@@ -1,5 +1,6 @@
 //************** COLORS | SHADOWS | LINEAR GRADIENT | BLUR **************//
 
+//? bl_ = (is) BLUR
 //? c_ = (is) COLOR
 //? cT_ = (is) COLOR OF TEXT
 //? sSp_ = (is) SPEACIAL SHADOW  
@@ -7,7 +8,8 @@
 //? lin_ = (is) LINEAR GRADIENT 
 
 //************** BLUR **************//
-$bl_circle: 60px;
+$bl_60: 60px;
+$bl_70: 70px;
 
 //************** COLORS **************//
 $c_white: #FFF;
