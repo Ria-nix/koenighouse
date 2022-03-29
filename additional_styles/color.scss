@@ -1,0 +1,37 @@
+//************** COLORS | SHADOWS | LINEAR GRADIENT | BLUR **************//
+
+//? c_ = (is) COLOR
+//? cT_ = (is) COLOR OF TEXT
+//? sSp_ = (is) SPEACIAL SHADOW  
+//? cOp_ = (is) COLOR WITH OPACITY and procent 
+//? lin_ = (is) LINEAR GRADIENT 
+
+//************** BLUR **************//
+$bl_circle: 60px;
+
+//************** COLORS **************//
+$c_white: #FFF;
+$cOp85_white: rgba(255, 255, 255, 0.85);
+$cOp17_white: rgba(255, 255, 255, 0.17);
+$cOp26_yell: rgba(255, 248, 230, 0.26);
+$c_milk: #F7F4F9;
+$c_blueGray: #D0D3D7;
+$cT_black: #000;
+$cT_red: #FF3B4C;
+$cT_gray: #C4C4C4;
+
+//************** SHADOWS **************//
+$shadow: 0px 7px 25px rgba(255, 29, 78, 0.2); 
+
+// BUTTONS "BUY" and "ABOUT HOME"
+$sSp_orange: 0px 7px 25px rgba(255, 114, 144, 0.76);
+$sSp_green:  0px 7px 25px rgba(5, 196, 193, 0.62);
+
+//************** LINEAR GRADIENT **************//
+$lin_orange: linear-gradient(270deg, #FFC539 -33.76%, #FF0451 104.7%);
+$lin_green: linear-gradient(270deg, rgba(0, 231, 124, 0.6) -33.76%, rgba(0, 154, 200, 0.6) 104.7%);
+$lin_underMenu: linear-gradient(348.76deg, #FFC539 -66.54%, #FF0451 177.33%);
+
+// BUTTONS "BUY" and "ABOUT HOME"
+$linSp_orange: linear-gradient(270deg, #FFC539 -18.05%, #FF0451 100%);
+$linSp_green: linear-gradient(270deg, #00E77C -30.45%, #05C4C1 100%);
