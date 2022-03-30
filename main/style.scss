@@ -1,3 +1,8 @@
 @use '../additional_styles/color' as *;
-@use '../additional_styles/obj' as *;
+@use '../additional_styles/object' as *;
 
+.main_wrap{
+    width: 100%;
+    background: blue;
+    height: 200px;
+}

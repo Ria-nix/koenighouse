@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <img src="../images/vector_fon_1.svg" alt="">
+    <div class="grid">
+        <div class="main_wrap">
+            skjdflskdjf
+            <!-- <img src="../images/homes/fon.svg" alt=""> -->
+        </div>
+        
+    </div>
 </body>
 </html>

@@ -18,12 +18,10 @@
   padding: 0 20px;
 }
 
-.bold {
-  font-weight: bold;
-}
-
 .main_wrap {
-  width: 100%;
-  background: blue;
   height: 200px;
+}
+.underline {
+  display: block;
+  background: linear-gradient(348.76deg, #FFC539 -66.54%, #FF0451 177.33%);
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,15 @@
+@use '../../additional_styles/color' as *;
+@use '../../additional_styles/object' as *;
+
+.main_wrap{
+    height: 200px;
+    
+    .logo{}
+    .menu{}
+    .big_text{}
+    .btn_home{}
+}
+.underline{
+    display: block;
+    background: $lin_underMenu;
+}
