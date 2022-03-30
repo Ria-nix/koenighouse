@@ -14,24 +14,26 @@
             <div class="menu">
                 <a href="#">
                     <span class="icon_link" id=""></span>
-                    <p></p>
+                    <p class="item_txt">Преимущества</p>
                     <span class="underline"></span>
                 </a>
                 <a href="#">
                     <span class="icon_link" id=""></span>
-                    <p></p>
+                    <p class="item_txt">Проекты</p>
                     <span class="underline"></span>
                 </a>
                 <a href="#">
                     <span class="icon_link" id=""></span>
-                    <p></p>
+                    <p class="item_txt">Галерея</p>
                     <span class="underline"></span>
                 </a>
             </div>
             <div class="big_text">
-                <input type="submit" value="выбрать дом">
+                
             </div>
-            <div class="btn_home"></div>
+            <div class="btn_home">
+            <input type="submit" value="выбрать дом">
+            </div>
         </div>
     </div>
     

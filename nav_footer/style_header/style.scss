@@ -3,10 +3,20 @@
 
 .main_wrap{
     height: 200px;
+    @include Flex(row, space-between, normal);
     
     .logo{}
-    .menu{}
-    .big_text{}
+    .menu{
+        @include Flex(row, normal, normal);
+        a{
+            display: block;
+            text-decoration: none;
+            @include Text($cT_black, normal, uppercase);
+        }
+    }
+    .big_text input{
+        
+    }
     .btn_home{}
 }
 .underline{
