@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: local("/additional_styles/fonts/Roboto/Roboto-Light.ttf"), url("/additional_styles/fonts/Roboto/Roboto-Thin.ttf") format("woff2");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  src: local("/additional_styles/fonts/Montserrat/static/Montserrat-Light.ttf");
+}
 * {
   margin: 0;
   padding: 0;
@@ -7,13 +19,8 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(1, minmax(320px, 1340px));
+  grid-template-columns: repeat(1, minmax(320px, 1360px));
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 1px solid red;
-}
-
-.main_wrap {
-  padding: 0 20px;
 }/*# sourceMappingURL=object.css.map */

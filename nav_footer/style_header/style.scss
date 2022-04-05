@@ -1,25 +1,82 @@
 @use '../../additional_styles/color' as *;
 @use '../../additional_styles/object' as *;
 
+//* ============= main code ============= *//
+.grid{ box-shadow: $shadow_menu;}
 .main_wrap{
-    height: 200px;
-    @include Flex(row, space-between, normal);
+    width: 100%;
+    @include Flex(row, space-between, center);
+    margin: 0 20px;
+    height: 100px;   
     
-    .logo{}
+    .logo{ width: 100%; }
     .menu{
         @include Flex(row, normal, normal);
         a{
             display: block;
             text-decoration: none;
-            @include Text($cT_black, normal, uppercase);
+            font-family: 'Montserrat', sans-serif;
+            @include Text($cT_black, 300, uppercase);
+            @include Flex(row, center, center);
+
+            //* ================= icons ================= *//
+            span{ 
+                display: block;
+                margin-right: 10px;
+            }
+            .icon_link{
+                width: 26px;
+                height: 26px;
+            }
+            .underline{
+                width: 40px;
+                height: 5px;
+            }
+            #advantages{
+                background: url('../../images/icons/libra_icon.svg') no-repeat center;
+            }
+            #projects{
+                background: url('../../images/icons/project_icon.svg') no-repeat center;
+            }
+            #townhouse{
+                background: url('../../images/icons//townhouse_icon.svg') no-repeat center;
+            }
+            #gallery{
+                background: url('../../images/icons/photo_icon.svg') no-repeat center;
+            }
+
         }
     }
-    .big_text input{
-        
+    .big_text{ cursor: pointer;
+        p{
+            font-family: 'Montserrat', sans-serif;
+            line-height: 24px;
+            font-size: 20px;
+            background: $lin_orange;
+            background-clip: text;
+            font-weight: 700;
+            text-transform: uppercase;
+            -webkit-text-fill-color: transparent;
+            span{
+                font-style: normal;
+                font-size: 24px;
+            }
+        }
     }
-    .btn_home{}
-}
-.underline{
-    display: block;
-    background: $lin_underMenu;
+    .btn_home input{
+        padding: 12px 30px;
+        font-weight: 700;
+        text-transform: uppercase;
+        border-radius: 50px;
+        border: none;
+        background: $linSp_orange;
+        color: $c_white;
+        box-shadow: $shadow_btn;
+        cursor: pointer;
+
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 800;
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
 }
