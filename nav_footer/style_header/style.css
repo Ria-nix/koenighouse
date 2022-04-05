@@ -1,13 +1,9 @@
 @font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 300;
-  src: local("/additional_styles/fonts/Roboto/Roboto-Light.ttf"), url("/additional_styles/fonts/Roboto/Roboto-Thin.ttf") format("woff2");
+  font-family: "Roboto", sans-serif;
+  src: local("/additional_styles/fonts/Roboto/Roboto-Light.ttf");
 }
 @font-face {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 300;
+  font-family: "Montserrat", sans-serif;
   src: local("/additional_styles/fonts/Montserrat/static/Montserrat-Light.ttf");
 }
 * {
@@ -31,7 +27,6 @@
 }
 
 .main_wrap {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -86,6 +81,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-right: 3.5rem;
+  position: relative;
 }
 .main_wrap .menu a span {
   display: block;
@@ -98,6 +95,11 @@
 .main_wrap .menu a .underline {
   width: 40px;
   height: 5px;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  background: -webkit-gradient(linear, right top, left top, color-stop(-33.76%, #FFC539), color-stop(104.7%, #FF0451));
+  background: linear-gradient(270deg, #FFC539 -33.76%, #FF0451 104.7%);
 }
 .main_wrap .menu a #advantages {
   background: url("../../images/icons/libra_icon.svg") no-repeat center;

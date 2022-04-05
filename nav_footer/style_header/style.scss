@@ -4,7 +4,6 @@
 //* ============= main code ============= *//
 .grid{ box-shadow: $shadow_menu;}
 .main_wrap{
-    width: 100%;
     @include Flex(row, space-between, center);
     margin: 0 20px;
     height: 100px;   
@@ -18,11 +17,13 @@
             font-family: 'Montserrat', sans-serif;
             @include Text($cT_black, 300, uppercase);
             @include Flex(row, center, center);
+            margin-right: 3.5rem;
+            position: relative;
 
             //* ================= icons ================= *//
             span{ 
                 display: block;
-                margin-right: 10px;
+                margin-right: 10px;                
             }
             .icon_link{
                 width: 26px;
@@ -31,6 +32,10 @@
             .underline{
                 width: 40px;
                 height: 5px;
+                position: absolute;
+                top: 30px;
+                left: 50%;
+                background: $lin_orange;
             }
             #advantages{
                 background: url('../../images/icons/libra_icon.svg') no-repeat center;
