@@ -2,22 +2,28 @@
 @use '../../additional_styles/object' as *;
 
 //* ============= main code ============= *//
-.grid{ box-shadow: $shadow_menu;}
-.main_wrap{
-    @include Flex(row, space-between, center);
-    margin: 0 20px;
-    height: 100px;   
-    
-    .logo{ width: 100%; }
-    .menu{
-        @include Flex(row, normal, normal);
+.layout_menu{ 
+    position: fixed;
+    box-shadow: $shadow_menu;
+    background: $c_white;   
+    width: 100%;
+}
+.html_div{
+    width: 100%;
+    height: 1000rem;
+    background: $c_milk;
+    padding-top: 100px
+}
+.main_wrap .sidebar{
+    @include Flex(row, normal, normal);
+    .menu{       
+        width: 45%;
+        // @include Flex(row, space-between, normal);
         a{
-            display: block;
             text-decoration: none;
             font-family: 'Montserrat', sans-serif;
             @include Text($cT_black, 300, uppercase);
             @include Flex(row, center, center);
-            margin-right: 3.5rem;
             position: relative;
 
             //* ================= icons ================= *//
@@ -33,8 +39,7 @@
                 width: 40px;
                 height: 5px;
                 position: absolute;
-                top: 30px;
-                left: 50%;
+                top: 30px; left: 50%;
                 background: $lin_orange;
             }
             #advantages{
@@ -52,36 +57,102 @@
 
         }
     }
-    .big_text{ cursor: pointer;
-        p{
-            font-family: 'Montserrat', sans-serif;
-            line-height: 24px;
-            font-size: 20px;
-            background: $lin_orange;
-            background-clip: text;
-            font-weight: 700;
-            text-transform: uppercase;
-            -webkit-text-fill-color: transparent;
-            span{
-                font-style: normal;
-                font-size: 24px;
+}
+@media screen and (min-width: 1060px){
+
+    .main_wrap{      
+        @include Flex(row, space-between, center);
+        margin: 0 20px;
+        height: 100px;   
+        
+        .logo{ width: 100%; }
+        .sidebar{
+            .menu{       
+                @include Flex(row, space-between, normal);
+            }
+            .big_text{ cursor: pointer;
+                p{
+                    font-family: 'Montserrat', sans-serif;
+                    line-height: 24px;
+                    font-size: 20px;
+                    background: $lin_orange;
+                    background-clip: text;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    -webkit-text-fill-color: transparent;
+                    span{
+                        font-style: normal;
+                        font-size: 24px;
+                    }
+                }
+            }
+            .btn_home input{
+                padding: 12px 30px;
+                font-weight: 700;
+                text-transform: uppercase;
+                border-radius: 50px;
+                border: none;
+                background: $linSp_orange;
+                color: $c_white;
+                box-shadow: $shadow_btn;
+                cursor: pointer;
+    
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 800;
+                font-size: 13px;
+                letter-spacing: 0.5px;
             }
         }
+    
     }
-    .btn_home input{
-        padding: 12px 30px;
-        font-weight: 700;
-        text-transform: uppercase;
-        border-radius: 50px;
-        border: none;
-        background: $linSp_orange;
-        color: $c_white;
-        box-shadow: $shadow_btn;
-        cursor: pointer;
+        
+    .toggle_btn{ display: none;}
+}
 
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 800;
-        font-size: 13px;
-        letter-spacing: 1px;
-    }
+
+
+@media screen and (max-width: 1059px){
+    .main_wrap{      
+        @include Flex(row, space-between, center);
+        margin: 0 20px;
+        height: 100px;   
+        
+        .logo{ width: 80%; }     
+            .menu{       
+                // height: 50%;
+                @include Flex(row, space-between, normal);
+            }  
+        }
+        .big_text{ cursor: pointer;
+            p{
+                font-family: 'Montserrat', sans-serif;
+                line-height: 24px;
+                font-size: 20px;
+                background: $lin_orange;
+                background-clip: text;
+                font-weight: 700;
+                text-transform: uppercase;
+                -webkit-text-fill-color: transparent;
+                span{
+                    font-style: normal;
+                    font-size: 24px;
+                }
+            }
+        }
+        .btn_home input{
+            padding: 12px 30px;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 50px;
+            border: none;
+            background: $linSp_orange;
+            color: $c_white;
+            box-shadow: $shadow_btn;
+            cursor: pointer;
+
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+        }
 }

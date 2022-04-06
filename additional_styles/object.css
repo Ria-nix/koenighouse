@@ -13,10 +13,14 @@
           box-sizing: border-box;
 }
 
-.grid {
+.layout_wrap {
   display: grid;
   grid-template-columns: repeat(1, minmax(320px, 1360px));
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.none {
+  display: none;
 }/*# sourceMappingURL=object.css.map */
