@@ -14,7 +14,9 @@
         <div class="main_wrap">
 
             <img src="../images/logo.svg" alt="logo">
-            <span class="toggle_btn"></span>
+            <div class="toggle_wrap">
+                <span class="toggle_btn"></span>
+            </div>
 
             <div class="sidebar">
                 <div class="menu">

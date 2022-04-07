@@ -14,23 +14,49 @@
     height: 100rem;
     position: absolute;
     z-index: 0;
-    // background: gray;    
+    background: $cOP_black;    
 }
 //* ================= icons ================= *//
 span{ 
-    display: block;
-    margin-right: 10px;                
+    display: block;         
 }
 .icon_link{
     width: 26px;
     height: 26px;
+    margin-right: 10px;          
 }
+
+//* ============= TOGGLE BUTTON ============= *//
+.toggle_wrap{
+    width: 25px;
+    height: 50px; 
+
+    .toggle_btn{
+        width: 25px;
+        height: 3px;
+        background: $cT_black;   
+        &::after, &::before{
+            // @extend .toggle_btn;
+            width: 25px;
+            height: 3px;
+            background: $cT_black;   
+        }
+        &::after{
+            transform: translateY(20px);
+        }
+        &::before{
+            // transform: translate();
+        }
+    }
+
+}
+
 
 //* ============= main code ============= *//
 .main_wrap img{ height: 80%;}
 .main_wrap .sidebar{
     @include Flex(row, space-between, center);
-    width: 88%;   
+    width: 88%;       
     z-index: 99;
     background: $c_white;
 
@@ -101,6 +127,7 @@ span{
 
 //* ============ MEDIA min-width: 1020px ============ *//
 @media screen and (min-width: 1020px){
+    .html{ margin-top: 100px;}
     .main_wrap{      
         @include Flex(row, space-between, center);
         margin: 0 20px;
@@ -119,6 +146,7 @@ span{
 
 //* ============ MEDIA min-width: 1019px ============ *//
 @media screen and (max-width: 1019px){
+    .html{ margin-top: 70px;}
     .toggle_btn, .media_info{ display: block;}
     .main_wrap{      
         @include Flex(row, space-between, center);
@@ -126,13 +154,14 @@ span{
         height: 70px;   
         
         .sidebar{  
-            padding: 30px 0 0 40px;
+            height: 95vh;
+            // padding: 30px 0 0 40px;
             position: fixed;
             right: 0; top: 70px;
             // border: 1px solid red;
             width: 250px;
-            height: 568px;
-            @include Flex(column, space-between, center);
+            // height: 568px;
+            @include Flex(column, normal, center);
             .menu{       
                 @include Flex(column, space-between, normal);
             }  
@@ -141,9 +170,13 @@ span{
                 height: 220px;
                 background: $cOp17_white;
                 // padding: 25px 0 0 30px;
+                margin-top: auto;
 
                 .wrap_info{
                     @include Flex(row, flex-start, normal);
+                    .name, .info{
+                        font-size: 14px;
+                    }
                     .name{
                         font-weight: bold;
                         font-family: "Montserrat", sans-serif;
