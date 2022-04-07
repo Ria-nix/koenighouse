@@ -1,41 +1,47 @@
 @use '../../additional_styles/color' as *;
 @use '../../additional_styles/object' as *;
 
-//* ============= main code ============= *//
+//* ============= additional code ============= *//
 .layout_menu{ 
     position: fixed;
     box-shadow: $shadow_menu;
     background: $c_white;   
     width: 100%;
+    z-index: 999;
 }
-.html_div{
+.html{
     width: 100%;
-    height: 1000rem;
-    background: $c_milk;
-    padding-top: 100px
+    height: 100rem;
+    position: absolute;
+    z-index: 0;
+    // background: gray;    
 }
+//* ================= icons ================= *//
+span{ 
+    display: block;
+    margin-right: 10px;                
+}
+.icon_link{
+    width: 26px;
+    height: 26px;
+}
+
+//* ============= main code ============= *//
+.main_wrap img{ height: 80%;}
 .main_wrap .sidebar{
     @include Flex(row, space-between, center);
-    width: 88%;
+    width: 88%;   
+    z-index: 99;
+    background: $c_white;
+
     .menu{       
-        width: 55%;
-        // @include Flex(row, space-between, normal);
         a{
             text-decoration: none;
             font-family: 'Montserrat', sans-serif;
             @include Text($cT_black, 300, uppercase);
             @include Flex(row, center, center);
             position: relative;
-
-            //* ================= icons ================= *//
-            span{ 
-                display: block;
-                margin-right: 10px;                
-            }
-            .icon_link{
-                width: 26px;
-                height: 26px;
-            }
+            
             .underline{
                 width: 40px;
                 height: 5px;
@@ -58,102 +64,105 @@
 
         }
     }
-}
-@media screen and (min-width: 1060px){
-
-    .main_wrap{      
-        @include Flex(row, space-between, center);
-        margin: 0 20px;
-        height: 100px;   
-        
-        .logo{ width: 100%; }
-        .sidebar{
-            .menu{       
-                @include Flex(row, space-between, normal);
-            }
-            .big_text{ cursor: pointer;
-                p{
-                    font-family: 'Montserrat', sans-serif;
-                    line-height: 24px;
-                    font-size: 20px;
-                    background: $lin_orange;
-                    background-clip: text;
-                    font-weight: 700;
-                    text-transform: uppercase;
-                    -webkit-text-fill-color: transparent;
-                    span{
-                        font-style: normal;
-                        font-size: 24px;
-                    }
-                }
-            }
-            .btn_home input{
-                padding: 12px 30px;
-                font-weight: 700;
-                text-transform: uppercase;
-                border-radius: 50px;
-                border: none;
-                background: $linSp_orange;
-                color: $c_white;
-                box-shadow: $shadow_btn;
-                cursor: pointer;
-    
-                font-family: 'Montserrat', sans-serif;
-                font-weight: 800;
-                font-size: 13px;
-                letter-spacing: 0.5px;
-            }
-        }
-    
-    }
-        
-    .toggle_btn{ display: none;}
-}
-
-
-
-@media screen and (max-width: 1059px){
-    .main_wrap{      
-        @include Flex(row, space-between, center);
-        margin: 0 20px;
-        height: 100px;   
-        
-        .logo{ width: 80%; }     
-            .menu{       
-                // height: 50%;
-                @include Flex(row, space-between, normal);
-            }  
-        }
-        .big_text{ cursor: pointer;
-            p{
-                font-family: 'Montserrat', sans-serif;
-                line-height: 24px;
-                font-size: 20px;
-                background: $lin_orange;
-                background-clip: text;
-                font-weight: 700;
-                text-transform: uppercase;
-                -webkit-text-fill-color: transparent;
-                span{
-                    font-style: normal;
-                    font-size: 24px;
-                }
-            }
-        }
-        .btn_home input{
-            padding: 12px 30px;
+    .big_text{ cursor: pointer;
+        p{
+            font-family: 'Montserrat', sans-serif;
+            line-height: 24px;
+            font-size: 20px;
+            background: $lin_orange;
+            background-clip: text;
             font-weight: 700;
             text-transform: uppercase;
-            border-radius: 50px;
-            border: none;
-            background: $linSp_orange;
-            color: $c_white;
-            box-shadow: $shadow_btn;
-            cursor: pointer;
-
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 800;
-            font-size: 13px;
-            letter-spacing: 0.5px;
+            -webkit-text-fill-color: transparent;
+            span{
+                font-style: normal;
+                font-size: 24px;
+                display: inline !important;
+            }
         }
+    }
+    .btn_home input{
+        padding: 12px 30px;
+        font-weight: 700;
+        text-transform: uppercase;
+        border-radius: 50px;
+        border: none;
+        background: $linSp_orange;
+        color: $c_white;
+        box-shadow: $shadow_btn;
+        cursor: pointer;
+
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 800;
+        font-size: 13px;
+        letter-spacing: 0.5px;
+    }
+}
+
+//* ============ MEDIA min-width: 1020px ============ *//
+@media screen and (min-width: 1020px){
+    .main_wrap{      
+        @include Flex(row, space-between, center);
+        margin: 0 20px;
+        height: 100px;   
+
+        .sidebar{
+            .menu{  
+                width: 55%;     
+                @include Flex(row, space-between, normal);
+            }
+        }    
+    }        
+    .toggle_btn, .media_info{ display: none;}
+}
+
+
+//* ============ MEDIA min-width: 1019px ============ *//
+@media screen and (max-width: 1019px){
+    .toggle_btn, .media_info{ display: block;}
+    .main_wrap{      
+        @include Flex(row, space-between, center);
+        margin: 0 20px;
+        height: 70px;   
+        
+        .sidebar{  
+            padding: 30px 0 0 40px;
+            position: fixed;
+            right: 0; top: 70px;
+            // border: 1px solid red;
+            width: 250px;
+            height: 568px;
+            @include Flex(column, space-between, center);
+            .menu{       
+                @include Flex(column, space-between, normal);
+            }  
+            .media_info{
+                width: 100%;
+                height: 220px;
+                background: $cOp17_white;
+                // padding: 25px 0 0 30px;
+
+                .wrap_info{
+                    @include Flex(row, flex-start, normal);
+                    .name{
+                        font-weight: bold;
+                        font-family: "Montserrat", sans-serif;
+                    }
+                    .info{
+                        font-family: "Roboto", sans-serif;
+                    }
+                }
+
+                #address{
+                    background: url('../../images/icons/address_icon.svg') no-repeat center;
+                }
+                #telefon{
+                    background: url('../../images/icons/phone_icon.svg') no-repeat center;
+                }
+                #email{
+                    background: url('../../images/icons/email_icon.svg') no-repeat center;
+                }
+            }
+        }
+    }   
 }
