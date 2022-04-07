@@ -15,9 +15,10 @@
     padding-top: 100px
 }
 .main_wrap .sidebar{
-    @include Flex(row, normal, normal);
+    @include Flex(row, space-between, center);
+    width: 88%;
     .menu{       
-        width: 45%;
+        width: 55%;
         // @include Flex(row, space-between, normal);
         a{
             text-decoration: none;

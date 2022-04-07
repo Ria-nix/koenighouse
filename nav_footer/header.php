@@ -15,7 +15,6 @@
 
             <img src="../images/logo.svg" alt="logo">
             <span class="toggle_btn"></span>
-
             <div class="sidebar">
                 <div class="menu">
                     <a href="#" name="name_advantages">
@@ -47,7 +46,7 @@
                 <div class="btn_home">
                     <input type="submit" value="выбрать дом">
                 </div>
-            </div>            
+            </div>                   
         </div>
     </div>
 
