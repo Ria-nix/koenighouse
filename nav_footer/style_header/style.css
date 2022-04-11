@@ -52,44 +52,50 @@ span {
   margin-right: 10px;
 }
 
+.wH_btn_toggle, .toggle_wrap .toggle_close::after, .toggle_wrap .toggle_close::before, .toggle_wrap .toggle_close, .toggle_wrap .toggle_open::after, .toggle_wrap .toggle_open::before, .toggle_wrap .toggle_open {
+  width: 25px;
+  height: 3px;
+}
+
 .toggle_wrap {
-  width: 25px;
-  height: 50px;
+  width: 40px;
+  height: auto;
 }
-.toggle_wrap .toggle_btn {
-  width: 25px;
-  height: 3px;
+.toggle_wrap .toggle_open {
   background: #000;
 }
-.toggle_wrap .toggle_btn::after, .toggle_wrap .toggle_btn::before {
-  width: 25px;
-  height: 3px;
+.toggle_wrap .toggle_open::after, .toggle_wrap .toggle_open::before {
+  display: block;
+  content: "";
   background: #000;
 }
-.toggle_wrap .toggle_btn::after {
-  -webkit-transform: translateY(20px);
-          transform: translateY(20px);
+.toggle_wrap .toggle_open::after {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
+.toggle_wrap .toggle_open::before {
+  -webkit-transform: translateY(7px);
+          transform: translateY(7px);
+}
+.toggle_wrap .toggle_close::after, .toggle_wrap .toggle_close::before {
+  display: block;
+  content: "";
+  background: #000;
+}
+.toggle_wrap .toggle_close::after {
+  -webkit-transform: rotateY(45deg);
+          transform: rotateY(45deg);
+}
+.toggle_wrap .toggle_close::before {
+  -webkit-transform: rotateY(-45deg);
+          transform: rotateY(-45deg);
+}
+
 .main_wrap img {
   height: 80%;
 }
 
 .main_wrap .sidebar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 88%;
-  z-index: 99;
   background: #FFF;
 }
 .main_wrap .sidebar .menu a {
@@ -193,6 +199,23 @@ span {
             align-items: center;
     margin: 0 20px;
     height: 100px;
+  }
+  .main_wrap .sidebar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 88%;
+    z-index: 99;
   }
   .main_wrap .sidebar .menu {
     width: 55%;
