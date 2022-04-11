@@ -23,7 +23,7 @@ span{
 .icon_link{
     width: 26px;
     height: 26px;
-    margin-right: 10px;          
+    margin-right: 5px;          
 }
 
 //* ============= TOGGLE BUTTON ============= *//
@@ -51,7 +51,6 @@ span{
     }
 
     .toggle_close{
-        
         @extend .wH_btn_toggle;
         &::after, &::before{
             display: block;
@@ -86,7 +85,7 @@ span{
                 width: 40px;
                 height: 5px;
                 position: absolute;
-                top: 30px; left: 50%;
+                top: 30px; left: 45%;
                 background: $lin_orange;
             }
             #advantages{
@@ -158,42 +157,50 @@ span{
             }
         }    
     }        
-    .toggle_btn, .media_info{ display: none;}
+    .toggle_wrap, .media_info{ display: none;}
 }
 
 
 //* ============ MEDIA min-width: 1019px ============ *//
 @media screen and (max-width: 1019px){
     .html{ margin-top: 70px;}
-    .toggle_btn, .media_info{ display: block;}
+    .toggle_wrap, .media_info{ display: block;}
     .main_wrap{      
         @include Flex(row, space-between, center);
         margin: 0 20px;
         height: 70px;   
         
-        .sidebar{  
+        .sidebar{              
             height: 95vh;
             position: fixed;
             right: 0; top: 70px;
             width: 250px;
             @include Flex(column, normal, center);
-            .menu{       
-                @include Flex(column, space-between, normal);
+            &::after{
+                box-shadow: ;
+            }
+            .menu{ 
+                padding: 20px 0 20px 0;      
+                @include Flex(column, space-between, flex-start);
+                a{
+                    padding-bottom: 20px;
+                }
             }  
             .media_info{
                 width: 100%;
                 height: 220px;
-                background: $cOp17_white;
+                background: $c_milk;
                 margin-top: auto;
+                padding: 15px 8px 0 15px;
 
                 .wrap_info{
                     @include Flex(row, flex-start, normal);
-                    .name, .info{
-                        font-size: 14px;
-                    }
+                    margin-bottom: 10px;                    
+                    .name, .info{ font-size: 14px; }
                     .name{
                         font-weight: bold;
                         font-family: "Montserrat", sans-serif;
+                        padding-bottom: 5px;
                     }
                     .info{
                         font-family: "Roboto", sans-serif;
