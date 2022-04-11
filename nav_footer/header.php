@@ -15,7 +15,8 @@
 
             <img src="../images/logo.svg" alt="logo">
             <div class="toggle_wrap">
-                <span class="toggle_close"></span>
+                <span class="toggle_open"></span>
+                <!-- <span class="toggle_close"></span> -->
             </div>
 
             <div class="sidebar">

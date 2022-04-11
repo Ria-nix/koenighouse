@@ -83,12 +83,12 @@ span {
   background: #000;
 }
 .toggle_wrap .toggle_close::after {
-  -webkit-transform: rotateY(45deg);
-          transform: rotateY(45deg);
+  -webkit-transform: translateY(-6px) rotate(45deg);
+          transform: translateY(-6px) rotate(45deg);
 }
 .toggle_wrap .toggle_close::before {
-  -webkit-transform: rotateY(-45deg);
-          transform: rotateY(-45deg);
+  -webkit-transform: translateY(-4px) rotate(-45deg);
+          transform: translateY(-4px) rotate(-45deg);
 }
 
 .main_wrap img {

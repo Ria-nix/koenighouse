@@ -51,6 +51,7 @@ span{
     }
 
     .toggle_close{
+        
         @extend .wH_btn_toggle;
         &::after, &::before{
             display: block;
@@ -59,13 +60,10 @@ span{
             background: $cT_black;  
         }
         &::after{ 
-            transform: rotateY(45deg);
-        
+            transform: translateY(-6px) rotate(45deg);
         }
         &::before{ 
-            // transform: translateY(7px);
-            transform: rotateY(-45deg);
-        
+            transform: translateY(-4px) rotate(-45deg);
         }
     }
 }
