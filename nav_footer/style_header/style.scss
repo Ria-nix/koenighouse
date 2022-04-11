@@ -176,9 +176,14 @@ span{
             right: 0; top: 70px;
             width: 250px;
             @include Flex(column, normal, center);
-            &::after{
-                box-shadow: ;
-            }
+            &::before{
+                display: block;
+                content: "";
+                box-shadow: $shadow_menu;
+                width: 250px;
+                height: 0.5rem;
+                background: $cOp17_white;
+            }            
             .menu{ 
                 padding: 20px 0 20px 0;      
                 @include Flex(column, space-between, flex-start);

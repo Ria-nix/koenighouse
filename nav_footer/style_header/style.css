@@ -284,6 +284,15 @@ span {
         -ms-flex-align: center;
             align-items: center;
   }
+  .main_wrap .sidebar::before {
+    display: block;
+    content: "";
+    -webkit-box-shadow: 10px 0px 30px rgba(0, 0, 0, 0.15);
+            box-shadow: 10px 0px 30px rgba(0, 0, 0, 0.15);
+    width: 250px;
+    height: 0.5rem;
+    background: rgba(255, 255, 255, 0.17);
+  }
   .main_wrap .sidebar .menu {
     padding: 20px 0 20px 0;
     display: -webkit-box;
