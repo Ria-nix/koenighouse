@@ -11,7 +11,7 @@
 }
 .html{
     width: 100%;
-    height: 100rem;
+    height: auto;
     position: absolute;
     z-index: 0;
     background: $cOP_black;    
@@ -31,7 +31,6 @@ span{
     width: 25px;
     height: 3px;
 }
-
 .toggle_wrap{
     width: 40px;
     height: auto;
@@ -66,6 +65,7 @@ span{
         }
     }
 }
+
 
 
 //* ============= main code ============= *//
@@ -163,34 +163,41 @@ span{
 
 //* ============ MEDIA min-width: 1019px ============ *//
 @media screen and (max-width: 1019px){
-    .html{ margin-top: 70px;}
+    .html{ 
+        margin-top: 70px;
+    }
     .toggle_wrap, .media_info{ display: block;}
     .main_wrap{      
+        // background: gray;
         @include Flex(row, space-between, center);
         margin: 0 20px;
         height: 70px;   
         
-        .sidebar{              
+        .sidebar{     
+            box-shadow: $sIn_menu;
+            overflow: scroll;         
             height: 95vh;
             position: fixed;
             right: 0; top: 70px;
             width: 250px;
             @include Flex(column, normal, center);
-            &::before{
-                display: block;
-                content: "";
-                box-shadow: $shadow_menu;
-                width: 250px;
-                height: 0.5rem;
-                background: $cOp17_white;
-            }            
+
+            //! &::before{
+            //!     display: block;
+            //!     content: "";
+            //!     box-shadow: $shadow_menu;
+            //!     width: 250px;
+            //!     height: 0.5rem;
+            //!     background: $cOp17_white;
+            //! }    
+
             .menu{ 
                 padding: 20px 0 20px 0;      
                 @include Flex(column, space-between, flex-start);
-                a{
-                    padding-bottom: 20px;
-                }
+
+                a{ padding-bottom: 20%;  }
             }  
+            .btn_home{ margin: 10% 0;}
             .media_info{
                 width: 100%;
                 height: 220px;
@@ -207,9 +214,7 @@ span{
                         font-family: "Montserrat", sans-serif;
                         padding-bottom: 5px;
                     }
-                    .info{
-                        font-family: "Roboto", sans-serif;
-                    }
+                    .info{  font-family: "Roboto", sans-serif; }
                 }
 
                 #address{
