@@ -22,5 +22,5 @@
 }
 
 .none {
-  display: none;
+  display: none !important;
 }/*# sourceMappingURL=object.css.map */

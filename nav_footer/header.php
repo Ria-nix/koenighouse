@@ -15,8 +15,7 @@
 
             <img src="../images/logo.svg" alt="logo">
             <div class="toggle_wrap">
-                <span class="toggle_close"></span>
-                <!-- <span class="toggle_close"></span> -->
+                <span class="toggle_open"></span>
             </div>
 
             <div class="sidebar">
@@ -35,14 +34,7 @@
                         <span class="icon_link" id="gallery"></span>
                         <p class="item_txt">Галерея</p>
                         <span class="underline"></span>
-                    </a>
-                    <!-- ======== don't touch ======== -->
-                    <!-- <a href="#" name="name_townhouse">
-                        <span class="icon_link" id="townhouse"></span>
-                        <p class="item_txt">ТАУНХАУСЫ</p>
-                        <span class="underline"></span>
-                    </a> -->
-                    <!-- ======== ======== ======== -->                    
+                    </a>                  
                 </div>
                 <div class="big_text">
                     <p>Ипотека <span>2.7</span>%</p>
@@ -76,7 +68,7 @@
             </div>                   
         </div>
     </div>
-    <div class="html">
+    <div class="content">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi perspiciatis dicta aspernatur ipsum facere autem delectus fugit cupiditate. Similique consectetur deleniti porro dolor dolorum necessitatibus? Nesciunt molestiae quo porro culpa.
         Ut qui mollitia totam obcaecati velit in ea nisi, vero blanditiis est ad saepe non earum magnam dignissimos aspernatur sit, corporis magni omnis voluptatum esse soluta commodi adipisci. Magni, modi.
         Minus saepe ut laborum distinctio aperiam omnis quis tenetur reprehenderit inventore quia perferendis incidunt minima sapiente provident dolor repellat, quae quibusdam. Provident facere quo enim voluptatibus tempora. Reiciendis, fugiat quos!

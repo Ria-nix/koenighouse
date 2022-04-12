@@ -22,7 +22,7 @@
 }
 
 .none {
-  display: none;
+  display: none !important;
 }
 
 .layout_menu {
@@ -34,12 +34,11 @@
   z-index: 999;
 }
 
-.html {
+.content {
   width: 100%;
   height: auto;
   position: absolute;
   z-index: 0;
-  background: rgba(0, 0, 0, 0.2);
 }
 
 span {
@@ -179,7 +178,7 @@ span {
 }
 
 @media screen and (min-width: 1020px) {
-  .html {
+  .content {
     margin-top: 100px;
   }
 
@@ -239,7 +238,7 @@ span {
   }
 }
 @media screen and (max-width: 1019px) {
-  .html {
+  .content {
     margin-top: 70px;
   }
 
@@ -265,9 +264,8 @@ span {
     height: 70px;
   }
   .main_wrap .sidebar {
-    -webkit-box-shadow: inset 10px 0px 30px rgba(0, 0, 0, 0.15);
-            box-shadow: inset 10px 0px 30px rgba(0, 0, 0, 0.15);
-    overflow: scroll;
+    -webkit-box-shadow: inset 0px 11px 13px -10px rgba(0, 0, 0, 0.15);
+            box-shadow: inset 0px 11px 13px -10px rgba(0, 0, 0, 0.15);
     height: 95vh;
     position: fixed;
     right: 0;
@@ -280,15 +278,15 @@ span {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: normal;
-        -ms-flex-pack: normal;
-            justify-content: normal;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
   .main_wrap .sidebar .menu {
-    padding: 20px 0 20px 0;
+    padding: 20px 0 5% 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -304,17 +302,17 @@ span {
             align-items: flex-start;
   }
   .main_wrap .sidebar .menu a {
-    padding-bottom: 20%;
+    padding-bottom: 18%;
   }
   .main_wrap .sidebar .btn_home {
-    margin: 10% 0;
+    margin: 10% 0 5% 0;
   }
   .main_wrap .sidebar .media_info {
     width: 100%;
     height: 220px;
     background: #F7F4F9;
     margin-top: auto;
-    padding: 15px 8px 0 15px;
+    padding: 13px 10px 0 20px;
   }
   .main_wrap .sidebar .media_info .wrap_info {
     display: -webkit-box;

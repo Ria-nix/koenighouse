@@ -43,13 +43,6 @@
     justify-content: $justify;
     align-items: $align;
 }
-
-// @mixin familyText($font-family){
-//     font-family: $font-family; 
-// }
-// .none_visible{
-    // text-decoration: none;
-// }
 .none{
-    display: none;
+    display: none !important;
 }
