@@ -65,7 +65,8 @@ span{ display: block; }
 .main_wrap img{ height: 80%;}
 .main_wrap .sidebar{
     background: $c_white;
-    .menu{       
+    .menu{    
+        font-size: 14px;
         a{
             text-decoration: none;
             font-family: 'Montserrat', sans-serif;

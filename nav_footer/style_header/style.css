@@ -97,6 +97,9 @@ span {
 .main_wrap .sidebar {
   background: #FFF;
 }
+.main_wrap .sidebar .menu {
+  font-size: 14px;
+}
 .main_wrap .sidebar .menu a {
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
