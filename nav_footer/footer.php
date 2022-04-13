@@ -8,40 +8,36 @@
     <link rel="stylesheet" href="style_footer/style.css">
 </head>
 <body>
-    <div class="layout_wrap layout_menu">
-        <div class="main_wrap">
-
+    <div class="layout_wrap layout_footer">
+        <div class="footer_wrap">
             <img src="../images/logo.svg" alt="logo">
 
-            <div class="social_media">
-                <div class="menu">
-                    <div class="bl_address wrap_info">
-                        <span class="icon_link" id="address"></span>
-                        <div class="text_link">
-                            <p class="name_address name">Адрес</p>
+            <div class="wrap_media">
+                <div class="social_media">
+                    <div class="info_address info_item">
+                        <span class="icon_link" id="address_link"></span>
+                        <div class="item_text">
+                            <p class="item_access name_item">Адрес</p>
                             <span class="info_address info">г.Калининград,  ул.Свободы 45</span>
                         </div>
                     </div>
-                    <div class="bl_tel wrap_info">
-                        <span class="icon_link" id="telefon"></span>
-                        <div class="text_link">
-                            <p class="name_tel name">Телефон</p>
+                    <div class="info_tel info_item">
+                        <span class="icon_link" id="telefon_link"></span>
+                        <div class="item_text">
+                            <p class="item_access name_item">Телефон</p>
                             <span class="info_tel info">+7 (412) 979-333</span>
                         </div>
                     </div>
-                    <div class="bl_email wrap_info">
-                        <span class="icon_link" id="email"></span>
-                        <div class="text_link">
-                            <p class="name_email name">E-mail</p>
+                    <div class="info_email info_item">
+                        <span class="icon_link" id="email_link"></span>
+                        <div class="item_text">
+                            <p class="item_access name_item">E-mail</p>
                             <span class="info_email info">support@koenighouse.ru</span>
                         </div>
                     </div>          
                 </div>
-                <div class="btn_home">
+                <div class="btn_call">
                     <input type="submit" value="позвонить">
-                </div>
-                <div class="media_info">
-                    
                 </div>
             </div>                   
         </div>

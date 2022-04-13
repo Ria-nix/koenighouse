@@ -10,15 +10,15 @@ span{ display: block; }
 }
 
 //* ============= main code ============= *//
-.main_wrap img{ height: 80%;}
-.main_wrap .social_media{
-    background: $c_white;
-    .menu{       
-        .wrap_info{
+.layout_footer{ background: $c_milk; }
+.footer_wrap img{ height: 80%;}
+.footer_wrap .wrap_media{
+    .social_media{       
+        .info_item{
             @include Flex(row, flex-start, normal);
             margin-bottom: 10px;                    
-            .name, .info{ font-size: 14px; }
-            .name{
+            .name_item, .info{ font-size: 14px; }
+            .name_item{
                 font-weight: bold;
                 font-family: "Montserrat", sans-serif;
                 padding-bottom: 5px;
@@ -26,17 +26,17 @@ span{ display: block; }
             .info{  font-family: "Roboto", sans-serif; }
         }
 
-        #address{
+        #address_link{
             background: url('../../images/icons/address_icon.svg') no-repeat center;
         }
-        #telefon{
+        #telefon_link{
             background: url('../../images/icons/phone_icon.svg') no-repeat center;
         }
-        #email{
+        #email_link{
             background: url('../../images/icons/email_icon.svg') no-repeat center;
         }
     }
-    .btn_home input{
+    .btn_call input{
         padding: 12px 30px;
         font-weight: 700;
         text-transform: uppercase;
@@ -56,20 +56,18 @@ span{ display: block; }
 
 //* ============ MEDIA min-width: 1020px ============ *//
 @media screen and (min-width: 1020px){
-    .content{ margin-top: 100px;}
-    .main_wrap{      
+    .footer_wrap{      
         @include Flex(row, space-between, center);
         margin: 0 20px;
         height: 100px;   
-
-        .social_media{
+        .wrap_media{
             @include Flex(row, space-between, center);
             width: 88%;       
             z-index: 99;
 
-            .menu{  
-                width: 55%;     
-                @include Flex(row, space-between, normal);
+            .social_media{  
+                width: 100%;     
+                @include Flex(row, space-around, normal);
             }
         }    
     }        
@@ -79,5 +77,5 @@ span{ display: block; }
 
 //* ============ MEDIA min-width: 1019px ============ *//
 @media screen and (max-width: 1019px){
-    
+    .layout_footer{ display: none;}
 }
