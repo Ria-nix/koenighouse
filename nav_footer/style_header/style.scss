@@ -61,7 +61,6 @@ span{ display: block; }
 }
 
 
-
 //* ============= main code ============= *//
 .main_wrap img{ height: 80%;}
 .main_wrap .sidebar{
@@ -163,7 +162,7 @@ span{ display: block; }
         margin: 0 20px;
         height: 70px;   
         
-        .sidebar{     
+        .sidebar{   
             box-shadow:  inset 0px 11px 13px -10px rgba(0, 0, 0, 0.15); 
             height: 95vh;
             position: fixed;
@@ -172,7 +171,7 @@ span{ display: block; }
             @include Flex(column, space-between, center);
 
             .menu{ 
-                padding: 20px 0 5% 0;      
+                padding: 25px 0 15px 0;      
                 @include Flex(column, space-between, flex-start);
 
                 a{ padding-bottom: 18%;  }

@@ -286,7 +286,7 @@ span {
             align-items: center;
   }
   .main_wrap .sidebar .menu {
-    padding: 20px 0 5% 0;
+    padding: 25px 0 15px 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
