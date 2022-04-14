@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php include_once('../nav_footer/header.php') ?>
-    <div class="grid">
+    <div class="grid content">
         <div class="new">
         </div>
         

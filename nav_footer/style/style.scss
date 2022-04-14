@@ -12,7 +12,6 @@
 .content{
     width: 100%;
     height: auto;
-    position: absolute;
     z-index: 0;
     // background: $cOP_black;    
 }
@@ -32,6 +31,7 @@ span{ display: block; }
 .toggle_wrap{
     width: 40px;
     height: auto;
+    cursor: pointer;
 
     .toggle_open{
         background: $cT_black;   
@@ -133,7 +133,7 @@ span{ display: block; }
 
 //* ============ MEDIA min-width: 1020px ============ *//
 @media screen and (min-width: 1020px){
-    .content{ margin-top: 100px;}
+    .content{ padding-top: 100px;}
     .main_wrap{      
         @include Flex(row, space-between, center);
         margin: 0 20px;
@@ -156,7 +156,7 @@ span{ display: block; }
 
 //* ============ MEDIA min-width: 1019px ============ *//
 @media screen and (max-width: 1019px){
-    .content{   margin-top: 70px; }
+    .content{ padding-top: 70px; }
     .toggle_wrap, .media_info{ display: block;}
     .main_wrap{      
         @include Flex(row, space-between, center);
