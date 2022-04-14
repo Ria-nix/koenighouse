@@ -11,7 +11,7 @@ span{ display: block; }
 
 //* ============= main code ============= *//
 .layout_footer{ background: $c_milk; }
-.footer_wrap img{ height: 80%;}
+.footer_wrap img{ height: 60%;}
 .footer_wrap .wrap_media{
     .social_media{       
         .info_item{
@@ -59,15 +59,15 @@ span{ display: block; }
     .footer_wrap{      
         @include Flex(row, space-between, center);
         margin: 0 20px;
-        height: 100px;   
+        height: 150px;   
         .wrap_media{
             @include Flex(row, space-between, center);
             width: 88%;       
             z-index: 99;
 
             .social_media{  
-                width: 100%;     
-                @include Flex(row, space-around, normal);
+                width: 79%;     
+                @include Flex(row, space-between, normal);
             }
         }    
     }        
@@ -77,5 +77,5 @@ span{ display: block; }
 
 //* ============ MEDIA min-width: 1019px ============ *//
 @media screen and (max-width: 1019px){
-    .layout_footer{ display: none;}
+    .layout_footer{ display: none !important;}
 }

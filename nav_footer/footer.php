@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
     <title>footer</title>
     <link rel="stylesheet" href="style_footer/style.css">
 </head>
-<body>
+<body> -->
     <div class="layout_wrap layout_footer">
         <div class="footer_wrap">
             <img src="../images/logo.svg" alt="logo">
@@ -42,5 +42,5 @@
             </div>                   
         </div>
     </div>
-</body>
-</html>
+<!-- </body>
+</html> -->
