@@ -1,8 +1,80 @@
 @use '../additional_styles/color' as *;
 @use '../additional_styles/object' as *;
 
-.new{
-    width: 100%;
-    // height: 1000px;
-    border: 2px solid red;
+.content{
+    border: 2px solid purple;
+
+    .main_info{
+        width: 100%;
+        height: auto;
+        border: 1px solid rgb(40, 255, 122);
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(1, minmax(320px, 1920px));
+        justify-content: center;
+    
+        .bl_image{ height: 100%;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    
+        .bl_text{
+            width: 50%;
+            height: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            // background:rgb(10, 0, 155, 0.5);
+            color: $c_white;
+
+            .wrap{
+                width: 100%;
+                height: 100%;
+                background: url('../images/vector_fon_1.svg') no-repeat center;
+                background-size: contain;
+                // @include Flex(row, center, center);
+            }
+
+            .heading{
+                font-size: 2vw;
+                font-weight: bold;
+                text-transform: uppercase;
+                text-align: center;
+                transform: translate(0%, 150%);
+            }
+            .txt_number{
+                width: 410px;
+                height: 230px;
+
+                #phone_call{
+                    background: url('../images/icons/call_icon.svg') no-repeat center;
+                }
+            }
+            
+        }
+    
+        
+    }
+    .projects{
+        width: 100%;
+        height: 100px;
+        background: blue;
+    }
+}
+
+@media screen and (min-width: 1020px){
+
+    // .bl_image img{
+    //     height: 100%;
+    // }
+}
+
+@media screen and (max-width: 1019px){
+
+    // .bl_image img{
+    //     height: 220px;
+    // }
 }

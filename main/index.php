@@ -9,7 +9,19 @@
 <body>
     <?php include_once('../nav_footer/header.php') ?>
     <div class="grid content">
-        <div class="new">
+        <div class="main_info">
+            <div class="bl_image">
+                <img src="../images/main_img.jpg" alt="">
+            </div>
+            <div class="bl_text">
+                <div class="wrap">
+                    <p class="heading">таунхаус по<br>цене квартиры</p>
+                    <!-- <p class="txt_number"><span class="icon_link" id="phone_call"></span>979-333</p> -->
+                </div>
+            </div>
+        </div>
+        <div class="projects">
+
         </div>
         
     </div>
