@@ -16,7 +16,7 @@
             <div class="bl_text">
                 <div class="wrap">
                     <p class="heading">таунхаус по<br>цене квартиры</p>
-                    <!-- <p class="txt_number"><span class="icon_link" id="phone_call"></span>979-333</p> -->
+                    <p class="txt_number"><span class="icon_link" id="phone_call"></span>979-333</p>
                 </div>
             </div>
         </div>

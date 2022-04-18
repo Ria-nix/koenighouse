@@ -47,7 +47,7 @@
   height: 100%;
 }
 .content .main_info .bl_text {
-  width: 50%;
+  width: 30%;
   height: 50%;
   position: absolute;
   top: 50%;
@@ -61,24 +61,51 @@
   height: 100%;
   background: url("../images/vector_fon_1.svg") no-repeat center;
   background-size: contain;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2vw;
 }
 .content .main_info .bl_text .heading {
-  font-size: 2vw;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
-  -webkit-transform: translate(0%, 150%);
-          transform: translate(0%, 150%);
+  -webkit-transform: translate(0%, 80%);
+          transform: translate(0%, 80%);
 }
 .content .main_info .bl_text .txt_number {
-  width: 410px;
-  height: 230px;
+  font-size: 36px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .content .main_info .bl_text .txt_number #phone_call {
+  margin-right: 10px;
   background: url("../images/icons/call_icon.svg") no-repeat center;
 }
 .content .projects {
   width: 100%;
-  height: 100px;
+  height: 500px;
   background: blue;
 }/*# sourceMappingURL=style.css.map */
