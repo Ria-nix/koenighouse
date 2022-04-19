@@ -158,6 +158,7 @@ body {
   background: #F7F4F9;
 }
 .content .projects .wrap_projects {
+  margin: 0 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -175,7 +176,6 @@ body {
 }
 .content .projects .wrap_projects .project_txt {
   max-width: 30%;
-  border: 1px solid red;
 }
 .content .projects .wrap_projects .project_txt #text {
   font-family: "Roboto", sans-serif;
@@ -183,6 +183,59 @@ body {
   font-style: normal;
   font-weight: 300;
   line-height: 23px;
+}
+.content .projects .wrap_projects .project_slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 65%;
+  height: 100%;
+  border: 1px solid red;
+}
+.content .projects .wrap_projects .project_slider .arrow_left, .content .projects .wrap_projects .project_slider .arrow_right {
+  width: 55px;
+  height: 55px;
+  background: #D0D3D7;
+  cursor: pointer;
+}
+.content .projects .wrap_projects .project_slider .arrow_left:before, .content .projects .wrap_projects .project_slider .arrow_right:before {
+  display: inline-block;
+  content: "";
+  width: 50px;
+  height: 50px;
+  -webkit-transform: translate(5%, 5%);
+          transform: translate(5%, 5%);
+}
+.content .projects .wrap_projects .project_slider .arrow_left:before {
+  background: url("../images/arrows/arrow_left_long.svg") no-repeat center;
+}
+.content .projects .wrap_projects .project_slider .arrow_right:before {
+  background: url("../images/arrows/arrow_right_long.svg") no-repeat center;
+}
+.content .projects .wrap_projects .project_slider .slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid blue;
 }
 
 @media screen and (max-width: 1459px) and (min-width: 320px) {
