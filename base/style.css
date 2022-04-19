@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "Roboto";
+  src: local("/additional_styles/fonts/Roboto/Roboto-Light.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: local("/additional_styles/fonts/Montserrat/static/Montserrat-Light.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.layout_wrap {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(320px, 1360px));
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.none {
+  display: none !important;
+}
+
+p {
+  font-weight: bold;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+.rob {
+  font-family: "Roboto", sans-serif;
+}
+
+.montser {
+  font-family: "Montserrat", sans-serif;
+}/*# sourceMappingURL=style.css.map */

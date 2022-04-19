@@ -1,23 +1,27 @@
 @use '../additional_styles/color' as *;
 @use '../additional_styles/object' as *;
 
+.heading{
+    font-weight: bold;
+    text-transform: uppercase;    
+}
+.main_txt{
+    @extend .heading;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
 .content{
-    border: 2px solid purple;
-
     .main_info{
         width: 100%;
         height: auto;
-        border: 1px solid rgb(40, 255, 122);
         position: relative;
         display: grid;
         grid-template-columns: repeat(1, minmax(320px, 1920px));
         justify-content: center;
     
-        .bl_image{ height: 100%;
-            img{
-                width: 100%;
-                height: 100%;
-            }
+        .bl_image img{
+            width: 100%;
+            height: 100%;
         }
     
         .bl_text{
@@ -36,14 +40,12 @@
                 background: url('../images/vector_fon_1.svg') no-repeat center;
                 background-size: contain;
                 @include Flex(column, space-between, center);
-                font-size: 2vw;
+                // font-size: 2vw;
             }
 
-            .heading{                
-                font-weight: bold;
-                text-transform: uppercase;
-                text-align: center;
+            .head_home{   
                 transform: translate(0%, 80%);
+                text-align: center;
             }
             .txt_number{
                 // width: 410px;
@@ -62,12 +64,89 @@
     
         
     }
-    .projects{
-        width: 100%;
-        height: 500px;
-        background: blue;
+
+    .benefits{
+        display: grid;
+        grid-template-columns: repeat(1, minmax(320px, 1360px));
+        justify-content: center;
+        margin-top: 60px;
+        
+        .wrap_benefits{ margin: 0 20px;
+            .benefits_items{
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+                gap: 1fr;
+                justify-content: space-between;
+                align-items: center;
+                
+                .item{
+                    width: 200px;
+                    height: 300px;
+                    background-size: contain;
+                    color: $c_white;
+                    @extend .heading;
+                    font-size: 18px;
+                    text-align: right;
+                    
+                    p{ padding: 40px 15px 0 0; }
+                    .image_folder{ transform: translate(-11%, 10%); }
+                    .image_room{ transform: translate(-30%, 17%); }
+                    .image_home, .image_tools{ transform: translate(-25%, 24%); }
+                }
+                .folder, .tools{
+                    background: url('../images/benefits/green_fon.svg') no-repeat ;
+                }
+                .room, .home{
+                    background: url('../images/benefits/orange_fon.svg') no-repeat ;
+                }
+            }
+        }
     }
+
+    .projects{
+        @extend .benefits;
+        background: $c_milk;
+        .wrap_projects{
+            @include Flex(row, space-between, center);
+            padding: 45px 0;
+            .project_txt{
+                max-width: 30%;                
+                border: 1px solid red;
+                .heading_projects{
+                    
+                }
+                #text{
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: 23px;
+                }
+            }            
+        }
+    }
+
+    
+    // .gallery{
+    //     @extend .benefits;
+    //     height: 500px;
+    //     background: green;
+    // }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (min-width: 1020px){
     // .heading{
@@ -79,12 +158,19 @@
     // }
 }
 
-@media screen and (max-width: 1019px){
-    // .heading{
-    //     font-size: 2vw;
-    // }
+@media screen and (max-width: 1459px) and (min-width: 320px){
+    .head_home{
+        font-size: 2vw;
+    }
 
     // .bl_image img{
     //     height: 220px;
     // }
+}
+
+@media screen and (max-width: 3000px) and (min-width: 1460px){
+
+    .head_home, .txt_number{
+        font-size: 36px;
+    }
 }

@@ -1,16 +1,14 @@
-@font-face {
-  font-family: "Roboto", sans-serif;
-  src: local("/additional_styles/fonts/Roboto/Roboto-Light.ttf");
-}
-@font-face {
-  font-family: "Montserrat", sans-serif;
-  src: local("/additional_styles/fonts/Montserrat/static/Montserrat-Light.ttf");
-}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@300;400&display=swap");
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
 }
 
 .layout_wrap {

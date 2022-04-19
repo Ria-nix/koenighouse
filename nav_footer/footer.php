@@ -1,7 +1,6 @@
 <div class="layout_wrap layout_footer">
     <div class="footer_wrap">
         <img src="../images/logo.svg" alt="logo">
-
         <div class="wrap_media">
             <div class="social_media">
                 <div class="info_address info_item">

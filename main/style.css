@@ -1,16 +1,14 @@
-@font-face {
-  font-family: "Roboto", sans-serif;
-  src: local("/additional_styles/fonts/Roboto/Roboto-Light.ttf");
-}
-@font-face {
-  font-family: "Montserrat", sans-serif;
-  src: local("/additional_styles/fonts/Montserrat/static/Montserrat-Light.ttf");
-}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@300;400&display=swap");
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
 }
 
 .layout_wrap {
@@ -25,22 +23,25 @@
   display: none !important;
 }
 
-.content {
-  border: 2px solid purple;
+.heading, .content .benefits .wrap_benefits .benefits_items .item, .content .projects .wrap_benefits .benefits_items .item, .main_txt {
+  font-weight: bold;
+  text-transform: uppercase;
 }
+
+.main_txt {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
 .content .main_info {
   width: 100%;
   height: auto;
-  border: 1px solid rgb(40, 255, 122);
   position: relative;
   display: grid;
   grid-template-columns: repeat(1, minmax(320px, 1920px));
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-.content .main_info .bl_image {
-  height: 100%;
 }
 .content .main_info .bl_image img {
   width: 100%;
@@ -74,14 +75,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 2vw;
 }
-.content .main_info .bl_text .heading {
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
+.content .main_info .bl_text .head_home {
   -webkit-transform: translate(0%, 80%);
           transform: translate(0%, 80%);
+  text-align: center;
 }
 .content .main_info .bl_text .txt_number {
   font-size: 36px;
@@ -104,8 +102,96 @@
   margin-right: 10px;
   background: url("../images/icons/call_icon.svg") no-repeat center;
 }
-.content .projects {
+.content .benefits, .content .projects {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(320px, 1360px));
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 60px;
+}
+.content .benefits .wrap_benefits, .content .projects .wrap_benefits {
+  margin: 0 20px;
+}
+.content .benefits .wrap_benefits .benefits_items, .content .projects .wrap_benefits .benefits_items {
   width: 100%;
-  height: 500px;
-  background: blue;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+  gap: 1fr;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.content .benefits .wrap_benefits .benefits_items .item, .content .projects .wrap_benefits .benefits_items .item {
+  width: 200px;
+  height: 300px;
+  background-size: contain;
+  color: #FFF;
+  font-size: 18px;
+  text-align: right;
+}
+.content .benefits .wrap_benefits .benefits_items .item p, .content .projects .wrap_benefits .benefits_items .item p {
+  padding: 40px 15px 0 0;
+}
+.content .benefits .wrap_benefits .benefits_items .item .image_folder, .content .projects .wrap_benefits .benefits_items .item .image_folder {
+  -webkit-transform: translate(-11%, 10%);
+          transform: translate(-11%, 10%);
+}
+.content .benefits .wrap_benefits .benefits_items .item .image_room, .content .projects .wrap_benefits .benefits_items .item .image_room {
+  -webkit-transform: translate(-30%, 17%);
+          transform: translate(-30%, 17%);
+}
+.content .benefits .wrap_benefits .benefits_items .item .image_home, .content .projects .wrap_benefits .benefits_items .item .image_home, .content .benefits .wrap_benefits .benefits_items .item .image_tools, .content .projects .wrap_benefits .benefits_items .item .image_tools {
+  -webkit-transform: translate(-25%, 24%);
+          transform: translate(-25%, 24%);
+}
+.content .benefits .wrap_benefits .benefits_items .folder, .content .projects .wrap_benefits .benefits_items .folder, .content .benefits .wrap_benefits .benefits_items .tools, .content .projects .wrap_benefits .benefits_items .tools {
+  background: url("../images/benefits/green_fon.svg") no-repeat;
+}
+.content .benefits .wrap_benefits .benefits_items .room, .content .projects .wrap_benefits .benefits_items .room, .content .benefits .wrap_benefits .benefits_items .home, .content .projects .wrap_benefits .benefits_items .home {
+  background: url("../images/benefits/orange_fon.svg") no-repeat;
+}
+.content .projects {
+  background: #F7F4F9;
+}
+.content .projects .wrap_projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 45px 0;
+}
+.content .projects .wrap_projects .project_txt {
+  max-width: 30%;
+  border: 1px solid red;
+}
+.content .projects .wrap_projects .project_txt #text {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 23px;
+}
+
+@media screen and (max-width: 1459px) and (min-width: 320px) {
+  .head_home {
+    font-size: 2vw;
+  }
+}
+@media screen and (max-width: 3000px) and (min-width: 1460px) {
+  .head_home, .txt_number {
+    font-size: 36px;
+  }
 }/*# sourceMappingURL=style.css.map */
