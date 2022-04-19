@@ -125,7 +125,7 @@
             .project_slider{
                 @include Flex(row, space-between, center);
                 width: 65%;                
-                height: 100%;
+                height: auto;
                 border: 1px solid red;
                 .arrow_left, .arrow_right{
                     width: 55px;
@@ -150,7 +150,8 @@
 
                 .slider{
                     @include Flex(row, space-around, center);
-                    // width: 90%;
+                    width: 100%;
+                    margin: 0 30px;
                     border: 1px solid blue;
                 }
             }
