@@ -75,12 +75,14 @@
             .benefits_items{
                 width: 100%;
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+                grid-template-columns: repeat(auto-fit, minmax(200px, 200px)); //1150px
                 gap: 1fr;
                 justify-content: space-between;
                 align-items: center;
+                border: 1px solid red;
                 
                 .item{
+                    border: 1px solid blueviolet;
                     width: 200px;
                     height: 300px;
                     background-size: contain;
@@ -153,6 +155,13 @@
                     width: 100%;
                     margin: 0 30px;
                     border: 1px solid blue;
+
+                    .project_card{
+                        width: 350px;
+                        // height: 150px;
+                        padding: 20px 30px;
+                        background: $c_white;
+                    }
                 }
             }
         
