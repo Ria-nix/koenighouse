@@ -66,19 +66,19 @@
     }
 
     .benefits{
-        display: grid;
-        grid-template-columns: repeat(1, minmax(320px, 1360px));
-        justify-content: center;
+        // display: grid;
+        // grid-template-columns: repeat(1, minmax(320px, 1360px));
+        // justify-content: center;
         margin-top: 60px;
         
         .wrap_benefits{ margin: 0 20px;
             .benefits_items{
                 width: 100%;
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(200px, 200px)); //1150px
-                gap: 1fr;
-                justify-content: space-between;
-                align-items: center;
+                // display: grid;
+                // grid-template-columns: repeat(auto-fit, minmax(200px, 200px)); //1150px
+                // gap: 1fr;
+                // justify-content: space-between;
+                // align-items: center;
                 border: 1px solid red;
                 
                 .item{
@@ -108,7 +108,8 @@
 
     .projects{
         @extend .benefits;
-        background: $c_milk;
+        // background: $c_milk;
+        background: green;
         .wrap_projects{
             margin: 0 20px;
             @include Flex(row, space-between, center);

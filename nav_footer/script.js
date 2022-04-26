@@ -1,8 +1,6 @@
 "use script";
 
 //* ================ TOGGLE BUTTON ================ *//
-let width = document.documentElement.clientWidth;
-width >= 1020 ? $(".sidebar").removeClass('none') :  $(".sidebar").addClass('none');
 
 let bool = false;
 function toggleButton(){   
@@ -10,10 +8,12 @@ function toggleButton(){
         bool = true;
         $("#toggle_btn").removeClass('toggle_open').addClass('toggle_close');
         $(".sidebar").removeClass('none');
+        $(".sidebar").css('display', 'none');
     }
     else{
         bool = false;
         $("#toggle_btn").removeClass('toggle_close').addClass('toggle_open');
         $(".sidebar").addClass('none');
+        $(".sidebar").css('display', 'flex');
     }
 }

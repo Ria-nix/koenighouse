@@ -44,7 +44,7 @@
             </div>           
         </div>
 
-        <div class="projects">
+        <!-- <div class="projects">
             <div class="wrap_projects">
                 <div class="project_txt">   
                     <p class="main_txt">Проекты</p>
@@ -82,13 +82,13 @@
                 </div>
                 
             </div>
-        </div>
+        </div> -->
 
-        <div class="gallery">
+        <!-- <div class="gallery">
             <div class="wrap_gallery">
                 
             </div>
-        </div>
+        </div> -->
         
     </div>
 
