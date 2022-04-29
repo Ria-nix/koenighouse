@@ -67,8 +67,7 @@
 .main_wrap img{ height: 80%;}
 .main_wrap .sidebar{
     background: $c_white;
-    .menu{    
-        font-size: 14px;
+    .menu{  font-size: 14px;
         a{
             text-decoration: none;
             @include Text($cT_black, 300, uppercase);
@@ -138,7 +137,7 @@
         margin: 0 20px;
         height: 100px;   
 
-        .sidebar{
+        .sidebar{            
             @include Flex(row, space-between, center);
             width: 88%;       
             z-index: 99;
@@ -163,12 +162,15 @@
         height: 70px;   
         
         .sidebar{   
+            display: none;
             box-shadow:  inset 0px 11px 13px -10px rgba(0, 0, 0, 0.15); 
             height: 95vh;
             position: fixed;
             right: 0; top: 70px;
             width: 250px;
-            @include Flex(column, space-between, center);
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
 
             .menu{ 
                 padding: 25px 0 15px 0;      

@@ -8,12 +8,12 @@ function toggleButton(){
         bool = true;
         $("#toggle_btn").removeClass('toggle_open').addClass('toggle_close');
         $(".sidebar").removeClass('none');
-        $(".sidebar").css('display', 'none');
+        $(".sidebar").css('display', 'flex');
     }
     else{
         bool = false;
         $("#toggle_btn").removeClass('toggle_close').addClass('toggle_open');
         $(".sidebar").addClass('none');
-        $(".sidebar").css('display', 'flex');
+        $(".sidebar").css('display', 'none');
     }
 }

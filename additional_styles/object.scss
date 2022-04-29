@@ -32,7 +32,7 @@ body{
 }
 
 @mixin Flex($direction, $justify, $align) {
-    display: flex;
+    display: flex !important;
     flex-direction: $direction;
     justify-content: $justify;
     align-items: $align;
