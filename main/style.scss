@@ -82,7 +82,6 @@
                 border: 1px solid red;
                 
                 .item{
-                    border: 1px solid blueviolet;
                     width: 200px;
                     height: 300px;
                     background-size: contain;
@@ -90,7 +89,12 @@
                     @extend .heading;
                     font-size: 18px;
                     text-align: right;
-                    
+
+                    img{
+                        width: 200px;
+                        height: 200px;
+                        object-fit: contain;
+                    }
                     p{ padding: 40px 15px 0 0; }
                     .image_folder{ transform: translate(-11%, 10%); }
                     .image_room{ transform: translate(-30%, 17%); }
@@ -155,7 +159,6 @@
                     @include Flex(row, space-around, center);
                     width: 100%;
                     margin: 0 30px;
-                    border: 1px solid blue;
 
                     .project_card{
                         width: 350px;
