@@ -23,13 +23,9 @@ body {
   display: none !important;
 }
 
-.heading, .content .benefits .wrap_benefits .benefits_items .item, .content .projects .wrap_benefits .benefits_items .item, .main_txt {
+.main_txt {
   font-weight: bold;
   text-transform: uppercase;
-}
-
-.main_txt {
-  font-size: 32px;
   margin-bottom: 30px;
 }
 
@@ -57,33 +53,11 @@ body {
           transform: translate(-50%, -50%);
   color: #FFF;
 }
-.content .main_info .bl_text .wrap {
+.content .main_info .bl_text .wrap_text {
   width: 100%;
-  height: 100%;
-  background: url("../images/vector_fon_1.svg") no-repeat center;
+  height: 80%;
+  background: url("../images/wrap.svg") no-repeat center;
   background-size: contain;
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.content .main_info .bl_text .head_home {
-  -webkit-transform: translate(0%, 80%);
-          transform: translate(0%, 80%);
-  text-align: center;
-}
-.content .main_info .bl_text .txt_number {
-  font-size: 36px;
-  font-weight: bold;
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -94,13 +68,16 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
-.content .main_info .bl_text .txt_number #phone_call {
-  margin-right: 10px;
-  background: url("../images/icons/call_icon.svg") no-repeat center;
+.content .main_info .bl_text .wrap_text .telefon_call {
+  display: block;
+  width: 100%;
+  height: 20px;
+  background: red;
+  cursor: pointer;
 }
 .content .benefits, .content .projects {
   display: grid;
@@ -131,6 +108,8 @@ body {
   height: 300px;
   background-size: contain;
   color: #FFF;
+  font-weight: bold;
+  text-transform: uppercase;
   font-size: 18px;
   text-align: right;
 }
@@ -251,13 +230,13 @@ body {
   background: #FFF;
 }
 
-@media screen and (max-width: 1459px) and (min-width: 320px) {
-  .head_home {
-    font-size: 2vw;
+@media screen and (min-width: 1020px) {
+  .main_txt {
+    font-size: 32px;
   }
 }
-@media screen and (max-width: 3000px) and (min-width: 1460px) {
-  .head_home, .txt_number {
-    font-size: 36px;
+@media screen and (max-width: 1019px) {
+  .main_txt {
+    font-size: 24px;
   }
 }/*# sourceMappingURL=style.css.map */

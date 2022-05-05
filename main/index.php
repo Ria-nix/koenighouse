@@ -14,9 +14,8 @@
                 <img src="../images/main_img.jpg" alt="">
             </div>
             <div class="bl_text">
-                <div class="wrap">
-                    <p class="heading head_home">таунхаус по<br>цене квартиры</p>
-                    <p class="txt_number"><span class="icon_link" id="phone_call"></span>979-333</p>
+                <div class="wrap_text">                    
+                    <span class='telefon_call'></span>
                 </div>
             </div>
         </div>

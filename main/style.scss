@@ -1,13 +1,9 @@
 @use '../additional_styles/color' as *;
 @use '../additional_styles/object' as *;
 
-.heading{
-    font-weight: bold;
-    text-transform: uppercase;    
-}
 .main_txt{
-    @extend .heading;
-    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;  
     margin-bottom: 30px;
 }
 .content{
@@ -34,31 +30,38 @@
             // background:rgb(10, 0, 155, 0.5);
             color: $c_white;
 
-            .wrap{
+            .wrap_text{
                 width: 100%;
-                height: 100%;
-                background: url('../images/vector_fon_1.svg') no-repeat center;
+                height: 80%;
+                background: url('../images/wrap.svg') no-repeat center;
                 background-size: contain;
-                @include Flex(column, space-between, center);
-                // font-size: 2vw;
-            }
+                @include Flex(row, center, flex-end);
 
-            .head_home{   
-                transform: translate(0%, 80%);
-                text-align: center;
-            }
-            .txt_number{
-                // width: 410px;
-                // height: 230px;
-                font-size: 36px;
-                font-weight: bold;               
-                @include Flex(row, center, center);
-
-                #phone_call{
-                    margin-right: 10px;
-                    background: url('../images/icons/call_icon.svg') no-repeat center;
+                .telefon_call{
+                    display: block;
+                    width: 100%;
+                    height: 20px;
+                    background: red;
+                    cursor: pointer;
                 }
             }
+
+            // .head_home{   
+            //     transform: translate(0%, 80%);
+            //     text-align: center;
+            // }
+            // .txt_number{
+            //     // width: 410px;
+            //     // height: 230px;
+            //     font-size: 36px;
+            //     font-weight: bold;               
+            //     @include Flex(row, center, center);
+
+            //     #phone_call{
+            //         margin-right: 10px;
+            //         background: url('../images/icons/call_icon.svg') no-repeat center;
+            //     }
+            // }
             
         }
     
@@ -86,7 +89,8 @@
                     height: 300px;
                     background-size: contain;
                     color: $c_white;
-                    @extend .heading;
+                    font-weight: bold;
+                    text-transform: uppercase; 
                     font-size: 18px;
                     text-align: right;
 
@@ -190,33 +194,16 @@
 
 
 
-
-
-
-
 @media screen and (min-width: 1020px){
-    // .heading{
-    //     font-size: 2vw;
-    // }
-
-    // .bl_image img{
-    //     height: 100%;
-    // }
-}
-
-@media screen and (max-width: 1459px) and (min-width: 320px){
-    .head_home{
-        font-size: 2vw;
+    .main_txt{
+        font-size: 32px;
     }
-
-    // .bl_image img{
-    //     height: 220px;
-    // }
 }
 
-@media screen and (max-width: 3000px) and (min-width: 1460px){
 
-    .head_home, .txt_number{
-        font-size: 36px;
+
+@media screen and (max-width: 1019px){
+    .main_txt{
+        font-size: 24px;
     }
 }
