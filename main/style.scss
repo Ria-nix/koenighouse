@@ -8,8 +8,7 @@
 }
 .content{
     .main_info{
-        width: 100%;
-        height: 600px;
+        width: 100%;       
         position: relative;
         display: grid;
         grid-template-columns: repeat(1, minmax(320px, 1920px));
@@ -19,7 +18,7 @@
 
         .bl_text{
             width: 100%;
-            height: 50%;
+            height: 45%;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -30,13 +29,11 @@
                 height: 100%;
                 background: url('../images/wrap.svg') no-repeat center;
                 background-size: contain;
-                @include Flex( align-items, flex-end);
+                @include Flex(row, center, flex-end);
 
                 .telefon_call{
                     display: block;
-                    width: calc(100% - 75%);
                     height: 45px;
-                    background: red;
                     cursor: pointer;
                 }
             }
@@ -167,6 +164,12 @@
     .main_txt{
         font-size: 32px;
     }
+    .main_info{
+        height: 600px;        
+        .telefon_call{
+            width: 300px;
+        }
+    }  
 }
 
 
@@ -174,4 +177,10 @@
     .main_txt{
         font-size: 20px;
     }
+    .main_info{
+        height: 400px;        
+        .telefon_call{
+            width: 180px;
+        }
+    }    
 }

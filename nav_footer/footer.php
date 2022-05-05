@@ -26,7 +26,9 @@
                 </div>          
             </div>
             <div class="btn_call">
-                <input type="submit" value="позвонить">
+                <a href="tel:+7412979333" class='telefon_call'>
+                    <input type="submit" value="позвонить">
+                </a>                
             </div>
         </div>                   
     </div>

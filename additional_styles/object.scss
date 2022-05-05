@@ -20,9 +20,16 @@ body{
 
 //================== MIXINS ==================//
 @mixin Button($bg_color, $br_color, $shadow) {
-    background: $bg_color;
-    border: 1px solid $br_color;
-    box-shadow: $shadow;
+    // background: $bg_color;
+    // // border: 1px solid $br_color;
+    // box-shadow: $shadow;
+    // transition: 0.5s;
+    // background-size: 200% auto;
+    // &:hover{
+    //     background-position: right center;
+    //     box-shadow: none;
+        
+    // }
 }
 
 @mixin Text($color, $bold, $uppercase) {

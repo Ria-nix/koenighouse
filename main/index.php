@@ -12,7 +12,7 @@
         <div class="main_info">
             <div class="bl_text">
                 <div class="wrap_text">                    
-                    <span class='telefon_call'></span>
+                    <a href="tel:+7412979333" class='telefon_call'></a>
                 </div>
             </div>
         </div>
