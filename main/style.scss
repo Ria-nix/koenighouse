@@ -9,63 +9,40 @@
 .content{
     .main_info{
         width: 100%;
-        height: auto;
+        height: 600px;
         position: relative;
         display: grid;
         grid-template-columns: repeat(1, minmax(320px, 1920px));
         justify-content: center;
-    
-        .bl_image img{
-            width: 100%;
-            height: 100%;
-        }
-    
+        background: url("../images/main_img.jpg") no-repeat center;
+        background-size: cover;
+
         .bl_text{
-            width: 30%;
+            width: 100%;
             height: 50%;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            // background:rgb(10, 0, 155, 0.5);
-            color: $c_white;
 
             .wrap_text{
-                width: 100%;
-                height: 80%;
+                margin: 0 30px;
+                height: 100%;
                 background: url('../images/wrap.svg') no-repeat center;
                 background-size: contain;
-                @include Flex(row, center, flex-end);
+                @include Flex( align-items, flex-end);
 
                 .telefon_call{
                     display: block;
-                    width: 100%;
-                    height: 20px;
+                    width: calc(100% - 75%);
+                    height: 45px;
                     background: red;
                     cursor: pointer;
                 }
             }
 
-            // .head_home{   
-            //     transform: translate(0%, 80%);
-            //     text-align: center;
-            // }
-            // .txt_number{
-            //     // width: 410px;
-            //     // height: 230px;
-            //     font-size: 36px;
-            //     font-weight: bold;               
-            //     @include Flex(row, center, center);
 
-            //     #phone_call{
-            //         margin-right: 10px;
-            //         background: url('../images/icons/call_icon.svg') no-repeat center;
-            //     }
-            // }
-            
-        }
-    
-        
+        }            
     }
 
     .benefits{
@@ -186,14 +163,6 @@
 
 
 
-
-
-
-
-
-
-
-
 @media screen and (min-width: 1020px){
     .main_txt{
         font-size: 32px;
@@ -201,9 +170,8 @@
 }
 
 
-
 @media screen and (max-width: 1019px){
     .main_txt{
-        font-size: 24px;
+        font-size: 20px;
     }
 }

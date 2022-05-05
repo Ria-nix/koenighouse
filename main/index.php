@@ -10,9 +10,6 @@
     <?php include_once('../nav_footer/header.php') ?>
     <div class="grid content">
         <div class="main_info">
-            <div class="bl_image">
-                <img src="../images/main_img.jpg" alt="">
-            </div>
             <div class="bl_text">
                 <div class="wrap_text">                    
                     <span class='telefon_call'></span>
