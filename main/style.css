@@ -88,70 +88,61 @@ body {
 .content .benefits .wrap_benefits .benefits_items, .content .projects .wrap_benefits .benefits_items {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
-  gap: 1fr;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   border: 1px solid red;
 }
 .content .benefits .wrap_benefits .benefits_items .item, .content .projects .wrap_benefits .benefits_items .item {
-  width: 200px;
+  width: 100%;
   height: 300px;
-  background-size: contain;
   color: #FFF;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 18px;
   text-align: right;
 }
-.content .benefits .wrap_benefits .benefits_items .item img, .content .projects .wrap_benefits .benefits_items .item img {
-  width: 200px;
-  height: 200px;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
 .content .benefits .wrap_benefits .benefits_items .item p, .content .projects .wrap_benefits .benefits_items .item p {
   padding: 40px 15px 0 0;
 }
 .content .benefits .wrap_benefits .benefits_items .item .image_folder, .content .projects .wrap_benefits .benefits_items .item .image_folder, .content .benefits .wrap_benefits .benefits_items .item .image_room, .content .projects .wrap_benefits .benefits_items .item .image_room {
   display: block;
-  width: 200px;
-  height: 250px;
+  width: 15rem;
+  height: 15rem;
 }
 .content .benefits .wrap_benefits .benefits_items .item .image_home, .content .projects .wrap_benefits .benefits_items .item .image_home, .content .benefits .wrap_benefits .benefits_items .item .image_tools, .content .projects .wrap_benefits .benefits_items .item .image_tools {
   display: block;
-  width: 270px;
-  height: 250px;
+  width: 6rem;
+  height: 6rem;
 }
 .content .benefits .wrap_benefits .benefits_items .item .image_folder, .content .projects .wrap_benefits .benefits_items .item .image_folder {
-  -webkit-transform: translate(-11%, 10%);
-          transform: translate(-11%, 10%);
+  -webkit-transform: translate(0%, 13%);
+          transform: translate(0%, 13%);
   background: url("../images/benefits/folders.svg") no-repeat center;
+  background-size: contain;
 }
 .content .benefits .wrap_benefits .benefits_items .item .image_room, .content .projects .wrap_benefits .benefits_items .item .image_room {
-  -webkit-transform: translate(-30%, 17%);
-          transform: translate(-30%, 17%);
+  -webkit-transform: translate(-25%, 17%);
+          transform: translate(-25%, 17%);
   background: url("../images/benefits/room.svg") no-repeat center;
-}
-.content .benefits .wrap_benefits .benefits_items .item .image_home, .content .projects .wrap_benefits .benefits_items .item .image_home {
-  -webkit-transform: translate(-25%, 24%);
-          transform: translate(-25%, 24%);
-  background: url("../images/benefits/home.svg") no-repeat center;
+  background-size: contain;
 }
 .content .benefits .wrap_benefits .benefits_items .item .image_tools, .content .projects .wrap_benefits .benefits_items .item .image_tools {
-  -webkit-transform: translate(-25%, 24%);
-          transform: translate(-25%, 24%);
+  -webkit-transform: translate(-27%, 25%);
+          transform: translate(-27%, 25%);
   background: url("../images/benefits/tools.svg") no-repeat center;
+  background-size: contain;
+}
+.content .benefits .wrap_benefits .benefits_items .item .image_home, .content .projects .wrap_benefits .benefits_items .item .image_home {
+  -webkit-transform: translate(-27%, 28%);
+          transform: translate(-27%, 28%);
+  background: url("../images/benefits/home.svg") no-repeat center;
+  background-size: contain;
 }
 .content .benefits .wrap_benefits .benefits_items .folder, .content .projects .wrap_benefits .benefits_items .folder, .content .benefits .wrap_benefits .benefits_items .tools, .content .projects .wrap_benefits .benefits_items .tools {
-  background: url("../images/benefits/green_fon.svg") no-repeat;
+  background: url("../images/benefits/green_fon.svg") no-repeat center;
+  background-size: cover;
 }
 .content .benefits .wrap_benefits .benefits_items .room, .content .projects .wrap_benefits .benefits_items .room, .content .benefits .wrap_benefits .benefits_items .home, .content .projects .wrap_benefits .benefits_items .home {
-  background: url("../images/benefits/orange_fon.svg") no-repeat;
+  background: url("../images/benefits/orange_fon.svg") no-repeat center;
+  background-size: cover;
 }
 .content .projects {
   background: green;
@@ -243,6 +234,33 @@ body {
   background: #FFF;
 }
 
+@media screen and (min-width: 1120px) {
+  .benefits_items {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+    grid-gap: 90px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1120px) {
+  .benefits_items {
+    grid-template-columns: repeat(4, minmax(10%, auto));
+    grid-gap: 30px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .benefits_items .item {
+    border: 1px solid blue;
+  }
+}
 @media screen and (min-width: 1020px) {
   .main_txt {
     font-size: 32px;
@@ -257,7 +275,7 @@ body {
 }
 @media screen and (max-width: 1019px) {
   .main_txt {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .main_info {

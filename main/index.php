@@ -23,22 +23,18 @@
                     <div class="item folder">
                         <p>Выгодные <br>условия</p>
                         <span class="image_folder"></span>
-                        <!-- <img class="image_folder" src="../images/benefits/folders.svg" alt="folders"> -->
                     </div>
                     <div class="item room">
                         <p>в наличии Все <br>коммуникации</p>
                         <span class="image_room"></span>
-                        <!-- <img class="image_room" src="../images/benefits/room.svg" alt="folders"> -->
                     </div>
                     <div class="item tools">
                         <p>Качественные <br>материалы</p>
                         <span class="image_tools"></span>
-                        <!-- <img class="image_tools" src="../images/benefits/tools.svg" alt="folders"> -->
                     </div>
                     <div class="item home">
                         <p>дом под <br>Серый ключ</p>
                         <span class="image_home"></span>
-                        <!-- <img class="image_home" src="../images/benefits/home.svg" alt="folders"> -->
                     </div>
                 </div>
             </div>           
