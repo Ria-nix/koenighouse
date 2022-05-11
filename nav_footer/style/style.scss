@@ -113,19 +113,9 @@
         }
     }
     .btn_home input{
-        padding: 12px 30px;
-        font-weight: 700;
-        text-transform: uppercase;
-        border-radius: 50px;
-        border: none;
-        background: $linSp_orange;
-        color: $c_white;
-        box-shadow: $shadow_btn;
-        cursor: pointer;
-
-        font-weight: 800;
-        font-size: 13px;
-        letter-spacing: 0.5px;
+        @include MainButton($linSp_orange, $shadow_btn);        
+        // background: ;
+        // box-shadow: $shadow_btn;
     }
 }
 
