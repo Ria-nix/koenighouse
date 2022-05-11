@@ -172,10 +172,12 @@ body {
   font-weight: 800;
   font-size: 13px;
   letter-spacing: 0.5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-size: 100% auto;
 }
 .main_wrap .sidebar .btn_home input:hover {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  background-size: 0% auto;
 }
 
 @media screen and (min-width: 1020px) {
@@ -388,20 +390,26 @@ body {
   background: url("../../images/icons/email_icon.svg") no-repeat center;
 }
 .footer_wrap .wrap_media .btn_call input {
+  background: -webkit-gradient(linear, right top, left top, color-stop(-18.05%, #FFC539), to(#FF0451));
+  background: linear-gradient(270deg, #FFC539 -18.05%, #FF0451 100%);
+  -webkit-box-shadow: 0px 7px 25px rgba(255, 29, 78, 0.2);
+          box-shadow: 0px 7px 25px rgba(255, 29, 78, 0.2);
   padding: 12px 30px;
   font-weight: 700;
   text-transform: uppercase;
   border-radius: 50px;
   border: none;
-  background: -webkit-gradient(linear, right top, left top, color-stop(-18.05%, #FFC539), to(#FF0451));
-  background: linear-gradient(270deg, #FFC539 -18.05%, #FF0451 100%);
   color: #FFF;
-  -webkit-box-shadow: 0px 7px 25px rgba(255, 29, 78, 0.2);
-          box-shadow: 0px 7px 25px rgba(255, 29, 78, 0.2);
   cursor: pointer;
   font-weight: 800;
   font-size: 13px;
   letter-spacing: 0.5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-size: 100% auto;
+}
+.footer_wrap .wrap_media .btn_call input:hover {
+  background-size: 0% auto;
 }
 
 @media screen and (min-width: 1020px) {

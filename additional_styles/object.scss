@@ -29,19 +29,20 @@ body{
     border: none;
     color: $c_white;
     cursor: pointer;
-
     font-weight: 800;
     font-size: 13px;
     letter-spacing: 0.5px;
 
-    // transition: 0.5s;
-    // background-size: 200% auto;
+    transition: 0.5s; 
+    // background-position: right center;    
+    background-size: 100% auto; 
 
     &:hover{
-        // background-position: right center;
-        box-shadow: none;
-        
+        // box-shadow: none;   
+        background-size: 0% auto;
+        //    
     }
+
 }
 
 @mixin Text($color, $bold, $uppercase) {
