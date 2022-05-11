@@ -37,8 +37,6 @@
                     cursor: pointer;
                 }
             }
-
-
         }            
     }
 
@@ -74,9 +72,32 @@
                         object-fit: contain;
                     }
                     p{ padding: 40px 15px 0 0; }
-                    .image_folder{ transform: translate(-11%, 10%); }
-                    .image_room{ transform: translate(-30%, 17%); }
-                    .image_home, .image_tools{ transform: translate(-25%, 24%); }
+                    .image_folder, .image_room{                        
+                        display: block;
+                        width: 200px;
+                        height: 250px;
+                    }
+                    .image_home, .image_tools{
+                        display: block;
+                        width: 270px;
+                        height: 250px;
+                    }
+                    .image_folder{
+                        transform: translate(-11%, 10%);
+                        background: url("../images/benefits/folders.svg") no-repeat center;
+                    }
+                    .image_room{
+                        transform: translate(-30%, 17%); 
+                        background: url("../images/benefits/room.svg") no-repeat center;
+                    }
+                    .image_home{
+                        transform: translate(-25%, 24%); 
+                        background: url("../images/benefits/home.svg") no-repeat center;
+                    }
+                    .image_tools{
+                        transform: translate(-25%, 24%); 
+                        background: url("../images/benefits/tools.svg") no-repeat center;
+                    }
                 }
                 .folder, .tools{
                     background: url('../images/benefits/green_fon.svg') no-repeat ;

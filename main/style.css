@@ -117,17 +117,35 @@ body {
 .content .benefits .wrap_benefits .benefits_items .item p, .content .projects .wrap_benefits .benefits_items .item p {
   padding: 40px 15px 0 0;
 }
+.content .benefits .wrap_benefits .benefits_items .item .image_folder, .content .projects .wrap_benefits .benefits_items .item .image_folder, .content .benefits .wrap_benefits .benefits_items .item .image_room, .content .projects .wrap_benefits .benefits_items .item .image_room {
+  display: block;
+  width: 200px;
+  height: 250px;
+}
+.content .benefits .wrap_benefits .benefits_items .item .image_home, .content .projects .wrap_benefits .benefits_items .item .image_home, .content .benefits .wrap_benefits .benefits_items .item .image_tools, .content .projects .wrap_benefits .benefits_items .item .image_tools {
+  display: block;
+  width: 270px;
+  height: 250px;
+}
 .content .benefits .wrap_benefits .benefits_items .item .image_folder, .content .projects .wrap_benefits .benefits_items .item .image_folder {
   -webkit-transform: translate(-11%, 10%);
           transform: translate(-11%, 10%);
+  background: url("../images/benefits/folders.svg") no-repeat center;
 }
 .content .benefits .wrap_benefits .benefits_items .item .image_room, .content .projects .wrap_benefits .benefits_items .item .image_room {
   -webkit-transform: translate(-30%, 17%);
           transform: translate(-30%, 17%);
+  background: url("../images/benefits/room.svg") no-repeat center;
 }
-.content .benefits .wrap_benefits .benefits_items .item .image_home, .content .projects .wrap_benefits .benefits_items .item .image_home, .content .benefits .wrap_benefits .benefits_items .item .image_tools, .content .projects .wrap_benefits .benefits_items .item .image_tools {
+.content .benefits .wrap_benefits .benefits_items .item .image_home, .content .projects .wrap_benefits .benefits_items .item .image_home {
   -webkit-transform: translate(-25%, 24%);
           transform: translate(-25%, 24%);
+  background: url("../images/benefits/home.svg") no-repeat center;
+}
+.content .benefits .wrap_benefits .benefits_items .item .image_tools, .content .projects .wrap_benefits .benefits_items .item .image_tools {
+  -webkit-transform: translate(-25%, 24%);
+          transform: translate(-25%, 24%);
+  background: url("../images/benefits/tools.svg") no-repeat center;
 }
 .content .benefits .wrap_benefits .benefits_items .folder, .content .projects .wrap_benefits .benefits_items .folder, .content .benefits .wrap_benefits .benefits_items .tools, .content .projects .wrap_benefits .benefits_items .tools {
   background: url("../images/benefits/green_fon.svg") no-repeat;
