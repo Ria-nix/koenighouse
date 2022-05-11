@@ -74,7 +74,7 @@ body {
   height: 45px;
   cursor: pointer;
 }
-.content .benefits, .content .projects {
+.content .benefits, .content .gallery, .content .projects {
   display: grid;
   grid-template-columns: repeat(1, minmax(320px, 1360px));
   -webkit-box-pack: center;
@@ -82,15 +82,15 @@ body {
           justify-content: center;
   margin-top: 60px;
 }
-.content .benefits .wrap_benefits, .content .projects .wrap_benefits {
+.content .benefits .wrap_benefits, .content .gallery .wrap_benefits, .content .gallery .wrap_gallery, .content .projects .wrap_benefits {
   margin: 0 20px;
 }
-.content .benefits .wrap_benefits .benefits_items, .content .projects .wrap_benefits .benefits_items {
+.content .benefits .wrap_benefits .benefits_items, .content .gallery .wrap_benefits .benefits_items, .content .gallery .wrap_gallery .benefits_items, .content .projects .wrap_benefits .benefits_items {
   width: 100%;
   display: grid;
   border: 1px solid red;
 }
-.content .benefits .wrap_benefits .benefits_items .item, .content .projects .wrap_benefits .benefits_items .item {
+.content .benefits .wrap_benefits .benefits_items .item, .content .gallery .wrap_benefits .benefits_items .item, .content .gallery .wrap_gallery .benefits_items .item, .content .projects .wrap_benefits .benefits_items .item {
   width: 100%;
   height: 300px;
   color: #FFF;
@@ -99,48 +99,48 @@ body {
   font-size: 18px;
   text-align: right;
 }
-.content .benefits .wrap_benefits .benefits_items .item p, .content .projects .wrap_benefits .benefits_items .item p {
+.content .benefits .wrap_benefits .benefits_items .item p, .content .gallery .wrap_benefits .benefits_items .item p, .content .gallery .wrap_gallery .benefits_items .item p, .content .projects .wrap_benefits .benefits_items .item p {
   padding: 40px 15px 0 0;
 }
-.content .benefits .wrap_benefits .benefits_items .item .image_folder, .content .projects .wrap_benefits .benefits_items .item .image_folder, .content .benefits .wrap_benefits .benefits_items .item .image_room, .content .projects .wrap_benefits .benefits_items .item .image_room {
+.content .benefits .wrap_benefits .benefits_items .item .image_folder, .content .gallery .wrap_benefits .benefits_items .item .image_folder, .content .gallery .wrap_gallery .benefits_items .item .image_folder, .content .projects .wrap_benefits .benefits_items .item .image_folder, .content .benefits .wrap_benefits .benefits_items .item .image_room, .content .gallery .wrap_benefits .benefits_items .item .image_room, .content .gallery .wrap_gallery .benefits_items .item .image_room, .content .projects .wrap_benefits .benefits_items .item .image_room {
   display: block;
   width: 15rem;
   height: 15rem;
 }
-.content .benefits .wrap_benefits .benefits_items .item .image_home, .content .projects .wrap_benefits .benefits_items .item .image_home, .content .benefits .wrap_benefits .benefits_items .item .image_tools, .content .projects .wrap_benefits .benefits_items .item .image_tools {
+.content .benefits .wrap_benefits .benefits_items .item .image_home, .content .gallery .wrap_benefits .benefits_items .item .image_home, .content .gallery .wrap_gallery .benefits_items .item .image_home, .content .projects .wrap_benefits .benefits_items .item .image_home, .content .benefits .wrap_benefits .benefits_items .item .image_tools, .content .gallery .wrap_benefits .benefits_items .item .image_tools, .content .gallery .wrap_gallery .benefits_items .item .image_tools, .content .projects .wrap_benefits .benefits_items .item .image_tools {
   display: block;
   width: 6rem;
   height: 6rem;
 }
-.content .benefits .wrap_benefits .benefits_items .item .image_folder, .content .projects .wrap_benefits .benefits_items .item .image_folder {
+.content .benefits .wrap_benefits .benefits_items .item .image_folder, .content .gallery .wrap_benefits .benefits_items .item .image_folder, .content .gallery .wrap_gallery .benefits_items .item .image_folder, .content .projects .wrap_benefits .benefits_items .item .image_folder {
   -webkit-transform: translate(0%, 13%);
           transform: translate(0%, 13%);
   background: url("../images/benefits/folders.svg") no-repeat center;
   background-size: contain;
 }
-.content .benefits .wrap_benefits .benefits_items .item .image_room, .content .projects .wrap_benefits .benefits_items .item .image_room {
+.content .benefits .wrap_benefits .benefits_items .item .image_room, .content .gallery .wrap_benefits .benefits_items .item .image_room, .content .gallery .wrap_gallery .benefits_items .item .image_room, .content .projects .wrap_benefits .benefits_items .item .image_room {
   -webkit-transform: translate(-25%, 17%);
           transform: translate(-25%, 17%);
   background: url("../images/benefits/room.svg") no-repeat center;
   background-size: contain;
 }
-.content .benefits .wrap_benefits .benefits_items .item .image_tools, .content .projects .wrap_benefits .benefits_items .item .image_tools {
+.content .benefits .wrap_benefits .benefits_items .item .image_tools, .content .gallery .wrap_benefits .benefits_items .item .image_tools, .content .gallery .wrap_gallery .benefits_items .item .image_tools, .content .projects .wrap_benefits .benefits_items .item .image_tools {
   -webkit-transform: translate(-27%, 25%);
           transform: translate(-27%, 25%);
   background: url("../images/benefits/tools.svg") no-repeat center;
   background-size: contain;
 }
-.content .benefits .wrap_benefits .benefits_items .item .image_home, .content .projects .wrap_benefits .benefits_items .item .image_home {
+.content .benefits .wrap_benefits .benefits_items .item .image_home, .content .gallery .wrap_benefits .benefits_items .item .image_home, .content .gallery .wrap_gallery .benefits_items .item .image_home, .content .projects .wrap_benefits .benefits_items .item .image_home {
   -webkit-transform: translate(-27%, 28%);
           transform: translate(-27%, 28%);
   background: url("../images/benefits/home.svg") no-repeat center;
   background-size: contain;
 }
-.content .benefits .wrap_benefits .benefits_items .folder, .content .projects .wrap_benefits .benefits_items .folder, .content .benefits .wrap_benefits .benefits_items .tools, .content .projects .wrap_benefits .benefits_items .tools {
+.content .benefits .wrap_benefits .benefits_items .folder, .content .gallery .wrap_benefits .benefits_items .folder, .content .gallery .wrap_gallery .benefits_items .folder, .content .projects .wrap_benefits .benefits_items .folder, .content .benefits .wrap_benefits .benefits_items .tools, .content .gallery .wrap_benefits .benefits_items .tools, .content .gallery .wrap_gallery .benefits_items .tools, .content .projects .wrap_benefits .benefits_items .tools {
   background: url("../images/benefits/green_fon.svg") no-repeat center;
   background-size: cover;
 }
-.content .benefits .wrap_benefits .benefits_items .room, .content .projects .wrap_benefits .benefits_items .room, .content .benefits .wrap_benefits .benefits_items .home, .content .projects .wrap_benefits .benefits_items .home {
+.content .benefits .wrap_benefits .benefits_items .room, .content .gallery .wrap_benefits .benefits_items .room, .content .gallery .wrap_gallery .benefits_items .room, .content .projects .wrap_benefits .benefits_items .room, .content .benefits .wrap_benefits .benefits_items .home, .content .gallery .wrap_benefits .benefits_items .home, .content .gallery .wrap_gallery .benefits_items .home, .content .projects .wrap_benefits .benefits_items .home {
   background: url("../images/benefits/orange_fon.svg") no-repeat center;
   background-size: cover;
 }
@@ -232,6 +232,39 @@ body {
   width: 350px;
   padding: 20px 30px;
   background: #FFF;
+}
+.content .gallery {
+  height: 500px;
+}
+.content .gallery .wrap_gallery .gallery_items {
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 90px;
+}
+.content .gallery .wrap_gallery .gallery_items .item_1, .content .gallery .wrap_gallery .gallery_items .item_4 {
+  width: 25rem;
+  height: 25rem;
+  background: url("../images/gallery/home_1.jpg") no-repeat center;
+  background-size: contain;
+}
+.content .gallery .wrap_gallery .gallery_items .item_2, .content .gallery .wrap_gallery .gallery_items .item_3 {
+  width: 50rem;
+  height: 25rem;
+  background: url("../images/gallery/home_2.jpg") no-repeat center;
+  background-size: contain;
+}
+.content .gallery .wrap_gallery .gallery_items .img_hover {
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, right top, left top, color-stop(-33.76%, rgba(0, 231, 124, 0.6)), color-stop(104.7%, rgba(0, 154, 200, 0.6)));
+  background: linear-gradient(270deg, rgba(0, 231, 124, 0.6) -33.76%, rgba(0, 154, 200, 0.6) 104.7%);
+  color: #FFF;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.content .gallery .wrap_gallery .gallery_items .img_hover p {
+  width: 200px;
 }
 
 @media screen and (min-width: 1120px) {

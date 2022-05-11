@@ -11,6 +11,7 @@
 //************** BLUR **************//
 $bl_60: 60px;
 $bl_70: 70px;
+$bl_lin_green: linear-gradient(270deg, rgba(0, 231, 124, 0.6) -33.76%, rgba(0, 154, 200, 0.6) 104.7%);
 
 //************** COLORS **************//
 $c_white: #FFF;
@@ -36,7 +37,7 @@ $sSp_green:  0px 7px 25px rgba(5, 196, 193, 0.62);
 
 //************** LINEAR GRADIENT **************//
 $lin_orange: linear-gradient(270deg, #FFC539 -33.76%, #FF0451 104.7%);
-$lin_green: linear-gradient(270deg, rgba(0, 231, 124, 0.6) -33.76%, rgba(0, 154, 200, 0.6) 104.7%);
+$lin_green: linear-gradient(270deg, #00E77C -30.45%, #05C4C1 100%);
 
 // BUTTONS "BUY" and "ABOUT HOME"
 $linSp_orange: linear-gradient(to right, #FF184F 0%, #FFCA41 51%, #FF184F 100%);
