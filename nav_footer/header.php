@@ -1,5 +1,5 @@
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../nav_footer/style/style.css">
     <title>nav</title>
 </head>
-<body>
+<body> -->
     
 <div class="layout_wrap layout_menu">
     <div class="main_wrap">
@@ -69,5 +69,5 @@
     </div>
 </div>
 
-</body>
-</html>
+<!-- </body>
+</html> -->

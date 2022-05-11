@@ -24,7 +24,7 @@
                         <p>Выгодные <br>условия</p>
                         <img class="image_folder" src="../images/benefits/folders.svg" alt="folders">
                     </div>
-                    <div class="item room">
+                    <!-- <div class="item room">
                         <p>в наличии Все <br>коммуникации</p>
                         <img class="image_room" src="../images/benefits/room.svg" alt="folders">
                     </div>
@@ -35,7 +35,7 @@
                     <div class="item home">
                         <p>дом под <br>Серый ключ</p>
                         <img class="image_home" src="../images/benefits/home.svg" alt="folders">
-                    </div>
+                    </div> -->
                 </div>
             </div>           
         </div>

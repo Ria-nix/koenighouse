@@ -4,6 +4,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
@@ -100,7 +101,7 @@ body {
 .main_wrap .sidebar .menu a {
   text-decoration: none;
   color: #000;
-  font-weight: 300;
+  font-weight: 700;
   text-transform: uppercase;
   display: -webkit-box !important;
   display: -ms-flexbox !important;
@@ -157,9 +158,14 @@ body {
   font-size: 24px;
   display: inline !important;
 }
+.main_wrap .sidebar .big_text p:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-position: right center;
+}
 .main_wrap .sidebar .btn_home input {
-  background: -webkit-gradient(linear, right top, left top, color-stop(-18.05%, #FFC539), to(#FF0451));
-  background: linear-gradient(270deg, #FFC539 -18.05%, #FF0451 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#FF184F), color-stop(51%, #FFCA41), to(#FF184F));
+  background: linear-gradient(to right, #FF184F 0%, #FFCA41 51%, #FF184F 100%);
   -webkit-box-shadow: 0px 7px 25px rgba(255, 29, 78, 0.2);
           box-shadow: 0px 7px 25px rgba(255, 29, 78, 0.2);
   padding: 12px 30px;
@@ -174,10 +180,12 @@ body {
   letter-spacing: 0.5px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  background-size: 100% auto;
+  background-size: 200% auto;
 }
 .main_wrap .sidebar .btn_home input:hover {
-  background-size: 0% auto;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-position: right center;
 }
 
 @media screen and (min-width: 1020px) {
@@ -390,8 +398,8 @@ body {
   background: url("../../images/icons/email_icon.svg") no-repeat center;
 }
 .footer_wrap .wrap_media .btn_call input {
-  background: -webkit-gradient(linear, right top, left top, color-stop(-18.05%, #FFC539), to(#FF0451));
-  background: linear-gradient(270deg, #FFC539 -18.05%, #FF0451 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#FF184F), color-stop(51%, #FFCA41), to(#FF184F));
+  background: linear-gradient(to right, #FF184F 0%, #FFCA41 51%, #FF184F 100%);
   -webkit-box-shadow: 0px 7px 25px rgba(255, 29, 78, 0.2);
           box-shadow: 0px 7px 25px rgba(255, 29, 78, 0.2);
   padding: 12px 30px;
@@ -406,10 +414,12 @@ body {
   letter-spacing: 0.5px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  background-size: 100% auto;
+  background-size: 200% auto;
 }
 .footer_wrap .wrap_media .btn_call input:hover {
-  background-size: 0% auto;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-position: right center;
 }
 
 @media screen and (min-width: 1020px) {
