@@ -179,32 +179,37 @@
 
     .gallery{
         @extend .benefits;
-        height: 500px;
+        // height: 500px;
         // background: green;
 
         .wrap_gallery{ @extend .wrap_benefits;
             .gallery_items{
-                width: 100%;
-                display: grid;
-                grid-template-rows: repeat(2, 1fr); //1150px               
-                grid-gap: 90px;
-                // justify-content: center;
-                // align-items: center;
+                display: grid; 
+                grid-template-columns: repeat(3, 1fr); 
+                grid-template-rows: repeat(2, 1fr); 
+                gap: 20px; 
+                grid-template-areas: 
+                                    "item_1 item_2 item_2"
+                                    "item_3 item_3 item_4"; 
 
+                .item_photo{
+                    height: 27.5rem; 
+                    cursor: pointer;
+                }
+                .item_1{grid-area: item_1 ;}
+                .item_2{grid-area: item_2 ;}
+                .item_3{grid-area: item_3 ;}
+                .item_4{grid-area: item_4 ;}
                 .item_1, .item_4{
-                    width: 25rem;
-                    height: 25rem; 
                     background: url("../images/gallery/home_1.jpg") no-repeat center;
-                    background-size: contain;
-                }
-                
-                .item_2, .item_3{                    
-                    width: 50rem;
-                    height: 25rem; 
+                    background-size: cover;
+                }                
+                .item_2, .item_3{     
                     background: url("../images/gallery/home_2.jpg") no-repeat center;
-                    background-size: contain;                      
-                }
+                    background-size: cover;                      
+                }                
                 .img_hover{
+                    display: none;
                     width: 100%;
                     height: 100%;
                     background: $bl_lin_green;

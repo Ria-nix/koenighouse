@@ -93,21 +93,18 @@
                     </div>
 
                     <div class="item_photo item_2">
-                        <!-- <img src="../images/gallery/home_2.jpg" alt="img_2" class="main"> -->
                         <div class="img_hover">
                             <span class="img_border"></span>
                             <p class="img_txt">Для поддержания комфортной температуры дом оснащен автономной водяной системой отопления</p>
                         </div>
                     </div>
                     <div class="item_photo item_3">
-                        <!-- <img src="../images/gallery/home_3.jpg" alt="img_3" class="main"> -->
                         <div class="img_hover">
                             <span class="img_border"></span>
                             <p class="img_txt">Для поддержания комфортной температуры дом оснащен автономной водяной системой отопления</p>
                         </div>
                     </div>
                     <div class="item_photo item_4">
-                        <!-- <img src="../images/gallery/home_4.jpg" alt="img_4" class="main"> -->
                         <div class="img_hover">
                             <span class="img_border"></span>
                             <p class="img_txt">Для поддержания комфортной температуры дом оснащен автономной водяной системой отопления</p>
