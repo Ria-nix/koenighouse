@@ -85,29 +85,32 @@
                 <p class="main_txt">фото</p>
                 <div class="gallery_items">
                     <div class="item_photo item_1">
-                        <!-- <img src="../images/gallery/home_1.jpg" alt="img_1" class="main"> -->
                         <div class="img_hover">
-                            <span class="img_border"></span>
-                            <p class="img_txt">Для поддержания комфортной температуры дом оснащен автономной водяной системой отопления</p>
+                            <span class="img_border">
+                                <p class="img_txt">Для поддержания комфортной температуры дом оснащен автономной водяной системой отопления</p>
+                            </span>                            
                         </div>
                     </div>
 
                     <div class="item_photo item_2">
                         <div class="img_hover">
-                            <span class="img_border"></span>
-                            <p class="img_txt">Для поддержания комфортной температуры дом оснащен автономной водяной системой отопления</p>
+                            <span class="img_border">
+                                <p class="img_txt">Для поддержания комфортной температуры дом оснащен автономной водяной системой отопления</p>
+                            </span>                            
                         </div>
                     </div>
                     <div class="item_photo item_3">
                         <div class="img_hover">
-                            <span class="img_border"></span>
-                            <p class="img_txt">Для поддержания комфортной температуры дом оснащен автономной водяной системой отопления</p>
+                            <span class="img_border">
+                                <p class="img_txt">Для поддержания комфортной температуры дом оснащен автономной водяной системой отопления</p>
+                            </span>                            
                         </div>
                     </div>
                     <div class="item_photo item_4">
                         <div class="img_hover">
-                            <span class="img_border"></span>
-                            <p class="img_txt">Для поддержания комфортной температуры дом оснащен автономной водяной системой отопления</p>
+                            <span class="img_border">
+                                <p class="img_txt">Для поддержания комфортной температуры дом оснащен автономной водяной системой отопления</p>
+                            </span>                            
                         </div>
                     </div>
                 </div>
