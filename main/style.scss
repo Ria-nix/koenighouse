@@ -194,10 +194,12 @@
                 }
                 .item_photo{
                     cursor: pointer;
-                    background-size: cover;
+                    background-size: cover;                   
                 }
                             
                 .img_hover{
+                    display: none;
+                    transition: all 5s ease-in;
                     width: 100%;
                     height: 100%;
                     background: $bl_lin_green;  
@@ -261,13 +263,15 @@
     .main_info{ height: 600px;        
         .telefon_call{width: 300px;}
     }    
-
     .gallery_items{
         gap: 20px;
         grid-template-columns: repeat(3, 1fr); 
         grid-template-areas:"item_1 item_2 item_2"
                             "item_3 item_3 item_4"; 
-        .item_photo{ height: 27.5rem; }
+        .item_photo{ 
+            height: 25rem;
+            &:hover>.img_hover{ display: block !important;}
+        }
         .img_hover{ 
             font-size: 20px;
             padding: 20px;
@@ -276,15 +280,11 @@
                     line-height: 30px; 
                     width: 18.125rem;
                 }
-                .img_special_txt{
-                    width: 450px;
-                }
+                .img_special_txt{ width: 450px; }
             }
         }
-    }
-    
+    }    
 }
-
 
 
 @media (max-width: 1019px){
@@ -293,7 +293,6 @@
         .telefon_call{ width: 180px;}
     }   
     .gallery{ margin-bottom: 60px;}
-    
 }
 
 @media (max-width: 1019px) and (min-width: 601px){
@@ -303,7 +302,10 @@
         grid-template-areas:"item_2 item_2 item_2 item_2"
                             "item_1 item_1 item_4 item_4"
                             "item_3 item_3 item_3 item_3"; 
-        .item_photo{ height: 27.5rem; }
+        .item_photo{ 
+            height: 25rem;
+            &:hover>.img_hover{ display: block !important;}
+        }
         .img_hover{ 
             font-size: 18px;
             padding: 15px;
@@ -312,9 +314,7 @@
                     line-height: 30px; 
                     width: 18.25rem;
                 }
-                .img_special_txt{
-                    width: 450px;
-                }
+                .img_special_txt{ width: 450px; }
             }
         }
     }
@@ -327,7 +327,10 @@
         grid-template-areas:"item_2 item_2 item_2 item_2"
                             "item_1 item_1 item_4 item_4"
                             "item_3 item_3 item_3 item_3"; 
-        .item_photo{ height: 12rem; }
+        .item_photo{ 
+            height: 12rem;
+            &:target>.img_hover{ display: block !important;}
+        }
         .img_hover{ 
             font-size: 10px;
             padding: 10px;
@@ -336,9 +339,7 @@
                     line-height: 15px; 
                     width: 12.25rem;
                 }
-                .img_special_txt{
-                    width: 300px;
-                }
+                .img_special_txt{ width: 300px;}
             }
         }
     }

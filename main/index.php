@@ -91,7 +91,6 @@
                             </span>                            
                         </div>
                     </div>
-
                     <div class="item_photo item_2">
                         <div class="img_hover">
                             <span class="img_border">
