@@ -205,21 +205,18 @@
                 }
                             
                 .img_hover{
-                    // display: none;
                     width: 100%;
                     height: 100%;
-                    background: $bl_lin_green;
-                    padding: 2rem;
+                    background: $bl_lin_green;  
                     @include Text($c_white, 400, uppercase);
 
                     .img_border{
+                        width: 100%;
+                        height: 100%;
                         display: block;
-                        border: 1px solid $c_white;
-                        transform: translate(50%, 50%);
-                        
+                        border: 1px solid $c_white;                        
+                        @include Flex(row, center, center);                        
                     }
-
-                    // p{ width: 200px;}
                 }
                 
             }
@@ -265,7 +262,9 @@
     }
 }
 
-@media screen and (min-width: 1020px){
+//? --------------------------------------
+
+@media (min-width: 1020px){
     .main_txt{font-size: 32px;}
     .main_info{ height: 600px;        
         .telefon_call{width: 300px;}
@@ -276,7 +275,23 @@
         grid-template-areas:"item_1 item_2 item_2"
                             "item_3 item_3 item_4"; 
         .item_photo{ height: 27.5rem; }
+        .img_hover{ 
+            font-size: 20px;
+            padding: 20px;
+            .img_border{
+                padding: 20px;
+                p{ 
+                    line-height: 30px; 
+                    width: 18.125rem;
+                }
+
+                .img_special_txt{
+                    width: 450px;
+                }
+            }
+        }
     }
+    
 }
 
 
@@ -286,9 +301,12 @@
     .main_info{ height: 400px;        
         .telefon_call{ width: 180px;}
     }   
-    
+    .img_hover{ 
+        font-size: 20px;
+    }
     
 }
+
 @media (max-width: 1019px) and (min-width:780px){
     .gallery_items{
         grid-template-columns: repeat(4, 1fr); 
@@ -306,5 +324,8 @@
                             "item_1 item_1 item_4 item_4"
                             "item_3 item_3 item_3 item_3"; 
         .item_photo{ height: 12rem; }
+        .img_hover{ font-size: 14px;
+            p{font-size: 12px;}
+        }
     }
 }

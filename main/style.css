@@ -262,16 +262,28 @@ body {
   height: 100%;
   background: -webkit-gradient(linear, right top, left top, color-stop(-33.76%, rgba(0, 231, 124, 0.6)), color-stop(104.7%, rgba(0, 154, 200, 0.6)));
   background: linear-gradient(270deg, rgba(0, 231, 124, 0.6) -33.76%, rgba(0, 154, 200, 0.6) 104.7%);
-  padding: 2rem;
   color: #FFF;
   font-weight: 400;
   text-transform: uppercase;
 }
 .content .gallery .wrap_gallery .gallery_items .img_hover .img_border {
+  width: 100%;
+  height: 100%;
   display: block;
   border: 1px solid #FFF;
-  -webkit-transform: translate(50%, 50%);
-          transform: translate(50%, 50%);
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (min-width: 1120px) {
@@ -301,7 +313,7 @@ body {
     border: 1px solid blue;
   }
 }
-@media screen and (min-width: 1020px) {
+@media (min-width: 1020px) {
   .main_txt {
     font-size: 32px;
   }
@@ -320,6 +332,20 @@ body {
   .gallery_items .item_photo {
     height: 27.5rem;
   }
+  .gallery_items .img_hover {
+    font-size: 20px;
+    padding: 20px;
+  }
+  .gallery_items .img_hover .img_border {
+    padding: 20px;
+  }
+  .gallery_items .img_hover .img_border p {
+    line-height: 30px;
+    width: 18.125rem;
+  }
+  .gallery_items .img_hover .img_border .img_special_txt {
+    width: 450px;
+  }
 }
 @media (max-width: 1019px) {
   .main_txt {
@@ -331,6 +357,10 @@ body {
   }
   .main_info .telefon_call {
     width: 180px;
+  }
+
+  .img_hover {
+    font-size: 20px;
   }
 }
 @media (max-width: 1019px) and (min-width: 780px) {
@@ -349,5 +379,11 @@ body {
   }
   .gallery_items .item_photo {
     height: 12rem;
+  }
+  .gallery_items .img_hover {
+    font-size: 14px;
+  }
+  .gallery_items .img_hover p {
+    font-size: 12px;
   }
 }/*# sourceMappingURL=style.css.map */

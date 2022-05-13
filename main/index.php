@@ -95,14 +95,14 @@
                     <div class="item_photo item_2">
                         <div class="img_hover">
                             <span class="img_border">
-                                <p class="img_txt">Для поддержания комфортной температуры дом оснащен автономной водяной системой отопления</p>
+                                <p class="img_txt img_special_txt">Для поддержания комфортной температуры дом оснащен автономной водяной системой отопления</p>
                             </span>                            
                         </div>
                     </div>
                     <div class="item_photo item_3">
                         <div class="img_hover">
                             <span class="img_border">
-                                <p class="img_txt">Для поддержания комфортной температуры дом оснащен автономной водяной системой отопления</p>
+                                <p class="img_txt img_special_txt">Для поддержания комфортной температуры дом оснащен автономной водяной системой отопления</p>
                             </span>                            
                         </div>
                     </div>
