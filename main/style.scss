@@ -50,10 +50,6 @@
             .benefits_items{
                 width: 100%;
                 display: grid;
-                // grid-template-columns: repeat(auto-fit, minmax(200px, 200px)); //1150px               
-                // grid-gap: 90px;
-                // justify-content: space-between;
-                // align-items: center;
 
                 border: 1px solid red;
                 
@@ -179,10 +175,7 @@
 
     .gallery{ @extend .benefits;
         .wrap_gallery{ @extend .wrap_benefits;
-            .gallery_items{
-                display: grid;                 
-                gap: 20px;                 
-
+            .gallery_items{ display: grid;   
                 .item_1{
                     grid-area: item_1;
                     background: url("../images/gallery/home_1.jpg") no-repeat center;
@@ -261,7 +254,6 @@
         
     }
 }
-
 //? --------------------------------------
 
 @media (min-width: 1020px){
@@ -271,6 +263,7 @@
     }    
 
     .gallery_items{
+        gap: 20px;
         grid-template-columns: repeat(3, 1fr); 
         grid-template-areas:"item_1 item_2 item_2"
                             "item_3 item_3 item_4"; 
@@ -278,13 +271,11 @@
         .img_hover{ 
             font-size: 20px;
             padding: 20px;
-            .img_border{
-                padding: 20px;
+            .img_border{ padding: 20px;
                 p{ 
                     line-height: 30px; 
                     width: 18.125rem;
                 }
-
                 .img_special_txt{
                     width: 450px;
                 }
@@ -301,31 +292,54 @@
     .main_info{ height: 400px;        
         .telefon_call{ width: 180px;}
     }   
-    .img_hover{ 
-        font-size: 20px;
-    }
+    .gallery{ margin-bottom: 60px;}
     
 }
 
-@media (max-width: 1019px) and (min-width:780px){
-    .gallery_items{
+@media (max-width: 1019px) and (min-width: 601px){
+    .gallery_items{   
+        gap: 15px;     
         grid-template-columns: repeat(4, 1fr); 
         grid-template-areas:"item_2 item_2 item_2 item_2"
                             "item_1 item_1 item_4 item_4"
                             "item_3 item_3 item_3 item_3"; 
         .item_photo{ height: 27.5rem; }
+        .img_hover{ 
+            font-size: 18px;
+            padding: 15px;
+            .img_border{ padding: 20px;
+                p{ 
+                    line-height: 30px; 
+                    width: 18.25rem;
+                }
+                .img_special_txt{
+                    width: 450px;
+                }
+            }
+        }
     }
 }
 
-@media (max-width: 780px){
+@media (max-width:  600px){
     .gallery_items{
+        gap: 10px;
         grid-template-columns: repeat(4, 1fr); 
         grid-template-areas:"item_2 item_2 item_2 item_2"
                             "item_1 item_1 item_4 item_4"
                             "item_3 item_3 item_3 item_3"; 
         .item_photo{ height: 12rem; }
-        .img_hover{ font-size: 14px;
-            p{font-size: 12px;}
+        .img_hover{ 
+            font-size: 10px;
+            padding: 10px;
+            .img_border{ padding: 15px;
+                p{ 
+                    line-height: 15px; 
+                    width: 12.25rem;
+                }
+                .img_special_txt{
+                    width: 300px;
+                }
+            }
         }
     }
 }
