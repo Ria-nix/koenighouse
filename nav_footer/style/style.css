@@ -5,6 +5,10 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 body {
@@ -24,6 +28,10 @@ body {
   display: none !important;
 }
 
+.none_scroll {
+  overscroll-behavior-y: none;
+}
+
 .layout_menu {
   position: fixed;
   -webkit-box-shadow: 10px 0px 30px rgba(0, 0, 0, 0.15);
@@ -37,6 +45,14 @@ body {
   width: 100%;
   height: auto;
   z-index: 0;
+  position: relative;
+}
+.content .dark_fon {
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 5;
 }
 
 .main_wrap span, .footer_wrap span {
@@ -48,23 +64,33 @@ body {
   margin-right: 5px;
 }
 
-.wH_btn_toggle, .toggle_wrap .toggle_close::after, .toggle_wrap .toggle_close::before, .toggle_wrap .toggle_close, .toggle_wrap .toggle_open::after, .toggle_wrap .toggle_open::before, .toggle_wrap .toggle_open {
+.wH_btn_toggle, .toggle_wrap .toggle_close, .toggle_wrap .toggle_open, .after_before, .toggle_wrap .toggle_close::after, .toggle_wrap .toggle_close::before, .toggle_wrap .toggle_open::after, .toggle_wrap .toggle_open::before {
   width: 25px;
   height: 3px;
 }
 
-.toggle_wrap {
-  width: 40px;
-  height: auto;
-  cursor: pointer;
-}
-.toggle_wrap .toggle_open {
-  background: #000;
-}
-.toggle_wrap .toggle_open::after, .toggle_wrap .toggle_open::before {
+.after_before, .toggle_wrap .toggle_close::after, .toggle_wrap .toggle_close::before, .toggle_wrap .toggle_open::after, .toggle_wrap .toggle_open::before {
   display: block;
   content: "";
   background: #000;
+}
+
+.toggle_wrap {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  padding: 18px 8px;
+  -webkit-transition: -webkit-transform 2s ease-in;
+  transition: -webkit-transform 2s ease-in;
+  transition: transform 2s ease-in;
+  transition: transform 2s ease-in, -webkit-transform 2s ease-in;
+}
+.toggle_wrap .toggle_open {
+  background: #000;
+  -webkit-transition: -webkit-transform 2s ease-in;
+  transition: -webkit-transform 2s ease-in;
+  transition: transform 2s ease-in;
+  transition: transform 2s ease-in, -webkit-transform 2s ease-in;
 }
 .toggle_wrap .toggle_open::after {
   -webkit-transform: translateY(-10px);
@@ -74,10 +100,11 @@ body {
   -webkit-transform: translateY(7px);
           transform: translateY(7px);
 }
-.toggle_wrap .toggle_close::after, .toggle_wrap .toggle_close::before {
-  display: block;
-  content: "";
-  background: #000;
+.toggle_wrap .toggle_close {
+  -webkit-transition: -webkit-transform 2s ease-in;
+  transition: -webkit-transform 2s ease-in;
+  transition: transform 2s ease-in;
+  transition: transform 2s ease-in, -webkit-transform 2s ease-in;
 }
 .toggle_wrap .toggle_close::after {
   -webkit-transform: translateY(-6px) rotate(45deg);
@@ -164,8 +191,8 @@ body {
   background-position: right center;
 }
 .main_wrap .sidebar .btn_home input {
-  background: -webkit-gradient(linear, left top, right top, from(#FF184F), color-stop(51%, #FFCA41), to(#FF184F));
-  background: linear-gradient(to right, #FF184F 0%, #FFCA41 51%, #FF184F 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#FF184F), color-stop(50%, #FFCA41), to(#FF184F));
+  background: linear-gradient(to right, #FF184F 0%, #FFCA41 50%, #FF184F 100%);
   -webkit-box-shadow: 0px 7px 25px rgba(255, 29, 78, 0.2);
           box-shadow: 0px 7px 25px rgba(255, 29, 78, 0.2);
   padding: 12px 30px;
@@ -398,8 +425,8 @@ body {
   background: url("../../images/icons/email_icon.svg") no-repeat center;
 }
 .footer_wrap .wrap_media .btn_call input {
-  background: -webkit-gradient(linear, left top, right top, from(#FF184F), color-stop(51%, #FFCA41), to(#FF184F));
-  background: linear-gradient(to right, #FF184F 0%, #FFCA41 51%, #FF184F 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#FF184F), color-stop(50%, #FFCA41), to(#FF184F));
+  background: linear-gradient(to right, #FF184F 0%, #FFCA41 50%, #FF184F 100%);
   -webkit-box-shadow: 0px 7px 25px rgba(255, 29, 78, 0.2);
           box-shadow: 0px 7px 25px rgba(255, 29, 78, 0.2);
   padding: 12px 30px;

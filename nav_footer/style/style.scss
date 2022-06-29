@@ -1,5 +1,5 @@
-@use '../../additional_styles/color' as *;
-@use '../../additional_styles/object' as *;
+@use '../../additional_styles/_color' as *;
+@use '../../additional_styles/_object' as *;
 
 //* ============= additional code ============= *//
 .layout_menu{ 
@@ -12,8 +12,15 @@
 .content{
     width: 100%;
     height: auto;
-    z-index: 0;
-    // background: $cOP_black;    
+    z-index: 0; 
+    position: relative; 
+    .dark_fon{
+        background: rgba(0, 0, 0, 0.4);
+        width: 100%;
+        height: 100%;
+        position:absolute;
+        z-index: 5;                
+    }
 }
 //* ================= icons ================= *//
 .main_wrap, .footer_wrap{
@@ -30,38 +37,42 @@
     width: 25px;
     height: 3px;
 }
+.after_before{
+    display: block;
+    content: '';
+    @extend .wH_btn_toggle;
+    background: $cT_black;   
+}
+//* 
 .toggle_wrap{
     width: 40px;
-    height: auto;
+    height: 40px;
     cursor: pointer;
+    padding: 18px 8px;    
+    transition: transform 2s ease-in;
 
     .toggle_open{
         background: $cT_black;   
         @extend .wH_btn_toggle;
+        transition: transform 2s ease-in;
 
         &::after, &::before{
-            display: block;
-            content: '';
-            @extend .wH_btn_toggle;
-            background: $cT_black;   
+            @extend .after_before;
         }
         &::after{ transform: translateY(-10px); }
         &::before{ transform: translateY(7px); }
     }
 
     .toggle_close{
+        transition: transform 2s ease-in;
         @extend .wH_btn_toggle;
         &::after, &::before{
-            display: block;
-            content: '';
-            @extend .wH_btn_toggle;            
-            background: $cT_black;  
+            @extend .after_before;
         }
         &::after{ transform: translateY(-6px) rotate(45deg); }
         &::before{ transform: translateY(-4px) rotate(-45deg); }
     }
 }
-
 
 //* ============= NAVIGATION main code ============= *//
 .main_wrap img{ height: 80%;}

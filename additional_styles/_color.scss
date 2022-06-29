@@ -24,6 +24,7 @@ $cT_black: #000;
 $cOP_black: rgba(0, 0, 0, 0.2);
 $cT_red: #FF3B4C;
 $cT_gray: #C4C4C4;
+$c_btn: #D0D3D7;
 
 //************** SHADOWS **************//
 $shadow: 0px 7px 25px rgba(255, 29, 78, 0.2); 
@@ -43,7 +44,25 @@ $lin_green: linear-gradient(270deg, #00E77C -30.45%, #05C4C1 100%);
 $linSp_orange: linear-gradient(to right, #FF184F 0%, #FFCA41 50%, #FF184F 100%);
 $linSp_green: linear-gradient(to right, #00E77C 0%, #05C4C1 51%, #00E77C 100%);
 
+//************** Fonts **************//
+$MonTitle: 'Montserrat', sans-serif;
+$Roboto-text: 'Roboto', sans-serif;
 
+// Font: Montserrat 
+%MontserratTitle {
+    font-family: $MonTitle;
+    font-size: 36px;
+    text-transform: uppercase;
+    line-height: 43.88px;
+}
+
+// Fonts: Roboto 
+%RobotoText {
+    font-family: $Roboto-text;
+    font-size: 20px;
+    line-height: 23.44px;
+    margin: 0;
+}
 
 
 

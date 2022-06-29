@@ -1,5 +1,5 @@
-@use '../additional_styles/color' as *;
-@use '../additional_styles/object' as *;
+@use '../additional_styles/_color' as *;
+@use '../additional_styles/_object' as *;
 
 .main_txt{
     font-weight: bold;
@@ -111,69 +111,10 @@
         }
     }
 
-    .projects{
-        @extend .benefits;
-        // background: $c_milk;
-        background: green;
-        .wrap_projects{
-            margin: 0 20px;
-            @include Flex(row, space-between, center);
-            padding: 45px 0;
-            .project_txt{
-                max-width: 30%;                
-                // border: 1px solid red;
-                #text{
-                    font-family: 'Roboto', sans-serif;
-                    font-size: 20px;
-                    font-style: normal;
-                    font-weight: 300;
-                    line-height: 23px;
-                }
-            }     
-            .project_slider{
-                @include Flex(row, space-between, center);
-                width: 65%;                
-                height: auto;
-                border: 1px solid red;
-                .arrow_left, .arrow_right{
-                    width: 55px;
-                    height: 55px;
-                    background: $c_blueGray; 
-                    cursor: pointer;                        
-
-                    &:before{
-                        display: inline-block;
-                        content: '';
-                        width: 50px;
-                        height: 50px;     
-                        transform: translate(5%, 5%);                   
-                    }              
-                }
-                .arrow_left:before{
-                    background: url('../images/arrows/arrow_left_long.svg') no-repeat center;
-                }
-                .arrow_right:before{
-                    background: url('../images/arrows/arrow_right_long.svg') no-repeat center;
-                }
-
-                .slider{
-                    @include Flex(row, space-around, center);
-                    width: 100%;
-                    margin: 0 30px;
-
-                    .project_card{
-                        width: 350px;
-                        // height: 150px;
-                        padding: 20px 30px;
-                        background: $c_white;
-                    }
-                }
-            }
-        
-        }       
-    }
+    .projects{ margin-top: 60px; }
 
     .gallery{ @extend .benefits;
+        padding-bottom: 60px;
         .wrap_gallery{ @extend .wrap_benefits;
             .gallery_items{ display: grid;   
                 .item_1{
