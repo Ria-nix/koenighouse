@@ -1,5 +1,9 @@
 "use strict";
 
+/* -------------------------------------------------------------------------- */
+/*                           SCROLL LINKS BY WEBSITE                          */
+/* -------------------------------------------------------------------------- */
+
 $(document).ready(function(){
     $("#main_menu").on("click","a", function (event) {
         event.preventDefault();
