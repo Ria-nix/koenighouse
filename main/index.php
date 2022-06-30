@@ -10,19 +10,20 @@
 <body>
     <?php include_once('../nav_footer/header.php') ?>
     <div class="grid content">
-        <div class="dark_fon none"></div>
+        <div class="dark_fon none" onClick="closeFon()"></div>
         <div class="main_info">
             <div class="bl_text">
                 <div class="wrap_text">                    
-                    <a href="tel:+7412979333" class='telefon_call'></a>
-                    button
+                    <a href="tel:+7412979333" class='telefon_call'>
+                        <input type="submit" value="позвонить">
+                    </a>
                 </div>
             </div>
         </div>
         <div class="benefits" id="id_advantage">
             <div class="wrap_benefits">
                 <p class="main_txt">приеимущества</p>
-                <div class="benefits_items">
+                <!-- <div class="benefits_items">
                     <div class="item folder">
                         <p>Выгодные <br>условия</p>
                         <span class="image_folder"></span>
@@ -39,7 +40,7 @@
                         <p>дом под <br>Серый ключ</p>
                         <span class="image_home"></span>
                     </div>
-                </div>
+                </div> -->
             </div>           
         </div>
 
@@ -79,14 +80,18 @@
                     </div>
                 </div>
             </div>
-        </div>
-        
+        </div>        
     </div>
 
-
     <?php include_once('../nav_footer/footer.php') ?>
+    
+    <!--/* -------------------------------------------------------------------------- */
+        /*                                   SCRIPTS                                  */
+        /* -------------------------------------------------------------------------- */ -->
+
     <script src="slider.js"></script>
     <script src="../nav_footer/script.js"></script>  
-    <script src="_menu.js"></script>  
+    <script src="_content.js"></script>  
+
 </body>
 </html>

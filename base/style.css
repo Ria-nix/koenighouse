@@ -28,10 +28,6 @@ body {
   display: none !important;
 }
 
-.none_scroll {
-  overscroll-behavior-y: none;
-}
-
 .layout_menu {
   position: fixed;
   -webkit-box-shadow: 10px 0px 30px rgba(0, 0, 0, 0.15);

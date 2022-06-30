@@ -28,10 +28,6 @@ body {
   display: none !important;
 }
 
-.none_scroll {
-  overscroll-behavior-y: none;
-}
-
 /* -------------------------------------------------------------------------- */
 /*                                    LINKS                                   */
 /* -------------------------------------------------------------------------- */
@@ -260,6 +256,9 @@ body {
   .main_info .telefon_call {
     width: 300px;
   }
+  .main_info .telefon_call input {
+    opacity: 0;
+  }
 
   .gallery_items {
     gap: 20px;
@@ -292,8 +291,29 @@ body {
   .main_info {
     height: 400px;
   }
-  .main_info .telefon_call {
-    width: 180px;
+  .main_info .telefon_call input {
+    background: -webkit-gradient(linear, left top, right top, from(#FF184F), color-stop(50%, #FFCA41), to(#FF184F));
+    background: linear-gradient(to right, #FF184F 0%, #FFCA41 50%, #FF184F 100%);
+    -webkit-box-shadow: 0px 7px 25px rgba(255, 29, 78, 0.2);
+            box-shadow: 0px 7px 25px rgba(255, 29, 78, 0.2);
+    padding: 12px 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 50px;
+    border: none;
+    color: #FFF;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    background-size: 200% auto;
+  }
+  .main_info .telefon_call input:hover {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    background-position: right center;
   }
 
   .gallery {
