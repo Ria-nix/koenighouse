@@ -84,6 +84,7 @@
             @include Text($cT_black, 400, uppercase);
             @include Flex(row, center, center);
             position: relative;
+            // transition: all 1s ease-in;   
             
             .underline{                
                 width: 40px;
@@ -91,12 +92,13 @@
                 position: absolute;
                 top: 30px; left: 45%;
                 background: $lin_orange;
-                $boldness: 400;
+                display: none;
                 opacity: 0;
-                transition: opacity 0.5s ease;                
+                transition: all 1s ease-in;                
             }
             &:hover>.underline, &:hover{
-                font-weight: 700;
+                display: block;
+                font-weight: 600;
                 opacity: 1;
             }
             #advantages{

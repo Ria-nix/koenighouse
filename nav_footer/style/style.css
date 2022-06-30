@@ -149,12 +149,14 @@ body {
   left: 45%;
   background: -webkit-gradient(linear, right top, left top, color-stop(-33.76%, #FFC539), color-stop(104.7%, #FF0451));
   background: linear-gradient(270deg, #FFC539 -33.76%, #FF0451 104.7%);
+  display: none;
   opacity: 0;
-  -webkit-transition: opacity 0.5s ease;
-  transition: opacity 0.5s ease;
+  -webkit-transition: all 1s ease-in;
+  transition: all 1s ease-in;
 }
 .main_wrap .sidebar .menu a:hover > .underline, .main_wrap .sidebar .menu a:hover {
-  font-weight: 700;
+  display: block;
+  font-weight: 600;
   opacity: 1;
 }
 .main_wrap .sidebar .menu a #advantages {

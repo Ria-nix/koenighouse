@@ -44,8 +44,7 @@
                 @include Flex(row, center, flex-end);
 
                 .telefon_call{
-                    display: block;
-                    height: 45px;
+                    display: block;                   
                     cursor: pointer;
                 }
             }
@@ -217,6 +216,7 @@
     .main_info{ height: 600px;        
         .telefon_call{
             width: 300px;
+            height: 45px;
             input{ opacity: 0;}
         }
     }    
@@ -246,9 +246,10 @@
 @media (max-width: 1019px){
     .main_txt{font-size: 24px;}
     .main_info{ height: 400px;        
-        .telefon_call{ 
-            // width: 180px;
-            input{ @include MainButton($linSp_orange, $shadow_btn);}
+        .telefon_call input{ 
+            @include MainButton($linSp_orange, $shadow_btn);
+            padding: 10px 25px !important;
+            font-size: 11.5px !important;
         }
     }   
     .gallery{ margin-bottom: 60px;}
@@ -287,7 +288,6 @@
                             "item_3 item_3 item_3 item_3"; 
         .item_photo{ 
             height: 12rem;
-            // &:target>.img_hover{ display: block !important;}
             .img_hover{ 
                 font-size: 10px;
                 padding: 10px;
@@ -300,5 +300,10 @@
                 }
             }
         }       
+    }
+}
+@media (max-width: 370px){
+    .telefon_call input{ 
+        transform: translateY(-10px);
     }
 }
