@@ -128,7 +128,7 @@ body {
 .main_wrap .sidebar .menu a {
   text-decoration: none;
   color: #000;
-  font-weight: 700;
+  font-weight: 400;
   text-transform: uppercase;
   display: -webkit-box !important;
   display: -ms-flexbox !important;
@@ -153,6 +153,13 @@ body {
   left: 45%;
   background: -webkit-gradient(linear, right top, left top, color-stop(-33.76%, #FFC539), color-stop(104.7%, #FF0451));
   background: linear-gradient(270deg, #FFC539 -33.76%, #FF0451 104.7%);
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+.main_wrap .sidebar .menu a:hover > .underline, .main_wrap .sidebar .menu a:hover {
+  font-weight: 700;
+  opacity: 1;
 }
 .main_wrap .sidebar .menu a #advantages {
   background: url("../../images/icons/libra_icon.svg") no-repeat center;

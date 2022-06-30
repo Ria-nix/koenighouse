@@ -1,6 +1,18 @@
 @use '../additional_styles/_color' as *;
 @use '../additional_styles/_object' as *;
 
+
+/* -------------------------------------------------------------------------- */
+/*                                    LINKS                                   */
+/* -------------------------------------------------------------------------- */
+#id_advantage,#id_project, #id_gallery{
+    // margin-top: 100px;
+    border-top: 80px solid $c_white;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  MAIN CODE                                 */
+/* -------------------------------------------------------------------------- */
 .main_txt{
     font-weight: bold;
     text-transform: uppercase;  
@@ -44,7 +56,7 @@
         display: grid;
         grid-template-columns: repeat(1, minmax(320px, 1360px));
         justify-content: center;
-        margin-top: 60px;
+        // margin-top: 60px;
         
         .wrap_benefits{ margin: 0 20px;
             .benefits_items{
@@ -111,7 +123,7 @@
         }
     }
 
-    .projects{ margin-top: 60px; }
+    // .projects{ margin-top: 60px; }
 
     .gallery{ @extend .benefits;
         padding-bottom: 60px;
@@ -135,26 +147,26 @@
                 }
                 .item_photo{
                     cursor: pointer;
-                    background-size: cover;                   
-                }
-                            
-                .img_hover{
-                    display: none;
-                    transition: all 5s ease-in;
-                    width: 100%;
-                    height: 100%;
-                    background: $bl_lin_green;  
-                    @include Text($c_white, 400, uppercase);
+                    background-size: cover;           
+                    &:hover .img_hover{  opacity: 1; }    
 
-                    .img_border{
+                    .img_hover{
+                        transition: opacity 0.3s ease-in;   
+                        opacity: 0;
                         width: 100%;
                         height: 100%;
-                        display: block;
-                        border: 1px solid $c_white;                        
-                        @include Flex(row, center, center);                        
+                        background: $bl_lin_green;  
+                        @include Text($c_white, 400, uppercase);
+    
+                        .img_border{
+                            width: 100%;
+                            height: 100%;
+                            display: block;
+                            border: 1px solid $c_white;                        
+                            @include Flex(row, center, center);                        
+                        }
                     }
                 }
-                
             }
         }
     }
@@ -211,20 +223,19 @@
         grid-template-areas:"item_1 item_2 item_2"
                             "item_3 item_3 item_4"; 
         .item_photo{ 
-            height: 25rem;
-            &:hover>.img_hover{ display: block !important;}
-        }
-        .img_hover{ 
-            font-size: 20px;
-            padding: 20px;
-            .img_border{ padding: 20px;
-                p{ 
-                    line-height: 30px; 
-                    width: 18.125rem;
+            height: 25rem;  
+            .img_hover{ 
+                font-size: 20px;
+                padding: 20px;
+                .img_border{ padding: 20px;
+                    p{ 
+                        line-height: 30px; 
+                        width: 18.125rem;
+                    }
+                    .img_special_txt{ width: 450px; }
                 }
-                .img_special_txt{ width: 450px; }
-            }
-        }
+            }          
+        }       
     }    
 }
 
@@ -243,22 +254,21 @@
         grid-template-columns: repeat(4, 1fr); 
         grid-template-areas:"item_2 item_2 item_2 item_2"
                             "item_1 item_1 item_4 item_4"
-                            "item_3 item_3 item_3 item_3"; 
+                            "item_3 item_3 item_3 item_3";                              
         .item_photo{ 
             height: 25rem;
-            &:hover>.img_hover{ display: block !important;}
-        }
-        .img_hover{ 
-            font-size: 18px;
-            padding: 15px;
-            .img_border{ padding: 20px;
-                p{ 
-                    line-height: 30px; 
-                    width: 18.25rem;
+            .img_hover{ 
+                font-size: 18px;
+                padding: 15px;
+                .img_border{ padding: 20px;
+                    p{ 
+                        line-height: 30px; 
+                        width: 18.25rem;
+                    }
+                    .img_special_txt{ width: 450px; }
                 }
-                .img_special_txt{ width: 450px; }
             }
-        }
+        }        
     }
 }
 
@@ -271,18 +281,18 @@
                             "item_3 item_3 item_3 item_3"; 
         .item_photo{ 
             height: 12rem;
-            &:target>.img_hover{ display: block !important;}
-        }
-        .img_hover{ 
-            font-size: 10px;
-            padding: 10px;
-            .img_border{ padding: 15px;
-                p{ 
-                    line-height: 15px; 
-                    width: 12.25rem;
+            // &:target>.img_hover{ display: block !important;}
+            .img_hover{ 
+                font-size: 10px;
+                padding: 10px;
+                .img_border{ padding: 15px;
+                    p{ 
+                        line-height: 15px; 
+                        width: 12.25rem;
+                    }
+                    .img_special_txt{ width: 300px;}
                 }
-                .img_special_txt{ width: 300px;}
             }
-        }
+        }       
     }
 }

@@ -15,10 +15,11 @@
             <div class="bl_text">
                 <div class="wrap_text">                    
                     <a href="tel:+7412979333" class='telefon_call'></a>
+                    button
                 </div>
             </div>
         </div>
-        <!-- <div class="benefits">
+        <div class="benefits" id="id_advantage">
             <div class="wrap_benefits">
                 <p class="main_txt">приеимущества</p>
                 <div class="benefits_items">
@@ -40,11 +41,11 @@
                     </div>
                 </div>
             </div>           
-        </div> -->
+        </div>
 
-        <!-- <div class="projects slider-module"></div>         -->
+        <div class="projects slider-module" id="id_project"></div>        
 
-        <div class="gallery">
+        <div class="gallery" id="id_gallery">
             <div class="wrap_gallery">
                 <p class="main_txt">фото</p>
                 <div class="gallery_items">
@@ -85,6 +86,7 @@
 
     <?php include_once('../nav_footer/footer.php') ?>
     <script src="slider.js"></script>
-    <script src="../nav_footer/script.js"></script>    
+    <script src="../nav_footer/script.js"></script>  
+    <script src="_menu.js"></script>  
 </body>
 </html>

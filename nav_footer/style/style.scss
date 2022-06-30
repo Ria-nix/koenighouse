@@ -81,16 +81,23 @@
     .menu{  font-size: 14px;
         a{
             text-decoration: none;
-            @include Text($cT_black, 700, uppercase);
+            @include Text($cT_black, 400, uppercase);
             @include Flex(row, center, center);
             position: relative;
             
-            .underline{
+            .underline{                
                 width: 40px;
                 height: 5px;
                 position: absolute;
                 top: 30px; left: 45%;
                 background: $lin_orange;
+                $boldness: 400;
+                opacity: 0;
+                transition: opacity 0.5s ease;                
+            }
+            &:hover>.underline, &:hover{
+                font-weight: 700;
+                opacity: 1;
             }
             #advantages{
                 background: url('../../images/icons/libra_icon.svg') no-repeat center;

@@ -1,17 +1,3 @@
-<?php
-    include_once('../helper.php');
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style/style.css">
-  
-</head>
-<body>
     <div class="layout_wrap layout_menu">
     <div class="main_wrap">
 
@@ -21,18 +7,18 @@
         </div>
 
         <div class="sidebar">
-            <div class="menu">
-                <a href="#" name="name_advantages">
+            <div class="menu" id="main_menu">
+                <a href="#id_advantage" name="name_advantages">
                     <span class="icon_link" id="advantages"></span>
                     <p class="item_txt">Преимущества</p>
                     <span class="underline"></span>
                 </a>
-                <a href="#" name="name_projects">
+                <a href="#id_project" name="name_projects">
                     <span class="icon_link" id="projects"></span>
                     <p class="item_txt">Проекты</p>
                     <span class="underline"></span>
                 </a>
-                <a href="#" name="name_gallery">
+                <a href="#id_gallery" name="name_gallery">
                     <span class="icon_link" id="gallery"></span>
                     <p class="item_txt">Галерея</p>
                     <span class="underline"></span>
@@ -71,5 +57,3 @@
     </div>
 </div>
 <script src="script.js"></script>
-</body>
-</html>

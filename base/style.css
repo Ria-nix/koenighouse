@@ -114,24 +114,6 @@ body {
   -webkit-transform: translateY(-4px) rotate(-45deg);
           transform: translateY(-4px) rotate(-45deg);
 }
-.toggle_wrap .checkbox2:checked + label > .hamburger2 > .bar1 {
-  -webkit-transform: translateX(40px);
-          transform: translateX(40px);
-  background-color: transparent;
-}
-.toggle_wrap .checkbox2:checked + label > .hamburger2 > .bar2 {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-.toggle_wrap .checkbox2:checked + label > .hamburger2 > .bar3 {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-.toggle_wrap .checkbox2:checked + label > .hamburger2 > .bar4 {
-  -webkit-transform: translateX(-40px);
-          transform: translateX(-40px);
-  background-color: transparent;
-}
 
 .main_wrap img {
   height: 80%;
@@ -338,6 +320,7 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    overflow-y: scroll;
   }
   .main_wrap .sidebar .menu {
     padding: 25px 0 15px 0;

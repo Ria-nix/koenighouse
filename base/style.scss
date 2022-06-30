@@ -43,7 +43,9 @@
     @extend .wH_btn_toggle;
     background: $cT_black;   
 }
-//* 
+
+//* ******************************
+
 .toggle_wrap{
     width: 40px;
     height: 40px;
@@ -75,23 +77,23 @@
 
     //? =============================== new code ============== ?//
 
-    .checkbox2:checked + label > .hamburger2 > .bar1{
-        transform: translateX(40px);
-        background-color: transparent;
-    }
+    // .checkbox2:checked + label > .hamburger2 > .bar1{
+    //     transform: translateX(40px);
+    //     background-color: transparent;
+    // }
     
-    .checkbox2:checked + label > .hamburger2 > .bar2{
-        transform: rotate(45deg);
-    }
+    // .checkbox2:checked + label > .hamburger2 > .bar2{
+    //     transform: rotate(45deg);
+    // }
     
-    .checkbox2:checked + label > .hamburger2 > .bar3{
-        transform: rotate(-45deg);
-    }
+    // .checkbox2:checked + label > .hamburger2 > .bar3{
+    //     transform: rotate(-45deg);
+    // }
     
-    .checkbox2:checked + label > .hamburger2 > .bar4{
-        transform: translateX(-40px);
-        background-color: transparent;
-    }
+    // .checkbox2:checked + label > .hamburger2 > .bar4{
+    //     transform: translateX(-40px);
+    //     background-color: transparent;
+    // }
 
 
 
@@ -197,6 +199,7 @@
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
+            overflow-y: scroll;
 
             .menu{ 
                 padding: 25px 0 15px 0;      
@@ -211,7 +214,8 @@
                 background: $c_milk;
                 margin-top: auto;
                 padding: 10px 10px 0 15px;
-
+                // margin-bottom: 55px;
+                
                 .wrap_info{
                     @include Flex(row, flex-start, normal);
                     margin-bottom: 10px;                    

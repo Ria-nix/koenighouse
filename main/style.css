@@ -32,6 +32,16 @@ body {
   overscroll-behavior-y: none;
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                    LINKS                                   */
+/* -------------------------------------------------------------------------- */
+#id_advantage, #id_project, #id_gallery {
+  border-top: 80px solid #FFF;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  MAIN CODE                                 */
+/* -------------------------------------------------------------------------- */
 .main_txt {
   font-weight: bold;
   text-transform: uppercase;
@@ -88,7 +98,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 60px;
 }
 .content .benefits .wrap_benefits, .content .gallery .wrap_benefits, .content .gallery .wrap_gallery {
   margin: 0 20px;
@@ -152,9 +161,6 @@ body {
   background: url("../images/benefits/orange_fon.svg") no-repeat center;
   background-size: cover;
 }
-.content .projects {
-  margin-top: 60px;
-}
 .content .gallery {
   padding-bottom: 60px;
 }
@@ -181,10 +187,13 @@ body {
   cursor: pointer;
   background-size: cover;
 }
-.content .gallery .wrap_gallery .gallery_items .img_hover {
-  display: none;
-  -webkit-transition: all 5s ease-in;
-  transition: all 5s ease-in;
+.content .gallery .wrap_gallery .gallery_items .item_photo:hover .img_hover {
+  opacity: 1;
+}
+.content .gallery .wrap_gallery .gallery_items .item_photo .img_hover {
+  -webkit-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
+  opacity: 0;
   width: 100%;
   height: 100%;
   background: -webkit-gradient(linear, right top, left top, color-stop(-33.76%, rgba(0, 231, 124, 0.6)), color-stop(104.7%, rgba(0, 154, 200, 0.6)));
@@ -193,7 +202,7 @@ body {
   font-weight: 400;
   text-transform: uppercase;
 }
-.content .gallery .wrap_gallery .gallery_items .img_hover .img_border {
+.content .gallery .wrap_gallery .gallery_items .item_photo .img_hover .img_border {
   width: 100%;
   height: 100%;
   display: block;
@@ -260,21 +269,18 @@ body {
   .gallery_items .item_photo {
     height: 25rem;
   }
-  .gallery_items .item_photo:hover > .img_hover {
-    display: block !important;
-  }
-  .gallery_items .img_hover {
+  .gallery_items .item_photo .img_hover {
     font-size: 20px;
     padding: 20px;
   }
-  .gallery_items .img_hover .img_border {
+  .gallery_items .item_photo .img_hover .img_border {
     padding: 20px;
   }
-  .gallery_items .img_hover .img_border p {
+  .gallery_items .item_photo .img_hover .img_border p {
     line-height: 30px;
     width: 18.125rem;
   }
-  .gallery_items .img_hover .img_border .img_special_txt {
+  .gallery_items .item_photo .img_hover .img_border .img_special_txt {
     width: 450px;
   }
 }
@@ -303,21 +309,18 @@ body {
   .gallery_items .item_photo {
     height: 25rem;
   }
-  .gallery_items .item_photo:hover > .img_hover {
-    display: block !important;
-  }
-  .gallery_items .img_hover {
+  .gallery_items .item_photo .img_hover {
     font-size: 18px;
     padding: 15px;
   }
-  .gallery_items .img_hover .img_border {
+  .gallery_items .item_photo .img_hover .img_border {
     padding: 20px;
   }
-  .gallery_items .img_hover .img_border p {
+  .gallery_items .item_photo .img_hover .img_border p {
     line-height: 30px;
     width: 18.25rem;
   }
-  .gallery_items .img_hover .img_border .img_special_txt {
+  .gallery_items .item_photo .img_hover .img_border .img_special_txt {
     width: 450px;
   }
 }
@@ -330,21 +333,18 @@ body {
   .gallery_items .item_photo {
     height: 12rem;
   }
-  .gallery_items .item_photo:target > .img_hover {
-    display: block !important;
-  }
-  .gallery_items .img_hover {
+  .gallery_items .item_photo .img_hover {
     font-size: 10px;
     padding: 10px;
   }
-  .gallery_items .img_hover .img_border {
+  .gallery_items .item_photo .img_hover .img_border {
     padding: 15px;
   }
-  .gallery_items .img_hover .img_border p {
+  .gallery_items .item_photo .img_hover .img_border p {
     line-height: 15px;
     width: 12.25rem;
   }
-  .gallery_items .img_hover .img_border .img_special_txt {
+  .gallery_items .item_photo .img_hover .img_border .img_special_txt {
     width: 300px;
   }
 }/*# sourceMappingURL=style.css.map */
