@@ -9,13 +9,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-body,
-html {
-    height: 100%;
-    width: 100%;
-}
-
 a {
     cursor: pointer;
     text-decoration: none;
@@ -54,6 +47,7 @@ a {
                             height: 40px;
                             width: 107px;
                             right: 0;
+                            z-index: 0;
                         }
                     }
                 }
@@ -172,9 +166,9 @@ a {
         .text-block {
             align-items: flex-start;
 
-            h1 {
-                font-size: 18px;
-            }
+            // h1 {
+            //     font-size: 18px;
+            // }
 
             .description p {
                 font-size: 14px;

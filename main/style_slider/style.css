@@ -2,14 +2,12 @@
 @import 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap';
 .slider-module .text-block h1 {
   font-family: "Montserrat", sans-serif;
-  font-size: 36px;
   text-transform: uppercase;
   line-height: 43.88px;
 }
 
 .slider-module .text-block .description p {
   font-family: "Roboto", sans-serif;
-  font-size: 20px;
   line-height: 23.44px;
   margin: 0;
 }
@@ -185,12 +183,6 @@
           box-sizing: border-box;
 }
 
-body,
-html {
-  height: 100%;
-  width: 100%;
-}
-
 a {
   cursor: pointer;
   text-decoration: none;
@@ -233,6 +225,7 @@ a {
     height: 40px;
     width: 107px;
     right: 0;
+    z-index: 0;
   }
 }
 @media (max-width: 805px) {
@@ -337,9 +330,6 @@ a {
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  .slider-module .text-block h1 {
-    font-size: 18px;
-  }
   .slider-module .text-block .description p {
     font-size: 14px;
   }
@@ -415,4 +405,4 @@ a {
     min-height: 25px;
     background-size: 80%;
   }
-}
+}/*# sourceMappingURL=style.css.map */

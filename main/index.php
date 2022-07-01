@@ -20,10 +20,10 @@
                 </div>
             </div>
         </div>
-        <div class="benefits" id="id_advantage">
+        <!-- <div class="benefits" id="id_advantage">
             <div class="wrap_benefits">
                 <p class="main_txt">приеимущества</p>
-                <!-- <div class="benefits_items">
+                    <div class="benefits_items">
                     <div class="item folder">
                         <p>Выгодные <br>условия</p>
                         <span class="image_folder"></span>
@@ -40,8 +40,34 @@
                         <p>дом под <br>Серый ключ</p>
                         <span class="image_home"></span>
                     </div>
-                </div> -->
+                </div> 
             </div>           
+        </div> -->
+
+        BENEFITS
+
+        <div class="wrap">
+            <article>
+                <h2 class="title">Преимуществa</h2>    
+                <div class="benefits">
+                    <div class="item fon green">
+                        <p class="text">Выгодные<br>условия</p>
+                        <div id="folder" class="icon"></div>
+                    </div>
+                    <div class="item fon orange">
+                        <p class="text">В наличии все коммуникации</p>
+                        <div id="room" class="icon"></div>
+                    </div>
+                    <div class="item fon green">
+                        <p class="text">Качественные материалы</p>
+                        <div id="build" class="icon"></div>
+                    </div>
+                    <div class="item fon orange">
+                        <p class="text">Дом под<br>серый ключ</p>
+                        <div id="house" class="icon"></div>
+                    </div>
+                </div>
+            </article>
         </div>
 
         <div class="projects slider-module" id="id_project"></div>        

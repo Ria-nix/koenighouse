@@ -51,7 +51,6 @@ $Roboto-text: 'Roboto', sans-serif;
 // Font: Montserrat 
 %MontserratTitle {
     font-family: $MonTitle;
-    font-size: 36px;
     text-transform: uppercase;
     line-height: 43.88px;
 }
@@ -59,7 +58,6 @@ $Roboto-text: 'Roboto', sans-serif;
 // Fonts: Roboto 
 %RobotoText {
     font-family: $Roboto-text;
-    font-size: 20px;
     line-height: 23.44px;
     margin: 0;
 }

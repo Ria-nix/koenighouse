@@ -31,7 +31,7 @@ const module = {
     renderBlocks() {
         // Здесь генерируется весь текстовый блок
         let textBlock = blockToConnect.appendChild(this.generateElement('div', 'text-block', ''))
-        textBlock.appendChild(this.generateElement('h1', '', 'проекты'))
+        textBlock.appendChild(this.generateElement('h1', 'main_txt', 'проекты'))
         
         let desc = textBlock.appendChild(this.generateElement('div', 'description', ''))
         desc.appendChild(this.generateElement('p', '', 'Наши дома - это возмoжнoсть жить в 20 минутaх oт центра Калининграда, в cобcтвeнном дoме на пpиpoде, рядом с лесным массивом, парковкой и зеленой лужайкой.'))
@@ -51,7 +51,7 @@ const module = {
         document.querySelectorAll('.item-about').forEach((element, index) => element.appendChild(this.generateElement('div','item-name',`<p>таунхаус</p><p>ул. свободы</p><p>дом № ${index + 1}А</p><p>5 100 00 руб.</p>`)))
         
         document.querySelectorAll('.slider-item').forEach((element) => element.appendChild(this.generateElement('div','card-image','')).appendChild(this.generateElement('img', '', '')).setAttribute('src', '../images/img.png'))
-        document.querySelectorAll('.slider-item').forEach((element) => element.appendChild(this.generateElement('a', 'link', '<img src="../images/linkArrow.svg" alt="arrow">')).setAttribute('href', '#'))
+        document.querySelectorAll('.slider-item').forEach((element) => element.appendChild(this.generateElement('a', 'link', '<img src="../images/linkArrow.svg" alt="arrow">')).setAttribute('href', ''))
         
         document.querySelector('.slider').prepend(this.generateElement('div','btn-prev',''))
         document.querySelector('.slider').appendChild(this.generateElement('div','btn-next',''))

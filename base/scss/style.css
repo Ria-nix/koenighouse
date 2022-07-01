@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #E5E5E5;
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(320px, 1300px));
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.wrap article {
+  padding: 2rem;
+}
+.wrap article .title, .wrap article .text {
+  text-transform: uppercase;
+}
+.wrap article .title {
+  color: #000;
+  font-weight: 700;
+  font-size: 2.25rem;
+  letter-spacing: 0.13rem;
+}
+.wrap article .benefits {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: 2rem;
+  display: grid;
+  grid-row-gap: 8vw;
+  grid-column-gap: 8vw;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.wrap article .benefits .item {
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.wrap article .benefits .item.fon {
+  position: relative;
+  z-index: 1;
+}
+.wrap article .benefits .item.fon.green {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(-33.76%, rgba(0, 231, 124, 0.6)), color-stop(104.7%, rgba(0, 154, 200, 0.6)));
+  background: linear-gradient(to top, rgba(0, 231, 124, 0.6) -33.76%, rgba(0, 154, 200, 0.6) 104.7%);
+}
+.wrap article .benefits .item.fon.orange {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(-6.46%, rgb(255, 24, 79)), color-stop(100.97%, rgb(255, 202, 65)));
+  background: linear-gradient(to top, rgb(255, 24, 79) -6.46%, rgb(255, 202, 65) 100.97%);
+}
+.wrap article .benefits .item.fon::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  mix-blend-mode: multiply;
+  background: url("../media/fons/cub.svg") no-repeat;
+  background-size: 100% 100%;
+  background-position: left bottom;
+}
+.wrap article .benefits .item .text {
+  width: 100%;
+  margin: 2rem 0;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.3rem;
+  text-align: right;
+  text-transform: uppercase;
+  line-height: 1.8rem;
+}
+.wrap article .benefits .item .icon {
+  height: 10rem;
+  width: 100%;
+  position: relative;
+  bottom: -4rem;
+  left: -4rem;
+  z-index: 10;
+}
+.wrap article .benefits .item .icon#folder {
+  left: -1rem;
+  bottom: -3.5rem;
+  background: url("../media/icon/folder.svg") no-repeat;
+  background-size: contain;
+}
+.wrap article .benefits .item .icon#room {
+  background: url("../media/icon/room.svg") no-repeat;
+  background-size: contain;
+}
+.wrap article .benefits .item .icon#build {
+  background: url("../media/icon/build.svg") no-repeat;
+  background-size: contain;
+}
+.wrap article .benefits .item .icon#house {
+  background: url("../media/icon/house.svg") no-repeat;
+  background-size: contain;
+}
+
+@media screen and (max-width: 1120px) {
+  .wrap article .benefits {
+    padding-bottom: 7vw;
+    grid-row-gap: 0;
+    grid-column-gap: 4rem;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(4, 13rem);
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+  }
+  .wrap article .benefits::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  .wrap article .benefits .item .icon {
+    height: 9.5rem;
+  }
+}
+@media screen and (max-width: 560px) {
+  .wrap article {
+    padding: 1rem;
+  }
+  .wrap article .title {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .wrap article .benefits {
+    padding: 0 2vw 12vw 2vw;
+    margin-top: 1rem;
+    grid-row-gap: 7vw;
+    grid-column-gap: 7vw;
+    grid-template-columns: repeat(auto-fit, 45%);
+    grid-template-areas: "folder house" "room build";
+    grid-auto-flow: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .wrap article .benefits .item:nth-child(1) {
+    grid-area: folder;
+  }
+  .wrap article .benefits .item:nth-child(2) {
+    grid-area: room;
+  }
+  .wrap article .benefits .item:nth-child(3) {
+    grid-area: build;
+  }
+  .wrap article .benefits .item:nth-child(4) {
+    grid-area: house;
+  }
+  .wrap article .benefits .item .text {
+    margin: 1rem 0;
+    font-size: 3.5vw;
+    line-height: 1.5rem;
+  }
+  .wrap article .benefits .item .icon {
+    height: 30vw;
+    bottom: -14vw;
+    left: -6vw;
+  }
+  .wrap article .benefits .item .icon#folder {
+    bottom: -12vw;
+    left: -4vw;
+  }
+  .wrap article .benefits .item .icon#build, .wrap article .benefits .item .icon#house {
+    width: 150%;
+    bottom: -14vw;
+    left: -7vw;
+  }
+}
+@media screen and (max-width: 320px) {
+  .wrap article .benefits {
+    padding: 0 0 15vw 0;
+    grid-row-gap: 0;
+    grid-column-gap: 13vw;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(4, 11rem);
+    grid-template-areas: "folder room build house";
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .wrap article .benefits::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  .wrap article .benefits .item .text {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .wrap article .benefits .item .icon {
+    height: 10rem;
+    bottom: -20vw;
+    left: -10vw;
+  }
+  .wrap article .benefits .item .icon#folder {
+    bottom: -18vw;
+    left: -5vw;
+  }
+  .wrap article .benefits .item .icon#build, .wrap article .benefits .item .icon#house {
+    width: 150%;
+    bottom: -21vw;
+    left: -11vw;
+  }
+}/*# sourceMappingURL=style.css.map */
