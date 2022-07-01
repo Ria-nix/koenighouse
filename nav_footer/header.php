@@ -24,7 +24,7 @@
                     <span class="underline"></span>
                 </a>                  
             </div>
-            <div class="big_text" onClick="isIpoteka()">
+            <div class="big_text" onClick="bank()">
                 <p>Ипотека <span>2.7</span>%</p>
             </div>
             <div class="btn_home">

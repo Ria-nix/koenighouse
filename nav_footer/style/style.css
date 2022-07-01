@@ -13,7 +13,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .layout_wrap {
@@ -124,7 +124,7 @@ body {
 .main_wrap .sidebar .menu a {
   text-decoration: none;
   color: #000;
-  font-weight: 400;
+  font-weight: 700;
   text-transform: uppercase;
   display: -webkit-box !important;
   display: -ms-flexbox !important;
@@ -140,8 +140,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
 }
 .main_wrap .sidebar .menu a .underline {
   width: 40px;
@@ -152,11 +150,10 @@ body {
   background: -webkit-gradient(linear, right top, left top, color-stop(-33.76%, #FFC539), color-stop(104.7%, #FF0451));
   background: linear-gradient(270deg, #FFC539 -33.76%, #FF0451 104.7%);
   opacity: 0;
-  -webkit-transition: font-weight 0.5s ease-in;
-  transition: font-weight 0.5s ease-in;
+  -webkit-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
 }
 .main_wrap .sidebar .menu a:hover > .underline, .main_wrap .sidebar .menu a:hover {
-  font-weight: 600;
   opacity: 1;
 }
 .main_wrap .sidebar .menu a #advantages {
@@ -280,7 +277,7 @@ body {
     display: none;
   }
 }
-@media screen and (max-width: 1019px) {
+@media screen and (max-width: 1020px) {
   .content {
     padding-top: 70px;
   }
@@ -388,6 +385,9 @@ body {
     background: url("../../images/icons/email_icon.svg") no-repeat center;
   }
 }
+/* -------------------------------------------------------------------------- */
+/*                              FOOTER main code                              */
+/* -------------------------------------------------------------------------- */
 .layout_footer {
   background: #F7F4F9;
   margin-top: 60px;
@@ -510,8 +510,8 @@ body {
     display: none;
   }
 }
-@media screen and (max-width: 1019px) {
+@media screen and (max-width: 1020px) {
   .layout_footer {
     display: none !important;
   }
-}/*# sourceMappingURL=style.css.map */
+}

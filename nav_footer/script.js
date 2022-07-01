@@ -22,7 +22,6 @@ function closeFon(){
         $(".dark_fon").addClass('none');       
 }
 
-console.log($(".big_text p"));
-function isIpoteka(){
-    $(".big_text p").window.location.href = 'https://www.sberbank.ru/ru/person';
+function bank(){
+    this.window.open('https://www.sberbank.ru/ru/person');
 }
