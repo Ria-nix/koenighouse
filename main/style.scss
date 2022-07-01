@@ -50,72 +50,162 @@
         }            
     }
 
-    .benefits{
+    // .benefits{
+    //     display: grid;
+    //     grid-template-columns: repeat(1, minmax(320px, 1360px));
+    //     justify-content: center;
+    //     // margin-top: 60px;
+        
+    //     .wrap_benefits{ margin: 0 20px;
+    //         .benefits_items{
+    //             width: 100%;
+    //             display: grid;
+
+    //             border: 1px solid red;
+                
+    //             .item{
+    //                 width: 100%;
+    //                 height: 300px;                    
+    //                 color: $c_white;
+    //                 font-weight: bold;
+    //                 text-transform: uppercase; 
+    //                 font-size: 18px;
+    //                 text-align: right;
+
+    //                 p{ padding: 40px 15px 0 0; }
+    //                 .image_folder, .image_room{                        
+    //                     display: block;
+    //                     // width: 240px;
+    //                     // height: 240px;
+    //                     width: 15rem;
+    //                     height: 15rem;
+    //                 }
+    //                 .image_home, .image_tools{
+    //                     display: block;
+    //                     // width: 270px;
+    //                     // height: 270px;
+    //                     width: 6rem;
+    //                     height: 6rem;
+    //                 }
+    //                 .image_folder{
+    //                     transform: translate(0%, 13%);                        
+    //                     background: url("../images/benefits/folders.svg") no-repeat center;
+    //                     background-size: contain;
+    //                 }
+    //                 .image_room{
+    //                     transform: translate(-25%, 17%); 
+    //                     background: url("../images/benefits/room.svg") no-repeat center;
+    //                     background-size: contain;
+    //                 }
+    //                 .image_tools{
+    //                     transform: translate(-27%, 25%); 
+    //                     background: url("../images/benefits/tools.svg") no-repeat center;
+    //                     background-size: contain;
+    //                 }
+    //                 .image_home{
+    //                     transform: translate(-27%, 28%); 
+    //                     background: url("../images/benefits/home.svg") no-repeat center;
+    //                     background-size: contain;
+    //                 }
+                    
+    //             }
+    //             .folder, .tools{
+    //                 background: url('../images/benefits/green_fon.svg') no-repeat center;
+    //                 background-size: cover;
+    //             }
+    //             .room, .home{
+    //                 background: url('../images/benefits/orange_fon.svg') no-repeat center;
+    //                 background-size: cover;
+    //             }
+    //         }
+    //     }
+    // }
+
+    .wrap {
+        width: 100%;
+        height: 100%; 
         display: grid;
         grid-template-columns: repeat(1, minmax(320px, 1360px));
+        align-items: center;
         justify-content: center;
-        // margin-top: 60px;
-        
-        .wrap_benefits{ margin: 0 20px;
-            .benefits_items{
+    
+        article {  padding: 2rem;
+            .text { text-transform: uppercase; }
+    
+            .benefits {
                 width: 100%;
+                height: fit-content;
+                margin-top: 2rem;
                 display: grid;
-
-                border: 1px solid red;
-                
-                .item{
-                    width: 100%;
-                    height: 300px;                    
-                    color: $c_white;
-                    font-weight: bold;
-                    text-transform: uppercase; 
-                    font-size: 18px;
-                    text-align: right;
-
-                    p{ padding: 40px 15px 0 0; }
-                    .image_folder, .image_room{                        
-                        display: block;
-                        // width: 240px;
-                        // height: 240px;
-                        width: 15rem;
-                        height: 15rem;
+                grid-row-gap: 8vw;
+                grid-column-gap: 8vw;
+                grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+                justify-content: space-between;
+    
+                .item {
+                    padding: 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+    
+                    &.fon {
+                        position: relative;
+                        z-index: 1;
+                        &.green { background: linear-gradient(to top, rgba(0, 231, 124, 0.6) -33.76%, rgba(0, 154, 200, 0.6) 104.7%);  }
+                        &.orange { background: linear-gradient(to top, rgb(255, 24, 79) -6.46%, rgb(255, 202, 65) 100.97%); }
+    
+                        &::after {
+                            content: "";
+                            width: 100%;
+                            height: 100%;                        
+                            position: absolute;
+                            top: 0; left: 0; z-index: -1;                        
+                            mix-blend-mode: multiply;
+                            background: url('../images/cub.svg') no-repeat;
+                            background-size: 100% 100%;
+                            background-position: left bottom;
+                        }
                     }
-                    .image_home, .image_tools{
-                        display: block;
-                        // width: 270px;
-                        // height: 270px;
-                        width: 6rem;
-                        height: 6rem;
+                    .text {
+                        width: 100%;
+                        margin: 2rem 0;
+                        color: $c_white;
+                        font-weight: 500;
+                        font-size: 1.3rem;
+                        text-align: right;
+                        text-transform: uppercase;
+                        line-height: 1.8rem;
                     }
-                    .image_folder{
-                        transform: translate(0%, 13%);                        
-                        background: url("../images/benefits/folders.svg") no-repeat center;
-                        background-size: contain;
+    
+                    .icon {
+                        height: 10rem;
+                        width: 100%;                    
+                        position: relative;
+                        bottom: -4rem; left: -4rem;
+                        z-index: 10;
+    
+                        &#folder {
+                            left: -1rem;
+                            bottom: -3.5rem;
+                            background: url('../images/benefits/folders.svg') no-repeat;
+                            background-size: contain;
+                        }
+    
+                        &#room {
+                            background: url('../images/benefits/room.svg') no-repeat;
+                            background-size: contain;
+                        }
+    
+                        &#build {
+                            background: url('../images/benefits/tools.svg') no-repeat;
+                            background-size: contain;
+                        }
+    
+                        &#house {
+                            background: url('../images/benefits/home.svg') no-repeat;
+                            background-size: contain;
+                        }
                     }
-                    .image_room{
-                        transform: translate(-25%, 17%); 
-                        background: url("../images/benefits/room.svg") no-repeat center;
-                        background-size: contain;
-                    }
-                    .image_tools{
-                        transform: translate(-27%, 25%); 
-                        background: url("../images/benefits/tools.svg") no-repeat center;
-                        background-size: contain;
-                    }
-                    .image_home{
-                        transform: translate(-27%, 28%); 
-                        background: url("../images/benefits/home.svg") no-repeat center;
-                        background-size: contain;
-                    }
-                    
-                }
-                .folder, .tools{
-                    background: url('../images/benefits/green_fon.svg') no-repeat center;
-                    background-size: cover;
-                }
-                .room, .home{
-                    background: url('../images/benefits/orange_fon.svg') no-repeat center;
-                    background-size: cover;
                 }
             }
         }
@@ -125,7 +215,7 @@
 
     .gallery{ @extend .benefits;
         padding-bottom: 60px;
-        .wrap_gallery{ @extend .wrap_benefits;
+        .wrap_gallery{ margin: 0 20px;
             .gallery_items{ display: grid;   
                 .item_1{
                     grid-area: item_1;
@@ -220,8 +310,7 @@
         grid-template-columns: repeat(3, 1fr); 
         grid-template-areas:"item_1 item_2 item_2"
                             "item_3 item_3 item_4"; 
-        .item_photo{ 
-            height: 25rem;  
+        .item_photo{ height: 25rem;  
             .img_hover{ 
                 font-size: 20px;
                 padding: 20px;
@@ -257,8 +346,7 @@
         grid-template-areas:"item_2 item_2 item_2 item_2"
                             "item_1 item_1 item_4 item_4"
                             "item_3 item_3 item_3 item_3";                              
-        .item_photo{ 
-            height: 25rem;
+        .item_photo{ height: 25rem;
             .img_hover{ 
                 font-size: 18px;
                 padding: 15px;
@@ -300,5 +388,111 @@
 @media (max-width: 370px){
     .telefon_call input{ 
         transform: translateY(-10px);
+    }
+}
+
+
+
+/* ------------------------- benefits media queries ------------------------- */
+
+@media screen and (max-width:1120px) {
+    .wrap {
+        article {
+            .benefits {
+                padding-bottom: 7vw;
+                grid-row-gap: 0;
+                grid-column-gap: 4rem;
+                grid-auto-flow: column;
+                grid-template-columns: repeat(4, 13rem);
+                overflow-x: auto;
+                overflow-y: hidden;
+                scrollbar-width: none;
+                &::-webkit-scrollbar { width: 0; height: 0; }
+
+                .item .icon { height: 9.5rem; }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:560px) {
+    .wrap {
+        article { padding: 1rem;
+            .title {
+                font-size: 2rem;
+                text-align: center;
+            }
+            .benefits {
+                padding: 0 2vw 12vw 2vw;
+                margin-top: 1rem;
+                grid-row-gap: 7vw;
+                grid-column-gap: 7vw;
+                grid-template-columns: repeat(auto-fit, 45%);
+                grid-template-areas: "folder house" "room build";
+                grid-auto-flow: row;
+                align-items: center;
+                justify-content: space-evenly;
+
+                .item {
+                    &:nth-child(1) { grid-area: folder; }
+                    &:nth-child(2) { grid-area: room; }
+                    &:nth-child(3) { grid-area: build; }
+                    &:nth-child(4) { grid-area: house; }
+
+                    .text { 
+                        margin: 1rem 0;
+                        font-size: 3.5vw;
+                        line-height: 1.5rem;
+                    }
+
+                    .icon {
+                        height: 30vw;
+                        bottom: -14vw; left: -6vw;
+                        &#folder { bottom: -12vw; left: -4vw; }
+                        &#build, &#house { 
+                            width: 150%;
+                            bottom: -14vw; left: -7vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:320px) {
+    .wrap {
+        article {
+            .benefits {
+                padding: 0 0 15vw 0;
+                grid-row-gap: 0;
+                grid-column-gap: 13vw;
+                grid-auto-flow: column;
+                grid-template-columns: repeat(4, 11rem);
+                grid-template-areas: "folder room build house";
+                justify-content: flex-start;
+                overflow-x: auto;
+                scrollbar-width: none;
+                &::-webkit-scrollbar { width: 0; height: 0; }
+
+                .item {
+                    .text {
+                        font-size: 1rem;
+                        line-height: 1.5rem;
+                    }
+                    .icon {
+                        height: 10rem;
+                        bottom: -20vw; left: -10vw;
+
+                        &#folder { bottom: -18vw; left: -5vw; }
+
+                        &#build, &#house { 
+                            width: 150%;
+                            bottom: -21vw; left: -11vw;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

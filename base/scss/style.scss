@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
 $bg_body: #E5E5E5;
-$color_title: #000;
+$cT_black: #000;
 $color_text: #fff;
 
 *,
@@ -34,7 +34,7 @@ body {
     article {  padding: 2rem;
         .title, .text { text-transform: uppercase; }
         .title {
-            color: $color_title;
+            color: $cT_black;
             font-weight: 700;
             font-size: 2.25rem;
             letter-spacing: .13rem;
@@ -141,8 +141,7 @@ body {
 
 @media screen and (max-width:560px) {
     .wrap {
-        article {
-            padding: 1rem;
+        article { padding: 1rem;
             .title {
                 font-size: 2rem;
                 text-align: center;

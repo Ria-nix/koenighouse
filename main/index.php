@@ -20,6 +20,7 @@
                 </div>
             </div>
         </div>
+
         <!-- <div class="benefits" id="id_advantage">
             <div class="wrap_benefits">
                 <p class="main_txt">приеимущества</p>
@@ -44,11 +45,13 @@
             </div>           
         </div> -->
 
-        BENEFITS
+        <!-- /* -------------------------------------------------------------------------- */
+        /*                                  BENEFITS                                  */
+        /* -------------------------------------------------------------------------- */ -->
 
         <div class="wrap">
             <article>
-                <h2 class="title">Преимуществa</h2>    
+                <h2 class="title main_txt">Преимуществa</h2>    
                 <div class="benefits">
                     <div class="item fon green">
                         <p class="text">Выгодные<br>условия</p>

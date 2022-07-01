@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@300;400&display=swap");
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -9,6 +11,12 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
 }
 
 body {
@@ -88,77 +96,117 @@ body {
   display: block;
   cursor: pointer;
 }
-.content .benefits, .content .gallery {
+.content .wrap {
+  width: 100%;
+  height: 100%;
   display: grid;
   grid-template-columns: repeat(1, minmax(320px, 1360px));
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
-.content .benefits .wrap_benefits, .content .gallery .wrap_benefits, .content .gallery .wrap_gallery {
-  margin: 0 20px;
+.content .wrap article {
+  padding: 2rem;
 }
-.content .benefits .wrap_benefits .benefits_items, .content .gallery .wrap_benefits .benefits_items, .content .gallery .wrap_gallery .benefits_items {
-  width: 100%;
-  display: grid;
-  border: 1px solid red;
-}
-.content .benefits .wrap_benefits .benefits_items .item, .content .gallery .wrap_benefits .benefits_items .item, .content .gallery .wrap_gallery .benefits_items .item {
-  width: 100%;
-  height: 300px;
-  color: #FFF;
-  font-weight: bold;
+.content .wrap article .text {
   text-transform: uppercase;
-  font-size: 18px;
+}
+.content .wrap article .benefits, .content .wrap article .gallery {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: 2rem;
+  display: grid;
+  grid-row-gap: 8vw;
+  grid-column-gap: 8vw;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.content .wrap article .benefits .item, .content .wrap article .gallery .item {
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.content .wrap article .benefits .item.fon, .content .wrap article .gallery .item.fon {
+  position: relative;
+  z-index: 1;
+}
+.content .wrap article .benefits .item.fon.green, .content .wrap article .gallery .item.fon.green {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(-33.76%, rgba(0, 231, 124, 0.6)), color-stop(104.7%, rgba(0, 154, 200, 0.6)));
+  background: linear-gradient(to top, rgba(0, 231, 124, 0.6) -33.76%, rgba(0, 154, 200, 0.6) 104.7%);
+}
+.content .wrap article .benefits .item.fon.orange, .content .wrap article .gallery .item.fon.orange {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(-6.46%, rgb(255, 24, 79)), color-stop(100.97%, rgb(255, 202, 65)));
+  background: linear-gradient(to top, rgb(255, 24, 79) -6.46%, rgb(255, 202, 65) 100.97%);
+}
+.content .wrap article .benefits .item.fon::after, .content .wrap article .gallery .item.fon::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  mix-blend-mode: multiply;
+  background: url("../images/cub.svg") no-repeat;
+  background-size: 100% 100%;
+  background-position: left bottom;
+}
+.content .wrap article .benefits .item .text, .content .wrap article .gallery .item .text {
+  width: 100%;
+  margin: 2rem 0;
+  color: #FFF;
+  font-weight: 500;
+  font-size: 1.3rem;
   text-align: right;
+  text-transform: uppercase;
+  line-height: 1.8rem;
 }
-.content .benefits .wrap_benefits .benefits_items .item p, .content .gallery .wrap_benefits .benefits_items .item p, .content .gallery .wrap_gallery .benefits_items .item p {
-  padding: 40px 15px 0 0;
+.content .wrap article .benefits .item .icon, .content .wrap article .gallery .item .icon {
+  height: 10rem;
+  width: 100%;
+  position: relative;
+  bottom: -4rem;
+  left: -4rem;
+  z-index: 10;
 }
-.content .benefits .wrap_benefits .benefits_items .item .image_folder, .content .gallery .wrap_benefits .benefits_items .item .image_folder, .content .gallery .wrap_gallery .benefits_items .item .image_folder, .content .benefits .wrap_benefits .benefits_items .item .image_room, .content .gallery .wrap_benefits .benefits_items .item .image_room, .content .gallery .wrap_gallery .benefits_items .item .image_room {
-  display: block;
-  width: 15rem;
-  height: 15rem;
-}
-.content .benefits .wrap_benefits .benefits_items .item .image_home, .content .gallery .wrap_benefits .benefits_items .item .image_home, .content .gallery .wrap_gallery .benefits_items .item .image_home, .content .benefits .wrap_benefits .benefits_items .item .image_tools, .content .gallery .wrap_benefits .benefits_items .item .image_tools, .content .gallery .wrap_gallery .benefits_items .item .image_tools {
-  display: block;
-  width: 6rem;
-  height: 6rem;
-}
-.content .benefits .wrap_benefits .benefits_items .item .image_folder, .content .gallery .wrap_benefits .benefits_items .item .image_folder, .content .gallery .wrap_gallery .benefits_items .item .image_folder {
-  -webkit-transform: translate(0%, 13%);
-          transform: translate(0%, 13%);
-  background: url("../images/benefits/folders.svg") no-repeat center;
+.content .wrap article .benefits .item .icon#folder, .content .wrap article .gallery .item .icon#folder {
+  left: -1rem;
+  bottom: -3.5rem;
+  background: url("../images/benefits/folders.svg") no-repeat;
   background-size: contain;
 }
-.content .benefits .wrap_benefits .benefits_items .item .image_room, .content .gallery .wrap_benefits .benefits_items .item .image_room, .content .gallery .wrap_gallery .benefits_items .item .image_room {
-  -webkit-transform: translate(-25%, 17%);
-          transform: translate(-25%, 17%);
-  background: url("../images/benefits/room.svg") no-repeat center;
+.content .wrap article .benefits .item .icon#room, .content .wrap article .gallery .item .icon#room {
+  background: url("../images/benefits/room.svg") no-repeat;
   background-size: contain;
 }
-.content .benefits .wrap_benefits .benefits_items .item .image_tools, .content .gallery .wrap_benefits .benefits_items .item .image_tools, .content .gallery .wrap_gallery .benefits_items .item .image_tools {
-  -webkit-transform: translate(-27%, 25%);
-          transform: translate(-27%, 25%);
-  background: url("../images/benefits/tools.svg") no-repeat center;
+.content .wrap article .benefits .item .icon#build, .content .wrap article .gallery .item .icon#build {
+  background: url("../images/benefits/tools.svg") no-repeat;
   background-size: contain;
 }
-.content .benefits .wrap_benefits .benefits_items .item .image_home, .content .gallery .wrap_benefits .benefits_items .item .image_home, .content .gallery .wrap_gallery .benefits_items .item .image_home {
-  -webkit-transform: translate(-27%, 28%);
-          transform: translate(-27%, 28%);
-  background: url("../images/benefits/home.svg") no-repeat center;
+.content .wrap article .benefits .item .icon#house, .content .wrap article .gallery .item .icon#house {
+  background: url("../images/benefits/home.svg") no-repeat;
   background-size: contain;
-}
-.content .benefits .wrap_benefits .benefits_items .folder, .content .gallery .wrap_benefits .benefits_items .folder, .content .gallery .wrap_gallery .benefits_items .folder, .content .benefits .wrap_benefits .benefits_items .tools, .content .gallery .wrap_benefits .benefits_items .tools, .content .gallery .wrap_gallery .benefits_items .tools {
-  background: url("../images/benefits/green_fon.svg") no-repeat center;
-  background-size: cover;
-}
-.content .benefits .wrap_benefits .benefits_items .room, .content .gallery .wrap_benefits .benefits_items .room, .content .gallery .wrap_gallery .benefits_items .room, .content .benefits .wrap_benefits .benefits_items .home, .content .gallery .wrap_benefits .benefits_items .home, .content .gallery .wrap_gallery .benefits_items .home {
-  background: url("../images/benefits/orange_fon.svg") no-repeat center;
-  background-size: cover;
 }
 .content .gallery {
   padding-bottom: 60px;
+}
+.content .gallery .wrap_gallery {
+  margin: 0 20px;
 }
 .content .gallery .wrap_gallery .gallery_items {
   display: grid;
@@ -375,5 +423,117 @@ body {
   .telefon_call input {
     -webkit-transform: translateY(-10px);
             transform: translateY(-10px);
+  }
+}
+/* ------------------------- benefits media queries ------------------------- */
+@media screen and (max-width: 1120px) {
+  .wrap article .benefits, .wrap article .content .gallery, .content .wrap article .gallery {
+    padding-bottom: 7vw;
+    grid-row-gap: 0;
+    grid-column-gap: 4rem;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(4, 13rem);
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+  }
+  .wrap article .benefits::-webkit-scrollbar, .wrap article .content .gallery::-webkit-scrollbar, .content .wrap article .gallery::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  .wrap article .benefits .item .icon, .wrap article .content .gallery .item .icon, .content .wrap article .gallery .item .icon {
+    height: 9.5rem;
+  }
+}
+@media screen and (max-width: 560px) {
+  .wrap article {
+    padding: 1rem;
+  }
+  .wrap article .title {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .wrap article .benefits, .wrap article .content .gallery, .content .wrap article .gallery {
+    padding: 0 2vw 12vw 2vw;
+    margin-top: 1rem;
+    grid-row-gap: 7vw;
+    grid-column-gap: 7vw;
+    grid-template-columns: repeat(auto-fit, 45%);
+    grid-template-areas: "folder house" "room build";
+    grid-auto-flow: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .wrap article .benefits .item:nth-child(1), .wrap article .content .gallery .item:nth-child(1), .content .wrap article .gallery .item:nth-child(1) {
+    grid-area: folder;
+  }
+  .wrap article .benefits .item:nth-child(2), .wrap article .content .gallery .item:nth-child(2), .content .wrap article .gallery .item:nth-child(2) {
+    grid-area: room;
+  }
+  .wrap article .benefits .item:nth-child(3), .wrap article .content .gallery .item:nth-child(3), .content .wrap article .gallery .item:nth-child(3) {
+    grid-area: build;
+  }
+  .wrap article .benefits .item:nth-child(4), .wrap article .content .gallery .item:nth-child(4), .content .wrap article .gallery .item:nth-child(4) {
+    grid-area: house;
+  }
+  .wrap article .benefits .item .text, .wrap article .content .gallery .item .text, .content .wrap article .gallery .item .text {
+    margin: 1rem 0;
+    font-size: 3.5vw;
+    line-height: 1.5rem;
+  }
+  .wrap article .benefits .item .icon, .wrap article .content .gallery .item .icon, .content .wrap article .gallery .item .icon {
+    height: 30vw;
+    bottom: -14vw;
+    left: -6vw;
+  }
+  .wrap article .benefits .item .icon#folder, .wrap article .content .gallery .item .icon#folder, .content .wrap article .gallery .item .icon#folder {
+    bottom: -12vw;
+    left: -4vw;
+  }
+  .wrap article .benefits .item .icon#build, .wrap article .content .gallery .item .icon#build, .content .wrap article .gallery .item .icon#build, .wrap article .benefits .item .icon#house, .wrap article .content .gallery .item .icon#house, .content .wrap article .gallery .item .icon#house {
+    width: 150%;
+    bottom: -14vw;
+    left: -7vw;
+  }
+}
+@media screen and (max-width: 320px) {
+  .wrap article .benefits, .wrap article .content .gallery, .content .wrap article .gallery {
+    padding: 0 0 15vw 0;
+    grid-row-gap: 0;
+    grid-column-gap: 13vw;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(4, 11rem);
+    grid-template-areas: "folder room build house";
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .wrap article .benefits::-webkit-scrollbar, .wrap article .content .gallery::-webkit-scrollbar, .content .wrap article .gallery::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  .wrap article .benefits .item .text, .wrap article .content .gallery .item .text, .content .wrap article .gallery .item .text {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .wrap article .benefits .item .icon, .wrap article .content .gallery .item .icon, .content .wrap article .gallery .item .icon {
+    height: 10rem;
+    bottom: -20vw;
+    left: -10vw;
+  }
+  .wrap article .benefits .item .icon#folder, .wrap article .content .gallery .item .icon#folder, .content .wrap article .gallery .item .icon#folder {
+    bottom: -18vw;
+    left: -5vw;
+  }
+  .wrap article .benefits .item .icon#build, .wrap article .content .gallery .item .icon#build, .content .wrap article .gallery .item .icon#build, .wrap article .benefits .item .icon#house, .wrap article .content .gallery .item .icon#house, .content .wrap article .gallery .item .icon#house {
+    width: 150%;
+    bottom: -21vw;
+    left: -11vw;
   }
 }/*# sourceMappingURL=style.css.map */
