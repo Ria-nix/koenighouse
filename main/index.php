@@ -21,57 +21,34 @@
             </div>
         </div>
 
-        <!-- <div class="benefits" id="id_advantage">
-            <div class="wrap_benefits">
-                <p class="main_txt">приеимущества</p>
-                    <div class="benefits_items">
-                    <div class="item folder">
-                        <p>Выгодные <br>условия</p>
-                        <span class="image_folder"></span>
-                    </div>
-                    <div class="item room">
-                        <p>в наличии Все <br>коммуникации</p>
-                        <span class="image_room"></span>
-                    </div>
-                    <div class="item tools">
-                        <p>Качественные <br>материалы</p>
-                        <span class="image_tools"></span>
-                    </div>
-                    <div class="item home">
-                        <p>дом под <br>Серый ключ</p>
-                        <span class="image_home"></span>
-                    </div>
-                </div> 
-            </div>           
-        </div> -->
-
         <!-- /* -------------------------------------------------------------------------- */
         /*                                  BENEFITS                                  */
         /* -------------------------------------------------------------------------- */ -->
 
-        <div class="wrap">
+        <div class="benefits" id="id_advantage">
             <article>
-                <h2 class="title main_txt">Преимуществa</h2>    
-                <div class="benefits">
+                <h2 class="main_txt">Преимуществa</h2>
+                <main>
                     <div class="item fon green">
-                        <p class="text">Выгодные<br>условия</p>
-                        <div id="folder" class="icon"></div>
+                        <p>Выгодные<br/>условия</p>
+                        <i id="icon_folder" class="icon"></i>
                     </div>
                     <div class="item fon orange">
-                        <p class="text">В наличии все коммуникации</p>
-                        <div id="room" class="icon"></div>
+                        <p class="text">В наличии все<br/>коммуникации</p>
+                        <i id="icon_room" class="icon"></i>
                     </div>
                     <div class="item fon green">
-                        <p class="text">Качественные материалы</p>
-                        <div id="build" class="icon"></div>
+                        <p>Качественные<br/>материалы</p>
+                        <i id="icon_build" class="icon"></i>
                     </div>
                     <div class="item fon orange">
-                        <p class="text">Дом под<br>серый ключ</p>
-                        <div id="house" class="icon"></div>
+                        <p>Дом под<br/>серый ключ</p>
+                        <i id="icon_house" class="icon"></i>
                     </div>
-                </div>
+                </main>
             </article>
         </div>
+
 
         <div class="projects slider-module" id="id_project"></div>        
 

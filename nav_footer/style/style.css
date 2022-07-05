@@ -151,7 +151,7 @@ body {
   position: relative;
 }
 .main_wrap .sidebar .menu a .underline {
-  width: 40px;
+  width: 0px;
   height: 5px;
   position: absolute;
   top: 30px;
@@ -159,11 +159,12 @@ body {
   background: -webkit-gradient(linear, right top, left top, color-stop(-33.76%, #FFC539), color-stop(104.7%, #FF0451));
   background: linear-gradient(270deg, #FFC539 -33.76%, #FF0451 104.7%);
   opacity: 0;
-  -webkit-transition: opacity 0.3s ease-in;
-  transition: opacity 0.3s ease-in;
+  -webkit-transition: all 0.3s linear 0.1s;
+  transition: all 0.3s linear 0.1s;
 }
-.main_wrap .sidebar .menu a:hover > .underline, .main_wrap .sidebar .menu a:hover {
+.main_wrap .sidebar .menu a:hover > .underline {
   opacity: 1;
+  width: 40px;
 }
 .main_wrap .sidebar .menu a #advantages {
   background: url("../../images/icons/libra_icon.svg") no-repeat center;
@@ -523,4 +524,4 @@ body {
   .layout_footer {
     display: none !important;
   }
-}/*# sourceMappingURL=style.css.map */
+}

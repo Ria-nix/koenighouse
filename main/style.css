@@ -96,6 +96,112 @@ body {
   display: block;
   cursor: pointer;
 }
+.content .benefits, .content .gallery {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(250px, 1360px));
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.content .benefits article, .content .gallery article {
+  margin-top: 1rem;
+}
+.content .benefits article main, .content .gallery article main {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-column-gap: 3rem;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(auto-fit, 14rem);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.content .benefits article main .item, .content .gallery article main .item {
+  padding: 3rem 1rem 14rem 1rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.content .benefits article main .item.fon, .content .gallery article main .item.fon {
+  position: relative;
+  z-index: 1;
+}
+.content .benefits article main .item.fon.green, .content .gallery article main .item.fon.green {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(-0.01%, #00C2C3), color-stop(77.31%, #8FFF8F));
+  background: linear-gradient(180deg, #00C2C3 -0.01%, #8FFF8F 77.31%);
+}
+.content .benefits article main .item.fon.orange, .content .gallery article main .item.fon.orange {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFCB46), color-stop(99.98%, #FE246E));
+  background: linear-gradient(180deg, #FFCB46 0%, #FE246E 99.98%);
+}
+.content .benefits article main .item.fon::after, .content .gallery article main .item.fon::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  mix-blend-mode: multiply;
+  background: url("../images/cub.svg") no-repeat;
+  background-size: 100% 105%;
+  background-position: left bottom;
+}
+.content .benefits article main .item p, .content .gallery article main .item p {
+  width: 100%;
+  color: #FFF;
+  font-weight: 500;
+  font-size: 1.4rem;
+  font-family: "Roboto";
+  text-align: right;
+  text-transform: uppercase;
+  line-height: 1.8rem;
+}
+.content .benefits article main .item .icon, .content .gallery article main .item .icon {
+  display: block;
+  height: 14rem;
+  width: 100%;
+  position: absolute;
+  bottom: -4rem;
+  left: -4vw;
+  z-index: 10;
+}
+.content .benefits article main .item .icon#icon_folder, .content .gallery article main .item .icon#icon_folder {
+  left: -1rem;
+  background: url("../images/benefits/folders.svg") no-repeat bottom;
+  background-size: contain;
+}
+.content .benefits article main .item .icon#icon_room, .content .gallery article main .item .icon#icon_room {
+  background: url("../images/benefits/room.svg") no-repeat bottom;
+  background-size: contain;
+}
+.content .benefits article main .item .icon#icon_build, .content .gallery article main .item .icon#icon_build {
+  background: url("../images/benefits/tools.svg") no-repeat bottom;
+  background-size: contain;
+}
+.content .benefits article main .item .icon#icon_house, .content .gallery article main .item .icon#icon_house {
+  background: url("../images/benefits/home.svg") no-repeat bottom;
+  background-size: contain;
+}
 .content .wrap {
   width: 100%;
   height: 100%;
@@ -266,33 +372,6 @@ body {
           align-items: center;
 }
 
-@media screen and (min-width: 1120px) {
-  .benefits_items {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
-    grid-gap: 90px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-@media (min-width: 600px) and (max-width: 1120px) {
-  .benefits_items {
-    grid-template-columns: repeat(4, minmax(10%, auto));
-    grid-gap: 30px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .benefits_items .item {
-    border: 1px solid blue;
-  }
-}
 @media (min-width: 1020px) {
   .main_txt {
     font-size: 32px;
@@ -425,115 +504,103 @@ body {
             transform: translateY(-10px);
   }
 }
-/* ------------------------- benefits media queries ------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                               BENEFITS MEDIA                               */
+/* -------------------------------------------------------------------------- */
 @media screen and (max-width: 1120px) {
-  .wrap article .benefits, .wrap article .content .gallery, .content .wrap article .gallery {
-    padding-bottom: 7vw;
-    grid-row-gap: 0;
-    grid-column-gap: 4rem;
-    grid-auto-flow: column;
-    grid-template-columns: repeat(4, 13rem);
-    overflow-x: auto;
+  .benefits article main, .content .gallery article main {
+    padding-bottom: 4rem;
+    grid-column-gap: 3.5rem !important;
+    grid-template-columns: repeat(4, 14rem) !important;
+    overflow-x: scroll;
     overflow-y: hidden;
     scrollbar-width: none;
   }
-  .wrap article .benefits::-webkit-scrollbar, .wrap article .content .gallery::-webkit-scrollbar, .content .wrap article .gallery::-webkit-scrollbar {
+  .benefits article main::-webkit-scrollbar, .content .gallery article main::-webkit-scrollbar {
     width: 0;
     height: 0;
   }
-  .wrap article .benefits .item .icon, .wrap article .content .gallery .item .icon, .content .wrap article .gallery .item .icon {
-    height: 9.5rem;
-  }
 }
 @media screen and (max-width: 560px) {
-  .wrap article {
-    padding: 1rem;
+  .benefits, .content .gallery {
+    padding: 0 1rem !important;
   }
-  .wrap article .title {
-    font-size: 2rem;
-    text-align: center;
-  }
-  .wrap article .benefits, .wrap article .content .gallery, .content .wrap article .gallery {
-    padding: 0 2vw 12vw 2vw;
-    margin-top: 1rem;
-    grid-row-gap: 7vw;
-    grid-column-gap: 7vw;
-    grid-template-columns: repeat(auto-fit, 45%);
+  .benefits article main, .content .gallery article main {
+    padding: 0 1rem 2.5rem 1rem !important;
+    grid-row-gap: 10vw !important;
+    grid-column-gap: 10vw !important;
+    grid-template-columns: repeat(auto-fit, 36vw) !important;
     grid-template-areas: "folder house" "room build";
     grid-auto-flow: row;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -webkit-box-pack: space-evenly !important;
+        -ms-flex-pack: space-evenly !important;
+            justify-content: space-evenly !important;
   }
-  .wrap article .benefits .item:nth-child(1), .wrap article .content .gallery .item:nth-child(1), .content .wrap article .gallery .item:nth-child(1) {
+  .benefits article main .item, .content .gallery article main .item {
+    padding: 10vw 3vw 30vw 3vw !important;
+  }
+  .benefits article main .item:nth-child(1), .content .gallery article main .item:nth-child(1) {
     grid-area: folder;
   }
-  .wrap article .benefits .item:nth-child(2), .wrap article .content .gallery .item:nth-child(2), .content .wrap article .gallery .item:nth-child(2) {
+  .benefits article main .item:nth-child(2), .content .gallery article main .item:nth-child(2) {
     grid-area: room;
   }
-  .wrap article .benefits .item:nth-child(3), .wrap article .content .gallery .item:nth-child(3), .content .wrap article .gallery .item:nth-child(3) {
+  .benefits article main .item:nth-child(3), .content .gallery article main .item:nth-child(3) {
     grid-area: build;
   }
-  .wrap article .benefits .item:nth-child(4), .wrap article .content .gallery .item:nth-child(4), .content .wrap article .gallery .item:nth-child(4) {
+  .benefits article main .item:nth-child(4), .content .gallery article main .item:nth-child(4) {
     grid-area: house;
   }
-  .wrap article .benefits .item .text, .wrap article .content .gallery .item .text, .content .wrap article .gallery .item .text {
-    margin: 1rem 0;
-    font-size: 3.5vw;
-    line-height: 1.5rem;
+  .benefits article main .item p, .content .gallery article main .item p {
+    font-size: 3.5vw !important;
+    line-height: 1.5rem !important;
   }
-  .wrap article .benefits .item .icon, .wrap article .content .gallery .item .icon, .content .wrap article .gallery .item .icon {
-    height: 30vw;
-    bottom: -14vw;
-    left: -6vw;
+  .benefits article main .item .icon, .content .gallery article main .item .icon {
+    height: 30vw !important;
+    left: -8vw !important;
+    bottom: -10vw !important;
   }
-  .wrap article .benefits .item .icon#folder, .wrap article .content .gallery .item .icon#folder, .content .wrap article .gallery .item .icon#folder {
-    bottom: -12vw;
-    left: -4vw;
-  }
-  .wrap article .benefits .item .icon#build, .wrap article .content .gallery .item .icon#build, .content .wrap article .gallery .item .icon#build, .wrap article .benefits .item .icon#house, .wrap article .content .gallery .item .icon#house, .content .wrap article .gallery .item .icon#house {
-    width: 150%;
-    bottom: -14vw;
-    left: -7vw;
+  .benefits article main .item .icon#icon_folder, .content .gallery article main .item .icon#icon_folder {
+    left: -5vw !important;
   }
 }
 @media screen and (max-width: 320px) {
-  .wrap article .benefits, .wrap article .content .gallery, .content .wrap article .gallery {
-    padding: 0 0 15vw 0;
-    grid-row-gap: 0;
-    grid-column-gap: 13vw;
-    grid-auto-flow: column;
-    grid-template-columns: repeat(4, 11rem);
+  .benefits, .content .gallery {
+    padding: 0 1rem !important;
+  }
+  .benefits article main, .content .gallery article main {
+    padding: 0 !important;
+    padding-bottom: 3rem !important;
+    grid-column-gap: 3.5rem !important;
+    grid-template-columns: repeat(4, 11rem) !important;
     grid-template-areas: "folder room build house";
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    overflow-x: auto;
+    -webkit-box-pack: justify !important;
+        -ms-flex-pack: justify !important;
+            justify-content: space-between !important;
+    overflow-x: scroll;
+    overflow-y: hidden;
     scrollbar-width: none;
   }
-  .wrap article .benefits::-webkit-scrollbar, .wrap article .content .gallery::-webkit-scrollbar, .content .wrap article .gallery::-webkit-scrollbar {
+  .benefits article main::-webkit-scrollbar, .content .gallery article main::-webkit-scrollbar {
     width: 0;
     height: 0;
   }
-  .wrap article .benefits .item .text, .wrap article .content .gallery .item .text, .content .wrap article .gallery .item .text {
-    font-size: 1rem;
-    line-height: 1.5rem;
+  .benefits article main .item, .content .gallery article main .item {
+    padding: 3rem 1rem 10rem 1rem !important;
   }
-  .wrap article .benefits .item .icon, .wrap article .content .gallery .item .icon, .content .wrap article .gallery .item .icon {
-    height: 10rem;
-    bottom: -20vw;
-    left: -10vw;
+  .benefits article main .item p, .content .gallery article main .item p {
+    font-size: 1rem !important;
+    line-height: 1.5rem !important;
   }
-  .wrap article .benefits .item .icon#folder, .wrap article .content .gallery .item .icon#folder, .content .wrap article .gallery .item .icon#folder {
-    bottom: -18vw;
-    left: -5vw;
+  .benefits article main .item .icon, .content .gallery article main .item .icon {
+    height: 10rem !important;
+    left: -3rem !important;
+    bottom: -3rem !important;
   }
-  .wrap article .benefits .item .icon#build, .wrap article .content .gallery .item .icon#build, .content .wrap article .gallery .item .icon#build, .wrap article .benefits .item .icon#house, .wrap article .content .gallery .item .icon#house, .content .wrap article .gallery .item .icon#house {
-    width: 150%;
-    bottom: -21vw;
-    left: -11vw;
+  .benefits article main .item .icon#icon_folder, .content .gallery article main .item .icon#icon_folder {
+    left: -1.2rem !important;
   }
-}/*# sourceMappingURL=style.css.map */
+}

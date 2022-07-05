@@ -1,0 +1,23 @@
+<div class="benefits">
+    <article>
+        <h2 class="main_txt">Преимуществa</h2>
+        <main>
+            <div class="item fon green">
+                <p>Выгодные<br/>условия</p>
+                <i id="icon_folder" class="icon"></i>
+            </div>
+            <div class="item fon orange">
+                <p class="text">В наличии все<br/>коммуникации</p>
+                <i id="icon_room" class="icon"></i>
+            </div>
+            <div class="item fon green">
+                <p>Качественные<br/>материалы</p>
+                <i id="icon_build" class="icon"></i>
+            </div>
+            <div class="item fon orange">
+                <p>Дом под<br/>серый ключ</p>
+                <i id="icon_house" class="icon"></i>
+            </div>
+        </main>
+    </article>
+</div>
