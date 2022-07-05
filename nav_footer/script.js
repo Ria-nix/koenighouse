@@ -7,9 +7,8 @@ function toggleButton(){
     if(!bool){
         bool = true;
         $("#toggle_btn").removeClass('toggle_open').addClass('toggle_close');
-        $(".sidebar").removeClass('none');
-        $(".sidebar").css('display', 'flex');
-        $(".dark_fon").removeClass('none');
+        $(".sidebar").css('right', '0');
+        $(".dark_fon").css('opacity', '1');
     }
     else{ closeFon();}
 }
@@ -17,9 +16,8 @@ function toggleButton(){
 function closeFon(){
         bool = false;
         $("#toggle_btn").removeClass('toggle_close').addClass('toggle_open');
-        $(".sidebar").addClass('none');
-        $(".sidebar").css('display', 'none');
-        $(".dark_fon").addClass('none');       
+        $(".sidebar").css('right', '-500px');
+        $(".dark_fon").css('opacity', '0');
 }
 
 function bank(){
