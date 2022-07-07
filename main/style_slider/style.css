@@ -27,9 +27,6 @@
   padding: 30px 20px;
   gap: 3%;
 }
-.slider-module .text-block h1 {
-  padding-bottom: 30px;
-}
 .slider-module .text-block .description {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -167,7 +164,7 @@
   padding-right: 23px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  z-index: 99;
+  z-index: 0;
   background: linear-gradient(89.97deg, #FF184F -6.46%, #FFCA41 100.97%);
 }
 .slider-item .link:hover {
