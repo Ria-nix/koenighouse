@@ -1,5 +1,6 @@
 <div class="layout_wrap layout_footer">
-    <div class="footer_wrap">
+    <p class="mobile_footer">© Разработка и продвижение - <span>msoft</span></p>
+    <div class="footer_wrap">        
         <img src="../images/logo.svg" alt="logo">
         <div class="wrap_media">
             <div class="social_media">

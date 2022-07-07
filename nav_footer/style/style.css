@@ -522,12 +522,34 @@ body {
             align-items: normal;
   }
 
+  .mobile_footer {
+    display: none;
+  }
+
   .toggle_wrap, .media_info {
     display: none;
   }
 }
 @media screen and (max-width: 1020px) {
-  .layout_footer {
+  .footer_wrap {
     display: none !important;
   }
-}
+
+  .mobile_footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 115px;
+    font-size: 14px;
+  }
+  .mobile_footer span {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}/*# sourceMappingURL=style.css.map */

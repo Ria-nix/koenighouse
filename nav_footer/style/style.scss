@@ -274,13 +274,25 @@
                 width: 79%;     
                 @include Flex(row, space-between, normal);
             }
-        }    
+        }            
     }        
+    .mobile_footer{ display: none;}
     .toggle_wrap, .media_info{ display: none;}
 }
 
 
 //* ============ MEDIA min-width: 1019px ============ *//
 @media screen and (max-width: 1020px){
-    .layout_footer{ display: none !important;}
+    .footer_wrap{ display: none !important;}
+    .mobile_footer{         
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 115px;
+        font-size: 14px;
+        span{ 
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    }
 }
