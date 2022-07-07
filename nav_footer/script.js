@@ -16,7 +16,7 @@ function toggleButton(){
 function closeFon(){
         bool = false;
         $("#toggle_btn").removeClass('toggle_close').addClass('toggle_open');
-        $(".sidebar").css('right', '-500px');
+        $(".sidebar").css('right', '-250px');
         $(".dark_fon").addClass('none');
 }
 

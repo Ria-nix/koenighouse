@@ -91,11 +91,10 @@
     <?php include_once('../nav_footer/footer.php') ?>
     
     <!--/* -------------------------------------------------------------------------- */
-        /*                                   SCRIPTS                                  */
-        /* -------------------------------------------------------------------------- */ -->
+    /*                                   SCRIPTS                                  */
+    /* -------------------------------------------------------------------------- */ -->
 
-    <script src="slider.js"></script>
-    <script src="../nav_footer/script.js"></script>  
+    <script src="slider.js"></script> 
     <script src="_content.js"></script>  
 
 </body>

@@ -212,10 +212,7 @@
  /*                              FOOTER main code                              */
  /* -------------------------------------------------------------------------- */
 
-.layout_footer{ 
-    background: $c_milk;
-    margin-top: 60px;
-}
+.layout_footer{ background: $c_milk;}
 .footer_wrap img{ height: 55%;}
 .footer_wrap .wrap_media{
     .social_media{       
@@ -278,6 +275,7 @@
         span{ 
             text-transform: uppercase;
             font-weight: bold;
+            text-decoration: underline;
         }
     }
 }

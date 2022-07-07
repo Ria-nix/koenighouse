@@ -13,12 +13,6 @@
           user-select: none;
 }
 
-html,
-body {
-  width: 100%;
-  height: 100%;
-}
-
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -390,7 +384,6 @@ body {
 /* -------------------------------------------------------------------------- */
 .layout_footer {
   background: #F7F4F9;
-  margin-top: 60px;
 }
 
 .footer_wrap img {
@@ -535,5 +528,6 @@ body {
   .mobile_footer span {
     text-transform: uppercase;
     font-weight: bold;
+    text-decoration: underline;
   }
 }/*# sourceMappingURL=style.css.map */
