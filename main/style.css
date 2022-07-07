@@ -53,6 +53,20 @@ body {
   margin-bottom: 30px;
 }
 
+.content {
+  width: 100%;
+  height: auto;
+  z-index: 0;
+  position: relative;
+}
+.content .dark_fon {
+  display: block;
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 5;
+}
 .content .main_info {
   width: 100%;
   position: relative;
@@ -96,7 +110,11 @@ body {
   display: block;
   cursor: pointer;
 }
-.content .benefits, .content .gallery {
+
+/* -------------------------------------------------------------------------- */
+/*                                  BENEFITS                                  */
+/* -------------------------------------------------------------------------- */
+.benefits, .gallery {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -111,10 +129,10 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.content .benefits article, .content .gallery article {
+.benefits article, .gallery article {
   margin-top: 1rem;
 }
-.content .benefits article main, .content .gallery article main {
+.benefits article main, .gallery article main {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -127,7 +145,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.content .benefits article main .item, .content .gallery article main .item {
+.benefits article main .item, .gallery article main .item {
   padding: 3rem 1rem 14rem 1rem;
   position: relative;
   display: -webkit-box;
@@ -141,19 +159,19 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.content .benefits article main .item.fon, .content .gallery article main .item.fon {
+.benefits article main .item.fon, .gallery article main .item.fon {
   position: relative;
   z-index: 1;
 }
-.content .benefits article main .item.fon.green, .content .gallery article main .item.fon.green {
+.benefits article main .item.fon.green, .gallery article main .item.fon.green {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(-0.01%, #00C2C3), color-stop(77.31%, #8FFF8F));
   background: linear-gradient(180deg, #00C2C3 -0.01%, #8FFF8F 77.31%);
 }
-.content .benefits article main .item.fon.orange, .content .gallery article main .item.fon.orange {
+.benefits article main .item.fon.orange, .gallery article main .item.fon.orange {
   background: -webkit-gradient(linear, left top, left bottom, from(#FFCB46), color-stop(99.98%, #FE246E));
   background: linear-gradient(180deg, #FFCB46 0%, #FE246E 99.98%);
 }
-.content .benefits article main .item.fon::after, .content .gallery article main .item.fon::after {
+.benefits article main .item.fon::after, .gallery article main .item.fon::after {
   content: "";
   width: 100%;
   height: 100%;
@@ -166,7 +184,7 @@ body {
   background-size: 100% 105%;
   background-position: left bottom;
 }
-.content .benefits article main .item p, .content .gallery article main .item p {
+.benefits article main .item p, .gallery article main .item p {
   width: 100%;
   color: #FFF;
   font-weight: 500;
@@ -176,7 +194,7 @@ body {
   text-transform: uppercase;
   line-height: 1.8rem;
 }
-.content .benefits article main .item .icon, .content .gallery article main .item .icon {
+.benefits article main .item .icon, .gallery article main .item .icon {
   display: block;
   height: 14rem;
   width: 100%;
@@ -185,162 +203,57 @@ body {
   left: -4vw;
   z-index: 10;
 }
-.content .benefits article main .item .icon#icon_folder, .content .gallery article main .item .icon#icon_folder {
+.benefits article main .item .icon#icon_folder, .gallery article main .item .icon#icon_folder {
   left: -1rem;
   background: url("../images/benefits/folders.svg") no-repeat bottom;
   background-size: contain;
 }
-.content .benefits article main .item .icon#icon_room, .content .gallery article main .item .icon#icon_room {
+.benefits article main .item .icon#icon_room, .gallery article main .item .icon#icon_room {
   background: url("../images/benefits/room.svg") no-repeat bottom;
   background-size: contain;
 }
-.content .benefits article main .item .icon#icon_build, .content .gallery article main .item .icon#icon_build {
+.benefits article main .item .icon#icon_build, .gallery article main .item .icon#icon_build {
   background: url("../images/benefits/tools.svg") no-repeat bottom;
   background-size: contain;
 }
-.content .benefits article main .item .icon#icon_house, .content .gallery article main .item .icon#icon_house {
+.benefits article main .item .icon#icon_house, .gallery article main .item .icon#icon_house {
   background: url("../images/benefits/home.svg") no-repeat bottom;
   background-size: contain;
 }
-.content .wrap {
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: repeat(1, minmax(320px, 1360px));
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.content .wrap article {
-  padding: 2rem;
-}
-.content .wrap article .text {
-  text-transform: uppercase;
-}
-.content .wrap article .benefits, .content .wrap article .gallery {
-  width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  margin-top: 2rem;
-  display: grid;
-  grid-row-gap: 8vw;
-  grid-column-gap: 8vw;
-  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.content .wrap article .benefits .item, .content .wrap article .gallery .item {
-  padding: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.content .wrap article .benefits .item.fon, .content .wrap article .gallery .item.fon {
-  position: relative;
-  z-index: 1;
-}
-.content .wrap article .benefits .item.fon.green, .content .wrap article .gallery .item.fon.green {
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(-33.76%, rgba(0, 231, 124, 0.6)), color-stop(104.7%, rgba(0, 154, 200, 0.6)));
-  background: linear-gradient(to top, rgba(0, 231, 124, 0.6) -33.76%, rgba(0, 154, 200, 0.6) 104.7%);
-}
-.content .wrap article .benefits .item.fon.orange, .content .wrap article .gallery .item.fon.orange {
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(-6.46%, rgb(255, 24, 79)), color-stop(100.97%, rgb(255, 202, 65)));
-  background: linear-gradient(to top, rgb(255, 24, 79) -6.46%, rgb(255, 202, 65) 100.97%);
-}
-.content .wrap article .benefits .item.fon::after, .content .wrap article .gallery .item.fon::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  mix-blend-mode: multiply;
-  background: url("../images/cub.svg") no-repeat;
-  background-size: 100% 100%;
-  background-position: left bottom;
-}
-.content .wrap article .benefits .item .text, .content .wrap article .gallery .item .text {
-  width: 100%;
-  margin: 2rem 0;
-  color: #FFF;
-  font-weight: 500;
-  font-size: 1.3rem;
-  text-align: right;
-  text-transform: uppercase;
-  line-height: 1.8rem;
-}
-.content .wrap article .benefits .item .icon, .content .wrap article .gallery .item .icon {
-  height: 10rem;
-  width: 100%;
-  position: relative;
-  bottom: -4rem;
-  left: -4rem;
-  z-index: 10;
-}
-.content .wrap article .benefits .item .icon#folder, .content .wrap article .gallery .item .icon#folder {
-  left: -1rem;
-  bottom: -3.5rem;
-  background: url("../images/benefits/folders.svg") no-repeat;
-  background-size: contain;
-}
-.content .wrap article .benefits .item .icon#room, .content .wrap article .gallery .item .icon#room {
-  background: url("../images/benefits/room.svg") no-repeat;
-  background-size: contain;
-}
-.content .wrap article .benefits .item .icon#build, .content .wrap article .gallery .item .icon#build {
-  background: url("../images/benefits/tools.svg") no-repeat;
-  background-size: contain;
-}
-.content .wrap article .benefits .item .icon#house, .content .wrap article .gallery .item .icon#house {
-  background: url("../images/benefits/home.svg") no-repeat;
-  background-size: contain;
-}
-.content .gallery {
+
+.gallery {
   padding-bottom: 60px;
 }
-.content .gallery .wrap_gallery {
+.gallery .wrap_gallery {
   margin: 0 20px;
 }
-.content .gallery .wrap_gallery .gallery_items {
+.gallery .wrap_gallery .gallery_items {
   display: grid;
 }
-.content .gallery .wrap_gallery .gallery_items .item_1 {
+.gallery .wrap_gallery .gallery_items .item_1 {
   grid-area: item_1;
   background: url("../images/gallery/home_1.jpg") no-repeat center;
 }
-.content .gallery .wrap_gallery .gallery_items .item_2 {
+.gallery .wrap_gallery .gallery_items .item_2 {
   grid-area: item_2;
   background: url("../images/gallery/home_2.jpg") no-repeat center;
 }
-.content .gallery .wrap_gallery .gallery_items .item_3 {
+.gallery .wrap_gallery .gallery_items .item_3 {
   grid-area: item_3;
   background: url("../images/gallery/home_3.jpg") no-repeat center;
 }
-.content .gallery .wrap_gallery .gallery_items .item_4 {
+.gallery .wrap_gallery .gallery_items .item_4 {
   grid-area: item_4;
   background: url("../images/gallery/home_4.jpg") no-repeat center;
 }
-.content .gallery .wrap_gallery .gallery_items .item_photo {
+.gallery .wrap_gallery .gallery_items .item_photo {
   cursor: pointer;
   background-size: cover;
 }
-.content .gallery .wrap_gallery .gallery_items .item_photo:hover .img_hover {
+.gallery .wrap_gallery .gallery_items .item_photo:hover .img_hover {
   opacity: 1;
 }
-.content .gallery .wrap_gallery .gallery_items .item_photo .img_hover {
+.gallery .wrap_gallery .gallery_items .item_photo .img_hover {
   -webkit-transition: opacity 0.3s ease-in;
   transition: opacity 0.3s ease-in;
   opacity: 0;
@@ -352,7 +265,7 @@ body {
   font-weight: 400;
   text-transform: uppercase;
 }
-.content .gallery .wrap_gallery .gallery_items .item_photo .img_hover .img_border {
+.gallery .wrap_gallery .gallery_items .item_photo .img_hover .img_border {
   width: 100%;
   height: 100%;
   display: block;
@@ -508,7 +421,7 @@ body {
 /*                               BENEFITS MEDIA                               */
 /* -------------------------------------------------------------------------- */
 @media screen and (max-width: 1120px) {
-  .benefits article main, .content .gallery article main {
+  .benefits article main, .gallery article main {
     padding-bottom: 4rem;
     grid-column-gap: 3.5rem !important;
     grid-template-columns: repeat(4, 14rem) !important;
@@ -516,16 +429,16 @@ body {
     overflow-y: hidden;
     scrollbar-width: none;
   }
-  .benefits article main::-webkit-scrollbar, .content .gallery article main::-webkit-scrollbar {
+  .benefits article main::-webkit-scrollbar, .gallery article main::-webkit-scrollbar {
     width: 0;
     height: 0;
   }
 }
 @media screen and (max-width: 560px) {
-  .benefits, .content .gallery {
+  .benefits, .gallery {
     padding: 0 1rem !important;
   }
-  .benefits article main, .content .gallery article main {
+  .benefits article main, .gallery article main {
     padding: 0 1rem 2.5rem 1rem !important;
     grid-row-gap: 10vw !important;
     grid-column-gap: 10vw !important;
@@ -539,39 +452,39 @@ body {
         -ms-flex-pack: space-evenly !important;
             justify-content: space-evenly !important;
   }
-  .benefits article main .item, .content .gallery article main .item {
+  .benefits article main .item, .gallery article main .item {
     padding: 10vw 3vw 30vw 3vw !important;
   }
-  .benefits article main .item:nth-child(1), .content .gallery article main .item:nth-child(1) {
+  .benefits article main .item:nth-child(1), .gallery article main .item:nth-child(1) {
     grid-area: folder;
   }
-  .benefits article main .item:nth-child(2), .content .gallery article main .item:nth-child(2) {
+  .benefits article main .item:nth-child(2), .gallery article main .item:nth-child(2) {
     grid-area: room;
   }
-  .benefits article main .item:nth-child(3), .content .gallery article main .item:nth-child(3) {
+  .benefits article main .item:nth-child(3), .gallery article main .item:nth-child(3) {
     grid-area: build;
   }
-  .benefits article main .item:nth-child(4), .content .gallery article main .item:nth-child(4) {
+  .benefits article main .item:nth-child(4), .gallery article main .item:nth-child(4) {
     grid-area: house;
   }
-  .benefits article main .item p, .content .gallery article main .item p {
+  .benefits article main .item p, .gallery article main .item p {
     font-size: 3.5vw !important;
     line-height: 1.5rem !important;
   }
-  .benefits article main .item .icon, .content .gallery article main .item .icon {
+  .benefits article main .item .icon, .gallery article main .item .icon {
     height: 30vw !important;
     left: -8vw !important;
     bottom: -10vw !important;
   }
-  .benefits article main .item .icon#icon_folder, .content .gallery article main .item .icon#icon_folder {
+  .benefits article main .item .icon#icon_folder, .gallery article main .item .icon#icon_folder {
     left: -5vw !important;
   }
 }
 @media screen and (max-width: 320px) {
-  .benefits, .content .gallery {
+  .benefits, .gallery {
     padding: 0 1rem !important;
   }
-  .benefits article main, .content .gallery article main {
+  .benefits article main, .gallery article main {
     padding: 0 !important;
     padding-bottom: 3rem !important;
     grid-column-gap: 3.5rem !important;
@@ -584,23 +497,23 @@ body {
     overflow-y: hidden;
     scrollbar-width: none;
   }
-  .benefits article main::-webkit-scrollbar, .content .gallery article main::-webkit-scrollbar {
+  .benefits article main::-webkit-scrollbar, .gallery article main::-webkit-scrollbar {
     width: 0;
     height: 0;
   }
-  .benefits article main .item, .content .gallery article main .item {
+  .benefits article main .item, .gallery article main .item {
     padding: 3rem 1rem 10rem 1rem !important;
   }
-  .benefits article main .item p, .content .gallery article main .item p {
+  .benefits article main .item p, .gallery article main .item p {
     font-size: 1rem !important;
     line-height: 1.5rem !important;
   }
-  .benefits article main .item .icon, .content .gallery article main .item .icon {
+  .benefits article main .item .icon, .gallery article main .item .icon {
     height: 10rem !important;
     left: -3rem !important;
     bottom: -3rem !important;
   }
-  .benefits article main .item .icon#icon_folder, .content .gallery article main .item .icon#icon_folder {
+  .benefits article main .item .icon#icon_folder, .gallery article main .item .icon#icon_folder {
     left: -1.2rem !important;
   }
 }/*# sourceMappingURL=style.css.map */

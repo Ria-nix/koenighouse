@@ -8,7 +8,7 @@ function toggleButton(){
         bool = true;
         $("#toggle_btn").removeClass('toggle_open').addClass('toggle_close');
         $(".sidebar").css('right', '0');
-        $(".dark_fon").css('opacity', '1');
+        $(".dark_fon").removeClass('none');
     }
     else{ closeFon();}
 }
@@ -17,7 +17,7 @@ function closeFon(){
         bool = false;
         $("#toggle_btn").removeClass('toggle_close').addClass('toggle_open');
         $(".sidebar").css('right', '-500px');
-        $(".dark_fon").css('opacity', '0');
+        $(".dark_fon").addClass('none');
 }
 
 function bank(){

@@ -10,7 +10,7 @@
 <body>
     <?php include_once('../nav_footer/header.php') ?>
     <div class="grid content">
-        <div class="dark_fon" onClick="closeFon()"></div>
+        <div class="dark_fon none" onClick="closeFon()"></div>
         <div class="main_info">
             <div class="bl_text">
                 <div class="wrap_text">                    
@@ -48,7 +48,6 @@
                 </main>
             </article>
         </div>
-
 
         <div class="projects slider-module" id="id_project"></div>        
 
