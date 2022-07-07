@@ -27,7 +27,7 @@
             <div class="big_text" onClick="bank()">
                 <p>Ипотека <span>2.7</span>%</p>
             </div>
-            <div class="btn_home">
+            <div class="btn_home" onclick="openHouses()">
                 <input type="submit" value="выбрать дом">
             </div>
             <div class="media_info">

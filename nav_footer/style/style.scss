@@ -25,6 +25,10 @@
         z-index: 5;        
     }
 }
+.active{
+    opacity: 1;
+    width: 40px;
+}
 //* ================= icons ================= *//
 .main_wrap, .footer_wrap{
     span{ display: block; }

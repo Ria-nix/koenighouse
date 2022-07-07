@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&;600&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.zoom {
+  display: none;
+}
+
+body.zoom-opened {
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .wrap {
+    display: flex;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    margin-top: 50px;
+  }
+  .wrap .title {
+    font-size: 32px;
+    text-transform: uppercase;
+  }
+  .wrap .summary,
+.wrap .blueprint,
+.wrap .photo {
+    padding: 0px 20px;
+  }
+  .wrap .summary > .title,
+.wrap .blueprint > .title,
+.wrap .photo > .title {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 24px;
+    text-transform: capitalize;
+  }
+  .wrap .sub-title {
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  .wrap .summary {
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .wrap .summary .table {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .wrap .summary .left,
+.wrap .summary .right {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .wrap .summary .summary-name {
+    font-family: "Roboto Condensed";
+    font-size: 16px;
+    font-weight: 300;
+  }
+  .wrap .summary .summary-value {
+    color: #FF3B4C;
+  }
+  .wrap .summary .readiness > .summary-value,
+.wrap .summary .price > .summary-value {
+    text-transform: uppercase;
+  }
+  .wrap .blueprint {
+    margin-top: 60px;
+    background-color: #F7F4F9;
+    width: 100%;
+    padding-bottom: 37px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .wrap .blueprint .title {
+    display: flex;
+    width: 100%;
+    margin-top: 32px;
+  }
+  .wrap .blueprint .house-blueprint {
+    box-shadow: 6px 8px 20px rgba(0, 0, 0, 0.25);
+    position: relative;
+  }
+  .wrap .blueprint .house-blueprint:hover .zoom-icon {
+    opacity: 1;
+    transition: 0.3s;
+  }
+  .wrap .blueprint .house-blueprint .zoom-icon {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+  }
+  .wrap .blueprint .house-blueprint .zoom-icon span {
+    font-size: 56px;
+  }
+  .wrap .photo {
+    width: 100%;
+    margin: 40px 0px;
+  }
+  .wrap .photo .title {
+    text-align: left;
+  }
+  .wrap .photo .gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+    height: 365px;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+  .wrap .photo .more {
+    font-family: "Roboto Condensed";
+    font-weight: 300;
+    font-size: 14px;
+    text-decoration: underline;
+    opacity: 0.5;
+    text-align: center;
+    margin-top: 5px;
+    transition: 0.3s;
+  }
+  .wrap .photo .more:hover {
+    transition: 0.3s;
+    opacity: 1;
+  }
+
+  .zoom {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+  }
+  .zoom.opened {
+    display: flex;
+    transition: 0.3s;
+  }
+  .zoom .zoom-content {
+    color: white;
+    font-family: "Roboto Condensed";
+    text-align: center;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0px 20px;
+  }
+  .zoom .zoom-content img {
+    height: auto;
+    width: 100%;
+    max-width: 520px;
+  }
+}/*# sourceMappingURL=style.css.map */

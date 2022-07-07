@@ -51,9 +51,7 @@
             background: $c_btn url('../../images/sliderArrow.svg') no-repeat center;
             cursor: pointer;
         }
-        .btn-next {
-            transform: rotate(180deg);
-        }
+        .btn-next { transform: rotate(180deg);}
     }
 }
 

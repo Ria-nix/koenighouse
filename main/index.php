@@ -8,7 +8,13 @@
     <?php include_once('../helper.php') ?>    
 </head>
 <body>
+     <!--/* -------------------------------------------------------------------------- */
+    /*                                   HEADER                                   */
+    /* -------------------------------------------------------------------------- */ -->
     <?php include_once('../nav_footer/header.php') ?>
+     <!--/* -------------------------------------------------------------------------- */
+    /*                                   CONTENT                                  */
+    /* -------------------------------------------------------------------------- */ -->
     <div class="grid content">
         <div class="dark_fon none" onClick="closeFon()"></div>
         <div class="main_info">
@@ -25,7 +31,7 @@
         /*                                  BENEFITS                                  */
         /* -------------------------------------------------------------------------- */ -->
 
-        <div class="benefits" id="id_advantage">
+        <div class="section benefits" id="id_advantage">
             <article>
                 <h2 class="main_txt">Преимуществa</h2>
                 <main>
@@ -49,9 +55,15 @@
             </article>
         </div>
 
-        <div class="projects slider-module" id="id_project"></div>        
-
-        <div class="gallery" id="id_gallery">
+        <!-- /* -------------------------------------------------------------------------- */
+        /*                                  PROJECTS                                  */
+        /* -------------------------------------------------------------------------- */ -->
+        <div class="section projects slider-module" id="id_project"></div>   
+        
+        <!-- /* ---------------------------------------------------------------------- */
+        /*                                  GALLERY                                   */
+        /* -------------------------------------------------------------------------- */ -->
+        <div class="section gallery" id="id_gallery">
             <div class="wrap_gallery">
                 <p class="main_txt">фото</p>
                 <div class="gallery_items">
@@ -87,13 +99,13 @@
             </div>
         </div>        
     </div>
-
-    <?php include_once('../nav_footer/footer.php') ?>
-    
+     <!--/* -------------------------------------------------------------------------- */
+    /*                                   FOOTER                                   */
+    /* -------------------------------------------------------------------------- */ -->
+    <?php include_once('../nav_footer/footer.php') ?>    
     <!--/* -------------------------------------------------------------------------- */
     /*                                   SCRIPTS                                  */
     /* -------------------------------------------------------------------------- */ -->
-
     <script src="slider.js"></script> 
     <script src="_content.js"></script>  
 
