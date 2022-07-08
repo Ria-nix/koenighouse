@@ -177,7 +177,7 @@ svg {
     display: none;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 0 20px 20px 20px;
 
     .title {
         font-family: 'Montserrat', sans-serif;
@@ -298,7 +298,9 @@ svg {
 @media (max-width: 768px) {
     .mobile {
         display: flex;
+        padding-top: 100px;
     }
+    .content{ padding-top: 0 !important;}
 
     .map {
         display: none;

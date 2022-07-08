@@ -162,7 +162,7 @@ svg polygon {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px;
+  padding: 0 20px 20px 20px;
 }
 .mobile .title {
   font-family: "Montserrat", sans-serif;
@@ -494,6 +494,11 @@ svg polygon {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    padding-top: 100px;
+  }
+
+  .content {
+    padding-top: 0 !important;
   }
 
   .map {
