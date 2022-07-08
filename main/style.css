@@ -48,6 +48,10 @@ body {
   margin-bottom: 30px;
 }
 
+.mobile_footer {
+  border: 1px solid red;
+}
+
 .content .main_info {
   width: 100%;
   position: relative;
@@ -202,6 +206,9 @@ body {
   background-size: contain;
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                   GALLERY                                  */
+/* -------------------------------------------------------------------------- */
 .gallery {
   padding-bottom: 60px;
 }

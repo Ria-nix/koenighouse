@@ -26,7 +26,7 @@ function bank(){
 }
 /* --------------------- Open the page with "map-module" -------------------- */
 function openHouses(){
-    this.window.open('../map_module/index.php');
+    this.window.location.href = '../map_page/index.php';
 }
 
 /* ------------------------- scroll of active links ------------------------- */

@@ -18,6 +18,9 @@
     text-transform: uppercase;  
     margin-bottom: 30px;
 }
+.mobile_footer{
+    border: 1px solid red;
+}
 .content{
 
     .main_info{
@@ -157,7 +160,9 @@
         }
     }
 
-    // .projects{ margin-top: 60px; }
+    /* -------------------------------------------------------------------------- */
+    /*                                   GALLERY                                  */
+    /* -------------------------------------------------------------------------- */
 
     .gallery{ @extend .benefits;
         padding-bottom: 60px;
@@ -208,17 +213,9 @@
 
 
 
-//* ------------------------------------------------------ *//
-//* ------------------- @MEDIA QUERIES ------------------- *//
-//* ------------------------------------------------------ *//
-@media screen and (min-width: 1120px){
-
-}
-
-@media (min-width: 600px) and (max-width: 1120px){
-
-}
-//? --------------------------------------
+    //* ------------------------------------------------------ *//
+    //* ------------------- @MEDIA QUERIES ------------------- *//
+    //* ------------------------------------------------------ *//
 
 @media (min-width: 1020px){
     .main_txt{font-size: 32px;}
@@ -249,7 +246,6 @@
         }       
     }    
 }
-
 
 @media (max-width: 1019px){
     .main_txt{font-size: 24px;}
@@ -293,8 +289,7 @@
         grid-template-areas:"item_2 item_2 item_2 item_2"
                             "item_1 item_1 item_4 item_4"
                             "item_3 item_3 item_3 item_3"; 
-        .item_photo{ 
-            height: 12rem;
+        .item_photo{ height: 12rem;
             .img_hover{ 
                 font-size: 10px;
                 padding: 10px;
@@ -309,13 +304,12 @@
         }       
     }
 }
+
 @media (max-width: 370px){
     .telefon_call input{ 
         transform: translateY(-10px);
     }
 }
-
-
 
 /* -------------------------------------------------------------------------- */
 /*                               BENEFITS MEDIA                               */
@@ -325,11 +319,9 @@
     .benefits {
         article {
             main {
-                padding-bottom: 4rem;
-                
+                padding-bottom: 4rem;                
                 grid-column-gap: 3.5rem !important;
-                grid-template-columns: repeat(4, 14rem) !important;
-                
+                grid-template-columns: repeat(4, 14rem) !important;                
                 overflow-x: scroll;
                 overflow-y: hidden;
                 scrollbar-width: none;
@@ -340,14 +332,10 @@
 }
 
 @media screen and (max-width:560px) {
-    .benefits {
-        padding: 0 1rem !important;
-
+    .benefits { padding: 0 1rem !important;
         article {
-            // border: 1px solid red;
             main {
-                padding: 0 1rem 2.5rem 1rem !important;
-                
+                padding: 0 1rem 2.5rem 1rem !important;                
                 grid-row-gap: 10vw !important;
                 grid-column-gap: 10vw !important;
                 grid-template-columns: repeat(auto-fit, 36vw) !important;
@@ -356,26 +344,19 @@
                 align-items: center;
                 justify-content: space-evenly !important;
 
-                .item {
-                    padding: 10vw 3vw 30vw 3vw !important;
-
+                .item { padding: 10vw 3vw 30vw 3vw !important;
                     &:nth-child(1) { grid-area: folder; }
                     &:nth-child(2) { grid-area: room; }
                     &:nth-child(3) { grid-area: build; }
                     &:nth-child(4) { grid-area: house; }
-
                     p {
                         font-size: 3.5vw !important;
                         line-height: 1.5rem !important;
                     }
-
                     .icon {
-                        // border: 1px solid green;
                         height: 30vw !important;
-
                         left: -8vw !important;
                         bottom: -10vw !important;
-
                         &#icon_folder { left: -5vw !important; }
                     }
                 }
@@ -385,38 +366,28 @@
 }
 
 @media screen and (max-width:320px) {
-    .benefits {
-        padding: 0 1rem !important;
-
+    .benefits { padding: 0 1rem !important;
         article {
             main {
                 padding: 0 !important;
-                padding-bottom: 3rem !important;
-                
+                padding-bottom: 3rem !important;                
                 grid-column-gap: 3.5rem !important;
                 grid-template-columns: repeat(4, 11rem) !important;
                 grid-template-areas: "folder room build house";
-                justify-content: space-between !important;
-                
+                justify-content: space-between !important;                
                 overflow-x: scroll;
                 overflow-y: hidden;
                 scrollbar-width: none;
                 &::-webkit-scrollbar { width: 0; height: 0; }
-
-                .item {
-                    padding: 3rem 1rem 10rem 1rem !important;
-
+                .item { padding: 3rem 1rem 10rem 1rem !important;
                     p { 
                         font-size: 1rem !important;
                         line-height: 1.5rem !important;
                     }
-
                     .icon {
-                        height: 10rem !important;
-                        
+                        height: 10rem !important;                        
                         left: -3rem !important;
                         bottom: -3rem !important;
-
                         &#icon_folder { left: -1.2rem !important; }
                     }
                 }
