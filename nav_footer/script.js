@@ -13,6 +13,14 @@ function toggleButton(){
     }
     else{ closeFon();}
 }
+
+
+// for(let elem of $('.links_menu')){
+//     elem.addEventListener('click', function(){
+//         console.log(elem + 'click');
+//     })
+// }
+
 /* ----------------------------- close dark fon ----------------------------- */
 function closeFon(){
         bool = false;
@@ -30,16 +38,16 @@ function openHouses(){
 }
 
 /* ------------------------- scroll of active links ------------------------- */
-window.addEventListener('scroll', () => {
-    let distance = window.scrollY;
-    document.querySelectorAll(".section").forEach((el, i) => {
-        if (el.offsetTop - document.querySelector('.menu').clientHeight <= distance){
-            document.querySelectorAll('.menu a').forEach((el) => {
-                if(el.classList.contains('active')){
-                    el.classList.remove('active');
-                } 
-            })
-            document.querySelectorAll('.menu a')[i].querySelector('.underline').classList.add('active');           
-        }
-    })
-})
+// window.addEventListener('scroll', () => {
+//     let distance = window.scrollY;
+//     document.querySelectorAll(".section").forEach((el, i) => {
+//         if (el.offsetTop - document.querySelector('.menu').clientHeight <= distance){
+//             document.querySelectorAll('.menu a').forEach((el) => {
+//                 if(el.classList.contains('active')){
+//                     el.classList.remove('active');
+//                 } 
+//             })
+//             document.querySelectorAll('.menu a')[i].querySelector('.underline').classList.add('active');           
+//         }
+//     })
+// })

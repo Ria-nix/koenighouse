@@ -1,7 +1,7 @@
 <!-- ===== LINKS: favicon, navigation panel, footer, main page ===== -->
 <link rel="shortcut icon" href="../images/favicon.svg" type="image/x-icon">
 <link rel="stylesheet" href="../nav_footer/style/style.css">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="scss/style.css">
 
 <script src="../nav_footer/script.js"></script>
 <!-- ===== JQUERY ===== -->

@@ -4,14 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="scss/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <?php include_once('../helper.php') ?>    
 </head>
 <body>
+     <!--/* -------------------------------------------------------------------------- */
+    /*                                   HEADER                                   */
+    /* -------------------------------------------------------------------------- */ -->
+    <?php include_once('../nav_footer/header.php') ?>
+     <!--/* -------------------------------------------------------------------------- */
+    /*                                   CONTENT                                  */
+    /* -------------------------------------------------------------------------- */ -->
     <div class="wrap">
         <div class="map">
-            <img src="/img/bg.svg" class="bg" alt="bg">
+            <img src="img/bg.svg" class="bg" alt="bg">
             <div class="houses">
                 <svg>
                     <polygon fill="red" class="hitbox" points="127,381 126,388 146,403 153,443 248,533 434,466 426,410 324,325 316,324"></polygon>
@@ -28,40 +34,40 @@
                     <polygon fill="red" class="hitbox" points="1611,175 1785,239 1785,249 1771,254 1767,294 1669,340 1671,296 1585,211 1533,207"></polygon>
                 </svg>
                 <div class="block">
-                    <img src="/img/houses/home 1a.svg" alt="house1a" class="house h1a">
+                    <img src="img/houses/home 1a.svg" alt="house1a" class="house h1a">
                 </div>
                 <div class="block">
-                    <img src="/img/houses/home 1b.svg" alt="house1b" class="house h1b">
+                    <img src="img/houses/home 1b.svg" alt="house1b" class="house h1b">
                 </div>
                 <div class="block">
-                    <img src="/img/houses/home 2a.svg" alt="house2a" class="house h2a">
+                    <img src="img/houses/home 2a.svg" alt="house2a" class="house h2a">
                 </div>
                 <div class="block">
-                    <img src="/img/houses/home 2b.svg" alt="house2b" class="house h2b">
+                    <img src="img/houses/home 2b.svg" alt="house2b" class="house h2b">
                 </div>
                 <div class="block">
-                    <img src="/img/houses/home 3a.svg" alt="house3a" class="house h3a">
+                    <img src="img/houses/home 3a.svg" alt="house3a" class="house h3a">
                 </div>
                 <div class="block">
-                    <img src="/img/houses/home 3b.svg" alt="house3b" class="house h3b">
+                    <img src="img/houses/home 3b.svg" alt="house3b" class="house h3b">
                 </div>
                 <div class="block">
-                    <img src="/img/houses/home 4a.svg" alt="house4a" class="house h4a">
+                    <img src="img/houses/home 4a.svg" alt="house4a" class="house h4a">
                 </div>
                 <div class="block">
-                    <img src="/img/houses/home 4b.svg" alt="house4b" class="house h4b">
+                    <img src="img/houses/home 4b.svg" alt="house4b" class="house h4b">
                 </div>
                 <div class="block">
-                    <img src="/img/houses/home 5a.svg" alt="house5a" class="house h5a">
+                    <img src="img/houses/home 5a.svg" alt="house5a" class="house h5a">
                 </div>
                 <div class="block">
-                    <img src="/img/houses/home 5b.svg" alt="house5b" class="house h5b">
+                    <img src="img/houses/home 5b.svg" alt="house5b" class="house h5b">
                 </div>
                 <div class="block">
-                    <img src="/img/houses/home 6a.svg" alt="house6a" class="house h6a">
+                    <img src="img/houses/home 6a.svg" alt="house6a" class="house h6a">
                 </div>
                 <div class="block">
-                    <img src="/img/houses/home 6b.svg" alt="house6b" class="house h6b">
+                    <img src="img/houses/home 6b.svg" alt="house6b" class="house h6b">
                 </div> 
             </div>
             <div class="pop-up-alert">
@@ -172,6 +178,13 @@
             </div>
         </div>
     </div>
-    <script src="/js/script.js"></script>
+     <!--/* -------------------------------------------------------------------------- */
+    /*                                   FOOTER                                   */
+    /* -------------------------------------------------------------------------- */ -->
+    <?php include_once('../nav_footer/footer.php') ?>    
+    <!--/* -------------------------------------------------------------------------- */
+    /*                                   SCRIPTS                                  */
+    /* -------------------------------------------------------------------------- */ -->
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -2,14 +2,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 .wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: relative;
 }
 
@@ -44,13 +50,16 @@ svg polygon {
   -webkit-user-drag: none;
 }
 .map .houses .block {
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .map .houses .block img.hovered {
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   opacity: 1;
 }
 .map .houses .block > img {
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   opacity: 0;
 }
@@ -109,8 +118,13 @@ svg polygon {
   font-family: "Roboto", sans-serif;
   color: white;
   font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding-left: 40px;
   padding-top: 150px;
   position: absolute;
@@ -123,6 +137,7 @@ svg polygon {
           backdrop-filter: blur(4px);
   border-top-right-radius: 100%;
   z-index: 0;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .map .pop-up-alert:hover {
@@ -130,10 +145,12 @@ svg polygon {
   height: 400px;
   padding-left: 50px;
   padding-top: 170px;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .map .pop-up-alert .arrow-icon {
   font-size: 96px;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   -webkit-animation: arrowAnimation 1s ease-in-out infinite alternate;
           animation: arrowAnimation 1s ease-in-out infinite alternate;
@@ -149,8 +166,13 @@ svg polygon {
 
 .mobile {
   display: none;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 100px 20px 20px 20px;
 }
 .mobile .title {
@@ -164,6 +186,8 @@ svg polygon {
   font-size: 24px;
 }
 .mobile .types {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 30px;
   gap: 25px;
@@ -181,32 +205,53 @@ svg polygon {
 }
 .mobile .types .free,
 .mobile .types .sold {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 5px;
   font-family: "Roboto Condensed", sans-serif;
   font-size: 14px;
 }
 .mobile .flats {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 25px;
   gap: 10px;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   max-width: 500px;
 }
 .mobile .flats .flats-card {
   width: 172.5px;
   height: 83px;
   background-color: #d9d9d9;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 10px;
   font-family: "Roboto Condensed", sans-serif;
   font-size: 14px;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .mobile .flats .flats-card .address {
@@ -217,9 +262,15 @@ svg polygon {
   font-weight: 800;
   font-size: 24px;
   opacity: 0.3;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .mobile .flats .flats-card.hovered {
   background-color: #84EF88;
@@ -261,16 +312,27 @@ svg polygon {
 
 .slider-module {
   background-color: #f5f5f5;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 30px 20px;
   gap: 85px;
 }
 .slider-module .text-block .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   max-width: 389px;
   gap: 1.5rem;
 }
@@ -278,16 +340,28 @@ svg polygon {
   max-width: 886px;
   width: 100%;
   height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 20px;
   position: relative;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .slider-module .slider .slider-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   gap: 20px;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   position: relative;
   right: 0px;
@@ -295,29 +369,41 @@ svg polygon {
 .slider-module .slider .slider-container {
   min-width: 740px;
   overflow: hidden;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .slider-module .slider .btn-prev,
 .slider-module .slider .btn-next {
   min-width: 55px;
   min-height: 55px;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   background: #D0D3D7 url(/imgs/sliderArrow.svg) no-repeat center;
 }
 .slider-module .slider .btn-prev:hover,
 .slider-module .slider .btn-next:hover {
+  -webkit-transition: 0.3s;
   transition: 0.3s;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   cursor: pointer;
 }
 .slider-module .slider .btn-next {
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .slider-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 510px;
   background-color: white;
   position: relative;
@@ -327,6 +413,8 @@ svg polygon {
   padding: 0px 20px 30px 20px;
 }
 .slider-item .item-about {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-family: "Roboto";
   font-weight: 900;
@@ -342,10 +430,19 @@ svg polygon {
   color: black;
   font-size: 24px;
   text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   max-width: 198px;
 }
 .slider-item .item-about .item-name p:last-child {
@@ -360,22 +457,30 @@ svg polygon {
   position: absolute;
   bottom: 48px;
   right: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   padding-right: 23px;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   z-index: 99;
   background: linear-gradient(89.97deg, #FF184F -6.46%, #FFCA41 100.97%);
 }
 .slider-item .link:hover {
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   padding-right: 8px;
 }
 
 @media (max-width: 1920px) {
   .map {
-    overflow: scroll;
+    overflow-x: scroll;
   }
   .map .bg {
     min-width: 1920px;
@@ -386,6 +491,8 @@ svg polygon {
   .map .pop-up-alert {
     -webkit-animation: alertShow 0.6s ease-in-out 1 forwards;
             animation: alertShow 0.6s ease-in-out 1 forwards;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
   .map .pop-up-alert.clicked {
@@ -395,6 +502,8 @@ svg polygon {
 }
 @media (max-width: 768px) {
   .mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 
@@ -447,17 +556,21 @@ svg polygon {
 }
 @-webkit-keyframes arrowAnimation {
   from {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   to {
-    transform: translateX(150px);
+    -webkit-transform: translateX(150px);
+            transform: translateX(150px);
   }
 }
 @keyframes arrowAnimation {
   from {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   to {
-    transform: translateX(150px);
+    -webkit-transform: translateX(150px);
+            transform: translateX(150px);
   }
 }/*# sourceMappingURL=style.css.map */

@@ -1,5 +1,5 @@
-@use '../additional_styles/_color' as *;
-@use '../additional_styles/_object' as *;
+@use '../../additional_styles/_color' as *;
+@use '../../additional_styles/_object' as *;
 
 
 /* -------------------------------------------------------------------------- */
@@ -18,9 +18,13 @@
     text-transform: uppercase;  
     margin-bottom: 30px;
 }
+
+//*
 .mobile_footer{
     border: 1px solid red;
 }
+//*
+
 .content{
 
     .main_info{
@@ -29,7 +33,7 @@
         display: grid;
         grid-template-columns: repeat(1, minmax(320px, 1920px));
         justify-content: center;
-        background: url("../images/main_img.jpg") no-repeat center;
+        background: url("../../images/main_img.jpg") no-repeat center;
         background-size: cover;
 
         .bl_text{
@@ -43,7 +47,7 @@
             .wrap_text{
                 margin: 0 30px;
                 height: 100%;
-                background: url('../images/wrap.svg') no-repeat center;
+                background: url('../../images/wrap.svg') no-repeat center;
                 background-size: contain;
                 @include Flex(row, center, flex-end);
 
@@ -107,7 +111,7 @@
                             top: 0; left: 0; z-index: -1;                        
                             
                             mix-blend-mode: multiply;
-                            background: url('../images/cub.svg') no-repeat;
+                            background: url('../../images/cub.svg') no-repeat;
                             background-size: 100% 105%;
                             background-position: left bottom;
                         }
@@ -136,22 +140,22 @@
     
                         &#icon_folder {
                             left: -1rem;
-                            background: url('../images/benefits/folders.svg') no-repeat bottom;
+                            background: url('../../images/benefits/folders.svg') no-repeat bottom;
                             background-size: contain;
                         }
     
                         &#icon_room {
-                            background: url('../images/benefits/room.svg') no-repeat bottom;
+                            background: url('../../images/benefits/room.svg') no-repeat bottom;
                             background-size: contain;
                         }
     
                         &#icon_build {
-                            background: url('../images/benefits/tools.svg') no-repeat bottom;
+                            background: url('../../images/benefits/tools.svg') no-repeat bottom;
                             background-size: contain;
                         }
     
                         &#icon_house {
-                            background: url('../images/benefits/home.svg') no-repeat bottom;
+                            background: url('../../images/benefits/home.svg') no-repeat bottom;
                             background-size: contain;
                         }
                     }
@@ -170,19 +174,19 @@
             .gallery_items{ display: grid;   
                 .item_1{
                     grid-area: item_1;
-                    background: url("../images/gallery/home_1.jpg") no-repeat center;
+                    background: url("../../images/gallery/home_1.jpg") no-repeat center;
                 }
                 .item_2{
                     grid-area: item_2;
-                    background: url("../images/gallery/home_2.jpg") no-repeat center;
+                    background: url("../../images/gallery/home_2.jpg") no-repeat center;
                 }
                 .item_3{
                     grid-area: item_3;
-                    background: url("../images/gallery/home_3.jpg") no-repeat center;
+                    background: url("../../images/gallery/home_3.jpg") no-repeat center;
                 }
                 .item_4{
                     grid-area: item_4;
-                    background: url("../images/gallery/home_4.jpg") no-repeat center;
+                    background: url("../../images/gallery/home_4.jpg") no-repeat center;
                 }
                 .item_photo{
                     cursor: pointer;

@@ -8,17 +8,17 @@
 
         <div class="sidebar">
             <div class="menu" id="main_menu">
-                <a href="#id_advantage" name="name_advantages">
+                <a href="/main/#id_advantage" name="name_advantages" class="links_menu">
                     <span class="icon_link" id="advantages"></span>
                     <p class="item_txt">Преимущества</p>
                     <span class="underline"></span>
                 </a>
-                <a href="#id_project" name="name_projects">
+                <a href="/main/#id_project" name="name_projects" class="links_menu">
                     <span class="icon_link" id="projects"></span>
                     <p class="item_txt">Проекты</p>
                     <span class="underline"></span>
                 </a>
-                <a href="#id_gallery" name="name_gallery">
+                <a href="/main/#id_gallery" name="name_gallery" class="links_menu">
                     <span class="icon_link" id="gallery"></span>
                     <p class="item_txt">Галерея</p>
                     <span class="underline"></span>
