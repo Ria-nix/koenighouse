@@ -1,33 +1,33 @@
     <div class="layout_wrap layout_menu">
     <div class="main_wrap">
 
-        <img src="../images/logo.svg" alt="logo" onClick="homePage()">
+        <img src="../images/logo.svg" alt="logo" onClick="openPage('../map_page/index.php')">
         <div class="toggle_wrap" onClick="toggleButton()">
             <span class="toggle_open" id="toggle_btn"></span>
         </div>
 
         <div class="sidebar">
             <div class="menu" id="main_menu">
-                <a href="/main/index.php#id_advantage" name="name_advantages" class="links_menu">
+                <a href="/main/index.php#id_advantage" name="name_advantages">
                     <span class="icon_link" id="advantages"></span>
                     <p class="item_txt">Преимущества</p>
                     <span class="underline"></span>
                 </a>
-                <a href="/main/index.php#id_project" name="name_projects" class="links_menu">
+                <a href="/main/index.php#id_project" name="name_projects">
                     <span class="icon_link" id="projects"></span>
                     <p class="item_txt">Проекты</p>
                     <span class="underline"></span>
                 </a>
-                <a href="/main/index.php#id_gallery" name="name_gallery" class="links_menu">
+                <a href="/main/index.php#id_gallery" name="name_gallery">
                     <span class="icon_link" id="gallery"></span>
                     <p class="item_txt">Галерея</p>
                     <span class="underline"></span>
                 </a>                  
             </div>
-            <div class="big_text" onClick="bank()">
+            <div class="big_text" onClick="newWindow('https://www.sberbank.ru/ru/person')">
                 <p>Ипотека <span>2.7</span>%</p>
             </div>
-            <div class="btn_home" onclick="openHouses()">
+            <div class="btn_home" onclick="openPage('../map_page/index.php')">
                 <input type="submit" value="выбрать дом">
             </div>
             <div class="media_info">

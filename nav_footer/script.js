@@ -14,13 +14,6 @@ function toggleButton(){
     else{ closeFon(); }
 }
 
-
-for(let elem of $('.links_menu')){
-    // elem.addEventListener('click', function(){
-        console.log(elem);
-    // })
-}
-
 /* ----------------------------- close dark fon ----------------------------- */
 function closeFon(){
     bool = false;
@@ -28,17 +21,21 @@ function closeFon(){
     $(".sidebar").css('right', '-250px');
     $(".dark_fon").addClass('none');
 }
-/* ------------------------- Open the website with bank ------------------------ */
-function bank(){
-    this.window.open('https://www.sberbank.ru/ru/person');
-}
-/* --------------------- Open the page with "map-module" -------------------- */
-function openHouses(){
-    this.window.location.href = '../map_page/index.php';
+
+
+
+for(let elem of $('.menu a')){
+    // elem.addEventListener('click', function(){
+        console.log(elem);
+    // })
 }
 
-function homePage(){
-    this.window.location.href = '/main/index.php';
+/* --------------------- Open the page with "map-module" -------------------- */
+function openPage(f_link){
+    this.window.location.href = f_link;
+}
+function newWindow(s_link){
+    this.window.open = s_link;
 }
 
 /* ------------------------- scroll of active links ------------------------- */
