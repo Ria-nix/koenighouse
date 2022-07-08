@@ -20,7 +20,7 @@
         display: block;
         background: rgba(0, 0, 0, 0.4);
         width: 100%;
-        height: 105.7%;
+        height: 100%;
         position:absolute;
         z-index: 5;        
     }
@@ -49,29 +49,25 @@
     content: '';
     @extend .wH_btn_toggle;
     background: $cT_black;   
+    transition: all 0.4s ease-in;
 }
-//* 
+
 .toggle_wrap{
     width: 40px;
     height: 40px;
     cursor: pointer;
-    padding: 18px 8px;    
-    transition: transform 2s ease-in;
+    padding: 18px 8px;        
 
     .toggle_open{
         background: $cT_black;   
         @extend .wH_btn_toggle;
-        transition: transform 2s ease-in;
 
-        &::after, &::before{
-            @extend .after_before;
-        }
+        &::after, &::before{ @extend .after_before;}
         &::after{ transform: translateY(-10px); }
         &::before{ transform: translateY(7px); }
     }
 
     .toggle_close{
-        transition: transform 2s ease-in;
         @extend .wH_btn_toggle;
         &::after, &::before{
             @extend .after_before;
@@ -83,9 +79,8 @@
 
 //* ============= NAVIGATION main code ============= *//
 .main_wrap img{ height: 80%;}
-.main_wrap .sidebar{
-    background: $c_white;
-    .menu{  font-size: 14px;
+.main_wrap .sidebar{ background: $c_white;
+    .menu{ font-size: 14px;
         a{
             text-decoration: none;
             @include Text($cT_black, 700, uppercase);
