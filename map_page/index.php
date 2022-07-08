@@ -15,7 +15,8 @@
      <!--/* -------------------------------------------------------------------------- */
     /*                                   CONTENT                                  */
     /* -------------------------------------------------------------------------- */ -->
-    <div class="wrap">
+    <div class="wrap content">
+        <div class="dark_fon none" onClick="closeFon()"></div>
         <div class="map">
             <img src="img/bg.svg" class="bg" alt="bg">
             <div class="houses">
@@ -177,6 +178,7 @@
                 </div>
             </div>
         </div>
+        <p class="mobile_footer">© Разработка и продвижение - <span>msoft</span></p>
     </div>
      <!--/* -------------------------------------------------------------------------- */
     /*                                   FOOTER                                   */

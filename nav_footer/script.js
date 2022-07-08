@@ -11,22 +11,22 @@ function toggleButton(){
         $(".sidebar").css('right', '0');
         $(".dark_fon").removeClass('none');
     }
-    else{ closeFon();}
+    else{ closeFon(); }
 }
 
 
-// for(let elem of $('.links_menu')){
-//     elem.addEventListener('click', function(){
-//         console.log(elem + 'click');
-//     })
-// }
+for(let elem of $('.links_menu')){
+    // elem.addEventListener('click', function(){
+        console.log(elem);
+    // })
+}
 
 /* ----------------------------- close dark fon ----------------------------- */
 function closeFon(){
-        bool = false;
-        $("#toggle_btn").removeClass('toggle_close').addClass('toggle_open');
-        $(".sidebar").css('right', '-250px');
-        $(".dark_fon").addClass('none');
+    bool = false;
+    $("#toggle_btn").removeClass('toggle_close').addClass('toggle_open');
+    $(".sidebar").css('right', '-250px');
+    $(".dark_fon").addClass('none');
 }
 /* ------------------------- Open the website with bank ------------------------ */
 function bank(){
@@ -35,6 +35,10 @@ function bank(){
 /* --------------------- Open the page with "map-module" -------------------- */
 function openHouses(){
     this.window.location.href = '../map_page/index.php';
+}
+
+function homePage(){
+    this.window.location.href = '/main/index.php';
 }
 
 /* ------------------------- scroll of active links ------------------------- */
