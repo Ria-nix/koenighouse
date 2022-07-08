@@ -7,7 +7,7 @@
 /* -------------------------------------------------------------------------- */
 #id_advantage,#id_project, #id_gallery{
     margin-top: 60px;
-    border: 1px solid red;
+    // border: 1px solid red;
     // border-top: 80px solid $c_white;
 }
 /* -------------------------------------------------------------------------- */
@@ -16,14 +16,8 @@
 .main_txt{
     font-weight: bold;
     text-transform: uppercase;  
-    margin-bottom: 30px
+    margin-bottom: 30px;
 }
-
-//*
-.mobile_footer{
-    border: 1px solid red;
-}
-//*
 
 .content{
     .main_info{
