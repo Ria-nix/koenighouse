@@ -39,8 +39,7 @@
 
             .wrap_text{
                 margin: 0 30px;
-                height: 100%;
-                background: url('../../images/wrap.svg') no-repeat center;
+                height: 100%;                
                 background-size: contain;
                 @include Flex(row, center, flex-end);
 
@@ -210,11 +209,14 @@
 
 
 
-    //* ------------------------------------------------------ *//
-    //* ------------------- @MEDIA QUERIES ------------------- *//
-    //* ------------------------------------------------------ *//
+//* ------------------------------------------------------ *//
+//* ------------------- @MEDIA QUERIES ------------------- *//
+//* ------------------------------------------------------ *//
 
 @media (min-width: 1020px){
+    .content .wrap_text{
+        background: url('../../images/wrap.svg') no-repeat center;
+    }
     .main_txt{font-size: 32px;}
     .main_info{ height: 600px;        
         .telefon_call{
@@ -245,6 +247,9 @@
 }
 
 @media (max-width: 1019px){
+    .content .wrap_text{
+        background: url('../../images/wrap_1.svg') no-repeat center;
+    }
     .main_txt{font-size: 24px;}
     .main_info{ height: 400px;        
         .telefon_call input{ 

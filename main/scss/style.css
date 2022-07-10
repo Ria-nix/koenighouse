@@ -75,7 +75,6 @@ body {
 .content .main_info .bl_text .wrap_text {
   margin: 0 30px;
   height: 100%;
-  background: url("../../images/wrap.svg") no-repeat center;
   background-size: contain;
   display: -webkit-box !important;
   display: -ms-flexbox !important;
@@ -274,6 +273,10 @@ body {
 }
 
 @media (min-width: 1020px) {
+  .content .wrap_text {
+    background: url("../../images/wrap.svg") no-repeat center;
+  }
+
   .main_txt {
     font-size: 32px;
   }
@@ -313,6 +316,10 @@ body {
   }
 }
 @media (max-width: 1019px) {
+  .content .wrap_text {
+    background: url("../../images/wrap_1.svg") no-repeat center;
+  }
+
   .main_txt {
     font-size: 24px;
   }
@@ -504,4 +511,4 @@ body {
   .benefits article main .item .icon#icon_folder, .gallery article main .item .icon#icon_folder {
     left: -1.2rem !important;
   }
-}/*# sourceMappingURL=style.css.map */
+}

@@ -22,14 +22,6 @@ function closeFon(){
     $(".dark_fon").addClass('none');
 }
 
-
-
-for(let elem of $('.menu a')){
-    // elem.addEventListener('click', function(){
-        console.log(elem);
-    // })
-}
-
 /* --------------------- Open the page with "map-module" -------------------- */
 function openPage(f_link){
     this.window.location.href = f_link;
@@ -37,6 +29,15 @@ function openPage(f_link){
 function newWindow(s_link){
     this.window.open = s_link;
 }
+
+
+// for(let elem of $('.menu a')){
+//     // elem.addEventListener('click', function(){
+//         console.log(elem);
+//     // })
+// }
+
+
 
 /* ------------------------- scroll of active links ------------------------- */
 // window.addEventListener('scroll', () => {

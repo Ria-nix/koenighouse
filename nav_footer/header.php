@@ -1,7 +1,7 @@
     <div class="layout_wrap layout_menu">
     <div class="main_wrap">
 
-        <img src="../images/logo.svg" alt="logo" onClick="openPage('../map_page/index.php')">
+        <img src="../images/logo.svg" alt="logo" onClick="openPage('../main/index.php')">
         <div class="toggle_wrap" onClick="toggleButton()">
             <span class="toggle_open" id="toggle_btn"></span>
         </div>
