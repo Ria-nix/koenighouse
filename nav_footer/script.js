@@ -27,7 +27,7 @@ function openPage(f_link){
     this.window.location.href = f_link;
 }
 function newWindow(s_link){
-    this.window.open = s_link;
+    this.window.open(s_link);
 }
 
 
