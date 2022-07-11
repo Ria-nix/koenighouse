@@ -7,5 +7,6 @@
 <script src="../nav_footer/script.js"></script>
 
 <!-- ===== TITLE OF THE PAGES ===== -->
-<title>Koenighouse - official website</title> 
+<!-- <title>Koenighouse - official website</title>  -->
+<title>localhost</title>
 

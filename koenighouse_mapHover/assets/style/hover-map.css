@@ -31,7 +31,9 @@ h1 {
   display: grid;
   grid-template-rows: 90px 1fr 145px;
   justify-items: center;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .popUpWindow .popUp-header,
 .house-card-info .popUp-header {
@@ -108,6 +110,7 @@ h1 {
 }
 
 .house-info {
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   position: absolute;
   left: 0;
@@ -123,18 +126,26 @@ h1 {
   width: 100%;
   grid-column-start: 1;
   grid-column-end: 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-end;
-  justify-content: end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
 }
 .house-info .close-info-container .close-btn {
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   width: 80px;
   margin: auto 0 auto auto;
 }
 .house-info .close-info-container .close-btn:hover {
   cursor: pointer;
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 .house-info .close-info-container .close-btn img {
   width: 18px;
@@ -185,9 +196,15 @@ h1 {
   margin: 0 auto;
   width: 95%;
   height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border: 1px solid white;
   background: rgba(255, 255, 255, 0.5);
 }
@@ -201,9 +218,16 @@ h1 {
   margin: 0 auto;
   height: 80%;
   width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .house-info .house-layout img {
   width: 100%;
@@ -235,6 +259,7 @@ main.test_container .back .pointer_block {
   background: red;
   position: absolute;
   opacity: 0.6;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 main.test_container .back .pointer_block:hover {
@@ -310,7 +335,10 @@ main.test_container .back .pointer_block:hover {
   }
   .house-info .house-layout {
     width: 97%;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     grid-column-start: 1;
     grid-column-end: 3;
   }

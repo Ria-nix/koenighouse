@@ -10,6 +10,7 @@ function toggleButton(){
         $("#toggle_btn").removeClass('toggle_open').addClass('toggle_close');
         $(".sidebar").css('right', '0');
         $(".dark_fon").removeClass('none');
+        $("body").addClass('none_scroll');
     }
     else{ closeFon(); }
 }
@@ -20,6 +21,7 @@ function closeFon(){
     $("#toggle_btn").removeClass('toggle_close').addClass('toggle_open');
     $(".sidebar").css('right', '-250px');
     $(".dark_fon").addClass('none');
+    $("body").removeClass('none_scroll');
 }
 
 /* --------------------- Open the page with "map-module" -------------------- */

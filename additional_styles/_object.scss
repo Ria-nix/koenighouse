@@ -29,6 +29,9 @@ body{
 .none{
     display: none !important;
 }
+.none_scroll{
+    overflow: hidden;
+}
 //================== MIXINS ==================//
 @mixin MainButton($bg_color, $shadow) {
     background: $bg_color;

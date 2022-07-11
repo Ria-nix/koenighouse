@@ -36,6 +36,10 @@ body {
   display: none !important;
 }
 
+.none_scroll {
+  overflow: hidden;
+}
+
 /* -------------------------------------------------------------------------- */
 /*                                    LINKS                                   */
 /* -------------------------------------------------------------------------- */
@@ -511,4 +515,4 @@ body {
   .benefits article main .item .icon#icon_folder, .gallery article main .item .icon#icon_folder {
     left: -1.2rem !important;
   }
-}
+}/*# sourceMappingURL=style.css.map */
