@@ -57,7 +57,7 @@
     width: 40px;
     height: 40px;
     cursor: pointer;
-    padding: 18px 8px;   
+    padding: 17px 0 0 7px;
 
     .toggle_open{
         background: $cT_black;   
@@ -75,8 +75,8 @@
         &::after, &::before{
             @extend .after_before;
         }
-        &::after{ transform: translateY(-6px) rotate(45deg); }
-        &::before{ transform: translateY(-4px) rotate(-45deg); }
+        &::after{ transform: translateY(-3px) rotate(45deg); }
+        &::before{ transform: translateY(0px) rotate(-45deg); }
     }
 }
 

@@ -15,9 +15,7 @@ a {
 }
 
 @media (max-width: 1285px) {
-    .slider-module {
-        flex-direction: column;
-
+    .slider-module {flex-direction: column;
         .text-block {
             width: 100%;
             display: flex;
