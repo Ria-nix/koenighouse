@@ -104,7 +104,6 @@
     /*                                   SCRIPTS                                  */
     /* -------------------------------------------------------------------------- */ -->
     <script src="js/slider.js"></script> 
-    <script src="js/_content.js"></script>  
-
+   
 </body>
 </html>

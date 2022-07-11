@@ -24,7 +24,7 @@ function closeFon(){
     $("body").removeClass('none_scroll');
 }
 
-/* --------------------- Open the page with "map-module" -------------------- */
+/* --------------------- Open the page with link -------------------- */
 function openPage(f_link){
     this.window.location.href = f_link;
 }
@@ -32,12 +32,41 @@ function newWindow(s_link){
     this.window.open(s_link);
 }
 
+/* -------------------------------------------------------------------------- */
+/*                           SCROLL LINKS BY WEBSITE                          */
+/* -------------------------------------------------------------------------- */
 
-for(let elem of $('.menu a')){
-    // elem.addEventListener('click', function(){
+// $(document).ready(function(){
+//     $("#main_menu").on("click","a", function (event) {
+//         event.preventDefault();
+//         var id  = $(this).attr('href'),
+//         top = $(id).offset().top;
+//         $('body,html').animate({scrollTop: top}, 1000);
+//     });
+// });
+
+
+
+// #id_advantage
+// ../main/index.php#id_project
+// http://localhost:3000/main/index.php#id_gallery
+
+let links_me = document.querySelectorAll('.menu_link');
+
+links_me.forEach((elem) => {
+    elem.addEventListener('click', () => {
         console.log(elem);
-    // })
-}
+        // if(elem )
+    })
+})
+
+let url_href = window.location.href;
+let url_host = window.location.hostname;
+let url_pathname = window.location.pathname;
+
+console.log(url_href);
+console.log(url_host);
+console.log(url_pathname);
 
 
 
