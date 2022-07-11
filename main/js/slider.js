@@ -71,7 +71,7 @@ const module = {
     },
     nextBtn() {
         this.position += this.movePosition
-        console.log(`Pos = ${this.position}, MovePos = ${this.movePosition}, Items = ${this.itemsCount}, ItemsWidth = ${this.itemsWidth}`);
+        // console.log(`Pos = ${this.position}, MovePos = ${this.movePosition}, Items = ${this.itemsCount}, ItemsWidth = ${this.itemsWidth}`);
         if(this.container.clientWidth > 426) {
             if(this.position > (this.itemsCount - 1) * this.itemsWidth) {
                 this.position = 0
@@ -85,7 +85,7 @@ const module = {
     },
     prevBtn() {
         this.position -= this.movePosition
-        console.log(`Pos = ${this.position}, MovePos = ${this.movePosition}, Items = ${this.itemsCount}, ItemsWidth = ${this.itemsWidth}`);
+        // console.log(`Pos = ${this.position}, MovePos = ${this.movePosition}, Items = ${this.itemsCount}, ItemsWidth = ${this.itemsWidth}`);
         if(this.container.clientWidth > 426) {
             if (this.position < 0) {
                 this.position = (this.itemsCount - 2) * (this.itemsWidth + 20)

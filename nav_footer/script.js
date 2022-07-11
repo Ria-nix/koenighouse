@@ -33,11 +33,11 @@ function newWindow(s_link){
 }
 
 
-// for(let elem of $('.menu a')){
-//     // elem.addEventListener('click', function(){
-//         console.log(elem);
-//     // })
-// }
+for(let elem of $('.menu a')){
+    // elem.addEventListener('click', function(){
+        console.log(elem);
+    // })
+}
 
 
 
