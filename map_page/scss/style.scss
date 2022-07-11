@@ -299,12 +299,11 @@ svg {
     .mobile {
         display: flex;
         padding-top: 100px;
+        padding-bottom: 60px;
     }
     .content{ padding-top: 0 !important;}
 
-    .map {
-        display: none;
-    }
+    .map { display: none;}
 }
 
 @media (max-width: 394px) {

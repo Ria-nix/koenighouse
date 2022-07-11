@@ -43,21 +43,21 @@
 .wH_btn_toggle{
     width: 25px;
     height: 3px;
-    border-radius: 5px;
+    border-radius: 5px;    
     transition: all 0.3s ease-in;
 }
 .after_before{
     display: block;
     content: '';
     @extend .wH_btn_toggle;
-    background: $cT_black;   
+    background: $cT_black;      
 }
 
 .toggle_wrap{
     width: 40px;
     height: 40px;
     cursor: pointer;
-    padding: 18px 8px;        
+    padding: 18px 8px;   
 
     .toggle_open{
         background: $cT_black;   

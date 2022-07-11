@@ -17,17 +17,15 @@ a {
 @media (max-width: 1285px) {
     .slider-module {
         flex-direction: column;
-        // height: 1022px;
 
         .text-block {
             width: 100%;
             display: flex;
-            align-items: center;
+            align-items: flex-start; 
             flex-direction: column;
+            padding-bottom: 2.5rem;
 
-            .description {
-                max-width: 615px;
-            }
+            .description { max-width: 615px;}
         }
     }
 }
