@@ -82,14 +82,14 @@ body {
   width: 25px;
   height: 3px;
   border-radius: 5px;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .after_before, .toggle_wrap .toggle_close::after, .toggle_wrap .toggle_close::before, .toggle_wrap .toggle_open::after, .toggle_wrap .toggle_open::before {
   display: block;
   content: "";
   background: #000;
-  -webkit-transition: all 0.4s ease-in;
-  transition: all 0.4s ease-in;
 }
 
 .toggle_wrap {
@@ -108,6 +108,9 @@ body {
 .toggle_wrap .toggle_open::before {
   -webkit-transform: translateY(7px);
           transform: translateY(7px);
+}
+.toggle_wrap .toggle_close {
+  background: transparent;
 }
 .toggle_wrap .toggle_close::after {
   -webkit-transform: translateY(-6px) rotate(45deg);

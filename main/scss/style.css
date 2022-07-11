@@ -102,7 +102,7 @@ body {
 /* -------------------------------------------------------------------------- */
 /*                                  BENEFITS                                  */
 /* -------------------------------------------------------------------------- */
-.benefits, .gallery {
+.benefits {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -117,10 +117,10 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.benefits article, .gallery article {
+.benefits article {
   margin-top: 1rem;
 }
-.benefits article main, .gallery article main {
+.benefits article main {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -133,7 +133,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.benefits article main .item, .gallery article main .item {
+.benefits article main .item {
   padding: 3rem 1rem 14rem 1rem;
   position: relative;
   display: -webkit-box;
@@ -147,19 +147,19 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.benefits article main .item.fon, .gallery article main .item.fon {
+.benefits article main .item.fon {
   position: relative;
   z-index: 1;
 }
-.benefits article main .item.fon.green, .gallery article main .item.fon.green {
+.benefits article main .item.fon.green {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(-0.01%, #00C2C3), color-stop(77.31%, #8FFF8F));
   background: linear-gradient(180deg, #00C2C3 -0.01%, #8FFF8F 77.31%);
 }
-.benefits article main .item.fon.orange, .gallery article main .item.fon.orange {
+.benefits article main .item.fon.orange {
   background: -webkit-gradient(linear, left top, left bottom, from(#FFCB46), color-stop(99.98%, #FE246E));
   background: linear-gradient(180deg, #FFCB46 0%, #FE246E 99.98%);
 }
-.benefits article main .item.fon::after, .gallery article main .item.fon::after {
+.benefits article main .item.fon::after {
   content: "";
   width: 100%;
   height: 100%;
@@ -172,7 +172,7 @@ body {
   background-size: 100% 105%;
   background-position: left bottom;
 }
-.benefits article main .item p, .gallery article main .item p {
+.benefits article main .item p {
   width: 100%;
   color: #FFF;
   font-weight: 500;
@@ -182,7 +182,7 @@ body {
   text-transform: uppercase;
   line-height: 1.8rem;
 }
-.benefits article main .item .icon, .gallery article main .item .icon {
+.benefits article main .item .icon {
   display: block;
   height: 14rem;
   width: 100%;
@@ -191,20 +191,20 @@ body {
   left: -4vw;
   z-index: 10;
 }
-.benefits article main .item .icon#icon_folder, .gallery article main .item .icon#icon_folder {
+.benefits article main .item .icon#icon_folder {
   left: -1rem;
   background: url("../../images/benefits/folders.svg") no-repeat bottom;
   background-size: contain;
 }
-.benefits article main .item .icon#icon_room, .gallery article main .item .icon#icon_room {
+.benefits article main .item .icon#icon_room {
   background: url("../../images/benefits/room.svg") no-repeat bottom;
   background-size: contain;
 }
-.benefits article main .item .icon#icon_build, .gallery article main .item .icon#icon_build {
+.benefits article main .item .icon#icon_build {
   background: url("../../images/benefits/tools.svg") no-repeat bottom;
   background-size: contain;
 }
-.benefits article main .item .icon#icon_house, .gallery article main .item .icon#icon_house {
+.benefits article main .item .icon#icon_house {
   background: url("../../images/benefits/home.svg") no-repeat bottom;
   background-size: contain;
 }
@@ -213,6 +213,14 @@ body {
 /*                                   GALLERY                                  */
 /* -------------------------------------------------------------------------- */
 .gallery {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(250px, 1360px));
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-bottom: 60px;
 }
 .gallery .wrap_gallery {
@@ -357,10 +365,6 @@ body {
             box-shadow: none;
     background-position: right center;
   }
-
-  .gallery {
-    margin-bottom: 60px;
-  }
 }
 @media (max-width: 1019px) and (min-width: 601px) {
   .gallery_items {
@@ -420,7 +424,7 @@ body {
 /*                               BENEFITS MEDIA                               */
 /* -------------------------------------------------------------------------- */
 @media screen and (max-width: 1120px) {
-  .benefits article main, .gallery article main {
+  .benefits article main {
     padding-bottom: 4rem;
     grid-column-gap: 3.5rem !important;
     grid-template-columns: repeat(4, 14rem) !important;
@@ -428,16 +432,16 @@ body {
     overflow-y: hidden;
     scrollbar-width: none;
   }
-  .benefits article main::-webkit-scrollbar, .gallery article main::-webkit-scrollbar {
+  .benefits article main::-webkit-scrollbar {
     width: 0;
     height: 0;
   }
 }
 @media screen and (max-width: 560px) {
-  .benefits, .gallery {
+  .benefits {
     padding: 0 1rem !important;
   }
-  .benefits article main, .gallery article main {
+  .benefits article main {
     padding: 0 1rem 2.5rem 1rem !important;
     grid-row-gap: 10vw !important;
     grid-column-gap: 10vw !important;
@@ -451,39 +455,39 @@ body {
         -ms-flex-pack: space-evenly !important;
             justify-content: space-evenly !important;
   }
-  .benefits article main .item, .gallery article main .item {
+  .benefits article main .item {
     padding: 10vw 3vw 30vw 3vw !important;
   }
-  .benefits article main .item:nth-child(1), .gallery article main .item:nth-child(1) {
+  .benefits article main .item:nth-child(1) {
     grid-area: folder;
   }
-  .benefits article main .item:nth-child(2), .gallery article main .item:nth-child(2) {
+  .benefits article main .item:nth-child(2) {
     grid-area: room;
   }
-  .benefits article main .item:nth-child(3), .gallery article main .item:nth-child(3) {
+  .benefits article main .item:nth-child(3) {
     grid-area: build;
   }
-  .benefits article main .item:nth-child(4), .gallery article main .item:nth-child(4) {
+  .benefits article main .item:nth-child(4) {
     grid-area: house;
   }
-  .benefits article main .item p, .gallery article main .item p {
+  .benefits article main .item p {
     font-size: 3.5vw !important;
     line-height: 1.5rem !important;
   }
-  .benefits article main .item .icon, .gallery article main .item .icon {
+  .benefits article main .item .icon {
     height: 30vw !important;
     left: -8vw !important;
     bottom: -10vw !important;
   }
-  .benefits article main .item .icon#icon_folder, .gallery article main .item .icon#icon_folder {
+  .benefits article main .item .icon#icon_folder {
     left: -5vw !important;
   }
 }
 @media screen and (max-width: 320px) {
-  .benefits, .gallery {
+  .benefits {
     padding: 0 1rem !important;
   }
-  .benefits article main, .gallery article main {
+  .benefits article main {
     padding: 0 !important;
     padding-bottom: 3rem !important;
     grid-column-gap: 3.5rem !important;
@@ -496,23 +500,23 @@ body {
     overflow-y: hidden;
     scrollbar-width: none;
   }
-  .benefits article main::-webkit-scrollbar, .gallery article main::-webkit-scrollbar {
+  .benefits article main::-webkit-scrollbar {
     width: 0;
     height: 0;
   }
-  .benefits article main .item, .gallery article main .item {
+  .benefits article main .item {
     padding: 3rem 1rem 10rem 1rem !important;
   }
-  .benefits article main .item p, .gallery article main .item p {
+  .benefits article main .item p {
     font-size: 1rem !important;
     line-height: 1.5rem !important;
   }
-  .benefits article main .item .icon, .gallery article main .item .icon {
+  .benefits article main .item .icon {
     height: 10rem !important;
     left: -3rem !important;
     bottom: -3rem !important;
   }
-  .benefits article main .item .icon#icon_folder, .gallery article main .item .icon#icon_folder {
+  .benefits article main .item .icon#icon_folder {
     left: -1.2rem !important;
   }
 }/*# sourceMappingURL=style.css.map */
