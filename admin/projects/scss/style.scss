@@ -1,0 +1,59 @@
+@use '../../../additional_styles/_color' as *;
+@use '../../../additional_styles/_object' as *;
+
+/* -------------------------------------------------------------------------- */
+/*                                  MAIN CODE                                 */
+/* -------------------------------------------------------------------------- */
+
+.content_wrap{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(320px, 1920px));
+    justify-content: center;
+
+    .content_proj{
+        margin: 0 auto;
+        width: 80%;
+        height: auto;
+        @include Flex(column, inline, center);
+        border: 1px solid red;
+
+        .heading{
+            padding: 20px 0 40px 0;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font: {
+                family: 'Montserrat';
+                style: normal;
+                weight: 500;
+                size: 28px;
+            }        
+        }
+    
+        .bl_projects{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            // grid-template-rows: minmax(260px, 400px);
+            row-gap: 35px;
+            column-gap: 20px;
+            // border: 1px solid red;
+
+            .bl_card{
+                width: 100%;
+                height: 100%;
+                border: 1px solid blue;
+                min-height: 200px;
+                background: $c_white;
+                filter: drop-shadow(0px 4px 10px rgba(166, 166, 166, 0.5));
+
+                .image{
+                    width: 100%;
+                    height: 50%;
+                    background: url('../../images/img.png') no-repeat center;
+                    background-size: contain;
+                }
+            }
+        }
+    }   
+}

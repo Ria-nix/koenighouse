@@ -8,8 +8,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <div class="wrap">
+    <?php
+
+        $url = $_SERVER['HTTP_HOST'];
+        // $new.=$_SERVER['REQUEST_URI'];   
+        if($_SERVER['REQUEST_URI'] == '/admin'){
+            header("Location:'.$url.'/main/index.php");
+        }
+
+    ?>
+    <!-- <div class="wrap">
         <div class="menu">
             <a href="base/index.html#home">HOME</a>
             <a href="base/index.html#news">NEWS</a>
@@ -31,6 +39,6 @@
                 <h2>THEME</h2>
             </div>
         </div>
-    </div>
+    </div> -->
 </body>
 </html>

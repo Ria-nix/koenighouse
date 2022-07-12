@@ -23,7 +23,7 @@ input{
         img{ 
             height: 18%;
             margin-bottom: 50px;
-        }
+        }    
         .fields{
             @include Flex(column, center, center);
             input{

@@ -1,5 +1,9 @@
 <!-- ===== LINKS: favicon, navigation panel, footer, main page ===== -->
 <!-- <link rel="shortcut icon" href="../images/favicon.svg" type="image/x-icon"> -->
+<?php
+    $url = $_SERVER['HTTP_HOST'];
+?>
+
 <link rel="stylesheet" href="../nav/scss/style.css">
 <link rel="stylesheet" href="scss/style.css">
 
