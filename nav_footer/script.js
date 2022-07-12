@@ -59,14 +59,14 @@ console.log(url_host);
 console.log(url_pathname);
 
 
-function changeAddress(address){
-    if(utr_pathname == ){
+// function changeAddress(address){
+//     if(utr_pathname == ){
 
-    }
-    else{
+//     }
+//     else{
 
-    }
-}
+//     }
+// }
 
 
 

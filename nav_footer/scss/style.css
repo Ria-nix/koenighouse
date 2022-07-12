@@ -69,15 +69,6 @@ body {
   width: 40px;
 }
 
-.links_foot, .footer_wrap .wrap_media .social_media .info_item a {
-  -webkit-user-select: text !important;
-     -moz-user-select: text !important;
-      -ms-user-select: text !important;
-          user-select: text !important;
-  text-decoration: none;
-  color: #000;
-}
-
 .main_wrap span, .footer_wrap span {
   display: block;
 }
@@ -106,6 +97,7 @@ body {
   height: 40px;
   cursor: pointer;
   padding: 17px 0 0 7px;
+  z-index: 999;
 }
 .toggle_wrap .toggle_open {
   background: #000;
@@ -328,12 +320,11 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-shadow: inset 0px 11px 13px -10px rgba(0, 0, 0, 0.15);
-            box-shadow: inset 0px 11px 13px -10px rgba(0, 0, 0, 0.15);
-    height: 95vh;
+    height: 100vh;
+    padding-top: 70px;
     position: fixed;
     right: -500px;
-    top: 70px;
+    top: 0;
     width: 250px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -349,7 +340,10 @@ body {
     transition: all 0.5s linear;
   }
   .main_wrap .sidebar .menu {
-    padding: 25px 0 15px 0;
+    -webkit-box-shadow: inset 0px 11px 13px -10px rgba(0, 0, 0, 0.15);
+            box-shadow: inset 0px 11px 13px -10px rgba(0, 0, 0, 0.15);
+    padding: 25px 0 15px 40px;
+    width: 100%;
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
@@ -427,6 +421,7 @@ body {
 
 .footer_wrap img {
   height: 55%;
+  cursor: pointer;
 }
 
 .footer_wrap .wrap_media .social_media .info_item {
@@ -445,6 +440,14 @@ body {
           align-items: normal;
   margin-bottom: 10px;
   cursor: pointer;
+}
+.footer_wrap .wrap_media .social_media .info_item a {
+  -webkit-user-select: text !important;
+     -moz-user-select: text !important;
+      -ms-user-select: text !important;
+          user-select: text !important;
+  text-decoration: none;
+  color: #000;
 }
 .footer_wrap .wrap_media .social_media .info_item a .info {
   -webkit-transition: color 0.2s ease-in-out;
