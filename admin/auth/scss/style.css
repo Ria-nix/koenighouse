@@ -42,4 +42,87 @@ body {
 
 /* -------------------------------------------------------------------------- */
 /*                                  MAIN CODE                                 */
-/* -------------------------------------------------------------------------- *//*# sourceMappingURL=style.css.map */
+/* -------------------------------------------------------------------------- */
+.grid_wrap {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(320px, 1440px));
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.grid_wrap form {
+  margin-top: 15%;
+  width: 100%;
+  height: 400px;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.grid_wrap form img {
+  height: 18%;
+  margin-bottom: 50px;
+}
+.grid_wrap form .fields {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.grid_wrap form .fields input {
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid #000;
+  padding-left: 5px;
+  height: 30px;
+  width: 240px;
+}
+.grid_wrap form .fields input:first-child {
+  margin-bottom: 20px;
+}
+.grid_wrap form .come_in {
+  background: -webkit-gradient(linear, left top, right top, from(#FF184F), color-stop(50%, #FFCA41), to(#FF184F));
+  background: linear-gradient(to right, #FF184F 0%, #FFCA41 50%, #FF184F 100%);
+  -webkit-box-shadow: 0px 7px 25px rgba(255, 29, 78, 0.2);
+          box-shadow: 0px 7px 25px rgba(255, 29, 78, 0.2);
+  padding: 12px 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 50px;
+  border: none;
+  color: #FFF;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-size: 200% auto;
+  margin-top: 40px;
+}
+.grid_wrap form .come_in:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-position: right center;
+}/*# sourceMappingURL=style.css.map */

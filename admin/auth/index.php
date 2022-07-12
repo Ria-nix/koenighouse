@@ -15,7 +15,7 @@
                 <input type="text" placeholder="Введите логин" require>
                 <input type="password" placeholder="Введите пароль" require>
             </div>
-            <input type="submit" value="Войти">
+            <input class="come_in" type="submit" value="Войти">
         </form>
     </div>
 </body>
