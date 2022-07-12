@@ -96,11 +96,11 @@ input {
 .grid_wrap form .fields input {
   height: 30px;
   width: 240px;
+  padding-left: 5px;
   border-top: 1px solid transparent;
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
   border-bottom: 1px solid #000;
-  padding-left: 5px;
   font-size: 16px;
   font-family: "Roboto";
   font-style: normal;
@@ -121,6 +121,7 @@ input {
   border: none;
   color: #FFF;
   cursor: pointer;
+  outline: none;
   font-weight: 800;
   font-size: 13px;
   letter-spacing: 0.5px;

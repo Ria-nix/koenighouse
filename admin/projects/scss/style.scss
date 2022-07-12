@@ -10,14 +10,15 @@
     height: 100%;
     display: grid;
     grid-template-columns: repeat(1, minmax(320px, 1920px));
-    justify-content: center;
+    row-gap: 30px;
+    justify-content: center;    
 
     .content_proj{
         margin: 0 auto;
         width: 80%;
-        height: auto;
+        height: auto;        
         @include Flex(column, inline, center);
-        border: 1px solid red;
+        // border: 1px solid red;
 
         .heading{
             padding: 20px 0 40px 0;
@@ -34,7 +35,6 @@
         .bl_projects{
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            // grid-template-rows: minmax(260px, 400px);
             row-gap: 35px;
             column-gap: 20px;
             // border: 1px solid red;
@@ -42,16 +42,68 @@
             .bl_card{
                 width: 100%;
                 height: 100%;
-                border: 1px solid blue;
+                // border: 1px solid blue;
                 min-height: 200px;
                 background: $c_white;
                 filter: drop-shadow(0px 4px 10px rgba(166, 166, 166, 0.5));
+                @include Flex(column, inline, center);
 
                 .image{
                     width: 100%;
-                    height: 50%;
-                    background: url('../../images/img.png') no-repeat center;
-                    background-size: contain;
+                    height: 250px;
+                    background: url('../../images/home.jpg') no-repeat center;
+                    background-size: cover;
+                }
+                .bl_text{
+                    padding: 15px 10px 0 10px;
+                    .main_head, .description{
+                        font: {
+                            family: 'Roboto';
+                            style: normal;
+                            size: 16px;
+                            weight: 300;
+                        }
+                        span{ 
+                            letter-spacing: 0.01em;
+                            font-weight: 700;
+                        }
+                    }
+                    .main_head{ margin-bottom: 5px;}
+                    .description{
+                    //     line-clamp: 4;
+                    //     overflow: hidden;
+                    //     white-space: nowrap;
+                    // }
+                }
+                .btns{
+                    margin: 20px 10px 15px 10px;
+                    @include Flex(row, none, space-between);
+                    // border: 1px solid red;
+
+                    input{
+                        // background: $lin_green;
+                        // box-shadow: $linSp_green;
+                        // text-align: center;
+                        // width: 150px;
+                        // height: 40px;
+                        // font-weight: 700;
+                        // text-transform: uppercase;
+                        // border-radius: 50px;
+                        // border: none;
+                        // color: $c_white;
+                        // cursor: pointer;
+                        // outline:none;
+                        
+                        // font-weight: 800;
+                        // font-size: 13px;
+                        // letter-spacing: 0.5px;
+                    }
+                    .edit_btn{
+                        @include MainButton($lin_green, $linSp_green);
+                    }
+                    .open_btn{
+                        @include MainButton($lin_orange, $linSp_orange);
+                    }
                 }
             }
         }

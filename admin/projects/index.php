@@ -23,24 +23,96 @@
             <div class="bl_card">
                 <div class="image"></div>
                 <div class="bl_text">
-                    <p class="main_head">Название: <span> 2 Таунхауса </span></p>
-                    <p class="description">Описание: <span> совершенно новый и невероятно архитектурно продуманный дом, который находится абсолютно не далеко от центра города и стоит настолько дешёво, что хватит ещё на мебель и технику, честное слово, отвечаю. </span></p>
+                    <p class="main_head"><span>Название:</span> 2 Таунхауса</p>
+                    <p class="description"><span>Описание:</span> совершенно новый и невероятно архитектурно продуманный дом, который находится абсолютно не далеко от центра города и стоит настолько дешёво, что хватит ещё на мебель и технику, честное слово, отвечаю.</p>
                 </div>
                 <div class="btns">
-                    <input type="text" class="edit_btn" value="Редактировать">
-                    <input type="text" class="open_btn" value="Открыть">                
+                    <input type="submit" class="edit_btn" value="Редактировать">
+                    <input type="submit" class="open_btn" value="Открыть">                
                 </div>
             </div>
 
             <div class="bl_card">
                 <div class="image"></div>
                 <div class="bl_text">
-                    <p class="main_head">Название: <span> 2 Таунхауса </span></p>
-                    <p class="description">Описание: <span> совершенно новый и невероятно архитектурно продуманный дом, который находится абсолютно не далеко от центра города и стоит настолько дешёво, что хватит ещё на мебель и технику, честное слово, отвечаю. </span></p>
+                    <p class="main_head"><span>Название:</span> 2 Таунхауса</p>
+                    <p class="description"><span>Описание:</span> совершенно новый и невероятно архитектурно продуманный дом, который находится абсолютно не далеко от центра города и стоит настолько дешёво, что хватит ещё на мебель и технику, честное слово, отвечаю.</p>
                 </div>
                 <div class="btns">
-                    <input type="text" class="edit_btn" value="Редактировать">
-                    <input type="text" class="open_btn" value="Открыть">                
+                    <input type="submit" class="edit_btn" value="Редактировать">
+                    <input type="submit" class="open_btn" value="Открыть">                
+                </div>
+            </div>
+
+            <div class="bl_card">
+                <div class="image"></div>
+                <div class="bl_text">
+                    <p class="main_head"><span>Название:</span> 2 Таунхауса</p>
+                    <p class="description"><span>Описание:</span> совершенно новый и невероятно архитектурно продуманный дом, который находится абсолютно не далеко от центра города и стоит настолько дешёво, что хватит ещё на мебель и технику, честное слово, отвечаю.</p>
+                </div>
+                <div class="btns">
+                    <input type="submit" class="edit_btn" value="Редактировать">
+                    <input type="submit" class="open_btn" value="Открыть">                
+                </div>
+            </div>
+
+            <div class="bl_card">
+                <div class="image"></div>
+                <div class="bl_text">
+                    <p class="main_head"><span>Название:</span> 2 Таунхауса</p>
+                    <p class="description"><span>Описание:</span> совершенно новый и невероятно архитектурно продуманный дом, который находится абсолютно не далеко от центра города и стоит настолько дешёво, что хватит ещё на мебель и технику, честное слово, отвечаю.</p>
+                </div>
+                <div class="btns">
+                    <input type="submit" class="edit_btn" value="Редактировать">
+                    <input type="submit" class="open_btn" value="Открыть">                
+                </div>
+            </div>
+
+            <div class="bl_card">
+                <div class="image"></div>
+                <div class="bl_text">
+                    <p class="main_head"><span>Название:</span> 2 Таунхауса</p>
+                    <p class="description"><span>Описание:</span> совершенно новый и невероятно архитектурно продуманный дом, который находится абсолютно не далеко от центра города и стоит настолько дешёво, что хватит ещё на мебель и технику, честное слово, отвечаю.</p>
+                </div>
+                <div class="btns">
+                    <input type="submit" class="edit_btn" value="Редактировать">
+                    <input type="submit" class="open_btn" value="Открыть">                
+                </div>
+            </div>
+
+            <div class="bl_card">
+                <div class="image"></div>
+                <div class="bl_text">
+                    <p class="main_head"><span>Название:</span> 2 Таунхауса</p>
+                    <p class="description"><span>Описание:</span> совершенно новый и невероятно архитектурно продуманный дом, который находится абсолютно не далеко от центра города и стоит настолько дешёво, что хватит ещё на мебель и технику, честное слово, отвечаю.</p>
+                </div>
+                <div class="btns">
+                    <input type="submit" class="edit_btn" value="Редактировать">
+                    <input type="submit" class="open_btn" value="Открыть">                
+                </div>
+            </div>
+
+            <div class="bl_card">
+                <div class="image"></div>
+                <div class="bl_text">
+                    <p class="main_head"><span>Название:</span> 2 Таунхауса</p>
+                    <p class="description"><span>Описание:</span> совершенно новый и невероятно архитектурно продуманный дом, который находится абсолютно не далеко от центра города и стоит настолько дешёво, что хватит ещё на мебель и технику, честное слово, отвечаю.</p>
+                </div>
+                <div class="btns">
+                    <input type="submit" class="edit_btn" value="Редактировать">
+                    <input type="submit" class="open_btn" value="Открыть">                
+                </div>
+            </div>
+
+            <div class="bl_card">
+                <div class="image"></div>
+                <div class="bl_text">
+                    <p class="main_head"><span>Название:</span> 2 Таунхауса</p>
+                    <p class="description"><span>Описание:</span> совершенно новый и невероятно архитектурно продуманный дом, который находится абсолютно не далеко от центра города и стоит настолько дешёво, что хватит ещё на мебель и технику, честное слово, отвечаю.</p>
+                </div>
+                <div class="btns">
+                    <input type="submit" class="edit_btn" value="Редактировать">
+                    <input type="submit" class="open_btn" value="Открыть">                
                 </div>
             </div>
 
@@ -48,94 +120,15 @@
             <div class="bl_card">
                 <div class="image"></div>
                 <div class="bl_text">
-                    <p class="main_head">Название: <span> 2 Таунхауса </span></p>
-                    <p class="description">Описание: <span> совершенно новый и невероятно архитектурно продуманный дом, который находится абсолютно не далеко от центра города и стоит настолько дешёво, что хватит ещё на мебель и технику, честное слово, отвечаю. </span></p>
+                    <p class="main_head"><span>Название:</span> 2 Таунхауса</p>
+                    <p class="description"><span>Описание:</span> совершенно новый и невероятно архитектурно продуманный дом, который находится абсолютно не далеко от центра города и стоит настолько дешёво, что хватит ещё на мебель и технику, честное слово, отвечаю.</p>
                 </div>
                 <div class="btns">
-                    <input type="text" class="edit_btn" value="Редактировать">
-                    <input type="text" class="open_btn" value="Открыть">                
+                    <input type="submit" class="edit_btn" value="Редактировать">
+                    <input type="submit" class="open_btn" value="Открыть">                
                 </div>
             </div>
 
-
-            <div class="bl_card">
-                <div class="image"></div>
-                <div class="bl_text">
-                    <p class="main_head">Название: <span> 2 Таунхауса </span></p>
-                    <p class="description">Описание: <span> совершенно новый и невероятно архитектурно продуманный дом, который находится абсолютно не далеко от центра города и стоит настолько дешёво, что хватит ещё на мебель и технику, честное слово, отвечаю. </span></p>
-                </div>
-                <div class="btns">
-                    <input type="text" class="edit_btn" value="Редактировать">
-                    <input type="text" class="open_btn" value="Открыть">                
-                </div>
-            </div>
-
-            <div class="bl_card">
-                <div class="image"></div>
-                <div class="bl_text">
-                    <p class="main_head">Название: <span> 2 Таунхауса </span></p>
-                    <p class="description">Описание: <span> совершенно новый и невероятно архитектурно продуманный дом, который находится абсолютно не далеко от центра города и стоит настолько дешёво, что хватит ещё на мебель и технику, честное слово, отвечаю. </span></p>
-                </div>
-                <div class="btns">
-                    <input type="text" class="edit_btn" value="Редактировать">
-                    <input type="text" class="open_btn" value="Открыть">                
-                </div>
-            </div>
-            <div class="bl_card">
-                <div class="image"></div>
-                <div class="bl_text">
-                    <p class="main_head">Название: <span> 2 Таунхауса </span></p>
-                    <p class="description">Описание: <span> совершенно новый и невероятно архитектурно продуманный дом, который находится абсолютно не далеко от центра города и стоит настолько дешёво, что хватит ещё на мебель и технику, честное слово, отвечаю. </span></p>
-                </div>
-                <div class="btns">
-                    <input type="text" class="edit_btn" value="Редактировать">
-                    <input type="text" class="open_btn" value="Открыть">                
-                </div>
-            </div>
-            <div class="bl_card">
-                <div class="image"></div>
-                <div class="bl_text">
-                    <p class="main_head">Название: <span> 2 Таунхауса </span></p>
-                    <p class="description">Описание: <span> совершенно новый и невероятно архитектурно продуманный дом, который находится абсолютно не далеко от центра города и стоит настолько дешёво, что хватит ещё на мебель и технику, честное слово, отвечаю. </span></p>
-                </div>
-                <div class="btns">
-                    <input type="text" class="edit_btn" value="Редактировать">
-                    <input type="text" class="open_btn" value="Открыть">                
-                </div>
-            </div>
-            <div class="bl_card">
-                <div class="image"></div>
-                <div class="bl_text">
-                    <p class="main_head">Название: <span> 2 Таунхауса </span></p>
-                    <p class="description">Описание: <span> совершенно новый и невероятно архитектурно продуманный дом, который находится абсолютно не далеко от центра города и стоит настолько дешёво, что хватит ещё на мебель и технику, честное слово, отвечаю. </span></p>
-                </div>
-                <div class="btns">
-                    <input type="text" class="edit_btn" value="Редактировать">
-                    <input type="text" class="open_btn" value="Открыть">                
-                </div>
-            </div>
-            <div class="bl_card">
-                <div class="image"></div>
-                <div class="bl_text">
-                    <p class="main_head">Название: <span> 2 Таунхауса </span></p>
-                    <p class="description">Описание: <span> совершенно новый и невероятно архитектурно продуманный дом, который находится абсолютно не далеко от центра города и стоит настолько дешёво, что хватит ещё на мебель и технику, честное слово, отвечаю. </span></p>
-                </div>
-                <div class="btns">
-                    <input type="text" class="edit_btn" value="Редактировать">
-                    <input type="text" class="open_btn" value="Открыть">                
-                </div>
-            </div>
-            <div class="bl_card">
-                <div class="image"></div>
-                <div class="bl_text">
-                    <p class="main_head">Название: <span> 2 Таунхауса </span></p>
-                    <p class="description">Описание: <span> совершенно новый и невероятно архитектурно продуманный дом, который находится абсолютно не далеко от центра города и стоит настолько дешёво, что хватит ещё на мебель и технику, честное слово, отвечаю. </span></p>
-                </div>
-                <div class="btns">
-                    <input type="text" class="edit_btn" value="Редактировать">
-                    <input type="text" class="open_btn" value="Открыть">                
-                </div>
-            </div>
 
             </div>
         </div>        
