@@ -1,6 +1,5 @@
 <div class="layout_wrap layout_menu">
     <div class="main_wrap">
-
         <img src="../images/logo.svg" alt="logo" onClick="openPage('../main/index.php')">
         <div class="toggle_wrap" onClick="toggleButton()">
             <span class="toggle_open" id="toggle_btn"></span>
@@ -8,17 +7,17 @@
 
         <div class="sidebar">
             <div class="menu" id="main_menu">
-                <a href="#" name="name_advantages" class="menu_link"> 
+                <a href="#" name="name_advantages" class="menu_link" onClick="changeAddress('#id_advantage')"> 
                     <span class="icon_link" id="advantages"></span>
                     <p class="item_txt">Преимущества</p>
                     <span class="underline"></span>
                 </a>
-                <a href="#" name="name_projects" class="menu_link">
+                <a href="#" name="name_projects" class="menu_link" onClick="changeAddress('#id_project')">
                     <span class="icon_link" id="projects"></span>
                     <p class="item_txt">Проекты</p>
                     <span class="underline"></span>
                 </a>
-                <a href="#" name="name_gallery" class="menu_link">
+                <a href="#" name="name_gallery" class="menu_link" onClick="changeAddress('#id_gallery')">
                     <span class="icon_link" id="gallery"></span>
                     <p class="item_txt">Галерея</p>
                     <span class="underline"></span>

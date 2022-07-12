@@ -45,20 +45,10 @@ function newWindow(s_link){
 //     });
 // });
 
-
-
 // #id_advantage
 // ../main/index.php#id_project
 // http://localhost:3000/main/index.php#id_gallery
 
-let links_me = document.querySelectorAll('.menu_link');
-
-links_me.forEach((elem) => {
-    elem.addEventListener('click', () => {
-        console.log(elem);
-        // if(elem )
-    })
-})
 
 let url_href = window.location.href;
 let url_host = window.location.hostname;
@@ -67,6 +57,16 @@ let url_pathname = window.location.pathname;
 console.log(url_href);
 console.log(url_host);
 console.log(url_pathname);
+
+
+function changeAddress(address){
+    if(utr_pathname == ){
+
+    }
+    else{
+
+    }
+}
 
 
 
