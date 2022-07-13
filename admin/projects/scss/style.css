@@ -44,8 +44,6 @@ body {
 /*                                  MAIN CODE                                 */
 /* -------------------------------------------------------------------------- */
 .content_wrap {
-  width: 100%;
-  height: 100%;
   display: grid;
   grid-template-columns: repeat(1, minmax(320px, 1920px));
   row-gap: 30px;
@@ -82,11 +80,13 @@ body {
 }
 .content_wrap .content_proj .bl_projects {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   row-gap: 35px;
   -webkit-column-gap: 20px;
      -moz-column-gap: 20px;
           column-gap: 20px;
+}
+.content_wrap .content_proj .bl_projects:last-child {
+  margin-bottom: 40px;
 }
 .content_wrap .content_proj .bl_projects .bl_card {
   width: 100%;
@@ -138,22 +138,7 @@ body {
   overflow: hidden;
 }
 .content_wrap .content_proj .bl_projects .bl_card .btns {
-  width: 100%;
   margin: 20px 0 15px 0;
-  padding: 0 10px;
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: none;
-      -ms-flex-align: none;
-          align-items: none;
 }
 .content_wrap .content_proj .bl_projects .bl_card .btns .edit_btn {
   background: -webkit-gradient(linear, right top, left top, color-stop(-30.45%, #00E77C), to(#05C4C1));
@@ -204,4 +189,50 @@ body {
   -webkit-box-shadow: none;
           box-shadow: none;
   background-position: right center;
+}
+
+@media screen and (min-width: 481px) {
+  .bl_projects {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+
+  .btns {
+    width: 100%;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: none;
+        -ms-flex-align: none;
+            align-items: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .bl_projects {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+
+  .btns {
+    width: 70%;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: none;
+        -ms-flex-align: none;
+            align-items: none;
+  }
+  .btns .edit_btn {
+    margin-bottom: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */

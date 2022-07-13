@@ -130,7 +130,7 @@ body {
 
 .content_wrap {
   width: 100%;
-  height: auto;
+  height: 100%;
   z-index: 0;
   position: relative;
 }
