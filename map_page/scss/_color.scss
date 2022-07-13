@@ -1,0 +1,66 @@
+//************** COLORS | SHADOWS | LINEAR GRADIENT | BLUR **************//
+
+//? bl_ = (is) BLUR
+//? c_ = (is) COLOR
+//? cT_ = (is) COLOR OF TEXT
+//? cOp_ = (is) COLOR WITH OPACITY and procent 
+//? sSp_ = (is) SPEACIAL SHADOW  
+//? lin_ = (is) LINEAR GRADIENT 
+//? linSp_ = (is) SPEACIAL LINEAR GRADIENT 
+
+//************** BLUR **************//
+$bl_60: 60px;
+$bl_70: 70px;
+$bl_lin_green: linear-gradient(270deg, rgba(0, 231, 124, 0.6) -33.76%, rgba(0, 154, 200, 0.6) 104.7%);
+
+//************** COLORS **************//
+$c_white: #FFF;
+$cOp85_white: rgba(255, 255, 255, 0.85);
+$cOp17_white: rgba(255, 255, 255, 0.17);
+$cOp26_yell: rgba(255, 248, 230, 0.26);
+$c_milk: #F7F4F9;
+$c_blueGray: #D0D3D7;
+$cT_black: #000;
+$cOP_black: rgba(0, 0, 0, 0.2);
+$cT_red: #FF3B4C;
+$cT_gray: #C4C4C4;
+$c_btn: #D0D3D7;
+
+//************** SHADOWS **************//
+$shadow: 0px 7px 25px rgba(255, 29, 78, 0.2); 
+$shadow_menu: 10px 0px 30px rgba(0, 0, 0, 0.15);
+$sIn_menu: inset 10px 0px 30px rgba(0, 0, 0, 0.15);
+$shadow_btn: 0px 7px 25px rgba(255, 29, 78, 0.2);
+
+// BUTTONS "BUY" and "ABOUT HOME"
+$sSp_orange: 0px 7px 25px rgba(255, 114, 144, 0.76);
+$sSp_green:  0px 7px 25px rgba(5, 196, 193, 0.62);
+
+//************** LINEAR GRADIENT **************//
+$lin_orange: linear-gradient(270deg, #FFC539 -33.76%, #FF0451 104.7%);
+$lin_green: linear-gradient(270deg, #00E77C -30.45%, #05C4C1 100%);
+
+// BUTTONS "BUY" and "ABOUT HOME"
+$linSp_orange: linear-gradient(to right, #FF184F 0%, #FFCA41 50%, #FF184F 100%);
+$linSp_green: linear-gradient(to right, #00E77C 0%, #05C4C1 51%, #00E77C 100%);
+
+//************** Fonts **************//
+$MonTitle: 'Montserrat', sans-serif;
+$Roboto-text: 'Roboto', sans-serif;
+
+// Font: Montserrat 
+%MontserratTitle {
+    font-family: $MonTitle;
+    text-transform: uppercase;
+    line-height: 43.88px;
+}
+
+// Fonts: Roboto 
+%RobotoText {
+    font-family: $Roboto-text;
+    line-height: 23.44px;
+    margin: 0;
+}
+
+
+

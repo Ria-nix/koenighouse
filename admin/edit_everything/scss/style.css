@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@300;400&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #000;
+}
+
+.layout_wrap {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(320px, 1360px));
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.none {
+  display: none !important;
+}
+
+.none_scroll {
+  overflow: hidden;
+}
+
+input {
+  outline: none;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  MAIN CODE                                 */
+/* -------------------------------------------------------------------------- */
+.content_wrap {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(320px, 1920px));
+  row-gap: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.content_wrap .content_proj {
+  margin: 0 auto;
+  width: 80%;
+  height: auto;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: inline;
+      -ms-flex-pack: inline;
+          justify-content: inline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* ------------------------------ all projects ------------------------------ */
+}
+.content_wrap .content_proj .heading {
+  padding: 20px 0 40px 0;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+}
+.content_wrap .content_proj .bl_projects {
+  width: 100%;
+  display: grid;
+  row-gap: 35px;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+}
+.content_wrap .content_proj .bl_projects:last-child {
+  margin-bottom: 40px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                MEDIA QUERIES                               */
+/* -------------------------------------------------------------------------- *//*# sourceMappingURL=style.css.map */

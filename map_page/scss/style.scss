@@ -9,13 +9,14 @@
 }
 
 .wrap {
-    // display: flex;
-    // flex-direction: column;
-    // position: relative;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-y: hidden;
 }
 
 .test {
-    color: white;
+    color: black;
 }
 
 svg {
@@ -25,10 +26,10 @@ svg {
     min-width: 1920px;
     height: 100%;
     opacity: 0;
-    z-index: 9;
+    z-index: 3;
 
     polygon {
-        z-index: 10;
+        z-index: 4;
     }
 }
 
@@ -177,7 +178,7 @@ svg {
     display: none;
     flex-direction: column;
     align-items: center;
-    padding: 0 20px 20px 20px;
+    padding: 100px 20px 20px 20px;
 
     .title {
         font-family: 'Montserrat', sans-serif;
@@ -268,6 +269,9 @@ svg {
 
 @import '_var';
 @import '_slider-module';
+@import '_color';
+@import '_object';
+@import '_hover-map';
 
 
 @media (max-width: 1920px) {
@@ -277,7 +281,7 @@ svg {
             max-height: 900px;
         }
 
-        overflow-x: scroll;
+        overflow: scroll;
     }
 }
 
@@ -298,12 +302,12 @@ svg {
 @media (max-width: 768px) {
     .mobile {
         display: flex;
-        padding-top: 100px;
-        padding-bottom: 60px;
     }
-    .content{ padding-top: 0 !important;}
 
-    .map { display: none;}
+    .map,
+    .house-info {
+        display: none;
+    }
 }
 
 @media (max-width: 394px) {

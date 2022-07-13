@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php include_once('../helper_admin.php')?>
     <sctipt src="script.js"></sctipt>
-    <title>Проекты Koenighouse</title>    
+    <title>Редактирование</title>    
 </head>
 <body>
      <!--/* -------------------------------------------------------------------------- */
@@ -19,30 +19,20 @@
     <!--/* -------------------------------------------------------------------------- */
     /*                                   CONTENT                                  */
     /* -------------------------------------------------------------------------- */ -->
+
     <div class="content_wrap">
         <div class="content_proj">
-            <p class="heading">Проекты</p>
+            <p class="heading">Редактирование</p>
 
             <!-- /* ------------------------------ all projects ------------------------------ */ -->
-            <div class="bl_projects">
+            <div class="bl_">
                 <!-- /* -------------------- the card with info about project -------------------- */ -->
-                <div class="bl_card">
-                    <div class="image"></div>
-                    <div class="bl_text">
-                        <p class="main_head"><span>Название:</span> 2 Таунхауса</p>
-                        <p class="description"><span>Описание:</span> совершенно новый и невероятно архитектурно продуманный дом, который находится абсолютно не далеко от центра города и стоит настолько дешёво, что хватит ещё на мебель и технику, честное слово, отвечаю.</p>
-                    </div>
-                    <div class="btns">
-                        <input type="submit" class="edit_btn" value="Редактировать">
-                        <input type="submit" class="open_btn" value="Открыть">                
-                    </div>
-                </div>
+                
                 <!-- /* -------------------- THE END OF the card with info about project -------------------- */ -->
 
             </div>
             <!-- /* ------------------------------ THE END OF all projects ------------------------------ */ -->
         </div>        
     </div>
-    
 </body>
 </html>

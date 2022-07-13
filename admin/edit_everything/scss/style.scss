@@ -1,0 +1,46 @@
+@use '../../../additional_styles/_color' as *;
+@use '../../../additional_styles/_object' as *;
+
+/* -------------------------------------------------------------------------- */
+/*                                  MAIN CODE                                 */
+/* -------------------------------------------------------------------------- */
+
+.content_wrap{
+    display: grid;
+    grid-template-columns: repeat(1, minmax(320px, 1920px));
+    row-gap: 30px;
+    justify-content: center;    
+
+    .content_proj{
+        margin: 0 auto;
+        width: 80%;
+        height: auto;        
+        @include Flex(column, inline, center);
+
+        .heading{
+            padding: 20px 0 40px 0;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font: {
+                family: 'Montserrat';
+                style: normal;
+                weight: 500;
+                size: 28px;
+            }        
+        }
+    
+        /* ------------------------------ all projects ------------------------------ */
+        .bl_projects{
+            width: 100%;
+            display: grid;           
+            row-gap: 35px;
+            column-gap: 20px;
+            &:last-child{ margin-bottom: 40px;}
+
+        }
+    }   
+}
+/* -------------------------------------------------------------------------- */
+/*                                MEDIA QUERIES                               */
+/* -------------------------------------------------------------------------- */
+

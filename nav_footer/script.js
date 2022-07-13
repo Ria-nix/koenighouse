@@ -1,5 +1,3 @@
-"use script";
-
 /* -------------------------------------------------------------------------- */
 /*                                TOGGLE BUTTON                               */
 /* -------------------------------------------------------------------------- */
@@ -36,51 +34,11 @@ function newWindow(s_link){
 /*                           SCROLL LINKS BY WEBSITE                          */
 /* -------------------------------------------------------------------------- */
 
-// $(document).ready(function(){
-//     $("#main_menu").on("click","a", function (event) {
-//         event.preventDefault();
-//         var id  = $(this).attr('href'),
-//         top = $(id).offset().top;
-//         $('body,html').animate({scrollTop: top}, 1000);
-//     });
-// });
-
-// #id_advantage
-// ../main/index.php#id_project
-// http://localhost:3000/main/index.php#id_gallery
-
-
-let url_href = window.location.href;
-let url_host = window.location.hostname;
-let url_pathname = window.location.pathname;
-
-console.log(url_href);
-console.log(url_host);
-console.log(url_pathname);
-
-
-// function changeAddress(address){
-//     if(utr_pathname == ){
-
-//     }
-//     else{
-
-//     }
-// }
-
-
-
-/* ------------------------- scroll of active links ------------------------- */
-// window.addEventListener('scroll', () => {
-//     let distance = window.scrollY;
-//     document.querySelectorAll(".section").forEach((el, i) => {
-//         if (el.offsetTop - document.querySelector('.menu').clientHeight <= distance){
-//             document.querySelectorAll('.menu a').forEach((el) => {
-//                 if(el.classList.contains('active')){
-//                     el.classList.remove('active');
-//                 } 
-//             })
-//             document.querySelectorAll('.menu a')[i].querySelector('.underline').classList.add('active');           
-//         }
-//     })
-// })
+$(document).ready(function(){
+    $("#main_menu").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+        top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1000);
+    });
+});
