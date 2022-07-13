@@ -33,6 +33,7 @@ body{
 .none_scroll{
     overflow: hidden;
 }
+input{ outline:none;}
 //================== MIXINS ==================//
 @mixin MainButton($bg_color, $shadow) {
     background: $bg_color;

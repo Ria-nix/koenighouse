@@ -3,8 +3,8 @@
         <img src="../images/Logo.svg" alt="logo">
         <div class="buttons">
             <?php echo $class_btn; ?>
-            <!-- <a href="#" class="exit">Выйти</a> -->
-            <!-- <a href="#" class="back_arrow">Назад</a> -->
+            <!-- <a href="#" class="exit" onClick="goAuth()">Выйти</a> -->
+            <!-- <a href="#" class="back_arrow" onClick="goBack()">Назад</a> -->
         </div>
     </div>        
 </div>    

@@ -25,6 +25,7 @@
         z-index: 5;        
     }
 }
+
 .active{
     opacity: 1;
     width: 40px;
@@ -54,13 +55,15 @@
     background: $cT_black;      
 }
 
+/* ------------------------------ toggle button ----------------------------- */
 .toggle_wrap{
     width: 40px;
     height: 40px;
     cursor: pointer;
     padding: 17px 0 0 7px;
     z-index: 999;
-
+    
+    /* ---------------------------- style open button --------------------------- */
     .toggle_open{
         background: $cT_black;   
         @extend .wH_btn_toggle;
@@ -70,6 +73,7 @@
         &::before{ transform: translateY(7px); }
     }
 
+    /* ---------------------------- style close button --------------------------- */
     .toggle_close{
         @extend .wH_btn_toggle;
         background: transparent;
@@ -88,6 +92,8 @@
     cursor: pointer;
 }
 .main_wrap .sidebar{ background: $c_white;
+
+    /* --------------------------- the menu with links -------------------------- */
     .menu{ font-size: 14px;
         a{
             text-decoration: none;
@@ -124,6 +130,8 @@
 
         }
     }
+
+    /* --------------------------- text with 'ipoteka' -------------------------- */
     .big_text{ cursor: pointer;
         p{
             line-height: 24px;
@@ -144,6 +152,8 @@
             }
         }
     }
+
+    /* -------------------------- button 'choose home' -------------------------- */
     .btn_home input{
         @include MainButton($linSp_orange, $shadow_btn);      
     }
@@ -179,7 +189,8 @@
         @include Flex(row, space-between, center);
         margin: 0 20px;
         height: 70px;   
-        
+
+        /* ----------------------------- sidebar visible ---------------------------- */
         .sidebar{   
             display: flex;            
             height: 100%;

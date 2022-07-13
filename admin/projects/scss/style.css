@@ -40,6 +40,10 @@ body {
   overflow: hidden;
 }
 
+input {
+  outline: none;
+}
+
 /* -------------------------------------------------------------------------- */
 /*                                  MAIN CODE                                 */
 /* -------------------------------------------------------------------------- */
@@ -68,6 +72,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  /* ------------------------------ all projects ------------------------------ */
 }
 .content_wrap .content_proj .heading {
   padding: 20px 0 40px 0;
@@ -79,11 +84,13 @@ body {
   font-size: 28px;
 }
 .content_wrap .content_proj .bl_projects {
+  width: 100%;
   display: grid;
   row-gap: 35px;
   -webkit-column-gap: 20px;
      -moz-column-gap: 20px;
           column-gap: 20px;
+  /* ---------------------------- the card of house --------------------------- */
 }
 .content_wrap .content_proj .bl_projects:last-child {
   margin-bottom: 40px;
@@ -108,6 +115,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  /* ---------------------------------- image --------------------------------- */
+  /* ------------------------ the all text about house ------------------------ */
+  /* ---------------------------- buttons or button --------------------------- */
 }
 .content_wrap .content_proj .bl_projects .bl_card .image {
   width: 100%;
@@ -141,10 +151,10 @@ body {
   margin: 20px 0 15px 0;
 }
 .content_wrap .content_proj .bl_projects .bl_card .btns .edit_btn {
-  background: -webkit-gradient(linear, right top, left top, color-stop(-30.45%, #00E77C), to(#05C4C1));
-  background: linear-gradient(270deg, #00E77C -30.45%, #05C4C1 100%);
-  -webkit-box-shadow: linear-gradient(to right, #00E77C 0%, #05C4C1 51%, #00E77C 100%);
-          box-shadow: linear-gradient(to right, #00E77C 0%, #05C4C1 51%, #00E77C 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#FF184F), color-stop(50%, #FFCA41), to(#FF184F));
+  background: linear-gradient(to right, #FF184F 0%, #FFCA41 50%, #FF184F 100%);
+  -webkit-box-shadow: none;
+          box-shadow: none;
   padding: 12px 30px;
   font-weight: 700;
   text-transform: uppercase;
@@ -166,10 +176,10 @@ body {
   background-position: right center;
 }
 .content_wrap .content_proj .bl_projects .bl_card .btns .open_btn {
-  background: -webkit-gradient(linear, right top, left top, color-stop(-33.76%, #FFC539), color-stop(104.7%, #FF0451));
-  background: linear-gradient(270deg, #FFC539 -33.76%, #FF0451 104.7%);
-  -webkit-box-shadow: linear-gradient(to right, #FF184F 0%, #FFCA41 50%, #FF184F 100%);
-          box-shadow: linear-gradient(to right, #FF184F 0%, #FFCA41 50%, #FF184F 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#00E77C), color-stop(51%, #05C4C1), to(#00E77C));
+  background: linear-gradient(to right, #00E77C 0%, #05C4C1 51%, #00E77C 100%);
+  -webkit-box-shadow: none;
+          box-shadow: none;
   padding: 12px 30px;
   font-weight: 700;
   text-transform: uppercase;
@@ -191,6 +201,9 @@ body {
   background-position: right center;
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                MEDIA QUERIES                               */
+/* -------------------------------------------------------------------------- */
 @media screen and (min-width: 481px) {
   .bl_projects {
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));

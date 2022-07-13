@@ -4,7 +4,7 @@
 /* -------------------------------------------------------------------------- */
 /*                                  MAIN CODE                                 */
 /* -------------------------------------------------------------------------- */
-input{ outline:none}
+
 .grid_wrap{
     width: 100%;
     height: 100%;
@@ -12,16 +12,20 @@ input{ outline:none}
     grid-template-columns: repeat(1, minmax(320px, 1440px));
     justify-content: center;
 
+     /* ------------------------- the authorisation form ------------------------- */
     form{
         margin-top: 15%;
         width: 100%;
         height: 400px;
         @include Flex(column, center, center);        
-
+        
+        /* ---------------------------------- logo ---------------------------------- */
         img{ 
             height: 18%;
             margin-bottom: 50px;
         }    
+
+        /* ---------------------- fields for login and password --------------------- */
         .fields{
             @include Flex(column, center, center);
             input{
@@ -43,6 +47,8 @@ input{ outline:none}
                 &:first-child{ margin-bottom: 20px;}
             }
         }
+
+        /* ---------------------------- button of sing in --------------------------- */
         .come_in{
             @include MainButton($linSp_orange, $shadow_btn);
             margin-top: 40px;  

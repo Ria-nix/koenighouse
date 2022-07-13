@@ -40,6 +40,10 @@ body {
   overflow: hidden;
 }
 
+input {
+  outline: none;
+}
+
 .layout_menu {
   position: fixed;
   -webkit-box-shadow: 10px 0px 30px rgba(0, 0, 0, 0.15);
@@ -92,12 +96,15 @@ body {
   background: #000;
 }
 
+/* ------------------------------ toggle button ----------------------------- */
 .toggle_wrap {
   width: 40px;
   height: 40px;
   cursor: pointer;
   padding: 17px 0 0 7px;
   z-index: 999;
+  /* ---------------------------- style open button --------------------------- */
+  /* ---------------------------- style close button --------------------------- */
 }
 .toggle_wrap .toggle_open {
   background: #000;
@@ -129,6 +136,9 @@ body {
 
 .main_wrap .sidebar {
   background: #FFF;
+  /* --------------------------- the menu with links -------------------------- */
+  /* --------------------------- text with 'ipoteka' -------------------------- */
+  /* -------------------------- button 'choose home' -------------------------- */
 }
 .main_wrap .sidebar .menu {
   font-size: 14px;
@@ -316,6 +326,7 @@ body {
             align-items: center;
     margin: 0 20px;
     height: 70px;
+    /* ----------------------------- sidebar visible ---------------------------- */
   }
   .main_wrap .sidebar {
     display: -webkit-box;
