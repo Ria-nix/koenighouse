@@ -1,9 +1,13 @@
 'use script';
 
 function goBack() {
-    window.history.back();
+    this.window.history.back();
 }
 
 function goAuth() {
-    window.location.href = '../admin/auth/index.php';
+    this.window.location.href = '../admin/auth/index.php';
+}
+
+function goOpen() {
+    this.window.location.href = '../admin/houses/index.php';
 }
