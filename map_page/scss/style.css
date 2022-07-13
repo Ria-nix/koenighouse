@@ -4,14 +4,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 .wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: relative;
   overflow-y: hidden;
 }
@@ -47,13 +53,16 @@ svg polygon {
   -webkit-user-drag: none;
 }
 .map .houses .block {
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .map .houses .block img.hovered {
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   opacity: 1;
 }
 .map .houses .block > img {
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   opacity: 0;
 }
@@ -112,8 +121,13 @@ svg polygon {
   font-family: "Roboto", sans-serif;
   color: white;
   font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding-left: 40px;
   padding-top: 150px;
   position: absolute;
@@ -126,6 +140,7 @@ svg polygon {
           backdrop-filter: blur(4px);
   border-top-right-radius: 100%;
   z-index: 0;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .map .pop-up-alert:hover {
@@ -133,10 +148,12 @@ svg polygon {
   height: 400px;
   padding-left: 50px;
   padding-top: 170px;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .map .pop-up-alert .arrow-icon {
   font-size: 96px;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   -webkit-animation: arrowAnimation 1s ease-in-out infinite alternate;
           animation: arrowAnimation 1s ease-in-out infinite alternate;
@@ -152,8 +169,13 @@ svg polygon {
 
 .mobile {
   display: none;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 100px 20px 20px 20px;
 }
 .mobile .title {
@@ -167,6 +189,8 @@ svg polygon {
   font-size: 24px;
 }
 .mobile .types {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 30px;
   gap: 25px;
@@ -184,32 +208,53 @@ svg polygon {
 }
 .mobile .types .free,
 .mobile .types .sold {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 5px;
   font-family: "Roboto Condensed", sans-serif;
   font-size: 14px;
 }
 .mobile .flats {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 25px;
   gap: 10px;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   max-width: 500px;
 }
 .mobile .flats .flats-card {
   width: 172.5px;
   height: 83px;
   background-color: #d9d9d9;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 10px;
   font-family: "Roboto Condensed", sans-serif;
   font-size: 14px;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .mobile .flats .flats-card .address {
@@ -220,9 +265,15 @@ svg polygon {
   font-weight: 800;
   font-size: 24px;
   opacity: 0.3;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .mobile .flats .flats-card.hovered {
   background-color: #84EF88;
@@ -264,16 +315,27 @@ svg polygon {
 
 .slider-module {
   background-color: #f5f5f5;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 30px 20px;
   gap: 85px;
 }
 .slider-module .text-block .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   max-width: 389px;
   gap: 1.5rem;
 }
@@ -281,16 +343,28 @@ svg polygon {
   max-width: 886px;
   width: 100%;
   height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 20px;
   position: relative;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .slider-module .slider .slider-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   gap: 20px;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   position: relative;
   right: 0px;
@@ -298,29 +372,41 @@ svg polygon {
 .slider-module .slider .slider-container {
   min-width: 740px;
   overflow: hidden;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .slider-module .slider .btn-prev,
 .slider-module .slider .btn-next {
   min-width: 55px;
   min-height: 55px;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   background: #D0D3D7 url(/imgs/sliderArrow.svg) no-repeat center;
 }
 .slider-module .slider .btn-prev:hover,
 .slider-module .slider .btn-next:hover {
+  -webkit-transition: 0.3s;
   transition: 0.3s;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   cursor: pointer;
 }
 .slider-module .slider .btn-next {
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .slider-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 510px;
   background-color: white;
   position: relative;
@@ -330,6 +416,8 @@ svg polygon {
   padding: 0px 20px 30px 20px;
 }
 .slider-item .item-about {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-family: "Roboto";
   font-weight: 900;
@@ -345,10 +433,19 @@ svg polygon {
   color: black;
   font-size: 24px;
   text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   max-width: 198px;
 }
 .slider-item .item-about .item-name p:last-child {
@@ -363,15 +460,23 @@ svg polygon {
   position: absolute;
   bottom: 48px;
   right: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   padding-right: 23px;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   z-index: 99;
   background: linear-gradient(89.97deg, #FF184F -6.46%, #FFCA41 100.97%);
 }
 .slider-item .link:hover {
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   padding-right: 8px;
 }
@@ -405,7 +510,8 @@ svg polygon {
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -427,7 +533,9 @@ body {
 .layout_wrap {
   display: grid;
   grid-template-columns: repeat(1, minmax(320px, 1360px));
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .none {
@@ -476,7 +584,9 @@ h1 {
   display: grid;
   grid-template-rows: 90px 1fr 145px;
   justify-items: center;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .popUpWindow .popUp-header,
 .house-card-info .popUp-header {
@@ -540,8 +650,10 @@ h1 {
 .popUpWindow .popUp-footer button:last-child,
 .house-card-info .popUp-footer button:last-child {
   margin: 23px auto 0 auto;
+  background: -webkit-gradient(linear, left top, right top, from(#FF184F), color-stop(50%, #FFCA41), to(#FF184F));
   background: linear-gradient(to right, #FF184F 0%, #FFCA41 50%, #FF184F 100%);
-  box-shadow: 0px 7px 25px rgba(255, 114, 144, 0.76);
+  -webkit-box-shadow: 0px 7px 25px rgba(255, 114, 144, 0.76);
+          box-shadow: 0px 7px 25px rgba(255, 114, 144, 0.76);
   padding: 12px 30px;
   font-weight: 700;
   text-transform: uppercase;
@@ -552,19 +664,23 @@ h1 {
   font-weight: 800;
   font-size: 13px;
   letter-spacing: 0.5px;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   background-size: 200% auto;
 }
 .popUpWindow .popUp-footer button:last-child:hover,
 .house-card-info .popUp-footer button:last-child:hover {
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   background-position: right center;
 }
 .popUpWindow .popUp-footer button:first-child,
 .house-card-info .popUp-footer button:first-child {
   margin-top: 15px;
+  background: -webkit-gradient(linear, left top, right top, from(#00E77C), color-stop(51%, #05C4C1), to(#00E77C));
   background: linear-gradient(to right, #00E77C 0%, #05C4C1 51%, #00E77C 100%);
-  box-shadow: 0px 7px 25px rgba(5, 196, 193, 0.62);
+  -webkit-box-shadow: 0px 7px 25px rgba(5, 196, 193, 0.62);
+          box-shadow: 0px 7px 25px rgba(5, 196, 193, 0.62);
   padding: 12px 30px;
   font-weight: 700;
   text-transform: uppercase;
@@ -575,13 +691,15 @@ h1 {
   font-weight: 800;
   font-size: 13px;
   letter-spacing: 0.5px;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   background-size: 200% auto;
   text-align: center;
 }
 .popUpWindow .popUp-footer button:first-child:hover,
 .house-card-info .popUp-footer button:first-child:hover {
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   background-position: right center;
 }
 
@@ -590,6 +708,7 @@ h1 {
 }
 
 .house-info {
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   position: absolute;
   left: 0;
@@ -606,18 +725,26 @@ h1 {
   width: 100%;
   grid-column-start: 1;
   grid-column-end: 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-end;
-  justify-content: end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
 }
 .house-info .close-info-container .close-btn {
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   width: 80px;
   margin: auto 0 auto auto;
 }
 .house-info .close-info-container .close-btn:hover {
   cursor: pointer;
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 .house-info .close-info-container .close-btn img {
   width: 18px;
@@ -666,8 +793,10 @@ h1 {
 }
 .house-info .house-card-info .popUp-footer button {
   margin: 0 auto;
+  background: -webkit-gradient(linear, left top, right top, from(#FF184F), color-stop(50%, #FFCA41), to(#FF184F));
   background: linear-gradient(to right, #FF184F 0%, #FFCA41 50%, #FF184F 100%);
-  box-shadow: 0px 7px 25px rgba(255, 114, 144, 0.76);
+  -webkit-box-shadow: 0px 7px 25px rgba(255, 114, 144, 0.76);
+          box-shadow: 0px 7px 25px rgba(255, 114, 144, 0.76);
   padding: 12px 30px;
   font-weight: 700;
   text-transform: uppercase;
@@ -678,20 +807,28 @@ h1 {
   font-weight: 800;
   font-size: 13px;
   letter-spacing: 0.5px;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   background-size: 200% auto;
 }
 .house-info .house-card-info .popUp-footer button:hover {
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   background-position: right center;
 }
 .house-info .house-recipe {
   margin: 0 auto;
   width: 95%;
   height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border: 1px solid white;
   background: rgba(255, 255, 255, 0.5);
 }
@@ -705,9 +842,16 @@ h1 {
   margin: 0 auto;
   height: 80%;
   width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .house-info .house-layout img {
   width: 100%;
@@ -739,6 +883,7 @@ main.test_container .back .pointer_block {
   background: red;
   position: absolute;
   opacity: 0.6;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 main.test_container .back .pointer_block:hover {
@@ -789,6 +934,7 @@ main.test_container .back .pointer_block:hover {
   .house-info .house-layout img:last-child {
     margin-top: 8px;
   }
+
   .house-card-info .popUp-header h2 {
     font-size: 24px;
   }
@@ -813,7 +959,10 @@ main.test_container .back .pointer_block:hover {
   }
   .house-info .house-layout {
     width: 97%;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     grid-column-start: 1;
     grid-column-end: 3;
   }
@@ -845,7 +994,7 @@ main.test_container .back .pointer_block:hover {
 }
 @media (max-width: 1920px) {
   .map {
-    overflow: scroll;
+    overflow-x: scroll;
   }
   .map .bg {
     min-width: 1920px;
@@ -856,6 +1005,8 @@ main.test_container .back .pointer_block:hover {
   .map .pop-up-alert {
     -webkit-animation: alertShow 0.6s ease-in-out 1 forwards;
             animation: alertShow 0.6s ease-in-out 1 forwards;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
   .map .pop-up-alert.clicked {
@@ -865,8 +1016,11 @@ main.test_container .back .pointer_block:hover {
 }
 @media (max-width: 768px) {
   .mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
+
   .map,
 .house-info {
     display: none;
@@ -917,17 +1071,21 @@ main.test_container .back .pointer_block:hover {
 }
 @-webkit-keyframes arrowAnimation {
   from {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   to {
-    transform: translateX(150px);
+    -webkit-transform: translateX(150px);
+            transform: translateX(150px);
   }
 }
 @keyframes arrowAnimation {
   from {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   to {
-    transform: translateX(150px);
+    -webkit-transform: translateX(150px);
+            transform: translateX(150px);
   }
 }/*# sourceMappingURL=style.css.map */

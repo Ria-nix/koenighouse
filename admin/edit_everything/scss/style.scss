@@ -30,13 +30,35 @@
         }
     
         /* ------------------------------ all projects ------------------------------ */
-        .bl_projects{
-            width: 100%;
-            display: grid;           
-            row-gap: 35px;
-            column-gap: 20px;
-            &:last-child{ margin-bottom: 40px;}
+        // .bl_projects{
+        //     width: 100%;
+        //     display: grid;           
+        //     row-gap: 35px;
+        //     column-gap: 20px;
+        //     // &:last-child{ margin-bottom: 40px;}
 
+        // }
+        .house_info{
+            width: 100%;
+            // @include Flex(row, flex-start, flex-start);
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            justify-content: flex-start;
+            border: 1px solid red;
+
+            .bl_image{
+                border: 1px solid blue;
+            }
+            .bl_info{
+                border: 1px solid yellow;
+                @include Flex(column, flex-start, none);
+                &>div{
+                    @include Flex(column, flex-start, none);
+                    .wrap_input{
+                        @include Flex(row, flex-start, none);
+                    }
+                }
+            }
         }
     }   
 }

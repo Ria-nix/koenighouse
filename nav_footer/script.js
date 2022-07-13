@@ -1,8 +1,8 @@
 /* -------------------------------------------------------------------------- */
 /*                                TOGGLE BUTTON                               */
 /* -------------------------------------------------------------------------- */
-let bool = false;
 function toggleButton(){   
+    let bool = false;
     if(!bool){
         bool = true;
         $("#toggle_btn").removeClass('toggle_open').addClass('toggle_close');
@@ -34,7 +34,7 @@ function newWindow(s_link){
 /*                           SCROLL LINKS BY WEBSITE                          */
 /* -------------------------------------------------------------------------- */
 
-$(document).ready(function(){
+$('document').ready(function(){
     $("#main_menu").on("click","a", function (event) {
         event.preventDefault();
         var id  = $(this).attr('href'),

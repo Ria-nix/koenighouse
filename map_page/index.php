@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="scss/style.css">
+    <?php include_once('../helper.php') ?>  
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
+    <!--/* -------------------------------------------------------------------------- */
+    /*                                   HEADER                                   */
+    /* -------------------------------------------------------------------------- */ -->
+    <?php include_once('../nav_footer/header.php') ?>
+    <!--/* -------------------------------------------------------------------------- */
+    /*                                   CONTENT                                  */
+    /* -------------------------------------------------------------------------- */ -->
     <div class="wrap">
         <div class="map">
             <img src="img/bg.svg" class="bg" alt="bg">
@@ -28,40 +34,40 @@
                     <polygon fill="red" class="hitbox" points="1611,175 1785,239 1785,249 1771,254 1767,294 1669,340 1671,296 1585,211 1533,207"id="1"></polygon>
                 </svg>
                 <div class="block">
-                    <img src="/img/houses/home 1a.svg" alt="house1a" class="house h1a">
+                    <img src="img/houses/home_1a.svg" alt="house1a" class="house h1a">
                 </div>
                 <div class="block">
-                    <img src="/img/houses/home 1b.svg" alt="house1b" class="house h1b">
+                    <img src="img/houses/home 1b.svg" alt="house1b" class="house h1b">
                 </div>
                 <div class="block">
-                    <img src="/img/houses/home 2a.svg" alt="house2a" class="house h2a">
+                    <img src="img/houses/home 2a.svg" alt="house2a" class="house h2a">
                 </div>
                 <div class="block">
-                    <img src="/img/houses/home 2b.svg" alt="house2b" class="house h2b">
+                    <img src="img/houses/home 2b.svg" alt="house2b" class="house h2b">
                 </div>
                 <div class="block">
-                    <img src="/img/houses/home 3a.svg" alt="house3a" class="house h3a">
+                    <img src="img/houses/home 3a.svg" alt="house3a" class="house h3a">
                 </div>
                 <div class="block">
-                    <img src="/img/houses/home 3b.svg" alt="house3b" class="house h3b">
+                    <img src="img/houses/home 3b.svg" alt="house3b" class="house h3b">
                 </div>
                 <div class="block">
-                    <img src="/img/houses/home 4a.svg" alt="house4a" class="house h4a">
+                    <img src="img/houses/home 4a.svg" alt="house4a" class="house h4a">
                 </div>
                 <div class="block">
-                    <img src="/img/houses/home 4b.svg" alt="house4b" class="house h4b">
+                    <img src="img/houses/home 4b.svg" alt="house4b" class="house h4b">
                 </div>
                 <div class="block">
-                    <img src="/img/houses/home 5a.svg" alt="house5a" class="house h5a">
+                    <img src="img/houses/home 5a.svg" alt="house5a" class="house h5a">
                 </div>
                 <div class="block">
-                    <img src="/img/houses/home 5b.svg" alt="house5b" class="house h5b">
+                    <img src="img/houses/home 5b.svg" alt="house5b" class="house h5b">
                 </div>
                 <div class="block">
-                    <img src="/img/houses/home 6a.svg" alt="house6a" class="house h6a">
+                    <img src="img/houses/home 6a.svg" alt="house6a" class="house h6a">
                 </div>
                 <div class="block">
-                    <img src="/img/houses/home 6b.svg" alt="house6b" class="house h6b">
+                    <img src="img/houses/home 6b.svg" alt="house6b" class="house h6b">
                 </div> 
             </div>
             <div class="pop-up-alert">
@@ -89,7 +95,7 @@
         <div class="house-info hiden">
             <nav class="close-info-container">
                 <div class="close-btn">
-                    <img src="/img/close.svg" alt="Закрыть окно с информацией выбранного дома">
+                    <img src="img/close.svg" alt="Закрыть окно с информацией выбранного дома">
                     <span>закрыть</span>
                 </div>
             </nav>
@@ -111,11 +117,11 @@
                 </div>
             </div>
             <div class="house-recipe">
-                <img src="/img/recipe.png" alt="Чертеж дома">
+                <img src="img/recipe.png" alt="Чертеж дома">
             </div>
             <div class="house-layout">
-                <img src="/img/1.png" alt="Первое фото дома">
-                <img src="/img/2.png" alt="Второе фото дома">
+                <img src="img/1.png" alt="Первое фото дома">
+                <img src="img/2.png" alt="Второе фото дома">
             </div>
         </div>
         <!-- <div class="test">X = 0; Y = 0;</div> -->
@@ -219,7 +225,15 @@
                 </div>
             </div>
         </div>
+        <p class="mobile_footer">© Разработка и продвижение - <span>msoft</span></p>
     </div>
+    <!--/* -------------------------------------------------------------------------- */
+    /*                                   FOOTER                                   */
+    /* -------------------------------------------------------------------------- */ -->
+    <?php include_once('../nav_footer/footer.php') ?>    
+    <!--/* -------------------------------------------------------------------------- */
+    /*                                   SCRIPTS                                  */
+    /* -------------------------------------------------------------------------- */ -->
     <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
     <script src="js/popUpWindows.js"></script>
     <script src="js/script.js"></script>

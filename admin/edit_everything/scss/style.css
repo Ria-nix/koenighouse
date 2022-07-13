@@ -83,16 +83,63 @@ input {
   font-weight: 500;
   font-size: 28px;
 }
-.content_wrap .content_proj .bl_projects {
+.content_wrap .content_proj .house_info {
   width: 100%;
   display: grid;
-  row-gap: 35px;
-  -webkit-column-gap: 20px;
-     -moz-column-gap: 20px;
-          column-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  border: 1px solid red;
 }
-.content_wrap .content_proj .bl_projects:last-child {
-  margin-bottom: 40px;
+.content_wrap .content_proj .house_info .bl_image {
+  border: 1px solid blue;
+}
+.content_wrap .content_proj .house_info .bl_info {
+  border: 1px solid yellow;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+}
+.content_wrap .content_proj .house_info .bl_info > div {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+}
+.content_wrap .content_proj .house_info .bl_info > div .wrap_input {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
 }
 
 /* -------------------------------------------------------------------------- */
