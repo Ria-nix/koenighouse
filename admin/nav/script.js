@@ -1,5 +1,3 @@
-'use script';
-
 function goBack() {
     this.window.history.back();
 }

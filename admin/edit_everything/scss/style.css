@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@300;400&display=swap");
 *,
 *::after,
@@ -57,7 +58,6 @@ input {
 }
 .content_wrap .content_proj {
   margin: 0 auto;
-  width: 80%;
   height: auto;
   display: -webkit-box !important;
   display: -ms-flexbox !important;
@@ -87,13 +87,42 @@ input {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  -webkit-column-gap: 40px;
+     -moz-column-gap: 40px;
+          column-gap: 40px;
+  row-gap: 30px;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   border: 1px solid red;
+  /* ------------------- block with marketing and other imgs ------------------ */
+  /* ------------------- block with information about house ------------------- */
 }
 .content_wrap .content_proj .house_info .bl_image {
   border: 1px solid blue;
+  position: relative;
+}
+.content_wrap .content_proj .house_info .bl_image > div {
+  width: 100%;
+  height: 450px;
+  position: absolute;
+}
+.content_wrap .content_proj .house_info .bl_image .slider {
+  background: red;
+}
+.content_wrap .content_proj .house_info .bl_image .slider .arrow {
+  display: block;
+}
+.content_wrap .content_proj .house_info .bl_image .slider .left {
+  content: url("../../images/left_arrow.svg");
+}
+.content_wrap .content_proj .house_info .bl_image .slider .right {
+  content: url("../../images/right_arrow.svg");
+  -webkit-transform: translate(100%, 0%);
+          transform: translate(100%, 0%);
+}
+.content_wrap .content_proj .house_info .bl_image .under_one {
+  background: rgba(0, 0, 0, 0.5);
 }
 .content_wrap .content_proj .house_info .bl_info {
   border: 1px solid yellow;
@@ -110,8 +139,10 @@ input {
   -webkit-box-align: none;
       -ms-flex-align: none;
           align-items: none;
+  padding-top: 450px;
 }
 .content_wrap .content_proj .house_info .bl_info > div {
+  margin-bottom: 40px;
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -126,6 +157,27 @@ input {
       -ms-flex-align: none;
           align-items: none;
 }
+.content_wrap .content_proj .house_info .bl_info > div > label {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+}
+.content_wrap .content_proj .house_info .bl_info > div input[type=text] {
+  height: 30px;
+  width: 240px;
+  padding-left: 5px;
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid #000;
+  font-size: 16px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+}
 .content_wrap .content_proj .house_info .bl_info > div .wrap_input {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
@@ -137,11 +189,123 @@ input {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-align: none;
-      -ms-flex-align: none;
-          align-items: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.content_wrap .content_proj .house_info .bl_info > div .wrap_input .download {
+  background: -webkit-gradient(linear, left top, right top, from(#FF184F), color-stop(50%, #FFCA41), to(#FF184F));
+  background: linear-gradient(to right, #FF184F 0%, #FFCA41 50%, #FF184F 100%);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 12px 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 50px;
+  border: none;
+  color: #FFF;
+  cursor: pointer;
+  outline: none;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-size: 200% auto;
+}
+.content_wrap .content_proj .house_info .bl_info > div .wrap_input .download:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-position: right center;
+}
+.content_wrap .content_proj .house_info .bl_info > div .wrap_input .delete {
+  margin-left: 40px;
+  font-size: 16px;
+  text-decoration: underline;
+  color: #808080;
+  border: none;
+  background: transparent;
+}
+.content_wrap .content_proj .house_info .bl_info .bl_marketImg label .bl_otherImg label {
+  position: relative;
+}
+.content_wrap .content_proj .house_info .bl_info .bl_marketImg label .bl_otherImg label:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  margin-top: 10px;
+  color: #808080;
+  text-transform: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+}
+.content_wrap .content_proj .house_info .bl_info .bl_marketImg label:after {
+  content: "Загрузите 2 изображения.";
+}
+.content_wrap .content_proj .house_info .bl_info .bl_otherImg label:after {
+  content: "Максимальное количество изображений - 15шт.";
+}
+.content_wrap .content_proj .house_info .bl_info .bl_status #status {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #000;
+}
+.content_wrap .content_proj .house_info .bl_info .bl_status .wrap_input label {
+  cursor: pointer;
+  font-family: "Roboto";
+  margin-left: 10px;
+}
+.content_wrap .content_proj .house_info .bl_info .bl_description textarea {
+  min-width: 400px;
+  height: 150px;
+  overflow-y: scroll;
+  padding: 5px 10px;
+  resize: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+}
+.content_wrap .content_proj .house_info .bl_saveInfo input {
+  width: 150px;
+  background: -webkit-gradient(linear, left top, right top, from(#00E77C), color-stop(51%, #05C4C1), to(#00E77C));
+  background: linear-gradient(to right, #00E77C 0%, #05C4C1 51%, #00E77C 100%);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 12px 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 50px;
+  border: none;
+  color: #FFF;
+  cursor: pointer;
+  outline: none;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-size: 200% auto;
+}
+.content_wrap .content_proj .house_info .bl_saveInfo input:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-position: right center;
 }
 
 /* -------------------------------------------------------------------------- */
 /*                                MEDIA QUERIES                               */
-/* -------------------------------------------------------------------------- *//*# sourceMappingURL=style.css.map */
+/* -------------------------------------------------------------------------- */
+@media screen and (min-width: 768px) {
+  .content_proj {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .content_proj {
+    width: 90%;
+  }
+}/*# sourceMappingURL=style.css.map */

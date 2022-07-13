@@ -1,6 +1,6 @@
 <div class="grid_wrap">
     <div class="wrap_nav">
-        <img src="../images/Logo.svg" alt="logo">
+        <img src="../images/Logo.svg" alt="logo" onClick="goHome()">
         <div class="buttons">
             <?php echo $class_btn; ?>
             <!-- <a href="" class="exit">Выйти</a> -->
