@@ -57,47 +57,28 @@
                 .bl_text{
                     padding: 15px 10px 0 10px;
                     .main_head, .description{
+                        letter-spacing: 0.01em;
                         font: {
                             family: 'Roboto';
                             style: normal;
                             size: 16px;
                             weight: 300;
                         }
-                        span{ 
-                            letter-spacing: 0.01em;
-                            font-weight: 700;
-                        }
+                        span{ font-weight: 700; }
                     }
                     .main_head{ margin-bottom: 5px;}
-                    .description{
-                    //     line-clamp: 4;
-                    //     overflow: hidden;
-                    //     white-space: nowrap;
-                    // }
+                    p.description{
+                        -webkit-line-clamp: 4; 
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical; 
+                        overflow: hidden;
+                    }
                 }
                 .btns{
-                    margin: 20px 10px 15px 10px;
-                    @include Flex(row, none, space-between);
-                    // border: 1px solid red;
-
-                    input{
-                        // background: $lin_green;
-                        // box-shadow: $linSp_green;
-                        // text-align: center;
-                        // width: 150px;
-                        // height: 40px;
-                        // font-weight: 700;
-                        // text-transform: uppercase;
-                        // border-radius: 50px;
-                        // border: none;
-                        // color: $c_white;
-                        // cursor: pointer;
-                        // outline:none;
-                        
-                        // font-weight: 800;
-                        // font-size: 13px;
-                        // letter-spacing: 0.5px;
-                    }
+                    width: 100%;
+                    margin: 20px 0 15px 0;
+                    padding: 0 10px;
+                    @include Flex(row, space-between, none);
                     .edit_btn{
                         @include MainButton($lin_green, $linSp_green);
                     }
@@ -109,3 +90,4 @@
         }
     }   
 }
+

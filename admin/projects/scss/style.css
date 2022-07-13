@@ -119,25 +119,28 @@ body {
   padding: 15px 10px 0 10px;
 }
 .content_wrap .content_proj .bl_projects .bl_card .bl_text .main_head, .content_wrap .content_proj .bl_projects .bl_card .bl_text .description {
+  letter-spacing: 0.01em;
   font-family: "Roboto";
   font-style: normal;
   font-size: 16px;
   font-weight: 300;
 }
 .content_wrap .content_proj .bl_projects .bl_card .bl_text .main_head span, .content_wrap .content_proj .bl_projects .bl_card .bl_text .description span {
-  letter-spacing: 0.01em;
   font-weight: 700;
 }
 .content_wrap .content_proj .bl_projects .bl_card .bl_text .main_head {
   margin-bottom: 5px;
 }
-.content_wrap .content_proj .bl_projects .bl_card .bl_text .description {
-  line-clamp: 4;
+.content_wrap .content_proj .bl_projects .bl_card .bl_text p.description {
+  -webkit-line-clamp: 4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
   overflow: hidden;
-  white-space: nowrap;
 }
 .content_wrap .content_proj .bl_projects .bl_card .btns {
-  margin: 20px 10px 15px 10px;
+  width: 100%;
+  margin: 20px 0 15px 0;
+  padding: 0 10px;
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -145,12 +148,12 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: none;
-      -ms-flex-pack: none;
-          justify-content: none;
-  -webkit-box-align: space-between;
-      -ms-flex-align: space-between;
-          align-items: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
 }
 .content_wrap .content_proj .bl_projects .bl_card .btns .edit_btn {
   background: -webkit-gradient(linear, right top, left top, color-stop(-30.45%, #00E77C), to(#05C4C1));
