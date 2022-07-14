@@ -27,13 +27,67 @@
             <div class="house_info">
                 <!-- /* ------------------------------ all projects ------------------------------ */ -->
                 <div class="bl_image">
-                    <div class="slider">
-                        <span class="arrow left"></span>
-                        <span class="arrow right"></span>
+                    <div class="market_img">
+                        <p class="names">Маркетинговые Изображения</p>
+                        <div class="main_wrapImg">
+                            <div class="wrap_img">
+                                <span class="no_imgTxt">Отсутствует изображение</span>
+                            </div>
+                            <div class="wrap_img">
+                                <span class="no_imgTxt">Отсутствует изображение</span>
+                            </div>
+                        </div>                        
                     </div>
-                    <div class="under_one">
-                        <p>Маркетинговое изображение</p>
-                        <span class="trash"></span>
+
+                    <div class="others_img">
+                        <p class="names">Остальные Изображения</p>
+                        <div class="main_wrapImg">
+                            <div class="wrap_img" id="1">
+                                <span class="cross"></span>
+                            </div>
+                            <div class="wrap_img" id="2">
+                                <span class="cross"></span>
+                            </div>
+                            <div class="wrap_img" id="3">
+                                <span class="cross"></span>
+                            </div>
+                            <div class="wrap_img" id="4">
+                                <span class="cross"></span>
+                            </div>
+                            <div class="wrap_img" id="5">
+                                <span class="cross"></span>
+                            </div>
+                            <div class="wrap_img" id="6">
+                                <span class="cross"></span>
+                            </div>
+                            <div class="wrap_img" id="7">
+                                <span class="cross"></span>
+                            </div>
+                            <div class="wrap_img" id="8">
+                                <span class="cross"></span>
+                            </div>
+                            <div class="wrap_img" id="9">
+                                <span class="cross"></span>
+                            </div>
+                            <div class="wrap_img" id="10">
+                                <span class="cross"></span>
+                            </div>
+                            <div class="wrap_img" id="11">
+                                <span class="cross"></span>
+                            </div>
+                            <div class="wrap_img" id="12">
+                                <span class="cross"></span>
+                            </div>
+                            <div class="wrap_img" id="13">
+                                <span class="cross"></span>
+                            </div>
+                            <div class="wrap_img" id="14">
+                                <span class="cross"></span>
+                            </div>
+                            <div class="wrap_img" id="15">
+                                <span class="cross"></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 

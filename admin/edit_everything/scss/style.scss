@@ -13,7 +13,6 @@
 
     .content_proj{
         margin: 0 auto;
-        // width: 80%; 
         height: auto;        
         @include Flex(column, inline, center);
 
@@ -32,47 +31,88 @@
         /* ------------------------------ all projects ------------------------------ */
         .house_info{
             width: 100%;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            column-gap: 40px;
-            row-gap: 30px;
-            justify-content: flex-start;
-            border: 1px solid red;
+            // border: 1px solid red;
 
             /* ------------------- block with marketing and other imgs ------------------ */
             .bl_image{
-                border: 1px solid blue;
+                // border: 1px solid blue;
                 position: relative;
+                // background: url('../../images/home.jpg') no-repeat center;
+                
+                @include Flex(column, flex-start, flex-start);
+
                 &>div{
                     width: 100%;
-                    height: 450px;
-                    position: absolute;
+                    @include Flex(column, flex-start, flex-start);
+                    .names{
+                        margin-bottom: 10px;
+                        text-transform: uppercase;
+                        @include Flex(row, none, center);
+                        font: {
+                            family: 'Montserrat';
+                            style: normal;
+                            weight: 700;
+                            size: 16px;
+                        }
+                        &:after{
+                            display: block;
+                            content: url('../../images/down_arrow.svg');
+                            padding-top: 5px;
+                        }
+                    }
+                    .main_wrapImg{   
+                        width: 100%;       
+                        .wrap_img{
+                            border: 1px dashed #808080;
+                            span{
+                                font-family: 'Roboto';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 16px;
+                                color: #808080;
+                                transform: translate(50%, 50%);
+                            }
+                        }
+                    }                   
+                }
 
-                }
-                .slider{ background: red;
-                    .arrow{ display: block; }
-                    .left{
-                        content: url('../../images/left_arrow.svg');
-                        // transform: translate(0%);
+                .market_img{                    
+                    border: 1px solid violet;
+                    .main_wrapImg{                    
+                        @include Flex(row, space-between, flex-start);   
+                        flex-wrap: wrap; 
+                        .wrap_img{
+                            min-width: 18.5rem;
+                            height: 15rem;
+                            &:first-child{
+                                margin-right: 20px;
+                            }
+                        }
                     }
-                    .right{
-                        content: url('../../images/right_arrow.svg');
-                        transform: translate(100%, 0%);
-                    }
                 }
-                .under_one{
-                    // z-index: ;
-                    background: rgba(0, 0, 0, 0.5);
+
+                .others_img{
+                    margin: 30px 0 40px 0;
+                    border: 1px solid salmon;
+                    .main_wrapImg{   
+                        display: grid;
+                        // grid-template-rows: repeat(auto-fill, minmax(5rem, 1fr));
+                        grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
+                        gap: 20px;
+                        .wrap_img{ height: 5rem;}
+                    }
                 }
             }
 
             /* ------------------- block with information about house ------------------- */
             .bl_info{
-                border: 1px solid yellow;
+                // border: 1px solid yellow;
                 @include Flex(column, flex-start, none);
-                padding-top: 450px; //!
+                width: 320px;
+                margin-left: 40px;
+
                 &>div{
-                    margin-bottom: 40px;
+                    width: 100%;                    
                     @include Flex(column, flex-start, none);
                     &>label{
                         margin-bottom: 10px;
@@ -102,7 +142,8 @@
                         }
                     }
                     .wrap_input{
-                        @include Flex(row, flex-start, center);                        
+                        @include Flex(row, flex-start, center);  
+                /* --------------------------------- buttons -------------------------------- */
                         .download{
                             @include MainButton($linSp_orange, none);
                         }
@@ -116,30 +157,28 @@
                         }
                     }
                 }
-                .bl_marketImg label .bl_otherImg label{
-                    position: relative;
-                    &:after{
-                        position:absolute;
-                        top: 0; left: 0;
-                        display: inline-block;
-                        margin-top: 10px;
-                        color: #808080;
-                        text-transform: none;                    
-                        font: {
-                            family: 'Montserrat';
-                            style: normal;
-                            weight: 300;
-                            size: 13px;
-                        }
+                /* --------------------------------- images:after --------------------------------- */
+                .style_after{
+                    display: inline-block;
+                    margin-top: 10px;
+                    color: #808080;
+                    text-transform: none;                    
+                    font: {
+                        family: 'Montserrat';
+                        style: normal;
+                        weight: 300;
+                        size: 13px;
                     }
                 }
                 .bl_marketImg label:after{
+                    @extend .style_after;
                     content: 'Загрузите 2 изображения.';                    
                 }
                 .bl_otherImg label:after{
+                    @extend .style_after;
                     content: 'Максимальное количество изображений - 15шт.';                    
                 }
-
+                /* --------------------------------- status --------------------------------- */
                 .bl_status{
                     #status{
                         width: 25px;
@@ -155,11 +194,12 @@
                 
                 .bl_description{
                     textarea{
-                        min-width: 400px;
                         height: 150px;
                         overflow-y: scroll;
                         padding: 5px 10px;
                         resize: none;
+                        user-select: none;
+                        outline: none;
                         font: {
                             family: 'Roboto';
                             style: normal;
@@ -180,15 +220,35 @@
 /*                                MEDIA QUERIES                               */
 /* -------------------------------------------------------------------------- */
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:1020px) {
         .content_proj{
             width: 80%;
+            .house_info{
+                @include Flex(row, flex-start, flex-start);
+                .bl_image{
+                    width: 60%;
+                }
+                .bl_info > div{ margin-bottom: 40px;}
+            }
         }
+        
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1019px) {
         .content_proj{
             width: 90%;
+            .house_info{
+                @include Flex(column, center, center);
+                .bl_image{
+                    width: 100%;
+                }
+                .bl_info{
+                    padding-top: 10px;
+                    &>div{
+                        margin-bottom: 20px;
+                    }
+                }
+            }
         }
 }
 
