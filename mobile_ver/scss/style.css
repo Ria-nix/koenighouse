@@ -206,7 +206,6 @@ body.zoom-opened {
     transition: 0.3s;
     opacity: 1;
   }
-
   .zoom {
     background-color: rgba(0, 0, 0, 0.7);
     width: 100%;

@@ -20,6 +20,7 @@
           flex-direction: column;
   position: relative;
   overflow-y: hidden;
+  padding-top: 100px;
 }
 
 .test {
@@ -37,6 +38,9 @@ svg {
 }
 svg polygon {
   z-index: 4;
+}
+svg polygon:hover {
+  cursor: pointer;
 }
 
 .map {
@@ -555,17 +559,16 @@ body {
   padding: 0;
 }
 
-h1 {
-  text-align: center;
-  width: 100%;
-  margin-top: 20px;
-}
-
 .popUpWindow {
   position: absolute;
   top: -1000px;
   left: -1000px;
   display: grid;
+}
+.popUpWindow h1 {
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
 }
 
 .popUpWindow.hidden {
@@ -575,12 +578,12 @@ h1 {
 .popUpWindow,
 .house-card-info {
   z-index: 15;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   background: rgba(255, 255, 255, 0.85);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   width: 245px;
-  height: 360px;
+  height: 310px;
   display: grid;
   grid-template-rows: 90px 1fr 145px;
   justify-items: center;
@@ -637,6 +640,13 @@ h1 {
   display: block;
   font-family: "Montserrat";
 }
+.popUpWindow .popUp-body p,
+.house-card-info .popUp-body p {
+  text-align: justify;
+  margin-top: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid white;
+}
 .popUpWindow .popUp-footer,
 .house-card-info .popUp-footer {
   border-top: 1px solid white;
@@ -646,6 +656,7 @@ h1 {
 .house-card-info .popUp-footer button {
   display: block;
   margin: 0 auto;
+  width: 157px;
 }
 .popUpWindow .popUp-footer button:last-child,
 .house-card-info .popUp-footer button:last-child {
@@ -768,11 +779,8 @@ h1 {
   grid-template-rows: 125px 1fr 100px;
   padding-top: 0 !important;
 }
-.house-info .house-card-info .popUp-header h2 {
-  font-size: 1.8vw;
-}
-.house-info .house-card-info .popUp-header h3 {
-  font-size: 1vw;
+.house-info .house-card-info .popUp-header h2, .house-info .house-card-info .popUp-header h3 {
+  font-size: 14px;
 }
 .house-info .house-card-info .popUp-body ul {
   display: grid;
@@ -934,7 +942,6 @@ main.test_container .back .pointer_block:hover {
   .house-info .house-layout img:last-child {
     margin-top: 8px;
   }
-
   .house-card-info .popUp-header h2 {
     font-size: 24px;
   }
@@ -1020,7 +1027,6 @@ main.test_container .back .pointer_block:hover {
     display: -ms-flexbox;
     display: flex;
   }
-
   .map,
 .house-info {
     display: none;

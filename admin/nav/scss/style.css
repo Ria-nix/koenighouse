@@ -149,7 +149,6 @@ input {
     border-bottom: 3px solid #ECECEC;
     border-radius: 3px;
   }
-
   .content_wrap {
     padding-top: 100px;
   }
@@ -161,7 +160,6 @@ input {
     -webkit-box-shadow: 10px 0px 30px rgba(0, 0, 0, 0.15);
             box-shadow: 10px 0px 30px rgba(0, 0, 0, 0.15);
   }
-
   .content_wrap {
     padding-top: 70px;
   }

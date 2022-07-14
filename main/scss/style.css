@@ -292,11 +292,9 @@ input {
   .content .wrap_text {
     background: url("../../images/wrap.svg") no-repeat center;
   }
-
   .main_txt {
     font-size: 32px;
   }
-
   .main_info {
     height: 600px;
   }
@@ -307,7 +305,6 @@ input {
   .main_info .telefon_call input {
     opacity: 0;
   }
-
   .gallery_items {
     gap: 20px;
     grid-template-columns: repeat(3, 1fr);
@@ -335,11 +332,9 @@ input {
   .content .wrap_text {
     background: url("../../images/wrap_1.svg") no-repeat center;
   }
-
   .main_txt {
     font-size: 24px;
   }
-
   .main_info {
     height: 400px;
   }

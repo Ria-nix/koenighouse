@@ -3,59 +3,73 @@ show = true
 
 function setLocation(curLoc) {
     var newurl = window.location.protocol + "//" + window.location.host + '?id=' + curLoc;
-    window.history.pushState({ path: newurl }, '123', newurl);
+    window.history.pushState({
+        path: newurl
+    }, '123', newurl);
 }
-setLocation("1")
 
-function popUpWindows(elem_to_hover) {
+// setLocation("1")
 
-    elem_to_hover.on({
-        mouseenter: function() {
-            if (show) {
-                hov = $(this)
-                selected_house = $(this).attr('id')
-                hovered_elem_position_left = hov.position().left - $('.popUpWindow').width() / 2
-                hovered_elem_position_top = hov.position().top - hov.position().top / 2
-                if (hovered_elem_position_top < 50)
-                    hovered_elem_position_top = hovered_elem_position_top + 50
-                if (hovered_elem_position_top >= 150)
-                    hovered_elem_position_top = hovered_elem_position_top + 100
-                if (hovered_elem_position_left <= 100)
-                    hovered_elem_position_left = hovered_elem_position_left + $('.popUpWindow').width() + hov.width() + 100
-                $('.popUpWindow').css({ top: hovered_elem_position_top, left: hovered_elem_position_left })
-            }
-        },
-        mouseleave: function(e) {
-            if (!$(e.toElement).hasClass('popUpWindow')) {
-                selected_house = null
-                closePopUpWindow()
-            }
+// window.addEventListener('mousemove', () => {
+//     $('.popUpWindow').css({
+//         top: (event.pageY),
+//         left: (event.pageX + 20),
+//         display: "grid"
+//     })
+// })
+
+
+const popUp = document.querySelector('.popUpWindow')
+
+document.querySelectorAll('.hitbox').forEach((elem) => {
+    elem.addEventListener('mousemove', (event) => {
+        if (elem.classList.contains('id7') || elem.classList.contains('id8')) {
+            $('.popUpWindow').css({
+                top: (event.pageY - 200),
+                left: (event.pageX + 20)
+            })
+            $('.popUpWindow').fadeIn(300)
+        } else {
+            $('.popUpWindow').css({
+                top: (event.pageY - 80),
+                left: (event.pageX + 20)
+            })
+            $('.popUpWindow').fadeIn(300)
         }
     })
+    elem.addEventListener('mouseleave', (e) => {
+        if(!$(e.toElement).hasClass('popUpWindow')) {
+            selected_house = null
+            closePopUpWindow()
+        }
+    })
+})
+
+function popUpWindows() {
     $('.popUpWindow').on({
-        mouseleave: function() {
+        mouseleave: function () {
             selected_house = null
             closePopUpWindow()
         }
     })
 }
-$('#more-house-info').on('click', function() {
+$('.hitbox').on('click', function () {
     $('.house-info').toggleClass('hiden')
     show = false
     if (selected_house !== null && selected_house !== undefined) {
         $('.map').css({
-                'filter': 'blur(5px)',
-                '-webkit-filter': 'blur(5px)',
-                '-moz-filter': 'blur(5px)',
-                '-o-filter': 'blur(5px)',
-                '-ms-filter': 'blur(5px)'
-            })
-            // setLocation(selected_house)
-        $('.popUpWindow').css({ top: -1000, left: -1000 })
+            'filter': 'blur(5px)',
+            '-webkit-filter': 'blur(5px)',
+            '-moz-filter': 'blur(5px)',
+            '-o-filter': 'blur(5px)',
+            '-ms-filter': 'blur(5px)'
+        })
+        // setLocation(selected_house)
+        closePopUpWindow()
 
     }
 })
-$('.house-info .close-info-container .close-btn').on('click', function() {
+$('.house-info .close-info-container .close-btn').on('click', function () {
     $('.house-info').toggleClass('hiden')
     $('.map').css({
         'filter': 'blur(0px)',
@@ -68,6 +82,6 @@ $('.house-info .close-info-container .close-btn').on('click', function() {
 })
 
 function closePopUpWindow() {
-    $('.popUpWindow').css({ top: -1000, left: -1000 })
+    $('.popUpWindow').fadeOut(100)
     show = true
 }

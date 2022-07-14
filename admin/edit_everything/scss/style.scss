@@ -38,7 +38,6 @@
             .bl_image{
                 border: 1px solid blue;
                 position: relative;
-                
                 @include Flex(column, flex-start, flex-start);
 
                 &>div{
@@ -46,6 +45,7 @@
                     @include Flex(column, flex-start, flex-start);
                     .names{
                         margin-bottom: 10px;
+                        width: 95%;
                         text-transform: uppercase;
                         @include Flex(row, none, center);
                         font: {
@@ -60,8 +60,7 @@
                             padding-top: 5px;
                         }
                     }
-                    .main_wrapImg{   
-                        width: 100%;       
+                    .main_wrapImg{ width: 100%;       
                         .wrap_img{
                             border: 1px dashed #808080;
                             position: relative;
@@ -81,14 +80,11 @@
 
                 .market_img{                    
                     border: 1px solid violet;
-                    .main_wrapImg{                    
-                        @include Flex(row, space-between, flex-start);   
-                        flex-wrap: wrap; 
-                        .wrap_img{
-                            height: 15rem;
-                            width: 45%;
-                            &:first-child{ margin-right: 20px;}
-                        }
+                    .main_wrapImg{           
+                        display: grid;
+                        grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+                        gap: 20px;
+                        .wrap_img{ height: 15rem; }
                     }
                 }
 
@@ -114,6 +110,7 @@
                     @include Flex(column, flex-start, none);
                     &>label{
                         margin-bottom: 10px;
+                        width: 300px;
                         text-transform: uppercase;
                         font: {
                             family: 'Montserrat';
@@ -236,7 +233,7 @@
         
 }
 
-@media (min-width:405px) and (max-width: 767px) {
+@media (min-width:500px) and (max-width: 767px) {
         .content_proj{
             width: 90%;
             .house_info{
@@ -254,7 +251,7 @@
         }
 }
 
-@media screen and (max-width:404px) {
+@media screen and (max-width:500px) {
     .bl_image, .bl_info{
         width: 90%;
     }

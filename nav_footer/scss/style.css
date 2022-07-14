@@ -245,7 +245,6 @@ input {
   .content {
     padding-top: 100px;
   }
-
   .main_wrap {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -296,20 +295,17 @@ input {
         -ms-flex-align: normal;
             align-items: normal;
   }
-
   .toggle_wrap, .media_info {
     display: none;
   }
 }
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 1019px) {
   .content {
     padding-top: 70px;
   }
-
   .toggle_wrap, .media_info {
     display: block;
   }
-
   .main_wrap {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -561,11 +557,9 @@ input {
         -ms-flex-align: normal;
             align-items: normal;
   }
-
   .mobile_footer {
     display: none;
   }
-
   .toggle_wrap, .media_info {
     display: none;
   }
@@ -574,7 +568,6 @@ input {
   .footer_wrap {
     display: none !important;
   }
-
   .mobile_footer {
     display: -webkit-box;
     display: -ms-flexbox;

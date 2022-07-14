@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php include_once('../helper.php') ?>  
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <?php include_once('../helper.php') ?>    
 </head>
 <body>
     <!--/* -------------------------------------------------------------------------- */
@@ -19,15 +19,15 @@
         <div class="map">
             <img src="img/bg.svg" class="bg" alt="bg">
             <div class="houses">
-                <svg>
+                <svg class="svg">
                     <polygon fill="red" class="hitbox" points="127,381 126,388 146,403 153,443 248,533 434,466 426,410 324,325 316,324" id="1"></polygon>
                     <polygon fill="red" class="hitbox" points="487,270 607,347 607,353 596,357 600,409 434,465 426,410 324,324 318,323" id="1"></polygon>
                     <polygon fill="red" class="hitbox" points="616,230 616,240 629,244 633,291 746,360 885,305 885,261 809,172" id="1"></polygon>
                     <polygon fill="red" class="hitbox" points="896,147 1028,206 1028,216 1016,216 1015,261 885,304 885,259 810,173"id="1"></polygon>
                     <polygon fill="red" class="hitbox" points="999,116 1000,121 1010,127 1011,167 1129,224 1241,180 1241,136 1156,67"id="1"></polygon>
                     <polygon fill="red" class="hitbox" points="1359,96 1359,100 1349,106 1346,150 1244,180 1243,135 1157,67 1224,47"id="1"></polygon>
-                    <polygon fill="red" class="hitbox" points="734,790 562,682 558,610 736,528 787,539 888,656 888,717"id="1"></polygon>
-                    <polygon fill="red" class="hitbox" points="873,465 1058,574 1039,589 1035,645 890,716 785,537 735,527"id="1"></polygon>
+                    <polygon fill="red" class="hitbox id7" points="734,790 562,682 558,610 736,528 787,539 888,656 888,717"id="1"></polygon>
+                    <polygon fill="red" class="hitbox id8" points="873,465 1058,574 1039,589 1035,645 890,716 785,537 735,527"id="1"></polygon>
                     <polygon fill="red" class="hitbox" points="988,425 989,433 1002,440 1002,489 1165,582 1309,513 1312,461 1213,365 1130,368"id="1"></polygon>
                     <polygon fill="red" class="hitbox" points="1280,308 1462,390 1464,395 1445,404 1440,452 1311,511 1217,364 1138,365"id="1"></polygon>
                     <polygon fill="red" class="hitbox" points="1384,266 1384,276 1396,279 1391,325 1553,397 1668,343 1671,298 1582,210 1530,208"id="1"></polygon>
@@ -86,10 +86,7 @@
                     <li>Стоимость:<b>5 100 000 ₽</b></li>
                     <li>Жилая площадь:<b>115 м²</b></li>
                 </ul>
-            </div>
-            <div class="popUp-footer">
-                <button class="main-btn green" id="more-house-info">Подробнее</button>
-                <button class="main-btn red">Купить</button>
+                <p>Нажмите на дом, чтобы посмотреть подробную информацию.</p>
             </div>
         </div>
         <div class="house-info hiden">
@@ -227,14 +224,14 @@
         </div>
         <p class="mobile_footer">© Разработка и продвижение - <span>msoft</span></p>
     </div>
-    <!--/* -------------------------------------------------------------------------- */
+     <!--/* -------------------------------------------------------------------------- */
     /*                                   FOOTER                                   */
     /* -------------------------------------------------------------------------- */ -->
     <?php include_once('../nav_footer/footer.php') ?>    
     <!--/* -------------------------------------------------------------------------- */
     /*                                   SCRIPTS                                  */
     /* -------------------------------------------------------------------------- */ -->
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/popUpWindows.js"></script>
     <script src="js/script.js"></script>
 </body>

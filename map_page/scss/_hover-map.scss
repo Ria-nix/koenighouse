@@ -9,17 +9,17 @@
     padding: 0;
 }
 
-h1 {
-    text-align: center;
-    width: 100%;
-    margin-top: 20px;
-}
 
 .popUpWindow {
     position: absolute;
     top: -1000px;
     left: -1000px;
     display: grid;
+    h1 {
+        text-align: center;
+        width: 100%;
+        margin-top: 20px;
+    }
 }
 
 .popUpWindow.hidden {
@@ -29,11 +29,11 @@ h1 {
 .popUpWindow,
 .house-card-info {
     z-index: 15;
-    font-family: "Montserrat";
+    font-family: "Montserrat", sans-serif;
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(10px);
     width: 245px;
-    height: 360px;
+    height: 310px;
     display: grid;
     grid-template-rows: 90px 1fr 145px;
     justify-items: center;
@@ -77,6 +77,12 @@ h1 {
                 }
             }
         }
+        p {
+            text-align: justify;
+            margin-top: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid white;
+        }
     }
     .popUp-footer {
         border-top: 1px solid white;
@@ -84,6 +90,7 @@ h1 {
         button {
             display: block;
             margin: 0 auto;
+            width: 157px;
             &:last-child {
                 margin: 23px auto 0 auto;
                 @include MainButton($linSp_orange, $sSp_orange);
@@ -152,11 +159,8 @@ h1 {
         grid-template-rows: 125px 1fr 100px;
         padding-top: 0 !important;
         .popUp-header {
-            h2 {
-                font-size: 1.8vw;
-            }
-            h3 {
-                font-size: 1vw;
+            h2, h3 {
+                font-size: 14px;
             }
         }
         .popUp-body {

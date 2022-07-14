@@ -13,6 +13,7 @@
     flex-direction: column;
     position: relative;
     overflow-y: hidden;
+    padding-top: 100px;
 }
 
 .test {
@@ -27,9 +28,11 @@ svg {
     height: 100%;
     opacity: 0;
     z-index: 3;
-
     polygon {
         z-index: 4;
+        &:hover{
+            cursor: pointer;
+        }
     }
 }
 

@@ -125,6 +125,7 @@ input {
 }
 .content_wrap .content_proj .house_info .bl_image > div .names {
   margin-bottom: 10px;
+  width: 95%;
   text-transform: uppercase;
   display: -webkit-box !important;
   display: -ms-flexbox !important;
@@ -171,28 +172,12 @@ input {
   border: 1px solid violet;
 }
 .content_wrap .content_proj .house_info .bl_image .market_img .main_wrapImg {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  gap: 20px;
 }
 .content_wrap .content_proj .house_info .bl_image .market_img .main_wrapImg .wrap_img {
   height: 15rem;
-  width: 45%;
-}
-.content_wrap .content_proj .house_info .bl_image .market_img .main_wrapImg .wrap_img:first-child {
-  margin-right: 20px;
 }
 .content_wrap .content_proj .house_info .bl_image .others_img {
   margin: 30px 0 40px 0;
@@ -242,6 +227,7 @@ input {
 }
 .content_wrap .content_proj .house_info .bl_info > div > label {
   margin-bottom: 10px;
+  width: 300px;
   text-transform: uppercase;
   font-family: "Montserrat";
   font-style: normal;
@@ -411,7 +397,7 @@ input {
     margin-bottom: 40px;
   }
 }
-@media (min-width: 405px) and (max-width: 767px) {
+@media (min-width: 500px) and (max-width: 767px) {
   .content_proj {
     width: 90%;
   }
@@ -440,7 +426,7 @@ input {
     margin-bottom: 20px;
   }
 }
-@media screen and (max-width: 404px) {
+@media screen and (max-width: 500px) {
   .bl_image, .bl_info {
     width: 90%;
   }
