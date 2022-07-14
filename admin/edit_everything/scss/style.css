@@ -75,6 +75,7 @@ input {
   /* ------------------------------ all projects ------------------------------ */
 }
 .content_wrap .content_proj .heading {
+  margin: 0 25px;
   padding: 20px 0 40px 0;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -86,12 +87,10 @@ input {
 }
 .content_wrap .content_proj .house_info {
   width: 100%;
-  border: 1px solid red;
   /* ------------------- block with marketing and other imgs ------------------ */
   /* ------------------- block with information about house ------------------- */
 }
 .content_wrap .content_proj .house_info .bl_image {
-  border: 1px solid blue;
   position: relative;
   display: -webkit-box !important;
   display: -ms-flexbox !important;
@@ -168,9 +167,6 @@ input {
   font-size: 14px;
   color: #808080;
 }
-.content_wrap .content_proj .house_info .bl_image .market_img {
-  border: 1px solid violet;
-}
 .content_wrap .content_proj .house_info .bl_image .market_img .main_wrapImg {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
@@ -181,7 +177,6 @@ input {
 }
 .content_wrap .content_proj .house_info .bl_image .others_img {
   margin: 30px 0 40px 0;
-  border: 1px solid salmon;
 }
 .content_wrap .content_proj .house_info .bl_image .others_img .main_wrapImg {
   display: grid;
@@ -192,7 +187,6 @@ input {
   height: 5rem;
 }
 .content_wrap .content_proj .house_info .bl_info {
-  border: 1px solid yellow;
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -289,12 +283,17 @@ input {
   background-position: right center;
 }
 .content_wrap .content_proj .house_info .bl_info > div .wrap_input .delete {
+  cursor: pointer;
   margin-left: 40px;
   font-size: 16px;
   text-decoration: underline;
   color: #808080;
   border: none;
   background: transparent;
+}
+.content_wrap .content_proj .house_info .bl_info > div .wrap_input .delete:hover {
+  text-decoration: none;
+  color: #000;
 }
 .content_wrap .content_proj .house_info .bl_info .style_after, .content_wrap .content_proj .house_info .bl_info .bl_otherImg label:after, .content_wrap .content_proj .house_info .bl_info .bl_marketImg label:after {
   display: inline-block;
@@ -367,6 +366,7 @@ input {
 /* -------------------------------------------------------------------------- */
 /*                                MEDIA QUERIES                               */
 /* -------------------------------------------------------------------------- */
+/* ------------------------- media min-width: 768px ------------------------- */
 @media screen and (min-width: 768px) {
   .content_proj {
     width: 80%;
@@ -397,6 +397,7 @@ input {
     margin-bottom: 40px;
   }
 }
+/* ------------------------- media max-width: 767px ------------------------- */
 @media (min-width: 500px) and (max-width: 767px) {
   .content_proj {
     width: 90%;
@@ -416,8 +417,8 @@ input {
         -ms-flex-align: center;
             align-items: center;
   }
-  .content_proj .house_info .bl_image {
-    width: 80%;
+  .content_proj .house_info .bl_image, .content_proj .house_info .bl_info {
+    width: 90%;
   }
   .content_proj .house_info .bl_info {
     padding-top: 10px;
