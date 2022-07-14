@@ -20,6 +20,7 @@
             padding: 20px 0 40px 0;
             letter-spacing: 0.05em;
             text-transform: uppercase;
+            text-align: center;
             font: {
                 family: 'Montserrat';
                 style: normal;
@@ -31,13 +32,12 @@
         /* ------------------------------ all projects ------------------------------ */
         .house_info{
             width: 100%;
-            // border: 1px solid red;
+            border: 1px solid red;
 
             /* ------------------- block with marketing and other imgs ------------------ */
             .bl_image{
-                // border: 1px solid blue;
+                border: 1px solid blue;
                 position: relative;
-                // background: url('../../images/home.jpg') no-repeat center;
                 
                 @include Flex(column, flex-start, flex-start);
 
@@ -64,13 +64,16 @@
                         width: 100%;       
                         .wrap_img{
                             border: 1px dashed #808080;
+                            position: relative;
                             span{
+                                width: 150px;
+                                position: absolute;
+                                top: 5rem; left: 5rem;
                                 font-family: 'Roboto';
                                 font-style: normal;
                                 font-weight: 400;
-                                font-size: 16px;
+                                font-size: 14px;
                                 color: #808080;
-                                transform: translate(50%, 50%);
                             }
                         }
                     }                   
@@ -82,11 +85,9 @@
                         @include Flex(row, space-between, flex-start);   
                         flex-wrap: wrap; 
                         .wrap_img{
-                            min-width: 18.5rem;
                             height: 15rem;
-                            &:first-child{
-                                margin-right: 20px;
-                            }
+                            width: 45%;
+                            &:first-child{ margin-right: 20px;}
                         }
                     }
                 }
@@ -96,7 +97,6 @@
                     border: 1px solid salmon;
                     .main_wrapImg{   
                         display: grid;
-                        // grid-template-rows: repeat(auto-fill, minmax(5rem, 1fr));
                         grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
                         gap: 20px;
                         .wrap_img{ height: 5rem;}
@@ -106,10 +106,8 @@
 
             /* ------------------- block with information about house ------------------- */
             .bl_info{
-                // border: 1px solid yellow;
-                @include Flex(column, flex-start, none);
-                width: 320px;
-                margin-left: 40px;
+                border: 1px solid yellow;
+                @include Flex(column, flex-start, none);               
 
                 &>div{
                     width: 100%;                    
@@ -220,7 +218,7 @@
 /*                                MEDIA QUERIES                               */
 /* -------------------------------------------------------------------------- */
 
-@media screen and (min-width:1020px) {
+@media screen and (min-width:768px) {
         .content_proj{
             width: 80%;
             .house_info{
@@ -228,19 +226,23 @@
                 .bl_image{
                     width: 60%;
                 }
-                .bl_info > div{ margin-bottom: 40px;}
+                .bl_info{
+                    width: 40%;
+                    margin-left: 40px;
+                    &> div{ margin-bottom: 40px;}
+                } 
             }
         }
         
 }
 
-@media screen and (max-width:1019px) {
+@media (min-width:405px) and (max-width: 767px) {
         .content_proj{
             width: 90%;
             .house_info{
                 @include Flex(column, center, center);
                 .bl_image{
-                    width: 100%;
+                    width: 80%;
                 }
                 .bl_info{
                     padding-top: 10px;
@@ -252,6 +254,22 @@
         }
 }
 
-// @media screen and (max-width:320px) {}
+@media screen and (max-width:404px) {
+    .bl_image, .bl_info{
+        width: 90%;
+    }
+    .content_proj{
+        width: 100%;
+        .house_info{
+            @include Flex(column, center, center);
+            .bl_info{
+                padding-top: 10px;
+                &>div{
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
 
 // @media screen and (max-width:320px) {}
