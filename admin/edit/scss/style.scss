@@ -224,13 +224,17 @@
 }
 
 /* ------------------------- media max-width: 767px ------------------------- */
-@media (min-width:500px) and (max-width: 767px) {
+@media (min-width:500px) and (max-width: 768px) {
         .content_proj{ width: 90%;
             .house_info{
                 @include Flex(column, center, center);
                 .bl_image, .bl_info{ width: 90%;}
                 .bl_info{ padding-top: 10px;
                     &>div{ margin-bottom: 20px; }
+                }
+                .bl_saveInfo{
+                    display: flex;
+                    justify-content: center;
                 }
             }
         }
@@ -242,6 +246,10 @@
         .house_info{ @include Flex(column, center, center);
             .bl_info{ padding-top: 10px;
                 &>div{ margin-bottom: 20px; }
+            }
+            .bl_saveInfo{
+                display: flex;
+                justify-content: center;
             }
         }
     }
