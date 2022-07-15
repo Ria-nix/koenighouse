@@ -7,11 +7,6 @@
   width: 100%;
   height: 230%;
   background: rgba(0, 0, 0, 0.5);
-  display: grid;
-  grid-template-columns: repeat(1, minmax(320px, 1024px));
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   outline: none;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -20,13 +15,17 @@
   z-index: 999;
 }
 .modal_wrap .modal_img {
-  margin-top: 5%;
+  position: fixed;
+  margin: auto;
+  left: 0;
+  right: 0;
   padding: 10px 20px;
 }
 .modal_wrap .modal_img h4 {
   line-height: 24px;
   text-transform: uppercase;
   color: #fff;
+  margin-top: 50px;
   margin-bottom: 10px;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
