@@ -9,7 +9,7 @@
 
 .empty{
     border: 1px dashed #808080;
-    @include Flex(row, center, center);
+    @include Flex(row, center, center);    
     .no_imgTxt{
         max-width: 180px;
         font-family: 'Roboto';
@@ -26,6 +26,7 @@
 }
 
 .none_empty{
+    cursor: pointer;
     background: url('../../images/home.jpg');
     background-size: cover;
     border: none;

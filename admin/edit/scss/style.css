@@ -80,6 +80,7 @@ input {
 }
 
 .none_empty {
+  cursor: pointer;
   background: url("../../images/home.jpg");
   background-size: cover;
   border: none;
