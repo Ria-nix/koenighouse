@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="modal_window/scss/style.css">
     <?php include_once('../helper_admin.php')?>
     <sctipt src="script.js"></sctipt>
     <title>Редактирование «2 Таунхауса»</title>    
@@ -15,7 +16,11 @@
     <?php 
         $class_btn = '<a class="back_arrow" onClick="goBack()">Назад</a>'; 
         include_once('../nav/index.php'); 
-    ?>   
+    ?>      
+    <!-- /* -------------------------------------------------------------------------- */
+    /*                                MODAL WINDOW                                */
+    /* -------------------------------------------------------------------------- */ -->
+    <?php  include_once('modal_window/index.php'); ?> 
     <!--/* -------------------------------------------------------------------------- */
     /*                                   CONTENT                                  */
     /* -------------------------------------------------------------------------- */ -->
@@ -28,8 +33,8 @@
                 <!-- /* ------------------------------ all projects ------------------------------ */ -->
                 <div class="bl_image">
                     <div class="market_img">
-                        <p class="names" onClick="fallList()">Маркетинговые Изображения</p>
-                        <div class="main_wrapImg">
+                        <p class="names" onClick="fallList('.marketList')">Маркетинговые Изображения</p>
+                        <div class="main_wrapImg marketList">
                             <div class="wrap_img none_empty">
                                 <span class="no_imgTxt">Отсутствует изображение</span>
                             </div>
@@ -40,8 +45,8 @@
                     </div>
 
                     <div class="others_img">
-                        <p class="names" onClick="fallList()">Остальные Изображения</p>
-                        <div class="main_wrapImg">
+                        <p class="names" onClick="fallList('.otherList')">Остальные Изображения</p>
+                        <div class="main_wrapImg otherList">
                             <div class="wrap_img none_empty" id="1">
                                 <span class="cross"></span>
                             </div>
@@ -143,9 +148,10 @@
                     </div>
                 </div>
             </div>
-            
-
         </div>        
     </div>
+
+    <!-- /* --------------------------------- script --------------------------------- */ -->
+    <script src="script.js"></script>
 </body>
 </html>

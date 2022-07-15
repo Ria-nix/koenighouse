@@ -27,9 +27,10 @@
 
 .none_empty{
     cursor: pointer;
-    background: url('../../images/home.jpg');
-    background-size: cover;
-    border: none;
+    background: url('../../images/home.jpg') no-repeat center;
+    background-size: contain;
+    border: 1px solid #808080;
+    
     span{ display: none;}
 }
 
@@ -38,6 +39,7 @@
 /* -------------------------------------------------------------------------- */
 
 .content_wrap{
+    z-index: 0;
     display: grid;
     grid-template-columns: repeat(1, minmax(320px, 1920px));
     row-gap: 30px;
@@ -72,6 +74,7 @@
                     width: 100%;
                     @include Flex(column, flex-start, flex-start);
                     .names{
+                        cursor: pointer;
                         margin-bottom: 10px;
                         width: 95%;
                         text-transform: uppercase;
@@ -88,7 +91,9 @@
                             padding-top: 5px;
                         }
                     }
-                    .main_wrapImg{ width: 100%;  }                   
+                    .main_wrapImg{ 
+                        width: 100%;
+                    }                   
                 }
 
                 .market_img{                    

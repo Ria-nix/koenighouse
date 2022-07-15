@@ -81,9 +81,9 @@ input {
 
 .none_empty {
   cursor: pointer;
-  background: url("../../images/home.jpg");
-  background-size: cover;
-  border: none;
+  background: url("../../images/home.jpg") no-repeat center;
+  background-size: contain;
+  border: 1px solid #808080;
 }
 .none_empty span {
   display: none;
@@ -93,6 +93,7 @@ input {
 /*                                  MAIN CODE                                 */
 /* -------------------------------------------------------------------------- */
 .content_wrap {
+  z-index: 0;
   display: grid;
   grid-template-columns: repeat(1, minmax(320px, 1920px));
   row-gap: 30px;
@@ -167,6 +168,7 @@ input {
           align-items: flex-start;
 }
 .content_wrap .content_proj .house_info .bl_image > div .names {
+  cursor: pointer;
   margin-bottom: 10px;
   width: 95%;
   text-transform: uppercase;
