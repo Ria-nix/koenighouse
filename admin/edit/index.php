@@ -28,63 +28,63 @@
                 <!-- /* ------------------------------ all projects ------------------------------ */ -->
                 <div class="bl_image">
                     <div class="market_img">
-                        <p class="names">Маркетинговые Изображения</p>
+                        <p class="names" onClick="fallList()">Маркетинговые Изображения</p>
                         <div class="main_wrapImg">
-                            <div class="wrap_img">
+                            <div class="wrap_img none_empty">
                                 <span class="no_imgTxt">Отсутствует изображение</span>
                             </div>
-                            <div class="wrap_img">
+                            <div class="wrap_img empty">
                                 <span class="no_imgTxt">Отсутствует изображение</span>
                             </div>
                         </div>                        
                     </div>
 
                     <div class="others_img">
-                        <p class="names">Остальные Изображения</p>
+                        <p class="names" onClick="fallList()">Остальные Изображения</p>
                         <div class="main_wrapImg">
-                            <div class="wrap_img" id="1">
+                            <div class="wrap_img none_empty" id="1">
                                 <span class="cross"></span>
                             </div>
-                            <div class="wrap_img" id="2">
+                            <div class="wrap_img none_empty" id="2">
                                 <span class="cross"></span>
                             </div>
-                            <div class="wrap_img" id="3">
+                            <div class="wrap_img none_empty" id="3">
                                 <span class="cross"></span>
                             </div>
-                            <div class="wrap_img" id="4">
+                            <div class="wrap_img none_empty" id="4">
                                 <span class="cross"></span>
                             </div>
-                            <div class="wrap_img" id="5">
+                            <div class="wrap_img none_empty" id="5">
                                 <span class="cross"></span>
                             </div>
-                            <div class="wrap_img" id="6">
+                            <div class="wrap_img none_empty" id="6">
                                 <span class="cross"></span>
                             </div>
-                            <div class="wrap_img" id="7">
+                            <div class="wrap_img none_empty" id="7">
                                 <span class="cross"></span>
                             </div>
-                            <div class="wrap_img" id="8">
+                            <div class="wrap_img none_empty" id="8">
                                 <span class="cross"></span>
                             </div>
-                            <div class="wrap_img" id="9">
+                            <div class="wrap_img none_empty" id="9">
                                 <span class="cross"></span>
                             </div>
-                            <div class="wrap_img" id="10">
+                            <div class="wrap_img none_empty" id="10">
                                 <span class="cross"></span>
                             </div>
-                            <div class="wrap_img" id="11">
+                            <div class="wrap_img none_empty" id="11">
                                 <span class="cross"></span>
                             </div>
-                            <div class="wrap_img" id="12">
+                            <div class="wrap_img none_empty" id="12">
                                 <span class="cross"></span>
                             </div>
-                            <div class="wrap_img" id="13">
+                            <div class="wrap_img none_empty" id="13">
                                 <span class="cross"></span>
                             </div>
-                            <div class="wrap_img" id="14">
+                            <div class="wrap_img none_empty" id="14">
                                 <span class="cross"></span>
                             </div>
-                            <div class="wrap_img" id="15">
+                            <div class="wrap_img empty" id="15">
                                 <span class="cross"></span>
                             </div>
                         </div>
@@ -110,7 +110,7 @@
                     <div class="bl_price">
                         <label for="price">ЦЕНА:</label>
                         <div class="wrap_input">
-                            <input type="text" id="price" value="5 100 000" placeholder="5 100 000">
+                            <input type="number" id="price" value="5 100 000" placeholder="5 100 000">
                             <p>РУБ.</p>
                         </div>  
                     </div>
@@ -118,7 +118,8 @@
                     <div class="bl_marketImg">
                         <label>Маркетинговые Изображения:</label>
                         <div class="wrap_input">
-                            <input type="submit" class="download" value="Загрузить">
+                            <label for="file" class="download">Загрузить</label>
+                            <input type="file" id="file">
                             <input type="submit" class="delete" value="Удалить">
                         </div>  
                     </div>
@@ -126,7 +127,8 @@
                     <div class="bl_otherImg">
                         <label>Остальные Изображения:</label>
                         <div class="wrap_input">
-                            <input type="submit" class="download" value="Загрузить">
+                            <label for="file" class="download">Загрузить</label>
+                            <input type="file" id="file">
                             <input type="submit" class="delete" value="Удалить">
                         </div>  
                     </div>
