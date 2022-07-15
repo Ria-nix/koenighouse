@@ -77,7 +77,7 @@
                             <div class="wrap_img none_empty" id="10">
                                 <span class="cross"></span>
                             </div>
-                            <div class="wrap_img none_empty" id="11">
+                            <div class="wrap_img none_empty unusual" id="11">
                                 <span class="cross"></span>
                             </div>
                             <div class="wrap_img none_empty" id="12">

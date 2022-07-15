@@ -7,16 +7,20 @@ function fallList(elem){
 $('.none_empty').click(function(){    
     $('.modal_wrap').removeClass('none');
     $('body').addClass('none_scroll');
-    // showImg($('.modal_wrap').attr('src'));
-    // console.log($('.modal_wrap').attr('src'));
+
+    /* ----------------- take the background url from scss file ----------------- */
+    var bg = $(this).css('background-image');
+    bg = bg.replace('url(','').replace(')','').replace(/\"/gi, "");
+    showImg(bg);    
 })
 
-function showImg(srcImg){
+/* ----------------------------- show the image ----------------------------- */
+function showImg(srcImg){    
     console.log(srcImg);
     $('.mod_image img').attr('src', srcImg);
 }
 
-
+/* ------------------------- close the modal window ------------------------- */
 function closeWindow(){
     $('body').removeClass('none_scroll');
     $('.modal_wrap').addClass('none');    
