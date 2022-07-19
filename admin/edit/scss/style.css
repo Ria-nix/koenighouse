@@ -48,6 +48,13 @@ input {
 /* -------------------------------------------------------------------------- */
 /*                              ADDITIONAL STYLES                             */
 /* -------------------------------------------------------------------------- */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 /* ------------------------------- for images ------------------------------- */
 .empty {
   border: 1px dashed #808080;
@@ -73,6 +80,9 @@ input {
   font-size: 14px;
   color: #808080;
 }
+.empty img {
+  display: none !important;
+}
 .empty .cross {
   width: 100%;
   height: 100%;
@@ -81,12 +91,18 @@ input {
 
 .none_empty {
   cursor: pointer;
-  background: url("../../images/home.jpg") no-repeat center;
   background-size: contain;
   border: 1px solid #808080;
 }
 .none_empty span {
   display: none;
+}
+.none_empty img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -316,7 +332,7 @@ input {
 .content_wrap .content_proj .house_info .bl_info > div .wrap_input .download:after {
   display: none;
 }
-.content_wrap .content_proj .house_info .bl_info > div .wrap_input #file {
+.content_wrap .content_proj .house_info .bl_info > div .wrap_input #files_other, .content_wrap .content_proj .house_info .bl_info > div .wrap_input #files_market {
   display: none;
 }
 .content_wrap .content_proj .house_info .bl_info > div .wrap_input .delete {
@@ -346,7 +362,7 @@ input {
   content: "Загрузите 2 изображения.";
 }
 .content_wrap .content_proj .house_info .bl_info .bl_otherImg label:after {
-  content: "Максимальное количество изображений - 15шт.";
+  content: "Минимум - 5шт. Максимальное количество изображений - 15шт.";
 }
 .content_wrap .content_proj .house_info .bl_info .bl_status #status {
   width: 25px;

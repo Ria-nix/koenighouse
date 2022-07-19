@@ -1,26 +1,26 @@
 <div class="layout_wrap layout_menu">
     <div class="main_wrap">
-        <img src="../images/logo.svg" alt="logo" onClick="openPage('../main/index.php')">
+        <img src="../images/logo.svg" alt="logo" onClick="openPage('/')">
         <div class="toggle_wrap" onClick="toggleButton()">
             <span class="toggle_open" id="toggle_btn"></span>
         </div>
 
         <div class="sidebar">
             <div class="menu" id="main_menu">
-                <a href="<?php echo 'http://'.$_SERVER['HTTP_HOST'].'/main/index.php#id_advantage'; ?>" name="name_advantages" class="menu_link" onClick="changeAddress('#id_advantage')"> 
+                <a href="<?php echo 'https://'.$_SERVER['HTTP_HOST'].'/#id_advantage'; ?>" name="name_advantages" class="menu_link"> 
                     <span class="icon_link" id="advantages"></span>
                     <p class="item_txt">Преимущества</p>
                     <span class="underline"></span>
                 </a>
-                <a href="<?php echo 'http://'.$_SERVER['HTTP_HOST'].'/main/index.php#id_project'; ?>" name="name_projects" class="menu_link" onClick="changeAddress('#id_project')">
+                <a href="<?php echo 'https://'.$_SERVER['HTTP_HOST'].'/#id_project'; ?>" name="name_projects" class="menu_link">
                     <span class="icon_link" id="projects"></span>
                     <p class="item_txt">Проекты</p>
                     <span class="underline"></span>
                 </a>
-                <a href="<?php echo 'http://'.$_SERVER['HTTP_HOST'].'/main/index.php#id_gallery'; ?>" name="name_gallery" class="menu_link" onClick="changeAddress('#id_gallery')">
+                <a href="<?php echo 'https://'.$_SERVER['HTTP_HOST'].'/#id_gallery'; ?>" name="name_gallery" class="menu_link">
                     <span class="icon_link" id="gallery"></span>
                     <p class="item_txt">Галерея</p>
-                    <span class="underline"></span>
+                    <span class="underline"></span> 
                 </a>                  
             </div>
             <div class="big_text" onClick="newWindow('https://www.sberbank.ru/ru/person')">

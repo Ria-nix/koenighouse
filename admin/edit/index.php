@@ -14,7 +14,7 @@
     /*                                   HEADER                                   */
     /* -------------------------------------------------------------------------- */ -->
     <?php 
-        $class_btn = '<a class="back_arrow" onClick="goBack()">Назад</a>'; 
+        $class_btn = '<a class="back_arrow">Назад</a>'; 
         include_once('../nav/index.php'); 
     ?>      
     <!-- /* -------------------------------------------------------------------------- */
@@ -22,7 +22,7 @@
     /* -------------------------------------------------------------------------- */ -->
     <?php  include_once('modal_window/index.php'); ?> 
     <!--/* -------------------------------------------------------------------------- */
-    /*                                   CONTENT                                  */
+    /*                                   CONTENT                                  */0
     /* -------------------------------------------------------------------------- */ -->
 
     <div class="content_wrap">
@@ -36,6 +36,7 @@
                         <p class="names" onClick="fallList('.marketList')">Маркетинговые Изображения</p>
                         <div class="main_wrapImg marketList">
                             <div class="wrap_img none_empty">
+                                <img src="../images/home.jpg" alt="">
                                 <span class="no_imgTxt">Отсутствует изображение</span>
                             </div>
                             <div class="wrap_img empty">
@@ -48,45 +49,46 @@
                         <p class="names" onClick="fallList('.otherList')">Остальные Изображения</p>
                         <div class="main_wrapImg otherList">
                             <div class="wrap_img none_empty" id="1">
+                                <img src="../images/home.jpg" alt="">
                                 <span class="cross"></span>
                             </div>
-                            <div class="wrap_img none_empty" id="2">
+                            <div class="wrap_img empty" id="2">
                                 <span class="cross"></span>
                             </div>
-                            <div class="wrap_img none_empty" id="3">
+                            <div class="wrap_img empty" id="3">
                                 <span class="cross"></span>
                             </div>
-                            <div class="wrap_img none_empty" id="4">
+                            <div class="wrap_img empty" id="4">
                                 <span class="cross"></span>
                             </div>
-                            <div class="wrap_img none_empty" id="5">
+                            <div class="wrap_img empty" id="5">
                                 <span class="cross"></span>
                             </div>
-                            <div class="wrap_img none_empty" id="6">
+                            <div class="wrap_img empty" id="6">
                                 <span class="cross"></span>
                             </div>
-                            <div class="wrap_img none_empty" id="7">
+                            <div class="wrap_img empty" id="7">
                                 <span class="cross"></span>
                             </div>
-                            <div class="wrap_img none_empty" id="8">
+                            <div class="wrap_img empty" id="8">
                                 <span class="cross"></span>
                             </div>
-                            <div class="wrap_img none_empty" id="9">
+                            <div class="wrap_img empty" id="9">
                                 <span class="cross"></span>
                             </div>
-                            <div class="wrap_img none_empty" id="10">
+                            <div class="wrap_img empty" id="10">
                                 <span class="cross"></span>
                             </div>
-                            <div class="wrap_img none_empty unusual" id="11">
+                            <div class="wrap_img empty" id="11">
                                 <span class="cross"></span>
                             </div>
-                            <div class="wrap_img none_empty" id="12">
+                            <div class="wrap_img empty" id="12">
                                 <span class="cross"></span>
                             </div>
-                            <div class="wrap_img none_empty" id="13">
+                            <div class="wrap_img empty" id="13">
                                 <span class="cross"></span>
                             </div>
-                            <div class="wrap_img none_empty" id="14">
+                            <div class="wrap_img empty" id="14">
                                 <span class="cross"></span>
                             </div>
                             <div class="wrap_img empty" id="15">
@@ -123,8 +125,8 @@
                     <div class="bl_marketImg">
                         <label>Маркетинговые Изображения:</label>
                         <div class="wrap_input">
-                            <label for="file" class="download">Загрузить</label>
-                            <input type="file" id="file">
+                            <label for="files_market" class="download" multiple accept="image/*" onClick="downloadImg('#files_market')">Загрузить</label>
+                            <input type="file" id="files_market">
                             <input type="submit" class="delete" value="Удалить">
                         </div>  
                     </div>
@@ -132,8 +134,8 @@
                     <div class="bl_otherImg">
                         <label>Остальные Изображения:</label>
                         <div class="wrap_input">
-                            <label for="file" class="download">Загрузить</label>
-                            <input type="file" id="file">
+                            <label for="files_other" class="download" multiple accept="image/*">Загрузить</label>
+                            <input type="file" id="files_other" >
                             <input type="submit" class="delete" value="Удалить">
                         </div>  
                     </div>

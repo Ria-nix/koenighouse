@@ -7,11 +7,6 @@ function fallList(elem){
 $('.none_empty').click(function(){    
     $('.modal_wrap').removeClass('none');
     $('body').addClass('none_scroll');
-
-    /* ----------------- take the background url from scss file ----------------- */
-    var bg = $(this).css('background-image');
-    bg = bg.replace('url(','').replace(')','').replace(/\"/gi, "");
-    showImg(bg);    
 })
 
 /* ----------------------------- show the image ----------------------------- */

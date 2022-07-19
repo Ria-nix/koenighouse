@@ -4,9 +4,13 @@
 /* -------------------------------------------------------------------------- */
 /*                              ADDITIONAL STYLES                             */
 /* -------------------------------------------------------------------------- */
-
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; 
+}
 /* ------------------------------- for images ------------------------------- */
-
 .empty{
     border: 1px dashed #808080;
     @include Flex(row, center, center);    
@@ -18,6 +22,7 @@
         font-size: 14px;
         color: #808080;
     }
+    img{ display: none !important; }
     .cross{
         width: 100%;
         height: 100%;
@@ -27,11 +32,16 @@
 
 .none_empty{
     cursor: pointer;
-    background: url('../../images/home.jpg') no-repeat center;
     background-size: contain;
     border: 1px solid #808080;
     
     span{ display: none;}
+    img{ 
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
 }
 
 /* -------------------------------------------------------------------------- */
@@ -154,7 +164,7 @@
                             @include MainButton($linSp_orange, none);
                             &:after{ display: none;}
                         }
-                        #file{ display: none; }
+                        #files_other,#files_market{ display: none; }
                         .delete{
                             cursor: pointer;
                             margin-left: 40px;
@@ -189,7 +199,7 @@
                 }
                 .bl_otherImg label:after{
                     @extend .style_after;
-                    content: 'Максимальное количество изображений - 15шт.';                    
+                    content: 'Минимум - 5шт. Максимальное количество изображений - 15шт.';                    
                 }
                 /* --------------------------------- status --------------------------------- */
                 .bl_status{
