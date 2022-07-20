@@ -90,6 +90,7 @@
 .main_wrap img{ 
     height: 80%;
     cursor: pointer;
+    z-index: 999;
 }
 .main_wrap .sidebar{ background: $c_white;
 

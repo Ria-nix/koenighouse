@@ -1,6 +1,3 @@
-//Общие стили, так как это всё-таки ядро стилей, я не буду изменять
-//своим принципам
-//Стили
 @use '_slider-module' as *;
 @use '../../additional_styles/_color' as *;
 
@@ -22,7 +19,7 @@ a {
             align-items: flex-start; 
             flex-direction: column;
             padding-bottom: 2.5rem;
-
+            padding-left: 1.5rem;
             .description { max-width: 615px;}
         }
     }
