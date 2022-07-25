@@ -34,9 +34,9 @@ function newWindow(s_link) {
 /*                           SCROLL LINKS BY WEBSITE                          */
 /* -------------------------------------------------------------------------- */
 
-if(window.innerWidth <= 1020){ closeSidebar() }
-function closeSidebar(){
-    for(let link_menu of $('.menu_link')){
-        link_menu.addEventListener('click', function(){ closeFon(); });
-    }
+for(let link_menu of $('.menu_link')){
+    link_menu.addEventListener('click', function(){ 
+        $('html, body').css('scroll-behavior', 'smooth');
+        closeFon();
+    });
 }

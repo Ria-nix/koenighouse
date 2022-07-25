@@ -47,7 +47,26 @@ input {
 /* -------------------------------------------------------------------------- */
 /*                                    LINKS                                   */
 /* -------------------------------------------------------------------------- */
-#id_advantage, #id_project, #id_gallery {
+p.anchor {
+  display: block;
+  position: relative;
+  visibility: hidden;
+}
+
+/* ---------------------------------- links --------------------------------- */
+.benefits_an {
+  top: -100px;
+}
+
+.projects_an {
+  top: -20px;
+}
+
+.gallery_an {
+  top: -110px;
+}
+
+.section {
   margin-top: 60px;
 }
 
@@ -329,6 +348,7 @@ input {
   }
 }
 @media (max-width: 1019px) {
+  /* --------------------------------- content -------------------------------- */
   .content .wrap_text {
     background: url("../../images/wrap_1.svg") no-repeat center;
   }

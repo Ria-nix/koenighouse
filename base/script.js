@@ -1,42 +1,34 @@
-/* -------------------------------------------------------------------------- */
-/*                                TOGGLE BUTTON                               */
-/* -------------------------------------------------------------------------- */
-let bool = false;
-function toggleButton() {
-    if (!bool) {
-        bool = true;
-        $("#toggle_btn").removeClass('toggle_open').addClass('toggle_close');
-        $(".sidebar").css('right', '0');
-        $(".dark_fon").removeClass('none');
-        $("body").addClass('none_scroll');
-    } else { closeFon(); }
-}
+const more = document.querySelector('.more')
+const gallery = document.querySelector('.gallery')
+const images = document.querySelectorAll('.gallery > img')
 
-/* ----------------------------- close dark fon ----------------------------- */
-function closeFon() {
-    bool = false;
-    $("#toggle_btn").removeClass('toggle_close').addClass('toggle_open');
-    $(".sidebar").css('right', '-250px');
-    $(".dark_fon").addClass('none');
-    $("body").removeClass('none_scroll');
-}
+let ammountOfImages = gallery.getElementsByTagName('*').length
+console.log(ammountofImages);
 
-/* --------------------- Open the page with link -------------------- */
-function openPage(f_link) {
-    this.window.location.href = f_link;
-}
-
-function newWindow(s_link) {
-    this.window.open(s_link);
-}
-
-/* -------------------------------------------------------------------------- */
-/*                           SCROLL LINKS BY WEBSITE                          */
-/* -------------------------------------------------------------------------- */
-
-if(window.innerWidth <= 1020){ closeSidebar() }
-function closeSidebar(){
-    for(let link_menu of $('.menu_link')){
-        link_menu.addEventListener('click', function(){ closeFon(); });
+more.addEventListener('click', () => {
+    if(!gallery.classList.contains('showed')) {
+        let imageAmmount = images.length
+        gallery.style.height = `${(imageAmmount * 186) + ((imageAmmount - 1) * 13)}px`
+        gallery.classList.toggle('showed')
+    }else {
+        gallery.classList.toggle('showed')
+        gallery.style.height = "365px"
     }
-}
+})
+
+// ----------------------------------------
+
+const zoom = document.querySelector('.zoom')
+const close = document.querySelector('.close-zoom')
+const zoomIcon = document.querySelector('.zoom-icon')
+const body = document.querySelector('body')
+
+zoomIcon.addEventListener('click', () => {
+    zoom.classList.toggle('opened')
+    body.classList.toggle('zoom-opened')
+})
+
+close.addEventListener('click', () => {
+    zoom.classList.toggle('opened')
+    body.classList.toggle('zoom-opened')
+})

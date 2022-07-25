@@ -33,6 +33,47 @@
                         <input type="submit" class="edit_btn" value="Редактировать">            
                     </div>
                 </div>
+
+                <div class="bl_card">
+                    <div class="image"></div>
+                    <div class="bl_text">
+                        <p class="main_head"><span>Название:</span> 2 Таунхауса</p>
+                    </div>
+                    <div class="btns">
+                        <input type="submit" class="edit_btn" value="Редактировать">            
+                    </div>
+                </div>
+
+                <div class="bl_card">
+                    <div class="image"></div>
+                    <div class="bl_text">
+                        <p class="main_head"><span>Название:</span> 2 Таунхауса</p>
+                    </div>
+                    <div class="btns">
+                        <input type="submit" class="edit_btn" value="Редактировать">            
+                    </div>
+                </div>
+
+
+                <div class="bl_card">
+                    <div class="image"></div>
+                    <div class="bl_text">
+                        <p class="main_head"><span>Название:</span> 2 Таунхауса</p>
+                    </div>
+                    <div class="btns">
+                        <input type="submit" class="edit_btn" value="Редактировать">            
+                    </div>
+                </div>
+
+                <div class="bl_card">
+                    <div class="image"></div>
+                    <div class="bl_text">
+                        <p class="main_head"><span>Название:</span> 2 Таунхауса</p>
+                    </div>
+                    <div class="btns">
+                        <input type="submit" class="edit_btn" value="Редактировать">            
+                    </div>
+                </div>
                 <!-- /* -------------------- THE END OF the card with info about house -------------------- */ -->
             </div>
             <!-- /* ------------------------------ THE END OF all houses ------------------------------ */ -->

@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.grid-wrap {  z-index: 900;}
+
+.modal_wrap {
+    z-index: 999;
+    padding-top: 200px;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: grid;
+    grid-template-columns: repeat(1, minmax(320px, 1024px));
+    justify-content: center;
+    outline: none;
+    user-select: none;
+    .modal_img {
+        margin-top: 5%;
+        h4 {
+            line-height: 24px;
+            text-transform: uppercase;
+            color: #fff;
+            margin-bottom: 10px;
+            font: {
+                family: 'Montserrat', sans-serif;
+                style: normal;
+                weight: 700;
+                size: 20px;
+            }
+        }
+        .mod_image {
+            background: #fff;
+            padding: 1.5%;
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            max-height: 500px;
+            img {
+                max-height: 440px;
+            }
+            .btn_img {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                span {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 5px 0;
+                    cursor: pointer;
+                    font-family: 'Roboto', sans-serif;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 19px;
+                    font-variant: small-caps;
+                    &:before {
+                        display: block;
+                        margin: 2.5px 2px 0 0;
+                    }
+                    &:hover {
+                        color: red;
+                    }
+                }
+                .remove_btn {
+                    margin-right: 15px;
+                }
+                .close_btn:before {
+                    content: url('../../../../images/cross.svg');
+                }
+                .remove_btn:before {
+                    content: url('../../../../images/trash.svg');
+                }
+            }
+        }
+    }
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/*                                MEDIA QUERIES                               */
+
+
+/* -------------------------------------------------------------------------- */
+
+@media screen and (min-width: 768px) {}
+
+@media screen and (max-width: 767px) {}

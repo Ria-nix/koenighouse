@@ -31,7 +31,8 @@
         <!-- /* -------------------------------------------------------------------------- */
         /*                                  BENEFITS                                  */
         /* -------------------------------------------------------------------------- */ -->
-        <div class="section benefits" id="id_advantage">
+        <div class="section benefits">
+            <p class="anchor benefits_an" id="id_advantage"></p>
             <article>
                 <h2 class="main_txt">Преимуществa</h2>
                 <main>
@@ -57,11 +58,13 @@
         <!-- /* -------------------------------------------------------------------------- */
         /*                                  PROJECTS                                  */
         /* -------------------------------------------------------------------------- */ -->
-        <div class="section projects slider-module" id="id_project"></div>
+        <p class="anchor projects_an" id="id_project"></p>
+        <div class="section projects slider-module"></div>        
         <!-- /* ---------------------------------------------------------------------- */
         /*                                  GALLERY                                   */
         /* -------------------------------------------------------------------------- */ -->
-        <div class="section gallery" id="id_gallery">
+        <div class="section gallery" >
+            <p class="anchor gallery_an" id="id_gallery"></p>
             <div class="wrap_gallery">
                 <p class="main_txt">фото</p>
                 <div class="gallery_items">
@@ -106,7 +109,6 @@
     /*                                   SCRIPTS                                  */
     /* -------------------------------------------------------------------------- */ -->
     <script src="js/slider.js"></script>
-
 </body>
 
 </html>
