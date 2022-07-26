@@ -34,6 +34,7 @@ body{
     overflow: hidden;
 }
 input{ outline:none;}
+
 //================== MIXINS ==================//
 @mixin MainButton($bg_color, $shadow) {
     background: $bg_color;
@@ -52,6 +53,7 @@ input{ outline:none;}
 
     transition: 0.5s; 
     background-size: 200% auto; 
+    text-decoration: none;
 
     &:hover{
         box-shadow: none;   
@@ -70,4 +72,9 @@ input{ outline:none;}
     flex-direction: $direction;
     justify-content: $justify;
     align-items: $align;
+}
+
+/* ----------------------- button about sold apartment ---------------------- */
+.sold_btn{
+    @include MainButton($cBg_gray, $c_white);
 }

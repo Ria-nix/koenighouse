@@ -44,6 +44,33 @@ input {
   outline: none;
 }
 
+/* ----------------------- button about sold apartment ---------------------- */
+.sold_btn {
+  background: #BDBDBD;
+  -webkit-box-shadow: #FFF;
+          box-shadow: #FFF;
+  padding: 12px 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 50px;
+  border: none;
+  color: #FFF;
+  cursor: pointer;
+  outline: none;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-size: 200% auto;
+  text-decoration: none;
+}
+.sold_btn:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-position: right center;
+}
+
 /* -------------------------------------------------------------------------- */
 /*                                  MAIN CODE                                 */
 /* -------------------------------------------------------------------------- */
@@ -169,6 +196,7 @@ input {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   background-size: 200% auto;
+  text-decoration: none;
 }
 .content_wrap .content_proj .bl_projects .bl_card .btns .edit_btn:hover {
   -webkit-box-shadow: none;
@@ -194,6 +222,7 @@ input {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   background-size: 200% auto;
+  text-decoration: none;
 }
 .content_wrap .content_proj .bl_projects .bl_card .btns .open_btn:hover {
   -webkit-box-shadow: none;
