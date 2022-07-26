@@ -1,118 +1,104 @@
+<?php
+if (empty($_GET["house_id"])) \inc\artemy\v1\json_output\JsonOutput::error("House Id пустой");
+$house = \DB\HousesQuery::create()->findOneById($_GET["house_id"]);
+if ($house === null) \inc\artemy\v1\json_output\JsonOutput::error("Не найден house Id");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="keywords" content="продажа, таунхаусы, дома">
-    <meta name="description" content="В этом проекте мы предоставляем возможность 
-    приобретения достойного жилья по доступной цене. 
-    Таунхаус площадью 95 кв.м. в двух секционном доме,">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/public/page/MAIN_PAGE/style_slider/style.css">
-    <link rel="stylesheet" href="src/public/page/MAIN_PAGE/scss/style.css">
+    
+    <link rel="stylesheet" href="mobile_ver/scss/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
+    
     <?php include_once('src/public/page/helper.php') ?>
-    <title>Koenighouse - official website</title>
+
+    <title>Купить таунхаус в Калининграде по адресу<?= $house->getAddress() ?></title>
 </head>
+
 <body>
-    <!--/* -------------------------------------------------------------------------- */
-    /*                                   HEADER                                   */
-    /* -------------------------------------------------------------------------- */ -->
-    <?php include_once('src/public/page/nav_footer/header.php') ?>
-    <!--/* -------------------------------------------------------------------------- */
-    /*                                   CONTENT                                  */
-    /* -------------------------------------------------------------------------- */ -->
-    <div class="content">
-        <div class="dark_fon none" onClick="closeFon()"></div>
-        <div class="main_info">
-            <div class="bl_text">
-                <div class="wrap_text">                    
-                    <a href="tel:+7412979333" class='telefon_call'>
-                        <input type="submit" value="позвонить">
-                    </a>
+<!--/* -------------------------------------------------------------------------- */
+/*                                   HEADER                                   */
+/* -------------------------------------------------------------------------- */ -->
+<?php include_once('src/public/page/nav_footer/header.php') ?>
+<div class="wrap content">
+<div class="dark_fon none" onClick="closeFon()"></div>
+    <h1 class="title"><?= $house->getName() ?></h1>
+    <h3 class="sub-title"><?= $house->getAddress() ?></h3>
+    <div class="summary">
+        <p class="title">Сводка</p>
+        <div class="table">
+            <div class="left">
+                <div class="house-area">
+                    <p class="summary-name">Площадь дома:</p>
+                    <p class="summary-value"><?= $house->getLivingSpace() ?> м<sup>2</sup></p>
+                </div>
+                <div class="readiness">
+                    <p class="summary-name">Готовность:</p>
+                    <p class="summary-value"><?php
+                        $date = $house->getDoReady();
+                        $intlFormatter = new IntlDateFormatter('ru_RU', IntlDateFormatter::SHORT, IntlDateFormatter::SHORT);
+                        $intlFormatter->setPattern('LLLL Y');
+
+                        echo $intlFormatter->format($date);
+                        ?></p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="land-area">
+                    <p class="summary-name">Площадь участка:</p>
+                    <p class="summary-value"><?= $house->getLandArea() ?> м<sup>2</sup></p>
+                </div>
+                <div class="price">
+                    <p class="summary-name">Стоимость:</p>
+                    <p class="summary-value"><?= $house->getPrice() ?> руб.</p>
                 </div>
             </div>
         </div>
-        <!-- /* -------------------------------------------------------------------------- */
-        /*                                  BENEFITS                                  */
-        /* -------------------------------------------------------------------------- */ -->
-        <div class="section benefits">
-            <p class="anchor benefits_an" id="id_advantage"></p>
-            <article>
-                <h2 class="main_txt">Преимуществa</h2>
-                <main>
-                    <div class="item fon green">
-                        <p>Выгодные<br/>условия</p>
-                        <i id="icon_folder" class="icon"></i>
-                    </div>
-                    <div class="item fon orange">
-                        <p class="text">В наличии все<br/>коммуникации</p>
-                        <i id="icon_room" class="icon"></i>
-                    </div>
-                    <div class="item fon green">
-                        <p>Качественные<br/>материалы</p>
-                        <i id="icon_build" class="icon"></i>
-                    </div>
-                    <div class="item fon orange">
-                        <p>Дом под<br/>серый ключ</p>
-                        <i id="icon_house" class="icon"></i>
-                    </div>
-                </main>
-            </article>
-        </div>
-        <!-- /* -------------------------------------------------------------------------- */
-        /*                                  PROJECTS                                  */
-        /* -------------------------------------------------------------------------- */ -->
-        <p class="anchor projects_an"></p>
-        <div class="section projects slider-module" id="id_project"></div>           
-        <!-- /* ---------------------------------------------------------------------- */
-        /*                                  GALLERY                                   */
-        /* -------------------------------------------------------------------------- */ -->
-        <div class="section gallery">
-        <p class="anchor gallery_an" id="id_gallery"></p>
-            <div class="wrap_gallery">
-                <p class="main_txt">фото</p>
-                <div class="gallery_items">
-                    <div class="item_photo item_1">
-                        <div class="img_hover">
-                            <span class="img_border">
-                                <p class="img_txt">Для поддержания комфортной температуры дом оснащен автономной водяной системой отопления</p>
-                            </span>                            
-                        </div>
-                    </div>
-                    <div class="item_photo item_2">
-                        <div class="img_hover">
-                            <span class="img_border">
-                                <p class="img_txt img_special_txt">Для поддержания комфортной температуры дом оснащен автономной водяной системой отопления</p>
-                            </span>                            
-                        </div>
-                    </div>
-                    <div class="item_photo item_3">
-                        <div class="img_hover">
-                            <span class="img_border">
-                                <p class="img_txt img_special_txt">Для поддержания комфортной температуры дом оснащен автономной водяной системой отопления</p>
-                            </span>                            
-                        </div>
-                    </div>
-                    <div class="item_photo item_4">
-                        <div class="img_hover">
-                            <span class="img_border">
-                                <p class="img_txt">Для поддержания комфортной температуры дом оснащен автономной водяной системой отопления</p>
-                            </span>                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>        
-        <p class="mobile_footer">© Разработка и продвижение - <span>msoft</span></p>
+        <a href="tel:+7412979333" class="buy_btn">Купить</a>
     </div>
-    <!--/* -------------------------------------------------------------------------- */
-    /*                                   FOOTER                                   */
-    /* -------------------------------------------------------------------------- */ -->
-    <?php include_once('src/public/page/nav_footer/footer.php') ?>    
-    <!--/* -------------------------------------------------------------------------- */
-    /*                                   SCRIPTS                                  */
-    /* -------------------------------------------------------------------------- */ -->
-    <script src="js/slider.js"></script> 
-   
+    <div class="blueprint">
+        <div class="title">
+            <p>План</p>
+        </div>
+        <div class="house-blueprint">
+            <img src="/api/GET/v1/house/image/plan?house_id=<?= $house->getId() ?>" alt="blueprint">
+            <div class="zoom-icon">
+                <span class="material-symbols-outlined">zoom_in</span>
+            </div>
+        </div>
+    </div>
+    <div class="photo">
+        <p class="title">Фото</p>
+        <div class="gallery">
+            <div class="image-container">
+                <img src="/api/GET/v1/house/image/main1?house_id=<?= $house->getId() ?>" alt="house1">
+            </div>
+            <div class="image-container">
+            <img src="/api/GET/v1/house/image/main2?house_id=<?= $house->getId() ?>" alt="house2">
+            </div>
+            <?php
+            $other_images = \DB\HouseImagesQuery::create()->findByHouseId($house->getId());
+            foreach ($other_images as $image) { ?>
+                <div class="image-container">
+                    <img src="/api/GET/v1/house/image/other?image_id=<?= $image->getId() ?>" alt="other image">
+                </div>
+            <?php } ?>
+        </div>
+        <p class="more">Показать все</p>
+    </div>
+</div>
+<div class="zoom">
+    <div class="zoom-content">
+        <p class="close-zoom">Закрыть</p>
+        <img src="/api/GET/v1/house/image/plan?house_id=<?= $house->getId() ?>" alt="blueprint">
+    </div>
+</div>
+<script src="js/script.js"></script>
 </body>
+
 </html>
